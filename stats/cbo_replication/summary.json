@@ -1,0 +1,42 @@
+{
+  "revenue": {
+    "error_rows_cbo": 5082,
+    "error_rows_ours": 5082,
+    "rows_only_in_one": 0,
+    "error_rows_within_0.01": 5082,
+    "error_max_abs_diff": 0.0,
+    "summary_rows": 88,
+    "summary_only_in_one": 0,
+    "summary_rows_within_0.01": 88
+  },
+  "outlay": {
+    "error_rows_cbo": 2946,
+    "error_rows_ours": 2946,
+    "rows_only_in_one": 0,
+    "error_rows_within_0.01": 2946,
+    "error_max_abs_diff": 0.0,
+    "summary_rows": 110,
+    "summary_only_in_one": 0,
+    "summary_rows_within_0.01": 110
+  },
+  "deficit": {
+    "error_rows_cbo": 347,
+    "error_rows_ours": 347,
+    "rows_only_in_one": 0,
+    "error_rows_within_0.01": 347,
+    "error_max_abs_diff": 0.0,
+    "summary_rows": 11,
+    "summary_only_in_one": 0,
+    "summary_rows_within_0.01": 11
+  },
+  "debt": {
+    "error_rows_cbo": 347,
+    "error_rows_ours": 347,
+    "rows_only_in_one": 0,
+    "error_rows_within_0.01": 347,
+    "error_max_abs_diff": 0.0,
+    "summary_rows": 11,
+    "summary_only_in_one": 0,
+    "summary_rows_within_0.01": 11
+  }
+}

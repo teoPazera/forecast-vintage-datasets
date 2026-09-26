@@ -1,0 +1,12 @@
+component,category,subcategory,projected_year_number,_merge,diff_number_of_projections,diff_average_error,diff_average_absolute_error,diff_RMSE,diff_two_thirds_spread,max_abs_diff
+deficit,Total,Total,1,both,0,0.0,0.0,0.0,0.0,0.0
+deficit,Total,Total,10,both,0,0.0,0.0,0.0,0.0,0.0
+deficit,Total,Total,11,both,0,0.0,0.0,0.0,0.0,0.0
+deficit,Total,Total,2,both,0,0.0,0.0,0.0,0.0,0.0
+deficit,Total,Total,3,both,0,0.0,0.0,0.0,0.0,0.0
+deficit,Total,Total,4,both,0,0.0,0.0,0.0,0.0,0.0
+deficit,Total,Total,5,both,0,0.0,0.0,0.0,0.0,0.0
+deficit,Total,Total,6,both,0,0.0,0.0,0.0,0.0,0.0
+deficit,Total,Total,7,both,0,0.0,0.0,0.0,0.0,0.0
+deficit,Total,Total,8,both,0,0.0,0.0,0.0,0.0,0.0
+deficit,Total,Total,9,both,0,0.0,0.0,0.0,0.0,0.0

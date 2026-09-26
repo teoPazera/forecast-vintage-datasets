@@ -1,0 +1,111 @@
+component,category,subcategory,projected_year_number,_merge,diff_number_of_projections,diff_average_error,diff_average_absolute_error,diff_RMSE,diff_two_thirds_spread,max_abs_diff
+outlay,Discretionary,Defense Discretionary,1,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Discretionary,Defense Discretionary,10,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Discretionary,Defense Discretionary,11,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Discretionary,Defense Discretionary,2,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Discretionary,Defense Discretionary,3,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Discretionary,Defense Discretionary,4,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Discretionary,Defense Discretionary,5,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Discretionary,Defense Discretionary,6,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Discretionary,Defense Discretionary,7,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Discretionary,Defense Discretionary,8,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Discretionary,Defense Discretionary,9,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Discretionary,Nondefense Discretionary,1,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Discretionary,Nondefense Discretionary,10,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Discretionary,Nondefense Discretionary,11,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Discretionary,Nondefense Discretionary,2,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Discretionary,Nondefense Discretionary,3,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Discretionary,Nondefense Discretionary,4,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Discretionary,Nondefense Discretionary,5,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Discretionary,Nondefense Discretionary,6,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Discretionary,Nondefense Discretionary,7,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Discretionary,Nondefense Discretionary,8,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Discretionary,Nondefense Discretionary,9,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Discretionary,Total Discretionary,1,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Discretionary,Total Discretionary,10,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Discretionary,Total Discretionary,11,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Discretionary,Total Discretionary,2,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Discretionary,Total Discretionary,3,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Discretionary,Total Discretionary,4,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Discretionary,Total Discretionary,5,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Discretionary,Total Discretionary,6,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Discretionary,Total Discretionary,7,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Discretionary,Total Discretionary,8,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Discretionary,Total Discretionary,9,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Medicaid,1,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Medicaid,10,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Medicaid,11,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Medicaid,2,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Medicaid,3,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Medicaid,4,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Medicaid,5,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Medicaid,6,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Medicaid,7,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Medicaid,8,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Medicaid,9,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Medicare,1,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Medicare,10,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Medicare,11,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Medicare,2,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Medicare,3,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Medicare,4,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Medicare,5,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Medicare,6,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Medicare,7,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Medicare,8,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Medicare,9,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Other Mandatory,1,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Other Mandatory,10,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Other Mandatory,11,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Other Mandatory,2,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Other Mandatory,3,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Other Mandatory,4,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Other Mandatory,5,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Other Mandatory,6,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Other Mandatory,7,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Other Mandatory,8,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Other Mandatory,9,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Social Security,1,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Social Security,10,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Social Security,11,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Social Security,2,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Social Security,3,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Social Security,4,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Social Security,5,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Social Security,6,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Social Security,7,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Social Security,8,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Social Security,9,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Total Mandatory,1,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Total Mandatory,10,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Total Mandatory,11,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Total Mandatory,2,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Total Mandatory,3,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Total Mandatory,4,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Total Mandatory,5,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Total Mandatory,6,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Total Mandatory,7,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Total Mandatory,8,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Mandatory,Total Mandatory,9,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Net Interest,Net Interest,1,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Net Interest,Net Interest,10,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Net Interest,Net Interest,11,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Net Interest,Net Interest,2,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Net Interest,Net Interest,3,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Net Interest,Net Interest,4,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Net Interest,Net Interest,5,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Net Interest,Net Interest,6,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Net Interest,Net Interest,7,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Net Interest,Net Interest,8,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Net Interest,Net Interest,9,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Total,Total,1,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Total,Total,10,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Total,Total,11,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Total,Total,2,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Total,Total,3,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Total,Total,4,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Total,Total,5,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Total,Total,6,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Total,Total,7,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Total,Total,8,both,0,0.0,0.0,0.0,0.0,0.0
+outlay,Total,Total,9,both,0,0.0,0.0,0.0,0.0,0.0

@@ -1,0 +1,81 @@
+{
+  "series": 21,
+  "vintages": 117,
+  "forecast_cells": 20342,
+  "outturns": 790,
+  "cells_by_role": {
+    "future": 17936,
+    "in_progress": 1950,
+    "past": 456
+  },
+  "attribution_rows": 36187,
+  "intermediate_vintages": 9,
+  "hierarchy_max_abs_residual": {
+    "outlay: Total": 0.009999999999990905,
+    "outlay: Total Discretionary": 4.547473508864641e-13,
+    "outlay: Total Mandatory": 9.094947017729282e-13,
+    "outlay: Total Mandatory (incl. Fannie Freddie)": 290.55700000000024,
+    "revenue: Total": 1.3000000000000682
+  },
+  "hierarchy_share_within_0.5": {
+    "outlay: Total": 1.0,
+    "outlay: Total Discretionary": 1.0,
+    "outlay: Total Mandatory": 1.0,
+    "outlay: Total Mandatory (incl. Fannie Freddie)": 0.5238,
+    "revenue: Total": 0.9939
+  },
+  "changes_relation": {
+    "category_years_tested": 17832,
+    "with_all_three_types": 7855,
+    "all_three_types_within_0.5": 0.9924,
+    "by_component_all_three_within_0.5": {
+      "deficit": 1.0,
+      "outlay": 0.9921,
+      "revenue": 1.0
+    },
+    "legislative_only_within_0.5": 0.2256,
+    "yearend_change_rows_without_baseline": 285
+  },
+  "replication": {
+    "revenue": {
+      "error_rows_cbo": 5082,
+      "error_rows_ours": 5082,
+      "rows_only_in_one": 0,
+      "error_rows_within_0.01": 5082,
+      "error_max_abs_diff": 0.0,
+      "summary_rows": 88,
+      "summary_only_in_one": 0,
+      "summary_rows_within_0.01": 88
+    },
+    "outlay": {
+      "error_rows_cbo": 2946,
+      "error_rows_ours": 2946,
+      "rows_only_in_one": 0,
+      "error_rows_within_0.01": 2946,
+      "error_max_abs_diff": 0.0,
+      "summary_rows": 110,
+      "summary_only_in_one": 0,
+      "summary_rows_within_0.01": 110
+    },
+    "deficit": {
+      "error_rows_cbo": 347,
+      "error_rows_ours": 347,
+      "rows_only_in_one": 0,
+      "error_rows_within_0.01": 347,
+      "error_max_abs_diff": 0.0,
+      "summary_rows": 11,
+      "summary_only_in_one": 0,
+      "summary_rows_within_0.01": 11
+    },
+    "debt": {
+      "error_rows_cbo": 347,
+      "error_rows_ours": 347,
+      "rows_only_in_one": 0,
+      "error_rows_within_0.01": 347,
+      "error_max_abs_diff": 0.0,
+      "summary_rows": 11,
+      "summary_only_in_one": 0,
+      "summary_rows_within_0.01": 11
+    }
+  }
+}

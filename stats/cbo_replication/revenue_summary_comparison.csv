@@ -1,0 +1,89 @@
+component,category,subcategory,projected_year_number,_merge,diff_number_of_projections,diff_average_error,diff_average_absolute_error,diff_RMSE,diff_two_thirds_spread,max_abs_diff
+revenue,Corporate Income Taxes,Corporate Income Taxes,1,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Corporate Income Taxes,Corporate Income Taxes,10,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Corporate Income Taxes,Corporate Income Taxes,11,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Corporate Income Taxes,Corporate Income Taxes,2,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Corporate Income Taxes,Corporate Income Taxes,3,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Corporate Income Taxes,Corporate Income Taxes,4,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Corporate Income Taxes,Corporate Income Taxes,5,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Corporate Income Taxes,Corporate Income Taxes,6,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Corporate Income Taxes,Corporate Income Taxes,7,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Corporate Income Taxes,Corporate Income Taxes,8,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Corporate Income Taxes,Corporate Income Taxes,9,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Customs Duties,Customs Duties,1,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Customs Duties,Customs Duties,10,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Customs Duties,Customs Duties,11,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Customs Duties,Customs Duties,2,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Customs Duties,Customs Duties,3,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Customs Duties,Customs Duties,4,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Customs Duties,Customs Duties,5,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Customs Duties,Customs Duties,6,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Customs Duties,Customs Duties,7,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Customs Duties,Customs Duties,8,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Customs Duties,Customs Duties,9,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Estate and Gift Taxes,Estate and Gift Taxes,1,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Estate and Gift Taxes,Estate and Gift Taxes,10,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Estate and Gift Taxes,Estate and Gift Taxes,11,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Estate and Gift Taxes,Estate and Gift Taxes,2,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Estate and Gift Taxes,Estate and Gift Taxes,3,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Estate and Gift Taxes,Estate and Gift Taxes,4,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Estate and Gift Taxes,Estate and Gift Taxes,5,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Estate and Gift Taxes,Estate and Gift Taxes,6,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Estate and Gift Taxes,Estate and Gift Taxes,7,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Estate and Gift Taxes,Estate and Gift Taxes,8,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Estate and Gift Taxes,Estate and Gift Taxes,9,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Excise Taxes,Excise Taxes,1,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Excise Taxes,Excise Taxes,10,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Excise Taxes,Excise Taxes,11,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Excise Taxes,Excise Taxes,2,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Excise Taxes,Excise Taxes,3,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Excise Taxes,Excise Taxes,4,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Excise Taxes,Excise Taxes,5,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Excise Taxes,Excise Taxes,6,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Excise Taxes,Excise Taxes,7,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Excise Taxes,Excise Taxes,8,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Excise Taxes,Excise Taxes,9,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Individual Income Taxes,Individual Income Taxes,1,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Individual Income Taxes,Individual Income Taxes,10,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Individual Income Taxes,Individual Income Taxes,11,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Individual Income Taxes,Individual Income Taxes,2,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Individual Income Taxes,Individual Income Taxes,3,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Individual Income Taxes,Individual Income Taxes,4,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Individual Income Taxes,Individual Income Taxes,5,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Individual Income Taxes,Individual Income Taxes,6,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Individual Income Taxes,Individual Income Taxes,7,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Individual Income Taxes,Individual Income Taxes,8,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Individual Income Taxes,Individual Income Taxes,9,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Miscellaneous Receipts,Miscellaneous Receipts,1,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Miscellaneous Receipts,Miscellaneous Receipts,10,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Miscellaneous Receipts,Miscellaneous Receipts,11,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Miscellaneous Receipts,Miscellaneous Receipts,2,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Miscellaneous Receipts,Miscellaneous Receipts,3,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Miscellaneous Receipts,Miscellaneous Receipts,4,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Miscellaneous Receipts,Miscellaneous Receipts,5,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Miscellaneous Receipts,Miscellaneous Receipts,6,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Miscellaneous Receipts,Miscellaneous Receipts,7,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Miscellaneous Receipts,Miscellaneous Receipts,8,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Miscellaneous Receipts,Miscellaneous Receipts,9,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Payroll Taxes,Payroll Taxes,1,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Payroll Taxes,Payroll Taxes,10,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Payroll Taxes,Payroll Taxes,11,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Payroll Taxes,Payroll Taxes,2,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Payroll Taxes,Payroll Taxes,3,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Payroll Taxes,Payroll Taxes,4,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Payroll Taxes,Payroll Taxes,5,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Payroll Taxes,Payroll Taxes,6,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Payroll Taxes,Payroll Taxes,7,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Payroll Taxes,Payroll Taxes,8,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Payroll Taxes,Payroll Taxes,9,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Total,Total,1,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Total,Total,10,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Total,Total,11,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Total,Total,2,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Total,Total,3,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Total,Total,4,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Total,Total,5,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Total,Total,6,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Total,Total,7,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Total,Total,8,both,0,0.0,0.0,0.0,0.0,0.0
+revenue,Total,Total,9,both,0,0.0,0.0,0.0,0.0,0.0
