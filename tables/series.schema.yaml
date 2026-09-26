@@ -1,0 +1,56 @@
+table: tables/series
+description: 'One row per forecast series. Partitioned by source: tables/series/<SOURCE>.parquet.'
+columns:
+- name: source
+  type: string
+  unit: ''
+  description: OBR | CBO
+- name: series_id
+  type: string
+  unit: ''
+  description: source-prefixed identifier, e.g. obr.vat, obr.psnb_gbp
+- name: source_code
+  type: string
+  unit: ''
+  description: the source's own code (HOFD sheet name; CBO component/category/subcategory)
+- name: name
+  type: string
+  unit: ''
+  description: series title as the source writes it
+- name: parent_series_id
+  type: string
+  unit: ''
+  description: parent in the hierarchy (components add up, with a residual, to the parent)
+- name: family
+  type: string
+  unit: ''
+  description: pooling family (decision D7)
+- name: unit
+  type: string
+  unit: ''
+  description: source unit as written
+- name: unit_harmonized
+  type: string
+  unit: ''
+  description: 'harmonized unit: ''GBP bn'' or ''USD bn'' for money; otherwise the source unit'
+- name: kind
+  type: string
+  unit: ''
+  description: level (strictly positive, may be logged) | balance (can change sign, never logged) | rate
+    (per cent)
+- name: period_type
+  type: string
+  unit: ''
+  description: uk_fiscal_year | us_fiscal_year | calendar_year
+- name: first_vintage_id
+  type: string
+  unit: ''
+  description: earliest vintage with a value
+- name: last_vintage_id
+  type: string
+  unit: ''
+  description: latest vintage with a value
+- name: notes
+  type: string
+  unit: ''
+  description: notes and footnotes carried by the source for this series

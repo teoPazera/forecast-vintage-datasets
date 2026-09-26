@@ -1,0 +1,40 @@
+table: tables/forecasts
+description: One row per forecast cell (source, series, target period, vintage). Partitioned by source.
+columns:
+- name: source
+  type: string
+  unit: ''
+  description: OBR | CBO
+- name: series_id
+  type: string
+  unit: ''
+  description: see tables/series
+- name: target_period
+  type: string
+  unit: ''
+  description: '''2025-26'' (UK fiscal year) or ''2025'' (US fiscal or calendar year; see series.period_type)'
+- name: vintage_id
+  type: string
+  unit: ''
+  description: see tables/vintages
+- name: value_source_unit
+  type: float
+  unit: series.unit
+  description: value as published
+- name: value
+  type: float
+  unit: series.unit_harmonized
+  description: value in the harmonized unit; same sign convention as the source series
+- name: cell_role
+  type: string
+  unit: ''
+  description: past (target period ended before publication) | in_progress | future
+- name: horizon_months
+  type: float
+  unit: months
+  description: months from publication date to the end of the target period (negative for past cells);
+    1 month = 365.25/12 days
+- name: origin
+  type: string
+  unit: ''
+  description: file, sheet and cell (e.g. HOFD:VAT!C5)

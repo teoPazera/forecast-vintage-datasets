@@ -1,0 +1,32 @@
+table: tables/outturns
+description: Realized values per series and target period. Partitioned by source.
+columns:
+- name: source
+  type: string
+  unit: ''
+  description: OBR | CBO
+- name: series_id
+  type: string
+  unit: ''
+  description: see tables/series
+- name: target_period
+  type: string
+  unit: ''
+  description: see tables/forecasts
+- name: value_latest
+  type: float
+  unit: series.unit_harmonized
+  description: 'latest outturn as published at retrieval (OBR: ''Outturn data'' row, as available at the
+    last forecast)'
+- name: value_first_estimate
+  type: float
+  unit: series.unit_harmonized
+  description: first published estimate after the period ended (D4; filled in E4)
+- name: first_estimate_vintage_id
+  type: string
+  unit: ''
+  description: vintage the first estimate is taken from (E4)
+- name: origin
+  type: string
+  unit: ''
+  description: file, sheet and cell of value_latest

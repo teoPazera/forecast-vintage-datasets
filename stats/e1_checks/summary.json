@@ -1,0 +1,54 @@
+{
+  "sheets": 114,
+  "series": 114,
+  "vintages": 109,
+  "forecast_cells": 26423,
+  "outturn_cells": 1854,
+  "cells_by_role": {
+    "future": 18248,
+    "past": 4297,
+    "in_progress": 3878
+  },
+  "cells_by_forecaster": {
+    "OBR": 23866,
+    "HM Treasury": 2557
+  },
+  "sheets_label_count_mismatch": [],
+  "non_numeric_cells": 21,
+  "chart_copy_cells_compared": 2494,
+  "chart_copy_cells_over_0.05": 14,
+  "chart_copy_share_within_0.05": 0.994,
+  "residual_share_of_parent": {
+    "Alcohol": {
+      "count": 232.0,
+      "50%": 0.0,
+      "max": 0.0
+    },
+    "IT": {
+      "count": 232.0,
+      "50%": 0.0101,
+      "max": 0.0231
+    },
+    "Total welfare": {
+      "count": 168.0,
+      "50%": 0.0,
+      "max": 0.0004
+    },
+    "\u00a3PSCR": {
+      "count": 232.0,
+      "50%": 0.1067,
+      "max": 0.1456
+    },
+    "\u00a3TME": {
+      "count": 232.0,
+      "50%": 0.0306,
+      "max": 0.1669
+    }
+  },
+  "residual_jumps_over_1pct": 88,
+  "residual_jumps_by_parent": {
+    "IT": 15,
+    "\u00a3PSCR": 35,
+    "\u00a3TME": 38
+  }
+}

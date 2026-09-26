@@ -1,0 +1,40 @@
+table: tables/vintages
+description: One row per vintage (publication of a full set of forecasts). Partitioned by source.
+columns:
+- name: source
+  type: string
+  unit: ''
+  description: OBR | CBO
+- name: vintage_id
+  type: string
+  unit: ''
+  description: obr_YYYY-MM[_memo], hmt_YYYY-MM, cbo_YYYY-MM
+- name: label
+  type: string
+  unit: ''
+  description: label as the source writes it
+- name: publication_date
+  type: date
+  unit: ''
+  description: publication day; last day of the month when month-only (D5)
+- name: date_certainty
+  type: string
+  unit: ''
+  description: exact | month_only | upper_bound (publication no later than this date) | assumed | unknown
+- name: date_basis
+  type: string
+  unit: ''
+  description: where the date comes from
+- name: forecaster
+  type: string
+  unit: ''
+  description: OBR | HM Treasury | CBO
+- name: flags
+  type: string
+  unit: ''
+  description: 'semicolon list: memo:<type> (D14), hmt (D11), june2010_budget_assumed, spring, winter,
+    no_season_flag'
+- name: primary_document_id
+  type: string
+  unit: ''
+  description: doc_id of the vintage's main report (inventory/documents)
