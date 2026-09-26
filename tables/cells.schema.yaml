@@ -1,0 +1,138 @@
+table: tables/cells
+description: 'Harmonized cell table (plan E4): every forecast cell with its previous vintage, revision,
+  outturns, raw and policy-adjusted errors and flags. Partitioned by source.'
+columns:
+- name: source
+  type: string
+  unit: ''
+  description: OBR | CBO
+- name: series_id
+  type: string
+  unit: ''
+  description: see tables/series
+- name: target_period
+  type: string
+  unit: ''
+  description: see tables/forecasts
+- name: vintage_id
+  type: string
+  unit: ''
+  description: see tables/vintages
+- name: publication_date
+  type: date
+  unit: ''
+  description: vintage publication date
+- name: forecaster
+  type: string
+  unit: ''
+  description: OBR | HM Treasury | CBO
+- name: cell_role
+  type: string
+  unit: ''
+  description: past | in_progress | future
+- name: horizon_months
+  type: float
+  unit: months
+  description: publication date to end of target period
+- name: value
+  type: float
+  unit: series.unit_harmonized
+  description: forecast F_v
+- name: in_revision_chain
+  type: boolean
+  unit: ''
+  description: false for memo vintages (D14), which are kept but not chained
+- name: prev_vintage_id
+  type: string
+  unit: ''
+  description: previous vintage in the chain for the same series and target
+- name: prev_value
+  type: float
+  unit: series.unit_harmonized
+  description: F_prev(v)
+- name: revision
+  type: float
+  unit: series.unit_harmonized
+  description: r_v = F_v - F_prev(v); positive = forecast raised
+- name: log_revision
+  type: float
+  unit: log points
+  description: log(F_v / F_prev(v)); level series with both values > 0 only
+- name: prev_forecaster_differs
+  type: boolean
+  unit: ''
+  description: the previous vintage was made by another forecaster (HM Treasury -> OBR in 2010)
+- name: outturn_latest
+  type: float
+  unit: series.unit_harmonized
+  description: latest outturn (D1 primary)
+- name: outturn_first
+  type: float
+  unit: series.unit_harmonized
+  description: first estimate (D4)
+- name: error_latest
+  type: float
+  unit: series.unit_harmonized
+  description: e = F_v - outturn_latest; positive = over-forecast
+- name: error_first
+  type: float
+  unit: series.unit_harmonized
+  description: F_v - outturn_first
+- name: log_error_latest
+  type: float
+  unit: log points
+  description: log(F_v / outturn_latest); level series only
+- name: log_error_first
+  type: float
+  unit: log points
+  description: log(F_v / outturn_first); level series only
+- name: policy_effect_after
+  type: float
+  unit: series.unit_harmonized
+  description: 'effect of policy announced after the vintage, in the series convention (CBO: legislative
+    changes; OBR aggregates: FRD policy and classification; OBR components: PMD direct effects); empty
+    when not available'
+- name: policy_adjustment_basis
+  type: string
+  unit: ''
+  description: which source the policy effect comes from
+- name: value_policy_adjusted
+  type: float
+  unit: series.unit_harmonized
+  description: F_v + policy_effect_after
+- name: error_latest_pa
+  type: float
+  unit: series.unit_harmonized
+  description: policy-adjusted error vs latest outturn (CBO's definition)
+- name: error_first_pa
+  type: float
+  unit: series.unit_harmonized
+  description: policy-adjusted error vs first estimate
+- name: log_error_latest_pa
+  type: float
+  unit: log points
+  description: log of policy-adjusted forecast over latest outturn
+- name: log_error_first_pa
+  type: float
+  unit: log points
+  description: log of policy-adjusted forecast over first estimate
+- name: z
+  type: float
+  unit: ''
+  description: normalized error (E6); empty until E6
+- name: classification_break
+  type: boolean
+  unit: ''
+  description: trajectory flagged for a classification break (E4 task 4)
+- name: memo_vintage
+  type: boolean
+  unit: ''
+  description: memo or supplementary vintage (D14)
+- name: episode
+  type: string
+  unit: ''
+  description: 'episode window of the target period (D8): gfc | covid | energy | empty'
+- name: origin
+  type: string
+  unit: ''
+  description: file, sheet and cell of the forecast value

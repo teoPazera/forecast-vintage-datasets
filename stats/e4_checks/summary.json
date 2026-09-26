@@ -1,0 +1,54 @@
+{
+  "OBR": {
+    "cells": 26423,
+    "cells_in_revision_chain": 26209,
+    "cells_with_revision": 23593,
+    "cells_with_outturn": 21007,
+    "cells_with_first_estimate": 20578,
+    "cells_policy_adjusted": 9744,
+    "identity_cells_checked": 20797,
+    "identity_max_abs_diff": 5.684341886080802e-14,
+    "classification_break_candidates": 208,
+    "classification_breaks_flagged": 7,
+    "episode_cells": {
+      "": 21592,
+      "covid": 2840,
+      "energy": 1378,
+      "gfc": 613
+    },
+    "flag_shares": {
+      "classification_break": 0.0041,
+      "memo_vintage": 0.0081,
+      "episode": 0.1828
+    }
+  },
+  "CBO": {
+    "cells": 20342,
+    "cells_in_revision_chain": 20342,
+    "cells_with_revision": 19321,
+    "cells_with_outturn": 17979,
+    "cells_with_first_estimate": 7634,
+    "cells_policy_adjusted": 20342,
+    "identity_cells_checked": 17979,
+    "identity_max_abs_diff": 9.094947017729282e-13,
+    "classification_break_candidates": 15,
+    "classification_breaks_flagged": 0,
+    "episode_cells": {
+      "": 18549,
+      "gfc": 635,
+      "covid": 599,
+      "energy": 559
+    },
+    "flag_shares": {
+      "classification_break": 0.0,
+      "memo_vintage": 0.0,
+      "episode": 0.0881
+    },
+    "cbo_adjusted_errors_vs_cbo": {
+      "rows": 8722,
+      "within_0.01": 8722,
+      "missing": 0,
+      "max_abs_diff": 4.547473508864641e-12
+    }
+  }
+}
