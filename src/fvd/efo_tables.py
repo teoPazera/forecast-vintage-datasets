@@ -34,6 +34,53 @@ def chart_table_documents() -> pd.DataFrame:
     return pd.concat(keep)
 
 
+def _is_chart_workbook(path: Path) -> bool:
+    """A charts-and-tables workbook: opens, and has several sheets titled 'Table ...'
+    or 'Chart ...' in their first cells."""
+    try:
+        sheets = workbook_sheets(path)
+    except Exception:
+        return False
+    titled = sum(bool(re.search(r"\b(table|chart)\s+[a-z]?\.?\d+(\.\d+)?", first_text(rows).lower()))
+                 for name, rows in sheets)
+    return titled >= 5
+
+
+def _part_key(text: str) -> str:
+    """Which part of an EFO a workbook covers: 'chapter 3', 'annex a', 'fiscal',
+    'economy', or '' for a single workbook."""
+    t = text.lower().replace("_", " ").replace("-", " ")
+    t = re.sub(r"economic (and )?fiscal outlook", " ", t)
+    m = re.search(r"chapters? (\d+)|annex (?:tables|[a-z]\b)|\b(fiscal|economy)\b", t)
+    return re.sub(r"\s+", " ", m.group(0)) if m else ""
+
+
+def _recover(r) -> Path | None:
+    """The source link was never archived: look for the same workbook archived
+    under another URL on obr.uk or the OBR's former domains (verified by content)."""
+    from .http import fetch_capture
+    from .obr_web import spreadsheet_candidates
+
+    month, year = r.vintage_label.split()
+    want = _part_key(r.title)
+    cands = spreadsheet_candidates(month, int(year), ("chart",),
+                                   ("supplementary", "devolved", "welsh", "scottish", "long-term",
+                                    "data-sources", "data_sources", "fan", "fiscal-sustainability",
+                                    "fsr", "fer", "evaluation", "welfare"))
+    # the candidate must be the same part of the EFO (same chapter, annex or half)
+    cands = [c for c in cands if _part_key(c["original"].rsplit("/", 1)[-1]) == want]
+    for c in cands[:6]:
+        try:
+            p = fetch_capture(r.url, c["original"], DEST / r.vintage_label.replace(" ", "_"),
+                              note=f"EFO tables: {r.title}; source link not archived",
+                              verify=_is_chart_workbook)
+        except FetchError:
+            continue
+        if p is not None:
+            return p
+    return None
+
+
 def download() -> pd.DataFrame:
     """Fetch every charts-and-tables file; unzip zips. Returns doc rows with local paths."""
     mark_challenged("obr.uk")
@@ -43,7 +90,11 @@ def download() -> pd.DataFrame:
         try:
             p = fetch(r.url, DEST / r.vintage_label.replace(" ", "_"), note=f"EFO tables: {r.title}")
         except FetchError as exc:
-            paths.append((r.doc_id, None, str(exc)))
+            p = _recover(r)
+            if p is None:
+                paths.append((r.doc_id, None, str(exc)))
+                continue
+            paths.append((r.doc_id, p, "alternate capture"))
             continue
         if sniff(p) == "zip":   # a real archive, not an .xlsx (which is also a zip)
             out = p.with_suffix("")
@@ -60,8 +111,12 @@ def download() -> pd.DataFrame:
 
 def workbook_sheets(path: Path) -> list[tuple[str, list[list]]]:
     """(sheet name, first 200 rows as lists) for .xlsx and .xls files."""
+    import io
+
     engine = "xlrd" if sniff(path) == "xls" else "openpyxl"
-    sheets = pd.read_excel(path, sheet_name=None, header=None, nrows=200, engine=engine)
+    # read from bytes: openpyxl refuses paths without a spreadsheet extension
+    sheets = pd.read_excel(io.BytesIO(path.read_bytes()), sheet_name=None, header=None,
+                           nrows=200, engine=engine)
     return [(name, df.where(pd.notna(df), None).values.tolist()) for name, df in sheets.items()]
 
 

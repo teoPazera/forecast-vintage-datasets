@@ -1,0 +1,45 @@
+{
+  "vintages_with_tables": 29,
+  "tables_by_kind": {
+    "other_tax": 236,
+    "receipts_by_head": 32,
+    "receipts_sources": 23,
+    "tax_drivers": 94
+  },
+  "tax_driver_tables_by_series": {
+    "obr.cgt": 2,
+    "obr.fuel": 1,
+    "obr.it_nics": 12,
+    "obr.nics": 2,
+    "obr.nonsa_it": 2,
+    "obr.nonsa_it_nics": 12,
+    "obr.onshore": 24,
+    "obr.ptt": 7,
+    "obr.sa_it": 10,
+    "obr.vat": 22
+  },
+  "level_cells_matched": 1505,
+  "level_cells_pass": 1438,
+  "level_share_pass": 0.9555,
+  "level_share_pass_by_which": {
+    "current": 0.9636,
+    "previous": 0.9482
+  },
+  "level_cells_unmatched": 0,
+  "sum_checks": 1039,
+  "sum_checks_pass": 956,
+  "sum_share_pass": 0.9201,
+  "sum_checks_pass_with_marked_groups_only": 890,
+  "efo_direct_effect_vs_pmd_cells": 151,
+  "efo_direct_effect_vs_pmd_within_0.1": 99,
+  "efo_direct_effect_vs_pmd_median_abs_diff": 0.01999999999999999,
+  "attribution_rows": 6221,
+  "attribution_labels": 527,
+  "attribution_labels_by_category": {
+    "modelling_other": 249,
+    "economic_determinants": 153,
+    "policy": 81,
+    "calibration_to_outturn": 41,
+    "classification_one_offs": 3
+  }
+}

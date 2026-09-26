@@ -123,6 +123,50 @@ def archived_pdfs() -> list[dict]:
     return _PDF_INDEX["all"]
 
 
+_SHEET_INDEX: dict[str, list[dict]] = {}
+
+
+def archived_spreadsheets() -> list[dict]:
+    """Wayback index of spreadsheets on obr.uk and the OBR's former domains (cached)."""
+    import json
+
+    from .http import wayback_captures
+
+    cache = RAW_WEB / "wayback_index_obr_spreadsheets.json"
+    if not _SHEET_INDEX:
+        if cache.exists():
+            _SHEET_INDEX["all"] = json.loads(cache.read_text())
+        else:
+            rows = []
+            # obr.uk/ as a whole is too large for one index query; files live under /docs/
+            for prefix in ("obr.uk/docs/",) + tuple(f"{h}/" for h in FORMER_HOSTS):
+                for mt in ("mimetype:application/vnd.ms-excel",
+                           "mimetype:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"):
+                    rows += wayback_captures(prefix, match="prefix", collapse="urlkey",
+                                             filter=[mt, "statuscode:200"])
+            cache.write_text(json.dumps(rows))
+            _SHEET_INDEX["all"] = rows
+    return _SHEET_INDEX["all"]
+
+
+def spreadsheet_candidates(month: str, year: int, words: tuple[str, ...],
+                           exclude: tuple[str, ...]) -> list[dict]:
+    """Archived spreadsheets whose file name names the month and year and a word."""
+    m_abbr = month[:3].lower()
+    out = []
+    for c in archived_spreadsheets():
+        name = c["original"].rsplit("/", 1)[-1].lower()
+        if not any(w in name for w in words) or any(x in name for x in exclude):
+            continue
+        if str(year) not in name and str(year)[2:] not in name:
+            continue
+        if month.lower() not in name and not re.search(rf"{m_abbr}(?![a-z])", name):
+            continue
+        out.append(c)
+    out.sort(key=lambda c: -int(c.get("length") or 0))
+    return out
+
+
 def report_candidates(month: str, year: int, words: tuple[str, ...],
                       exclude: tuple[str, ...], require_month: bool = True,
                       require_year: bool = True) -> list[dict]:

@@ -1,0 +1,1040 @@
+vintage_label,table,target_period,check,n_rows,stated_total,sum_rows,abs_diff,tolerance,nesting
+December 2012,T4.10,2012-13,all rows vs change,9,-2.3,-2.1000000000000005,0.1999999999999993,0.900000001,marked groups
+December 2012,T4.10,2013-14,all rows vs change,9,-7.0,-7.0,0.0,0.900000001,marked groups
+December 2012,T4.10,2014-15,all rows vs change,9,-13.6,-13.600000000000001,1.7763568394002505e-15,0.900000001,marked groups
+December 2012,T4.10,2015-16,all rows vs change,9,-16.9,-16.8,0.09999999999999787,0.900000001,marked groups
+December 2012,T4.10,2016-17,all rows vs change,9,-20.9,-21.0,0.10000000000000142,0.900000001,marked groups
+December 2012,T4.11,2012-13,all rows vs change,8,-0.9,-0.8999999999999999,1.1102230246251565e-16,0.800000001,marked groups
+December 2012,T4.11,2013-14,all rows vs change,8,-2.0,-2.1,0.10000000000000009,0.800000001,marked groups
+December 2012,T4.11,2014-15,all rows vs change,8,-2.8,-2.9,0.10000000000000009,0.800000001,marked groups
+December 2012,T4.11,2015-16,all rows vs change,8,-3.7,-3.6,0.10000000000000009,0.800000001,marked groups
+December 2012,T4.11,2016-17,all rows vs change,8,-4.6,-4.7,0.10000000000000053,0.800000001,marked groups
+December 2012,T4.12,2012-13,all rows vs change,7,-2.1,-2.1,0.0,0.700000001,marked groups
+December 2012,T4.12,2013-14,all rows vs change,7,-3.0,-3.1,0.10000000000000009,0.700000001,marked groups
+December 2012,T4.12,2014-15,all rows vs change,7,-4.5,-4.5,0.0,0.700000001,marked groups
+December 2012,T4.12,2015-16,all rows vs change,7,-5.7,-5.6,0.10000000000000053,0.700000001,marked groups
+December 2012,T4.12,2016-17,all rows vs change,7,-6.8,-6.8999999999999995,0.09999999999999964,0.700000001,marked groups
+December 2013,T4.10,2013-14,all rows vs change,6,2.9,2.8,0.10000000000000009,0.6000000010000001,marked groups
+December 2013,T4.10,2014-15,all rows vs change,6,2.6,2.5,0.10000000000000009,0.6000000010000001,marked groups
+December 2013,T4.10,2015-16,all rows vs change,6,2.5,2.3,0.20000000000000018,0.6000000010000001,marked groups
+December 2013,T4.10,2016-17,all rows vs change,6,2.5,2.5,0.0,0.6000000010000001,marked groups
+December 2013,T4.10,2017-18,all rows vs change,6,2.5,2.4000000000000004,0.09999999999999964,0.6000000010000001,marked groups
+December 2013,T4.11,2013-14,all rows vs change,6,1.2,1.0999999999999999,0.10000000000000009,0.6000000010000001,marked groups
+December 2013,T4.11,2014-15,all rows vs change,6,4.5,4.6,0.09999999999999964,0.6000000010000001,marked groups
+December 2013,T4.11,2015-16,all rows vs change,6,5.6,5.5,0.09999999999999964,0.6000000010000001,marked groups
+December 2013,T4.11,2016-17,all rows vs change,6,5.2,5.2,0.0,0.6000000010000001,marked groups
+December 2013,T4.11,2017-18,all rows vs change,6,4.7,4.7,0.0,0.6000000010000001,marked groups
+December 2013,T4.13,2013-14,all rows vs change,4,1.1,1.1,0.0,0.40000000100000005,marked groups
+December 2013,T4.13,2014-15,all rows vs change,4,2.5,2.5,0.0,0.40000000100000005,marked groups
+December 2013,T4.13,2015-16,all rows vs change,4,3.2,3.1999999999999997,4.440892098500626e-16,0.40000000100000005,marked groups
+December 2013,T4.13,2016-17,all rows vs change,4,3.4,3.4,0.0,0.40000000100000005,marked groups
+December 2013,T4.13,2017-18,all rows vs change,4,3.5,3.5,0.0,0.40000000100000005,marked groups
+December 2013,T4.7,2013-14,all rows vs change,10,6.4,6.3999999999999995,8.881784197001252e-16,1.000000001,inferred groups
+December 2013,T4.7,2014-15,all rows vs change,8,12.5,12.6,0.09999999999999964,0.800000001,inferred groups
+December 2013,T4.7,2015-16,all rows vs change,14,16.2,17.0,0.8000000000000007,1.4000000010000002,inferred groups
+December 2013,T4.7,2016-17,all rows vs change,7,17.2,17.3,0.10000000000000142,0.700000001,inferred groups
+December 2013,T4.7,2017-18,all rows vs change,7,18.8,18.799999999999997,3.552713678800501e-15,0.700000001,inferred groups
+December 2013,T4.9,2013-14,all rows vs change,12,1.0,1.0000000000000002,2.220446049250313e-16,1.2000000010000003,marked groups
+December 2013,T4.9,2014-15,all rows vs change,12,2.3,2.2,0.09999999999999964,1.2000000010000003,marked groups
+December 2013,T4.9,2015-16,all rows vs change,12,3.1,3.0000000000000004,0.09999999999999964,1.2000000010000003,marked groups
+December 2013,T4.9,2016-17,all rows vs change,12,1.7,1.5999999999999994,0.10000000000000053,1.2000000010000003,marked groups
+December 2013,T4.9,2017-18,all rows vs change,12,0.8,0.7000000000000002,0.09999999999999987,1.2000000010000003,marked groups
+July 2015,T4.10,2015-16,section 'Underlying OBR forecast changes' vs its total,5,0.2,0.19999999999999998,2.7755575615628914e-17,0.500000001,marked groups
+July 2015,T4.10,2015-16,section totals vs change,5,0.2,0.2,0.0,0.500000001,marked groups
+July 2015,T4.10,2016-17,section 'Underlying OBR forecast changes' vs its total,5,-0.6,-0.6,0.0,0.500000001,marked groups
+July 2015,T4.10,2016-17,section totals vs change,3,-0.2,-0.19999999999999998,2.7755575615628914e-17,0.30000000100000007,marked groups
+July 2015,T4.10,2017-18,section 'Underlying OBR forecast changes' vs its total,5,-0.8,-0.8,0.0,0.500000001,marked groups
+July 2015,T4.10,2017-18,section totals vs change,3,3.2,3.2,0.0,0.30000000100000007,marked groups
+July 2015,T4.10,2018-19,section 'Underlying OBR forecast changes' vs its total,5,-0.8,-0.7,0.10000000000000009,0.500000001,marked groups
+July 2015,T4.10,2018-19,section totals vs change,3,0.6,0.6,0.0,0.30000000100000007,marked groups
+July 2015,T4.10,2019-20,section 'Underlying OBR forecast changes' vs its total,5,-0.8,-0.9,0.09999999999999998,0.500000001,marked groups
+July 2015,T4.10,2019-20,section totals vs change,3,-2.6,-2.5,0.10000000000000009,0.30000000100000007,marked groups
+July 2015,T4.7,2015-16,section 'Underlying OBR forecast changes' vs its total,7,4.9,5.2,0.2999999999999998,0.700000001,inferred groups
+July 2015,T4.7,2015-16,section 'Effect of Government decisions' vs its total,2,0.6,0.6,0.0,0.200000001,marked groups
+July 2015,T4.7,2015-16,section totals vs change,2,5.5,5.5,0.0,0.200000001,marked groups
+July 2015,T4.7,2016-17,section 'Underlying OBR forecast changes' vs its total,10,3.7,3.7,0.0,1.000000001,inferred groups
+July 2015,T4.7,2016-17,section 'Effect of Government decisions' vs its total,2,6.5,6.5,0.0,0.200000001,marked groups
+July 2015,T4.7,2016-17,section totals vs change,2,10.3,10.2,0.10000000000000142,0.200000001,marked groups
+July 2015,T4.7,2017-18,section 'Underlying OBR forecast changes' vs its total,6,4.0,3.8,0.20000000000000018,0.6000000010000001,inferred groups
+July 2015,T4.7,2017-18,section 'Effect of Government decisions' vs its total,2,8.5,8.5,0.0,0.200000001,marked groups
+July 2015,T4.7,2017-18,section totals vs change,2,12.6,12.5,0.09999999999999964,0.200000001,marked groups
+July 2015,T4.7,2018-19,section 'Underlying OBR forecast changes' vs its total,10,3.5,3.6000000000000005,0.10000000000000053,1.000000001,inferred groups
+July 2015,T4.7,2018-19,section 'Effect of Government decisions' vs its total,2,9.9,9.9,0.0,0.200000001,marked groups
+July 2015,T4.7,2018-19,section totals vs change,2,13.5,13.4,0.09999999999999964,0.200000001,marked groups
+July 2015,T4.7,2019-20,section 'Underlying OBR forecast changes' vs its total,11,3.1,2.9,0.20000000000000018,1.1000000010000002,inferred groups
+July 2015,T4.7,2019-20,section 'Effect of Government decisions' vs its total,2,6.9,6.9,0.0,0.200000001,marked groups
+July 2015,T4.7,2019-20,section totals vs change,2,10.0,10.0,0.0,0.200000001,marked groups
+July 2015,T4.8,2015-16,section totals vs change,17,1.4,3.1,1.7000000000000002,1.7000000010000003,marked groups
+July 2015,T4.8,2016-17,section totals vs change,3,4.7,4.7,0.0,0.30000000100000007,inferred groups
+July 2015,T4.8,2017-18,section totals vs change,3,2.0,2.0,0.0,0.30000000100000007,inferred groups
+July 2015,T4.8,2018-19,section totals vs change,7,5.0,4.6,0.40000000000000036,0.700000001,inferred groups
+July 2015,T4.8,2019-20,section totals vs change,15,4.9,6.1,1.1999999999999993,1.500000001,marked groups
+July 2015,T4.9,2015-16,section 'Underlying OBR forecast changes' vs its total,4,1.7,1.5999999999999999,0.10000000000000009,0.40000000100000005,marked groups
+July 2015,T4.9,2015-16,section totals vs change,3,1.6,1.5999999999999999,2.220446049250313e-16,0.30000000100000007,marked groups
+July 2015,T4.9,2016-17,section 'Underlying OBR forecast changes' vs its total,4,1.2,1.0999999999999999,0.10000000000000009,0.40000000100000005,marked groups
+July 2015,T4.9,2016-17,section totals vs change,3,1.5,1.5,0.0,0.30000000100000007,marked groups
+July 2015,T4.9,2017-18,section 'Underlying OBR forecast changes' vs its total,4,1.7,1.6,0.09999999999999987,0.40000000100000005,marked groups
+July 2015,T4.9,2017-18,section totals vs change,3,1.7,1.7,0.0,0.30000000100000007,marked groups
+July 2015,T4.9,2018-19,section 'Underlying OBR forecast changes' vs its total,4,1.5,1.5,0.0,0.40000000100000005,marked groups
+July 2015,T4.9,2018-19,section totals vs change,3,2.0,1.9,0.10000000000000009,0.30000000100000007,marked groups
+July 2015,T4.9,2019-20,section 'Underlying OBR forecast changes' vs its total,4,0.7,0.6,0.09999999999999998,0.40000000100000005,marked groups
+July 2015,T4.9,2019-20,section totals vs change,3,1.7,1.7,0.0,0.30000000100000007,marked groups
+March 2012,T4.11,2011-12,all rows vs change,7,0.9,0.8999999999999999,1.1102230246251565e-16,0.700000001,marked groups
+March 2012,T4.11,2012-13,all rows vs change,7,1.8,1.9,0.09999999999999987,0.700000001,marked groups
+March 2012,T4.11,2013-14,all rows vs change,7,2.0,2.0,0.0,0.700000001,marked groups
+March 2012,T4.11,2014-15,all rows vs change,7,2.2,2.2,0.0,0.700000001,marked groups
+March 2012,T4.11,2015-16,all rows vs change,7,2.5,2.5,0.0,0.700000001,marked groups
+March 2012,T4.11,2016-17,all rows vs change,7,2.8,2.6,0.19999999999999973,0.700000001,marked groups
+March 2012,T4.12,2011-12,all rows vs change,7,-0.7,-0.5,0.19999999999999996,0.700000001,marked groups
+March 2012,T4.12,2012-13,all rows vs change,7,1.9,1.9,0.0,0.700000001,marked groups
+March 2012,T4.12,2013-14,all rows vs change,7,2.1,2.1,0.0,0.700000001,marked groups
+March 2012,T4.12,2014-15,all rows vs change,7,2.3,2.3,0.0,0.700000001,marked groups
+March 2012,T4.12,2015-16,all rows vs change,7,2.4,2.3,0.10000000000000009,0.700000001,marked groups
+March 2012,T4.12,2016-17,all rows vs change,7,2.5,2.4,0.10000000000000009,0.700000001,marked groups
+March 2013,T4.10,2012-13,all rows vs change,10,-3.8,-3.6999999999999997,0.10000000000000009,1.000000001,marked groups
+March 2013,T4.10,2013-14,all rows vs change,10,-8.1,-8.1,0.0,1.000000001,marked groups
+March 2013,T4.10,2014-15,all rows vs change,10,-9.0,-9.1,0.09999999999999964,1.000000001,marked groups
+March 2013,T4.10,2015-16,all rows vs change,10,-10.2,-10.2,0.0,1.000000001,marked groups
+March 2013,T4.10,2016-17,all rows vs change,10,-5.2,-5.1,0.10000000000000053,1.000000001,marked groups
+March 2013,T4.10,2017-18,all rows vs change,10,-5.8,-5.800000000000001,8.881784197001252e-16,1.000000001,marked groups
+March 2013,T4.11,2012-13,all rows vs change,6,-0.4,-0.4,0.0,0.6000000010000001,marked groups
+March 2013,T4.11,2013-14,all rows vs change,6,-0.8,-0.8,0.0,0.6000000010000001,marked groups
+March 2013,T4.11,2014-15,all rows vs change,6,-1.0,-0.8999999999999999,0.10000000000000009,0.6000000010000001,marked groups
+March 2013,T4.11,2015-16,all rows vs change,6,-1.3,-1.2,0.10000000000000009,0.6000000010000001,marked groups
+March 2013,T4.11,2016-17,all rows vs change,6,-1.6,-1.6,0.0,0.6000000010000001,marked groups
+March 2013,T4.11,2017-18,all rows vs change,6,-2.1,-2.1,0.0,0.6000000010000001,marked groups
+March 2013,T4.12,2012-13,all rows vs change,7,0.9,0.8999999999999999,1.1102230246251565e-16,0.700000001,marked groups
+March 2013,T4.12,2013-14,all rows vs change,7,0.3,0.19999999999999996,0.10000000000000003,0.700000001,marked groups
+March 2013,T4.12,2014-15,all rows vs change,7,-0.7,-0.8,0.10000000000000009,0.700000001,marked groups
+March 2013,T4.12,2015-16,all rows vs change,7,-2.0,-2.0,0.0,0.700000001,marked groups
+March 2013,T4.12,2016-17,all rows vs change,7,-3.1,-3.3,0.19999999999999973,0.700000001,marked groups
+March 2013,T4.12,2017-18,all rows vs change,7,-3.2,-3.3,0.09999999999999964,0.700000001,marked groups
+March 2014,T4.10,2013-14,all rows vs change,6,0.8,0.8,0.0,0.6000000010000001,marked groups
+March 2014,T4.10,2014-15,all rows vs change,6,0.6,0.7,0.09999999999999998,0.6000000010000001,marked groups
+March 2014,T4.10,2015-16,all rows vs change,6,0.5,0.7,0.19999999999999996,0.6000000010000001,marked groups
+March 2014,T4.10,2016-17,all rows vs change,6,0.4,0.3000000000000001,0.09999999999999992,0.6000000010000001,marked groups
+March 2014,T4.10,2017-18,all rows vs change,6,0.9,0.8999999999999999,1.1102230246251565e-16,0.6000000010000001,marked groups
+March 2014,T4.10,2018-19,all rows vs change,6,1.4,1.4,0.0,0.6000000010000001,marked groups
+March 2014,T4.7,2013-14,all rows vs change,32,1.1,2.0,0.8999999999999999,3.2000000010000003,marked groups
+March 2014,T4.7,2014-15,all rows vs change,32,2.0,4.0,2.0,3.2000000010000003,marked groups
+March 2014,T4.7,2015-16,all rows vs change,32,2.8,6.0,3.2,3.2000000010000003,marked groups
+March 2014,T4.7,2016-17,all rows vs change,11,2.9,2.8,0.10000000000000009,1.1000000010000002,inferred groups
+March 2014,T4.7,2017-18,all rows vs change,3,2.6,2.8000000000000003,0.20000000000000018,0.30000000100000007,inferred groups
+March 2014,T4.7,2018-19,all rows vs change,32,0.8,3.4000000000000004,2.6000000000000005,3.2000000010000003,marked groups
+March 2014,T4.8,2013-14,all rows vs change,11,0.6,0.6000000000000001,1.1102230246251565e-16,1.1000000010000002,marked groups
+March 2014,T4.8,2014-15,all rows vs change,11,0.0,-0.10000000000000006,0.10000000000000006,1.1000000010000002,marked groups
+March 2014,T4.8,2015-16,all rows vs change,11,0.4,0.6,0.19999999999999996,1.1000000010000002,marked groups
+March 2014,T4.8,2016-17,all rows vs change,11,1.4,1.2,0.19999999999999996,1.1000000010000002,marked groups
+March 2014,T4.8,2017-18,all rows vs change,11,1.6,1.5,0.10000000000000009,1.1000000010000002,marked groups
+March 2014,T4.8,2018-19,all rows vs change,11,0.3,0.30000000000000004,5.551115123125783e-17,1.1000000010000002,marked groups
+March 2014,T4.9,2013-14,all rows vs change,5,0.3,0.2,0.09999999999999998,0.500000001,marked groups
+March 2014,T4.9,2014-15,all rows vs change,5,0.9,1.0,0.09999999999999998,0.500000001,marked groups
+March 2014,T4.9,2015-16,all rows vs change,5,1.3,1.4,0.09999999999999987,0.500000001,marked groups
+March 2014,T4.9,2016-17,all rows vs change,5,1.5,1.6,0.10000000000000009,0.500000001,marked groups
+March 2014,T4.9,2017-18,all rows vs change,5,1.5,1.6,0.10000000000000009,0.500000001,marked groups
+March 2014,T4.9,2018-19,all rows vs change,5,1.6,1.7,0.09999999999999987,0.500000001,marked groups
+March 2015,T4.10,2014-15,all rows vs change,6,1.0,1.0,0.0,0.6000000010000001,marked groups
+March 2015,T4.10,2015-16,all rows vs change,6,0.8,0.7000000000000001,0.09999999999999998,0.6000000010000001,marked groups
+March 2015,T4.10,2016-17,all rows vs change,6,1.2,1.2,0.0,0.6000000010000001,marked groups
+March 2015,T4.10,2017-18,all rows vs change,6,1.4,1.4,0.0,0.6000000010000001,marked groups
+March 2015,T4.10,2018-19,all rows vs change,6,1.6,1.6,0.0,0.6000000010000001,marked groups
+March 2015,T4.10,2019-20,all rows vs change,6,2.1,2.0,0.10000000000000009,0.6000000010000001,marked groups
+March 2015,T4.7,2014-15,section 'Underlying OBR forecast changes' vs its total,31,1.1,2.2,1.1,3.100000001,marked groups
+March 2015,T4.7,2014-15,section totals vs change,2,1.1,1.1,0.0,0.200000001,marked groups
+March 2015,T4.7,2015-16,section 'Underlying OBR forecast changes' vs its total,31,-3.3,-6.3,3.0,3.100000001,marked groups
+March 2015,T4.7,2015-16,section totals vs change,2,-2.9,-2.8,0.10000000000000009,0.200000001,marked groups
+March 2015,T4.7,2016-17,section 'Underlying OBR forecast changes' vs its total,8,-4.9,-4.3999999999999995,0.5000000000000009,0.800000001,inferred groups
+March 2015,T4.7,2016-17,section totals vs change,2,-4.9,-4.9,0.0,0.200000001,marked groups
+March 2015,T4.7,2017-18,section 'Underlying OBR forecast changes' vs its total,9,-5.8,-5.6000000000000005,0.1999999999999993,0.900000001,inferred groups
+March 2015,T4.7,2017-18,section totals vs change,2,-5.5,-5.6,0.09999999999999964,0.200000001,marked groups
+March 2015,T4.7,2018-19,section 'Underlying OBR forecast changes' vs its total,31,-4.0,-7.0,3.0,3.100000001,marked groups
+March 2015,T4.7,2018-19,section totals vs change,2,-4.9,-4.9,0.0,0.200000001,marked groups
+March 2015,T4.7,2019-20,section 'Underlying OBR forecast changes' vs its total,31,1.9,4.8,2.9,3.100000001,marked groups
+March 2015,T4.7,2019-20,section totals vs change,2,1.3,1.2999999999999998,2.220446049250313e-16,0.200000001,marked groups
+March 2015,T4.8,2014-15,all rows vs change,9,-0.6,-0.4999999999999999,0.10000000000000009,0.900000001,marked groups
+March 2015,T4.8,2015-16,all rows vs change,9,0.1,0.20000000000000012,0.10000000000000012,0.900000001,marked groups
+March 2015,T4.8,2016-17,all rows vs change,9,2.0,2.0,0.0,0.900000001,marked groups
+March 2015,T4.8,2017-18,all rows vs change,9,2.2,2.2,0.0,0.900000001,marked groups
+March 2015,T4.8,2018-19,all rows vs change,9,1.9,2.1,0.20000000000000018,0.900000001,marked groups
+March 2015,T4.8,2019-20,all rows vs change,9,5.1,5.1,0.0,0.900000001,marked groups
+March 2015,T4.9,2014-15,all rows vs change,6,0.7,0.7,0.0,0.6000000010000001,marked groups
+March 2015,T4.9,2015-16,all rows vs change,6,0.2,0.30000000000000004,0.10000000000000003,0.6000000010000001,marked groups
+March 2015,T4.9,2016-17,all rows vs change,6,0.1,0.10000000000000012,1.1102230246251565e-16,0.6000000010000001,marked groups
+March 2015,T4.9,2017-18,all rows vs change,6,-0.2,-0.19999999999999987,1.3877787807814457e-16,0.6000000010000001,marked groups
+March 2015,T4.9,2018-19,all rows vs change,6,0.1,0.1999999999999999,0.0999999999999999,0.6000000010000001,marked groups
+March 2015,T4.9,2019-20,all rows vs change,6,1.0,0.8999999999999999,0.10000000000000009,0.6000000010000001,marked groups
+March 2016,T4.10,2015-16,section totals vs change,17,-1.7,-3.3,1.5999999999999999,1.7000000010000003,marked groups
+March 2016,T4.10,2016-17,section totals vs change,5,-5.3,-5.5,0.20000000000000018,0.500000001,inferred groups
+March 2016,T4.10,2017-18,section totals vs change,17,-8.3,-15.2,6.899999999999999,1.7000000010000003,marked groups
+March 2016,T4.10,2018-19,section totals vs change,17,-10.5,-19.3,8.8,1.7000000010000003,marked groups
+March 2016,T4.10,2019-20,section totals vs change,6,-13.1,-13.1,0.0,0.6000000010000001,inferred groups
+March 2016,T4.10,2020-21,section totals vs change,6,-17.0,-17.099999999999998,0.09999999999999787,0.6000000010000001,inferred groups
+March 2016,T4.11,2015-16,section 'Underlying OBR forecast changes' vs its total,4,0.2,0.19999999999999998,2.7755575615628914e-17,0.40000000100000005,marked groups
+March 2016,T4.11,2015-16,section totals vs change,3,0.2,0.2,0.0,0.30000000100000007,marked groups
+March 2016,T4.11,2016-17,section 'Underlying OBR forecast changes' vs its total,4,-0.2,-0.2,0.0,0.40000000100000005,marked groups
+March 2016,T4.11,2016-17,section totals vs change,3,0.0,-0.1,0.1,0.30000000100000007,marked groups
+March 2016,T4.11,2017-18,section 'Underlying OBR forecast changes' vs its total,4,-0.4,-0.5000000000000001,0.10000000000000009,0.40000000100000005,marked groups
+March 2016,T4.11,2017-18,section totals vs change,3,-0.1,0.0,0.1,0.30000000100000007,marked groups
+March 2016,T4.11,2018-19,section 'Underlying OBR forecast changes' vs its total,4,-0.5,-0.5,0.0,0.40000000100000005,marked groups
+March 2016,T4.11,2018-19,section totals vs change,3,0.1,0.2,0.1,0.30000000100000007,marked groups
+March 2016,T4.11,2019-20,section 'Underlying OBR forecast changes' vs its total,4,-0.7,-0.6999999999999998,1.1102230246251565e-16,0.40000000100000005,marked groups
+March 2016,T4.11,2019-20,section totals vs change,3,0.0,5.551115123125783e-17,5.551115123125783e-17,0.30000000100000007,marked groups
+March 2016,T4.11,2020-21,section 'Underlying OBR forecast changes' vs its total,4,-1.0,-1.0,0.0,0.40000000100000005,marked groups
+March 2016,T4.11,2020-21,section totals vs change,3,-0.3,-0.3,0.0,0.30000000100000007,marked groups
+March 2016,T4.12,2015-16,section 'Underlying OBR forecast changes' vs its total,6,0.3,0.30000000000000004,5.551115123125783e-17,0.6000000010000001,marked groups
+March 2016,T4.12,2015-16,section totals vs change,3,0.2,0.3,0.09999999999999998,0.30000000100000007,marked groups
+March 2016,T4.12,2016-17,section 'Underlying OBR forecast changes' vs its total,6,-1.3,-1.2,0.10000000000000009,0.6000000010000001,marked groups
+March 2016,T4.12,2016-17,section totals vs change,3,-0.8,-0.8,0.0,0.30000000100000007,marked groups
+March 2016,T4.12,2017-18,section 'Underlying OBR forecast changes' vs its total,6,-0.2,-0.30000000000000004,0.10000000000000003,0.6000000010000001,marked groups
+March 2016,T4.12,2017-18,section totals vs change,3,-3.3,-3.3000000000000003,4.440892098500626e-16,0.30000000100000007,marked groups
+March 2016,T4.12,2018-19,section 'Underlying OBR forecast changes' vs its total,6,-0.9,-0.9,0.0,0.6000000010000001,marked groups
+March 2016,T4.12,2018-19,section totals vs change,3,-1.3,-1.4,0.09999999999999987,0.30000000100000007,marked groups
+March 2016,T4.12,2019-20,section 'Underlying OBR forecast changes' vs its total,6,-0.2,-0.3,0.09999999999999998,0.6000000010000001,marked groups
+March 2016,T4.12,2019-20,section totals vs change,3,8.0,8.100000000000001,0.10000000000000142,0.30000000100000007,marked groups
+March 2016,T4.12,2020-21,section 'Underlying OBR forecast changes' vs its total,6,-0.4,-0.39999999999999986,1.6653345369377348e-16,0.6000000010000001,marked groups
+March 2016,T4.12,2020-21,section totals vs change,3,4.3,4.3,0.0,0.30000000100000007,marked groups
+March 2016,T4.8,2015-16,section 'Underlying OBR forecast changes' vs its total,23,-0.4,-1.1,0.7000000000000001,2.3000000010000003,marked groups
+March 2016,T4.8,2015-16,section 'Effect of Government decisions' vs its total,2,0.0,0.0,0.0,0.200000001,marked groups
+March 2016,T4.8,2015-16,section totals vs change,2,-0.4,-0.4,0.0,0.200000001,marked groups
+March 2016,T4.8,2016-17,section 'Underlying OBR forecast changes' vs its total,5,-8.2,-7.7,0.4999999999999991,0.500000001,inferred groups
+March 2016,T4.8,2016-17,section 'Effect of Government decisions' vs its total,2,1.3,1.2999999999999998,2.220446049250313e-16,0.200000001,marked groups
+March 2016,T4.8,2016-17,section totals vs change,2,-6.9,-6.8999999999999995,8.881784197001252e-16,0.200000001,marked groups
+March 2016,T4.8,2017-18,section 'Underlying OBR forecast changes' vs its total,7,-10.5,-10.3,0.1999999999999993,0.700000001,inferred groups
+March 2016,T4.8,2017-18,section 'Effect of Government decisions' vs its total,2,-6.4,-6.4,0.0,0.200000001,marked groups
+March 2016,T4.8,2017-18,section totals vs change,2,-16.9,-16.9,0.0,0.200000001,marked groups
+March 2016,T4.8,2018-19,section 'Underlying OBR forecast changes' vs its total,11,-14.0,-14.6,0.5999999999999996,1.1000000010000002,inferred groups
+March 2016,T4.8,2018-19,section 'Effect of Government decisions' vs its total,2,-3.0,-3.0,0.0,0.200000001,marked groups
+March 2016,T4.8,2018-19,section totals vs change,2,-17.0,-17.0,0.0,0.200000001,marked groups
+March 2016,T4.8,2019-20,section 'Underlying OBR forecast changes' vs its total,9,-16.3,-16.5,0.1999999999999993,0.900000001,inferred groups
+March 2016,T4.8,2019-20,section 'Effect of Government decisions' vs its total,2,6.1,6.1,0.0,0.200000001,marked groups
+March 2016,T4.8,2019-20,section totals vs change,2,-10.2,-10.200000000000001,1.7763568394002505e-15,0.200000001,marked groups
+March 2016,T4.8,2020-21,section 'Underlying OBR forecast changes' vs its total,7,-19.5,-19.5,0.0,0.700000001,inferred groups
+March 2016,T4.8,2020-21,section 'Effect of Government decisions' vs its total,2,-0.2,-0.30000000000000004,0.10000000000000003,0.200000001,marked groups
+March 2016,T4.8,2020-21,section totals vs change,2,-19.8,-19.7,0.10000000000000142,0.200000001,marked groups
+March 2017,T4.10,2016-17,section 'Underlying OBR forecast changes' vs its total,4,0.6605134008762406,0.6605134008762406,0.0,0.40000000100000005,marked groups
+March 2017,T4.10,2016-17,section totals vs change,3,0.6605134008762406,0.6605134008762406,0.0,0.30000000100000007,marked groups
+March 2017,T4.10,2017-18,section 'Underlying OBR forecast changes' vs its total,4,0.6468222003313979,0.6468222003313979,0.0,0.40000000100000005,marked groups
+March 2017,T4.10,2017-18,section totals vs change,3,0.7799421998398373,0.7799421998398373,0.0,0.30000000100000007,marked groups
+March 2017,T4.10,2018-19,section 'Underlying OBR forecast changes' vs its total,4,0.6137869302585388,0.6137869302585388,0.0,0.40000000100000005,marked groups
+March 2017,T4.10,2018-19,section totals vs change,3,0.8214771604348243,0.8214771604348243,0.0,0.30000000100000007,marked groups
+March 2017,T4.10,2019-20,section 'Underlying OBR forecast changes' vs its total,4,-0.06196567217391322,-0.06196567217391322,0.0,0.40000000100000005,marked groups
+March 2017,T4.10,2019-20,section totals vs change,3,0.1301043663945336,0.1301043663945336,0.0,0.30000000100000007,marked groups
+March 2017,T4.10,2020-21,section 'Underlying OBR forecast changes' vs its total,4,-0.6548533701310177,-0.6548533701310177,0.0,0.40000000100000005,marked groups
+March 2017,T4.10,2020-21,section totals vs change,3,-0.4785556359180134,-0.4785556359180134,0.0,0.30000000100000007,marked groups
+March 2017,T4.10,2021-22,section 'Underlying OBR forecast changes' vs its total,4,-1.0542272727100295,-1.0542272727100295,0.0,0.40000000100000005,marked groups
+March 2017,T4.10,2021-22,section totals vs change,3,-0.8717488063223584,-0.8717488063223585,1.1102230246251565e-16,0.30000000100000007,marked groups
+March 2017,T4.12,2016-17,section 'Underlying OBR forecast changes' vs its total,5,4.395032735801948,4.395032735801948,0.0,0.500000001,marked groups
+March 2017,T4.12,2016-17,section totals vs change,2,4.395032735801948,4.395032735801948,0.0,0.200000001,marked groups
+March 2017,T4.12,2017-18,section 'Underlying OBR forecast changes' vs its total,5,2.8130373927960823,2.8130373927960823,0.0,0.500000001,marked groups
+March 2017,T4.12,2017-18,section totals vs change,2,2.876410425804856,2.876410425804856,0.0,0.200000001,marked groups
+March 2017,T4.12,2018-19,section 'Underlying OBR forecast changes' vs its total,5,2.515431303915451,2.515431303915451,0.0,0.500000001,marked groups
+March 2017,T4.12,2018-19,section totals vs change,2,2.549333353288766,2.549333353288766,0.0,0.200000001,marked groups
+March 2017,T4.12,2019-20,section 'Underlying OBR forecast changes' vs its total,5,1.5187683527252422,1.518768352725242,2.220446049250313e-16,0.500000001,marked groups
+March 2017,T4.12,2019-20,section totals vs change,2,1.5450074767026152,1.5450074767026152,0.0,0.200000001,marked groups
+March 2017,T4.12,2020-21,section 'Underlying OBR forecast changes' vs its total,5,0.7433503848955803,0.7433503848955804,1.1102230246251565e-16,0.500000001,marked groups
+March 2017,T4.12,2020-21,section totals vs change,2,0.8206730888028204,0.8206730888028204,0.0,0.200000001,marked groups
+March 2017,T4.12,2021-22,section 'Underlying OBR forecast changes' vs its total,5,0.4503211428821927,0.45032114288219266,5.551115123125783e-17,0.500000001,marked groups
+March 2017,T4.12,2021-22,section totals vs change,2,0.5700851934317157,0.5700851934317157,0.0,0.200000001,marked groups
+March 2017,T4.8,2016-17,section 'Underlying OBR forecast changes' vs its total,9,7.45760334135625,7.5435625805032425,0.08595923914699277,0.900000001,inferred groups
+March 2017,T4.8,2016-17,section 'Effect of Government decisions' vs its total,3,1.3047479254463923e-05,1.3047479254463923e-05,0.0,0.30000000100000007,marked groups
+March 2017,T4.8,2016-17,section totals vs change,2,7.457616388835504,7.457616388835504,0.0,0.200000001,marked groups
+March 2017,T4.8,2017-18,section 'Underlying OBR forecast changes' vs its total,29,4.279413934099525,7.4514424126077845,3.1720284785082598,2.9000000010000004,marked groups
+March 2017,T4.8,2017-18,section 'Effect of Government decisions' vs its total,3,0.8678484498474842,0.8678484498474842,0.0,0.30000000100000007,marked groups
+March 2017,T4.8,2017-18,section totals vs change,2,5.147262383947009,5.147262383947009,0.0,0.200000001,marked groups
+March 2017,T4.8,2018-19,section 'Underlying OBR forecast changes' vs its total,6,4.625608809205949,4.40183554365004,0.22377326555590926,0.6000000010000001,inferred groups
+March 2017,T4.8,2018-19,section 'Effect of Government decisions' vs its total,3,1.55033020836762,1.55033020836762,0.0,0.30000000100000007,marked groups
+March 2017,T4.8,2018-19,section totals vs change,2,6.175939017573569,6.175939017573569,0.0,0.200000001,marked groups
+March 2017,T4.8,2019-20,section 'Underlying OBR forecast changes' vs its total,29,1.5480411014430375,1.8881858054419602,0.3401447039989227,2.9000000010000004,marked groups
+March 2017,T4.8,2019-20,section 'Effect of Government decisions' vs its total,3,2.31205875247971,2.31205875247971,0.0,0.30000000100000007,marked groups
+March 2017,T4.8,2019-20,section totals vs change,2,3.8600998539227476,3.8600998539227476,0.0,0.200000001,marked groups
+March 2017,T4.8,2020-21,section 'Underlying OBR forecast changes' vs its total,29,-1.5403364202937158,-4.2293402152409625,2.6890037949472467,2.9000000010000004,marked groups
+March 2017,T4.8,2020-21,section 'Effect of Government decisions' vs its total,3,2.2373169682128267,2.2373169682128267,0.0,0.30000000100000007,marked groups
+March 2017,T4.8,2020-21,section totals vs change,2,0.6969805479191109,0.6969805479191109,0.0,0.200000001,marked groups
+March 2017,T4.8,2021-22,section 'Underlying OBR forecast changes' vs its total,29,-2.4180432042090216,-5.8032031689033605,3.385159964694339,2.9000000010000004,marked groups
+March 2017,T4.8,2021-22,section 'Effect of Government decisions' vs its total,3,2.409810596244307,2.409810596244307,0.0,0.30000000100000007,marked groups
+March 2017,T4.8,2021-22,section totals vs change,2,-0.008232607964714589,-0.008232607964714589,0.0,0.200000001,marked groups
+March 2017,T4.9,2016-17,section totals vs change,8,1.6226768572146284,1.5319200694651764,0.09075678774945195,0.800000001,inferred groups
+March 2017,T4.9,2017-18,section totals vs change,13,0.7110710257831556,0.8547192308824113,0.1436482050992557,1.3000000010000001,marked groups
+March 2017,T4.9,2018-19,section totals vs change,13,1.673362683036487,2.7827446653103767,1.1093819822738897,1.3000000010000001,marked groups
+March 2017,T4.9,2019-20,section totals vs change,13,0.4843554656194442,-0.5397779193507553,1.0241333849701995,1.3000000010000001,marked groups
+March 2017,T4.9,2020-21,section totals vs change,13,-0.6162913948041933,-2.6732427273675414,2.056951332563348,1.3000000010000001,marked groups
+March 2017,T4.9,2021-22,section totals vs change,3,-1.5435558332559935,-1.543555833255993,4.440892098500626e-16,0.30000000100000007,inferred groups
+March 2018,T4.10,2017-18,section 'Underlying forecast changes' vs its total,7,2.9150256313306606,2.9150256313306606,0.0,0.700000001,marked groups
+March 2018,T4.10,2017-18,section totals vs change,1,2.9150256313306606,2.9150256313306606,0.0,0.100000001,marked groups
+March 2018,T4.10,2018-19,section 'Underlying forecast changes' vs its total,7,0.4658315303612319,0.465831530361232,5.551115123125783e-17,0.700000001,marked groups
+March 2018,T4.10,2018-19,section totals vs change,1,0.4658315303612319,0.4658315303612319,0.0,0.100000001,marked groups
+March 2018,T4.10,2019-20,section 'Underlying forecast changes' vs its total,7,0.9948831805702767,0.9948831805702767,0.0,0.700000001,marked groups
+March 2018,T4.10,2019-20,section totals vs change,1,0.9948831805702767,0.9948831805702767,0.0,0.100000001,marked groups
+March 2018,T4.10,2020-21,section 'Underlying forecast changes' vs its total,7,0.8839460694989967,0.8839460694989967,0.0,0.700000001,marked groups
+March 2018,T4.10,2020-21,section totals vs change,1,0.8839460694989967,0.8839460694989967,0.0,0.100000001,marked groups
+March 2018,T4.10,2021-22,section 'Underlying forecast changes' vs its total,7,1.338228565492308,1.338228565492308,0.0,0.700000001,marked groups
+March 2018,T4.10,2021-22,section totals vs change,1,1.338228565492308,1.338228565492308,0.0,0.100000001,marked groups
+March 2018,T4.10,2022-23,section 'Underlying forecast changes' vs its total,7,1.1056086518451238,1.1056086518451238,0.0,0.700000001,marked groups
+March 2018,T4.10,2022-23,section totals vs change,1,1.1056086518451238,1.1056086518451238,0.0,0.100000001,marked groups
+March 2018,T4.11,2017-18,section 'Underlying forecast changes' vs its total,4,-0.12630959502016026,-0.1263095950201603,2.7755575615628914e-17,0.40000000100000005,marked groups
+March 2018,T4.11,2017-18,section totals vs change,1,-0.12630959502016026,-0.12630959502016026,0.0,0.100000001,marked groups
+March 2018,T4.11,2018-19,section 'Underlying forecast changes' vs its total,4,0.14420677518469915,0.14420677518469915,0.0,0.40000000100000005,marked groups
+March 2018,T4.11,2018-19,section totals vs change,1,0.14420677518469915,0.14420677518469915,0.0,0.100000001,marked groups
+March 2018,T4.11,2019-20,section 'Underlying forecast changes' vs its total,4,0.29158619641333416,0.2915861964133341,5.551115123125783e-17,0.40000000100000005,marked groups
+March 2018,T4.11,2019-20,section totals vs change,1,0.29158619641333416,0.29158619641333416,0.0,0.100000001,marked groups
+March 2018,T4.11,2020-21,section 'Underlying forecast changes' vs its total,4,-0.05734719573356983,-0.05734719573356983,0.0,0.40000000100000005,marked groups
+March 2018,T4.11,2020-21,section totals vs change,1,-0.05734719573356983,-0.05734719573356983,0.0,0.100000001,marked groups
+March 2018,T4.11,2021-22,section 'Underlying forecast changes' vs its total,4,-0.2786119582497122,-0.2786119582497122,0.0,0.40000000100000005,marked groups
+March 2018,T4.11,2021-22,section totals vs change,1,-0.2786119582497122,-0.2786119582497122,0.0,0.100000001,marked groups
+March 2018,T4.11,2022-23,section 'Underlying forecast changes' vs its total,4,-0.3959602216049518,-0.3959602216049518,0.0,0.40000000100000005,marked groups
+March 2018,T4.11,2022-23,section totals vs change,1,-0.3959602216049518,-0.3959602216049518,0.0,0.100000001,marked groups
+March 2018,T4.12,2017-18,section 'Underlying forecast changes' vs its total,4,1.9192879932153843,1.9192879932153846,2.220446049250313e-16,0.40000000100000005,marked groups
+March 2018,T4.12,2017-18,section totals vs change,1,1.9192879932153843,1.9192879932153843,0.0,0.100000001,marked groups
+March 2018,T4.12,2018-19,section 'Underlying forecast changes' vs its total,4,1.086631258895224,1.086631258895224,0.0,0.40000000100000005,marked groups
+March 2018,T4.12,2018-19,section totals vs change,1,1.086631258895224,1.086631258895224,0.0,0.100000001,marked groups
+March 2018,T4.12,2019-20,section 'Underlying forecast changes' vs its total,4,1.942374633570381,1.942374633570381,0.0,0.40000000100000005,marked groups
+March 2018,T4.12,2019-20,section totals vs change,1,1.942374633570381,1.942374633570381,0.0,0.100000001,marked groups
+March 2018,T4.12,2020-21,section 'Underlying forecast changes' vs its total,4,1.2744385177556765,1.2744385177556765,0.0,0.40000000100000005,marked groups
+March 2018,T4.12,2020-21,section totals vs change,1,1.2744385177556765,1.2744385177556765,0.0,0.100000001,marked groups
+March 2018,T4.12,2021-22,section 'Underlying forecast changes' vs its total,4,1.199225733094785,1.199225733094785,0.0,0.40000000100000005,marked groups
+March 2018,T4.12,2021-22,section totals vs change,1,1.199225733094785,1.199225733094785,0.0,0.100000001,marked groups
+March 2018,T4.12,2022-23,section 'Underlying forecast changes' vs its total,4,1.1062079300591634,1.1062079300591634,0.0,0.40000000100000005,marked groups
+March 2018,T4.12,2022-23,section totals vs change,1,1.1062079300591634,1.1062079300591634,0.0,0.100000001,marked groups
+March 2018,T4.14,2017-18,section 'Underlying forecast changes' vs its total,5,-0.1113214449067943,-0.1113214449067943,0.0,0.500000001,marked groups
+March 2018,T4.14,2017-18,section totals vs change,1,-0.1113214449067943,-0.1113214449067943,0.0,0.100000001,marked groups
+March 2018,T4.14,2018-19,section 'Underlying forecast changes' vs its total,5,-0.26582412520114396,-0.26582412520114396,0.0,0.500000001,marked groups
+March 2018,T4.14,2018-19,section totals vs change,1,-0.26582412520114396,-0.26582412520114396,0.0,0.100000001,marked groups
+March 2018,T4.14,2019-20,section 'Underlying forecast changes' vs its total,5,-0.3421521350365424,-0.3421521350365424,0.0,0.500000001,marked groups
+March 2018,T4.14,2019-20,section totals vs change,1,-0.3421521350365424,-0.3421521350365424,0.0,0.100000001,marked groups
+March 2018,T4.14,2020-21,section 'Underlying forecast changes' vs its total,5,-0.4446577896352579,-0.4446577896352579,0.0,0.500000001,marked groups
+March 2018,T4.14,2020-21,section totals vs change,1,-0.4446577896352579,-0.4446577896352579,0.0,0.100000001,marked groups
+March 2018,T4.14,2021-22,section 'Underlying forecast changes' vs its total,5,-0.5708637601953548,-0.5708637601953548,0.0,0.500000001,marked groups
+March 2018,T4.14,2021-22,section totals vs change,1,-0.5708637601953548,-0.5708637601953548,0.0,0.100000001,marked groups
+March 2018,T4.14,2022-23,section 'Underlying forecast changes' vs its total,5,-0.6088294242361698,-0.6088294242361698,0.0,0.500000001,marked groups
+March 2018,T4.14,2022-23,section totals vs change,1,-0.6088294242361698,-0.6088294242361698,0.0,0.100000001,marked groups
+March 2018,T4.8,2017-18,section 'Underlying forecast changes' vs its total,6,6.770222691969038,6.784314657929217,0.014091965960179031,0.6000000010000001,inferred groups
+March 2018,T4.8,2017-18,section totals vs change,3,6.770622691969038,6.770622691969038,0.0,0.30000000100000007,marked groups
+March 2018,T4.8,2018-19,section 'Underlying forecast changes' vs its total,8,5.621594509059627,6.022463674788791,0.40086916572916387,0.800000001,inferred groups
+March 2018,T4.8,2018-19,section totals vs change,3,6.01290448309976,6.012904483099759,8.881784197001252e-16,0.30000000100000007,marked groups
+March 2018,T4.8,2019-20,section 'Underlying forecast changes' vs its total,12,7.226683385193964,7.398534553396434,0.17185116820246993,1.2000000010000003,inferred groups
+March 2018,T4.8,2019-20,section totals vs change,3,8.09525311802804,8.09525311802804,0.0,0.30000000100000007,marked groups
+March 2018,T4.8,2020-21,section 'Underlying forecast changes' vs its total,11,6.847290390186051,6.893110651323844,0.04582026113779314,1.1000000010000002,inferred groups
+March 2018,T4.8,2020-21,section totals vs change,3,7.737804719423025,7.737804719423025,0.0,0.30000000100000007,marked groups
+March 2018,T4.8,2021-22,section 'Underlying forecast changes' vs its total,9,4.897395189549893,5.530076342157253,0.6326811526073604,0.900000001,inferred groups
+March 2018,T4.8,2021-22,section totals vs change,3,5.818207501548159,5.818207501548159,0.0,0.30000000100000007,marked groups
+March 2018,T4.8,2022-23,section 'Underlying forecast changes' vs its total,8,4.4027835405888505,5.10097616229274,0.6981926217038898,0.800000001,inferred groups
+March 2018,T4.8,2022-23,section totals vs change,3,5.357173763801029,5.357173763801029,0.0,0.30000000100000007,marked groups
+March 2018,T4.9,2017-18,section totals vs change,4,2.7702112083104566,2.8148545307243005,0.04464332241384383,0.40000000100000005,marked groups
+March 2018,T4.9,2018-19,section totals vs change,4,5.415509317911415,5.145493704548753,0.2700156133626619,0.40000000100000005,marked groups
+March 2018,T4.9,2019-20,section totals vs change,4,5.296819773768618,5.0353512700980945,0.26146850367052377,0.40000000100000005,marked groups
+March 2018,T4.9,2020-21,section totals vs change,2,4.935459439491922,4.935459439491922,0.0,0.200000001,marked groups
+March 2018,T4.9,2021-22,section totals vs change,2,3.8202426192365238,3.8202426192365238,0.0,0.200000001,marked groups
+March 2018,T4.9,2022-23,section totals vs change,2,4.788270556331497,4.788270556331497,0.0,0.200000001,marked groups
+March 2019,T4.5,2018-19,section 'Underlying forecast changes' vs its total,29,1.7002738638902553,3.4194426611277122,1.719168797237457,2.9000000010000004,marked groups
+March 2019,T4.5,2018-19,section 'Effect of Government decisions' vs its total,2,0.01874971413977749,0.01874971413977749,0.0,0.200000001,marked groups
+March 2019,T4.5,2018-19,section totals vs change,2,1.7190235780300327,1.7190235780300327,0.0,0.200000001,marked groups
+March 2019,T4.5,2019-20,section 'Underlying forecast changes' vs its total,29,1.0085291899749613,2.6501974214014643,1.641668231426503,2.9000000010000004,marked groups
+March 2019,T4.5,2019-20,section 'Effect of Government decisions' vs its total,2,0.5507559074432217,0.5507559074432217,0.0,0.200000001,marked groups
+March 2019,T4.5,2019-20,section totals vs change,2,1.5592850974181829,1.5592850974181829,0.0,0.200000001,marked groups
+March 2019,T4.5,2020-21,section 'Underlying forecast changes' vs its total,9,2.547455223747881,2.6251655158496505,0.0777102921017696,0.900000001,inferred groups
+March 2019,T4.5,2020-21,section 'Effect of Government decisions' vs its total,2,1.0767792296525094,1.0767792296525094,0.0,0.200000001,marked groups
+March 2019,T4.5,2020-21,section totals vs change,2,3.6242344534003905,3.6242344534003905,0.0,0.200000001,marked groups
+March 2019,T4.5,2021-22,section 'Underlying forecast changes' vs its total,29,3.748915696390989,8.555364750549401,4.806449054158412,2.9000000010000004,marked groups
+March 2019,T4.5,2021-22,section 'Effect of Government decisions' vs its total,2,0.7339903034900518,0.7339903034900518,0.0,0.200000001,marked groups
+March 2019,T4.5,2021-22,section totals vs change,2,4.482905999881041,4.482905999881041,0.0,0.200000001,marked groups
+March 2019,T4.5,2022-23,section 'Underlying forecast changes' vs its total,29,4.9825850204613396,10.686710859916774,5.704125839455434,2.9000000010000004,marked groups
+March 2019,T4.5,2022-23,section 'Effect of Government decisions' vs its total,2,0.7327550144459454,0.7327550144459454,0.0,0.200000001,marked groups
+March 2019,T4.5,2022-23,section totals vs change,2,5.715340034907285,5.715340034907285,0.0,0.200000001,marked groups
+March 2019,T4.5,2023-24,section 'Underlying forecast changes' vs its total,5,5.184049734409049,5.65127798827621,0.4672282538671606,0.500000001,inferred groups
+March 2019,T4.5,2023-24,section 'Effect of Government decisions' vs its total,2,0.8129117644908013,0.8129117644908013,0.0,0.200000001,marked groups
+March 2019,T4.5,2023-24,section totals vs change,2,5.99696149889985,5.99696149889985,0.0,0.200000001,marked groups
+March 2019,T4.6,2018-19,section totals vs change,6,1.990029122052249,1.9131950731345573,0.07683404891769174,0.6000000010000001,marked groups
+March 2019,T4.6,2019-20,section totals vs change,2,3.132495637514978,3.132495637514978,0.0,0.200000001,marked groups
+March 2019,T4.6,2020-21,section totals vs change,2,4.852699840600565,4.852699840600565,0.0,0.200000001,marked groups
+March 2019,T4.6,2021-22,section totals vs change,2,5.581513781869148,5.581513781869148,0.0,0.200000001,marked groups
+March 2019,T4.6,2022-23,section totals vs change,6,5.234876999000733,5.296531856844117,0.06165485784338465,0.6000000010000001,marked groups
+March 2019,T4.6,2023-24,section totals vs change,2,4.318820246985638,4.318820246985638,0.0,0.200000001,marked groups
+March 2019,T4.7,2018-19,section 'Underlying forecast changes' vs its total,5,1.0143952469257338,1.0143952469257338,0.0,0.500000001,marked groups
+March 2019,T4.7,2018-19,section totals vs change,1,1.0085798138356523,1.0143952469257338,0.005815433090081479,0.100000001,marked groups
+March 2019,T4.7,2019-20,section 'Underlying forecast changes' vs its total,5,1.1169894828421858,1.1169894828421858,0.0,0.500000001,marked groups
+March 2019,T4.7,2019-20,section totals vs change,1,1.1127710811612346,1.1169894828421858,0.004218401680951223,0.100000001,marked groups
+March 2019,T4.7,2020-21,section 'Underlying forecast changes' vs its total,5,2.0016973915611223,2.0016973915611223,0.0,0.500000001,marked groups
+March 2019,T4.7,2020-21,section totals vs change,1,1.9988585079670997,2.0016973915611223,0.002838883594022512,0.100000001,marked groups
+March 2019,T4.7,2021-22,section 'Underlying forecast changes' vs its total,5,1.660598106561964,1.660598106561964,0.0,0.500000001,marked groups
+March 2019,T4.7,2021-22,section totals vs change,1,1.6584857385339902,1.660598106561964,0.0021123680279737655,0.100000001,marked groups
+March 2019,T4.7,2022-23,section 'Underlying forecast changes' vs its total,5,1.8220763043368793,1.8220763043368793,0.0,0.500000001,marked groups
+March 2019,T4.7,2022-23,section totals vs change,1,1.819963071642448,1.8220763043368793,0.0021132326944313107,0.100000001,marked groups
+March 2019,T4.7,2023-24,section 'Underlying forecast changes' vs its total,5,2.0307893203805083,2.0307893203805083,0.0,0.500000001,marked groups
+March 2019,T4.7,2023-24,section totals vs change,1,2.032541752387047,2.0307893203805083,0.00175243200653874,0.100000001,marked groups
+March 2019,T4.8,2018-19,section 'Underlying forecast changes' vs its total,3,-0.5141927005361708,-0.5141927005361707,1.1102230246251565e-16,0.30000000100000007,marked groups
+March 2019,T4.8,2018-19,section totals vs change,1,-0.5141927005361708,-0.5141927005361708,0.0,0.100000001,marked groups
+March 2019,T4.8,2019-20,section 'Underlying forecast changes' vs its total,3,-0.5687853666984211,-0.5687853666984212,1.1102230246251565e-16,0.30000000100000007,marked groups
+March 2019,T4.8,2019-20,section totals vs change,1,-0.5687853666984211,-0.5687853666984211,0.0,0.100000001,marked groups
+March 2019,T4.8,2020-21,section 'Underlying forecast changes' vs its total,3,-0.3858551156935448,-0.3858551156935448,0.0,0.30000000100000007,marked groups
+March 2019,T4.8,2020-21,section totals vs change,1,-0.3858551156935448,-0.3858551156935448,0.0,0.100000001,marked groups
+March 2019,T4.8,2021-22,section 'Underlying forecast changes' vs its total,3,-0.09207950163263945,-0.09207950163263945,0.0,0.30000000100000007,marked groups
+March 2019,T4.8,2021-22,section totals vs change,1,-0.09207950163263945,-0.09207950163263945,0.0,0.100000001,marked groups
+March 2019,T4.8,2022-23,section 'Underlying forecast changes' vs its total,3,0.1066877473307386,0.1066877473307386,0.0,0.30000000100000007,marked groups
+March 2019,T4.8,2022-23,section totals vs change,1,0.1066877473307386,0.1066877473307386,0.0,0.100000001,marked groups
+March 2019,T4.8,2023-24,section 'Underlying forecast changes' vs its total,3,0.3115599952877801,0.31155999528778017,5.551115123125783e-17,0.30000000100000007,marked groups
+March 2019,T4.8,2023-24,section totals vs change,1,0.3115599952877801,0.3115599952877801,0.0,0.100000001,marked groups
+March 2019,T4.9,2018-19,section 'Underlying forecast changes' vs its total,5,-1.1678612133293882,-1.1678612133293882,0.0,0.500000001,marked groups
+March 2019,T4.9,2018-19,section totals vs change,2,-1.1714978408552454,-1.1714978408552454,0.0,0.200000001,marked groups
+March 2019,T4.9,2019-20,section 'Underlying forecast changes' vs its total,5,-0.6888051123259562,-0.6888051123259561,1.1102230246251565e-16,0.500000001,marked groups
+March 2019,T4.9,2019-20,section totals vs change,2,-0.7096512987050119,-0.7096512987050119,0.0,0.200000001,marked groups
+March 2019,T4.9,2020-21,section 'Underlying forecast changes' vs its total,5,-0.19746689780304136,-0.19746689780304139,2.7755575615628914e-17,0.500000001,marked groups
+March 2019,T4.9,2020-21,section totals vs change,2,-0.2466118777510644,-0.2466118777510644,0.0,0.200000001,marked groups
+March 2019,T4.9,2021-22,section 'Underlying forecast changes' vs its total,5,0.410281754521341,0.4102817545213411,5.551115123125783e-17,0.500000001,marked groups
+March 2019,T4.9,2021-22,section totals vs change,2,0.3358941676272664,0.3358941676272664,0.0,0.200000001,marked groups
+March 2019,T4.9,2022-23,section 'Underlying forecast changes' vs its total,5,0.6072587616442571,0.6072587616442571,0.0,0.500000001,marked groups
+March 2019,T4.9,2022-23,section totals vs change,2,0.5084654603259366,0.5084654603259366,0.0,0.200000001,marked groups
+March 2019,T4.9,2023-24,section 'Underlying forecast changes' vs its total,5,0.7255671543184046,0.7255671543184046,0.0,0.500000001,marked groups
+March 2019,T4.9,2023-24,section totals vs change,2,0.598424367552127,0.598424367552127,0.0,0.200000001,marked groups
+March 2020,T3.10,2019-20,section 'Underlying forecast changes' vs its total,3,0.16489635058498298,0.16489635058498298,0.0,0.30000000100000007,marked groups
+March 2020,T3.10,2019-20,section 'Effect of Government decisions' vs its total,2,0.004753607393733546,0.004753607393733546,0.0,0.200000001,marked groups
+March 2020,T3.10,2019-20,section totals vs change,2,0.16964995797871651,0.16964995797871651,0.0,0.200000001,marked groups
+March 2020,T3.10,2020-21,section 'Underlying forecast changes' vs its total,3,0.12411459227559425,0.12411459227559424,1.3877787807814457e-17,0.30000000100000007,marked groups
+March 2020,T3.10,2020-21,section 'Effect of Government decisions' vs its total,2,0.3083600880737231,0.3083600880737231,0.0,0.200000001,marked groups
+March 2020,T3.10,2020-21,section totals vs change,2,0.43247468034931735,0.43247468034931735,0.0,0.200000001,marked groups
+March 2020,T3.10,2021-22,section 'Underlying forecast changes' vs its total,3,0.19170490212828023,0.19170490212828017,5.551115123125783e-17,0.30000000100000007,marked groups
+March 2020,T3.10,2021-22,section 'Effect of Government decisions' vs its total,2,0.05786082435728168,0.05786082435728168,0.0,0.200000001,marked groups
+March 2020,T3.10,2021-22,section totals vs change,2,0.24956572648556197,0.2495657264855619,5.551115123125783e-17,0.200000001,marked groups
+March 2020,T3.10,2022-23,section 'Underlying forecast changes' vs its total,3,0.2946700625257345,0.29467006252573447,5.551115123125783e-17,0.30000000100000007,marked groups
+March 2020,T3.10,2022-23,section 'Effect of Government decisions' vs its total,2,0.42915971181413265,0.42915971181413265,0.0,0.200000001,marked groups
+March 2020,T3.10,2022-23,section totals vs change,2,0.7238297743398672,0.7238297743398672,0.0,0.200000001,marked groups
+March 2020,T3.10,2023-24,section 'Underlying forecast changes' vs its total,3,0.2501776078899052,0.2501776078899052,0.0,0.30000000100000007,marked groups
+March 2020,T3.10,2023-24,section 'Effect of Government decisions' vs its total,2,0.38870679276310693,0.38870679276310693,0.0,0.200000001,marked groups
+March 2020,T3.10,2023-24,section totals vs change,2,0.6388844006530121,0.6388844006530121,0.0,0.200000001,marked groups
+March 2020,T3.10,2024-25,section 'Effect of Government decisions' vs its total,2,0.20844334043866913,0.20844334043866913,0.0,0.200000001,marked groups
+March 2020,T3.11,2019-20,section 'Underlying forecast changes' vs its total,3,0.8753801532706824,0.8753801532706824,0.0,0.30000000100000007,marked groups
+March 2020,T3.11,2019-20,section 'Effect of Government decisions' vs its total,2,8.442784408543958e-05,8.442784408543958e-05,0.0,0.200000001,marked groups
+March 2020,T3.11,2019-20,section totals vs change,2,0.8754645811147679,0.8754645811147679,0.0,0.200000001,marked groups
+March 2020,T3.11,2020-21,section 'Underlying forecast changes' vs its total,3,1.4729762956729249,1.4729762956729249,0.0,0.30000000100000007,marked groups
+March 2020,T3.11,2020-21,section 'Effect of Government decisions' vs its total,2,0.17276320881397075,0.17276320881397075,0.0,0.200000001,marked groups
+March 2020,T3.11,2020-21,section totals vs change,2,1.6457395044868957,1.6457395044868957,0.0,0.200000001,marked groups
+March 2020,T3.11,2021-22,section 'Underlying forecast changes' vs its total,3,1.9126096946956643,1.9126096946956643,0.0,0.30000000100000007,marked groups
+March 2020,T3.11,2021-22,section 'Effect of Government decisions' vs its total,2,0.9050075005571561,0.9050075005571561,0.0,0.200000001,marked groups
+March 2020,T3.11,2021-22,section totals vs change,2,2.8176171952528204,2.8176171952528204,0.0,0.200000001,marked groups
+March 2020,T3.11,2022-23,section 'Underlying forecast changes' vs its total,3,2.1454376928708077,2.1454376928708077,0.0,0.30000000100000007,marked groups
+March 2020,T3.11,2022-23,section 'Effect of Government decisions' vs its total,2,1.4817749682742107,1.4817749682742107,0.0,0.200000001,marked groups
+March 2020,T3.11,2022-23,section totals vs change,2,3.627212661145018,3.6272126611450184,4.440892098500626e-16,0.200000001,marked groups
+March 2020,T3.11,2023-24,section 'Underlying forecast changes' vs its total,3,2.4101525862831417,2.4101525862831417,0.0,0.30000000100000007,marked groups
+March 2020,T3.11,2023-24,section 'Effect of Government decisions' vs its total,2,1.6944051518456107,1.6944051518456107,0.0,0.200000001,marked groups
+March 2020,T3.11,2023-24,section totals vs change,2,4.104557738128753,4.104557738128753,0.0,0.200000001,marked groups
+March 2020,T3.11,2024-25,section 'Effect of Government decisions' vs its total,2,1.7047434950546905,1.7047434950546905,0.0,0.200000001,marked groups
+March 2020,T3.5,2019-20,section 'Underlying forecast changes' vs its total,4,4.86569936945034,4.748732054873409,0.11696731457693055,0.40000000100000005,inferred groups
+March 2020,T3.5,2019-20,section 'Effect of Government decisions' vs its total,4,1.2782543130182409,1.2782543130182409,0.0,0.40000000100000005,marked groups
+March 2020,T3.5,2019-20,section totals vs change,2,6.143953682468577,6.143953682468581,3.552713678800501e-15,0.200000001,marked groups
+March 2020,T3.5,2020-21,section 'Underlying forecast changes' vs its total,28,-1.029566940200425,-2.759601844969296,1.7300349047688708,2.8000000010000003,marked groups
+March 2020,T3.5,2020-21,section 'Effect of Government decisions' vs its total,4,6.4428273694328215,6.422349494613533,0.020477874819288644,0.40000000100000005,marked groups
+March 2020,T3.5,2020-21,section totals vs change,2,5.413260429232423,5.4132604292323965,2.6645352591003757e-14,0.200000001,marked groups
+March 2020,T3.5,2021-22,section 'Underlying forecast changes' vs its total,7,-3.5117336268848476,-4.085659987335211,0.573926360450363,0.700000001,inferred groups
+March 2020,T3.5,2021-22,section 'Effect of Government decisions' vs its total,3,13.618143827039322,13.618143827039322,0.0,0.30000000100000007,marked groups
+March 2020,T3.5,2021-22,section totals vs change,2,10.106410200154528,10.106410200154475,5.3290705182007514e-14,0.200000001,marked groups
+March 2020,T3.5,2022-23,section 'Underlying forecast changes' vs its total,28,-4.131434123060899,-10.050377996232434,5.918943873171536,2.8000000010000003,marked groups
+March 2020,T3.5,2022-23,section 'Effect of Government decisions' vs its total,3,19.51468538477176,19.51468538477176,0.0,0.30000000100000007,marked groups
+March 2020,T3.5,2022-23,section totals vs change,2,15.383251261710825,15.38325126171086,3.552713678800501e-14,0.200000001,marked groups
+March 2020,T3.5,2023-24,section 'Underlying forecast changes' vs its total,28,-3.5001898711634567,-9.188772931096425,5.688583059932968,2.8000000010000003,marked groups
+March 2020,T3.5,2023-24,section 'Effect of Government decisions' vs its total,3,18.6406674358617,18.6406674358617,0.0,0.30000000100000007,marked groups
+March 2020,T3.5,2023-24,section totals vs change,2,15.140477564698244,15.140477564698244,0.0,0.200000001,marked groups
+March 2020,T3.5,2024-25,section 'Effect of Government decisions' vs its total,3,17.39543875391263,17.395438753912632,3.552713678800501e-15,0.30000000100000007,marked groups
+March 2020,T3.6,2019-20,section 'Underlying forecast changes' vs its total,5,3.329151795591343,1.233933606280305,2.095218189311038,0.500000001,marked groups
+March 2020,T3.6,2019-20,section 'Effect of Government decisions' vs its total,2,0.0075083603490784315,0.0075083603490784315,0.0,0.200000001,marked groups
+March 2020,T3.6,2019-20,section totals vs change,5,3.3366601559404216,6.048845148391612,2.7121849924511903,0.500000001,marked groups
+March 2020,T3.6,2020-21,section 'Underlying forecast changes' vs its total,5,1.5075016555176375,0.46990418685521584,1.0375974686624216,0.500000001,marked groups
+March 2020,T3.6,2020-21,section 'Effect of Government decisions' vs its total,2,-0.30741837934370997,-0.30741837934370997,0.0,0.200000001,marked groups
+March 2020,T3.6,2020-21,section totals vs change,5,1.2000832761739275,2.472632838263957,1.2725495620900293,0.500000001,marked groups
+March 2020,T3.6,2021-22,section 'Underlying forecast changes' vs its total,5,1.3047365854217317,-0.8746502779750731,2.1793868633968048,0.500000001,marked groups
+March 2020,T3.6,2021-22,section 'Effect of Government decisions' vs its total,2,2.3516371009830452,2.3516371009830452,0.0,0.200000001,marked groups
+March 2020,T3.6,2021-22,section totals vs change,5,3.656373686404777,5.398435410814045,1.7420617244092682,0.500000001,marked groups
+March 2020,T3.6,2022-23,section 'Underlying forecast changes' vs its total,5,2.84277615104021,0.41457005130955105,2.4282060997306587,0.500000001,marked groups
+March 2020,T3.6,2022-23,section 'Effect of Government decisions' vs its total,2,3.659631718901084,3.659631718901084,0.0,0.200000001,marked groups
+March 2020,T3.6,2022-23,section totals vs change,5,6.502407869941294,9.137898995326728,2.6354911253854336,0.500000001,marked groups
+March 2020,T3.6,2023-24,section 'Underlying forecast changes' vs its total,5,3.891019711364294,-0.15219379899924412,4.043213510363538,0.500000001,marked groups
+March 2020,T3.6,2023-24,section 'Effect of Government decisions' vs its total,2,2.62646143933253,2.62646143933253,0.0,0.200000001,marked groups
+March 2020,T3.6,2023-24,section totals vs change,2,6.517481150696824,6.517481150696824,0.0,0.200000001,marked groups
+March 2020,T3.6,2024-25,section 'Effect of Government decisions' vs its total,2,2.0814343607296206,2.0814343607296206,0.0,0.200000001,marked groups
+March 2020,T3.7,2019-20,section 'Underlying forecast changes' vs its total,5,-1.787813217515711,-1.787813217515711,0.0,0.500000001,marked groups
+March 2020,T3.7,2019-20,section 'Effect of Government decisions' vs its total,2,-0.0008504934128632444,-0.0008504934128632444,0.0,0.200000001,marked groups
+March 2020,T3.7,2019-20,section totals vs change,2,-1.7886637109285743,-1.7886637109285743,0.0,0.200000001,marked groups
+March 2020,T3.7,2020-21,section 'Underlying forecast changes' vs its total,5,-1.492977143659384,-1.492977143659384,0.0,0.500000001,marked groups
+March 2020,T3.7,2020-21,section 'Effect of Government decisions' vs its total,2,0.1782963799208901,0.1782963799208901,0.0,0.200000001,marked groups
+March 2020,T3.7,2020-21,section totals vs change,2,-1.3146807637384939,-1.3146807637384939,0.0,0.200000001,marked groups
+March 2020,T3.7,2021-22,section 'Underlying forecast changes' vs its total,5,-1.5562597354787093,-1.556259735478709,2.220446049250313e-16,0.500000001,marked groups
+March 2020,T3.7,2021-22,section 'Effect of Government decisions' vs its total,2,0.9924919247818997,0.9924919247818997,0.0,0.200000001,marked groups
+March 2020,T3.7,2021-22,section totals vs change,2,-0.5637678106968096,-0.5637678106968096,0.0,0.200000001,marked groups
+March 2020,T3.7,2022-23,section 'Underlying forecast changes' vs its total,5,-2.5425073097389674,-2.5425073097389674,0.0,0.500000001,marked groups
+March 2020,T3.7,2022-23,section 'Effect of Government decisions' vs its total,2,1.4929291050356515,1.4929291050356515,0.0,0.200000001,marked groups
+March 2020,T3.7,2022-23,section totals vs change,2,-1.049578204703316,-1.049578204703316,0.0,0.200000001,marked groups
+March 2020,T3.7,2023-24,section 'Underlying forecast changes' vs its total,5,-3.0418546918723965,-3.041854691872397,4.440892098500626e-16,0.500000001,marked groups
+March 2020,T3.7,2023-24,section 'Effect of Government decisions' vs its total,2,1.6747998795601848,1.6747998795601848,0.0,0.200000001,marked groups
+March 2020,T3.7,2023-24,section totals vs change,2,-1.3670548123122117,-1.3670548123122117,0.0,0.200000001,marked groups
+March 2020,T3.7,2024-25,section 'Effect of Government decisions' vs its total,2,1.5698630930026822,1.5698630930026822,0.0,0.200000001,marked groups
+March 2020,T3.8,2019-20,section 'Underlying forecast changes' vs its total,4,0.1362312613706913,0.1362312613706913,0.0,0.40000000100000005,marked groups
+March 2020,T3.8,2019-20,section 'Effect of Government decisions' vs its total,2,-0.1020547061553807,-0.1020547061553807,0.0,0.200000001,marked groups
+March 2020,T3.8,2019-20,section totals vs change,2,0.0341765552153106,0.0341765552153106,0.0,0.200000001,marked groups
+March 2020,T3.8,2020-21,section 'Underlying forecast changes' vs its total,4,-1.3486693809205548,-1.3486693809205548,0.0,0.40000000100000005,marked groups
+March 2020,T3.8,2020-21,section 'Effect of Government decisions' vs its total,2,0.41040489514550427,0.41040489514550427,0.0,0.200000001,marked groups
+March 2020,T3.8,2020-21,section totals vs change,2,-0.9382644857750506,-0.9382644857750505,1.1102230246251565e-16,0.200000001,marked groups
+March 2020,T3.8,2021-22,section 'Underlying forecast changes' vs its total,4,-1.3857797110682055,-1.3857797110682055,0.0,0.40000000100000005,marked groups
+March 2020,T3.8,2021-22,section 'Effect of Government decisions' vs its total,2,0.9764918021147605,0.9764918021147605,0.0,0.200000001,marked groups
+March 2020,T3.8,2021-22,section totals vs change,2,-0.4092879089534449,-0.409287908953445,1.1102230246251565e-16,0.200000001,marked groups
+March 2020,T3.8,2022-23,section 'Underlying forecast changes' vs its total,4,-1.1397114211162176,-1.1397114211162176,0.0,0.40000000100000005,marked groups
+March 2020,T3.8,2022-23,section 'Effect of Government decisions' vs its total,2,1.2212987797981185,1.2212987797981185,0.0,0.200000001,marked groups
+March 2020,T3.8,2022-23,section totals vs change,2,0.08158735868190092,0.08158735868190092,0.0,0.200000001,marked groups
+March 2020,T3.8,2023-24,section 'Underlying forecast changes' vs its total,4,-0.669593819616503,-0.669593819616503,0.0,0.40000000100000005,marked groups
+March 2020,T3.8,2023-24,section 'Effect of Government decisions' vs its total,2,0.9273319798719313,0.9273319798719313,0.0,0.200000001,marked groups
+March 2020,T3.8,2023-24,section totals vs change,2,0.2577381602554283,0.2577381602554283,0.0,0.200000001,marked groups
+March 2020,T3.8,2024-25,section 'Effect of Government decisions' vs its total,2,0.42726414959516845,0.42726414959516845,0.0,0.200000001,marked groups
+March 2020,T3.9,2019-20,section 'Underlying forecast changes' vs its total,4,0.5947050909721658,0.5947050909721658,0.0,0.40000000100000005,marked groups
+March 2020,T3.9,2019-20,section 'Effect of Government decisions' vs its total,2,0.9341417389928319,0.9341417389928319,0.0,0.200000001,marked groups
+March 2020,T3.9,2019-20,section totals vs change,2,1.5288468299649978,1.5288468299649978,0.0,0.200000001,marked groups
+March 2020,T3.9,2020-21,section 'Underlying forecast changes' vs its total,4,0.06476796107011659,0.06476796107011656,2.7755575615628914e-17,0.40000000100000005,marked groups
+March 2020,T3.9,2020-21,section 'Effect of Government decisions' vs its total,2,4.6209632139055765,4.6209632139055765,0.0,0.200000001,marked groups
+March 2020,T3.9,2020-21,section totals vs change,2,4.685731174975693,4.685731174975693,0.0,0.200000001,marked groups
+March 2020,T3.9,2021-22,section 'Underlying forecast changes' vs its total,4,-0.9156098157850069,-0.9156098157850069,0.0,0.40000000100000005,marked groups
+March 2020,T3.9,2021-22,section 'Effect of Government decisions' vs its total,2,5.819539973752529,5.819539973752529,0.0,0.200000001,marked groups
+March 2020,T3.9,2021-22,section totals vs change,2,4.9039301579675225,4.9039301579675225,0.0,0.200000001,marked groups
+March 2020,T3.9,2022-23,section 'Underlying forecast changes' vs its total,4,-0.9039301562504582,-0.9039301562504582,0.0,0.40000000100000005,marked groups
+March 2020,T3.9,2022-23,section 'Effect of Government decisions' vs its total,2,5.953708976900009,5.953708976900009,0.0,0.200000001,marked groups
+March 2020,T3.9,2022-23,section totals vs change,2,5.04977882064955,5.04977882064955,0.0,0.200000001,marked groups
+March 2020,T3.9,2023-24,section 'Underlying forecast changes' vs its total,4,-0.8883148554484088,-0.8883148554484088,0.0,0.40000000100000005,marked groups
+March 2020,T3.9,2023-24,section 'Effect of Government decisions' vs its total,2,5.817025288949852,5.817025288949852,0.0,0.200000001,marked groups
+March 2020,T3.9,2023-24,section totals vs change,2,4.928710433501443,4.928710433501443,0.0,0.200000001,marked groups
+March 2020,T3.9,2024-25,section 'Effect of Government decisions' vs its total,2,5.758592394095221,5.758592394095221,0.0,0.200000001,marked groups
+March 2021,T3.10,2019-20,section 'Underlying forecast changes since March 2020' vs its total,1,-6.644260439864624,-6.644260439864624,0.0,0.100000001,marked groups
+March 2021,T3.10,2019-20,section totals vs change,1,-6.644260439864624,-6.644260439864624,0.0,0.100000001,marked groups
+March 2021,T3.10,2020-21,section 'Underlying forecast changes since March 2020' vs its total,4,-10.62993662803194,-10.62993662803194,0.0,0.40000000100000005,marked groups
+March 2021,T3.10,2020-21,section 'Direct effect of Government decisions since March 2020' vs its total,5,-1.5762232923600852,-1.5762232923600854,2.220446049250313e-16,0.500000001,marked groups
+March 2021,T3.10,2020-21,section totals vs change,2,-12.206159920392025,-12.206159920392025,0.0,0.200000001,marked groups
+March 2021,T3.10,2021-22,section 'Underlying forecast changes since March 2020' vs its total,4,-6.996447177442137,-6.996447177442137,0.0,0.40000000100000005,marked groups
+March 2021,T3.10,2021-22,section 'Direct effect of Government decisions since March 2020' vs its total,5,-12.38500163859772,-12.38500163859772,0.0,0.500000001,marked groups
+March 2021,T3.10,2021-22,section totals vs change,2,-19.381448816039857,-19.381448816039857,0.0,0.200000001,marked groups
+March 2021,T3.10,2022-23,section 'Underlying forecast changes since March 2020' vs its total,4,-3.513521120202947,-3.513521120202947,0.0,0.40000000100000005,marked groups
+March 2021,T3.10,2022-23,section 'Direct effect of Government decisions since March 2020' vs its total,5,-9.78806943208483,-9.78806943208483,0.0,0.500000001,marked groups
+March 2021,T3.10,2022-23,section totals vs change,2,-13.301590552287777,-13.301590552287777,0.0,0.200000001,marked groups
+March 2021,T3.10,2023-24,section 'Underlying forecast changes since March 2020' vs its total,4,-2.6937045996657343,-2.6937045996657343,0.0,0.40000000100000005,marked groups
+March 2021,T3.10,2023-24,section 'Direct effect of Government decisions since March 2020' vs its total,5,9.855385218815014,9.855385218815014,0.0,0.500000001,marked groups
+March 2021,T3.10,2023-24,section totals vs change,2,7.16168061914928,7.16168061914928,0.0,0.200000001,marked groups
+March 2021,T3.10,2024-25,section 'Underlying forecast changes since March 2020' vs its total,4,-3.024177477872801,-3.024177477872801,0.0,0.40000000100000005,marked groups
+March 2021,T3.10,2024-25,section 'Direct effect of Government decisions since March 2020' vs its total,5,18.32284188351466,18.32284188351466,0.0,0.500000001,marked groups
+March 2021,T3.10,2024-25,section totals vs change,2,15.298664405641858,15.298664405641858,0.0,0.200000001,marked groups
+March 2021,T3.10,2025-26,section 'Direct effect of Government decisions since March 2020' vs its total,5,19.564400001897422,19.564400001897422,0.0,0.500000001,marked groups
+March 2021,T3.11,2020-21,section 'Underlying forecast changes since March 2020' vs its total,4,-1.7403841566316052,-1.7403841566316052,0.0,0.40000000100000005,marked groups
+March 2021,T3.11,2020-21,section 'Direct effect of Government decisions since March 2020' vs its total,3,-2.491976408486731,-2.491976408486731,0.0,0.30000000100000007,marked groups
+March 2021,T3.11,2020-21,section totals vs change,2,-4.232360565118336,-4.232360565118336,0.0,0.200000001,marked groups
+March 2021,T3.11,2021-22,section 'Underlying forecast changes since March 2020' vs its total,4,-0.13520068179903255,-0.13520068179903255,0.0,0.40000000100000005,marked groups
+March 2021,T3.11,2021-22,section 'Direct effect of Government decisions since March 2020' vs its total,3,-2.268181331596402,-2.2681813315964017,4.440892098500626e-16,0.30000000100000007,marked groups
+March 2021,T3.11,2021-22,section totals vs change,2,-2.4033820133954347,-2.4033820133954347,0.0,0.200000001,marked groups
+March 2021,T3.11,2022-23,section 'Underlying forecast changes since March 2020' vs its total,4,-1.7377192572091107,-1.737719257209111,2.220446049250313e-16,0.40000000100000005,marked groups
+March 2021,T3.11,2022-23,section 'Direct effect of Government decisions since March 2020' vs its total,3,0.0064180776322361206,0.0064180776322361206,0.0,0.30000000100000007,marked groups
+March 2021,T3.11,2022-23,section totals vs change,2,-1.7313011795768745,-1.7313011795768745,0.0,0.200000001,marked groups
+March 2021,T3.11,2023-24,section 'Underlying forecast changes since March 2020' vs its total,4,-2.34038958793732,-2.3403895879373207,4.440892098500626e-16,0.40000000100000005,marked groups
+March 2021,T3.11,2023-24,section 'Direct effect of Government decisions since March 2020' vs its total,3,0.008798294288928091,0.008798294288928091,0.0,0.30000000100000007,marked groups
+March 2021,T3.11,2023-24,section totals vs change,2,-2.3315912936483922,-2.3315912936483922,0.0,0.200000001,marked groups
+March 2021,T3.11,2024-25,section 'Underlying forecast changes since March 2020' vs its total,4,-2.4630233034681632,-2.4630233034681632,0.0,0.40000000100000005,marked groups
+March 2021,T3.11,2024-25,section 'Direct effect of Government decisions since March 2020' vs its total,3,0.011605095946394457,0.011605095946394457,0.0,0.30000000100000007,marked groups
+March 2021,T3.11,2024-25,section totals vs change,2,-2.451418207521769,-2.451418207521769,0.0,0.200000001,marked groups
+March 2021,T3.11,2025-26,section 'Direct effect of Government decisions since March 2020' vs its total,3,0.011196488344183428,0.011196488344183428,0.0,0.30000000100000007,marked groups
+March 2021,T3.3,2020-21,section 'Underlying forecast changes since March 2020' vs its total,8,-70.17678877251609,-112.28380233774836,42.107013565232265,0.800000001,marked groups
+March 2021,T3.3,2020-21,section 'Direct effect of government decisions since March 2020' vs its total,3,-16.424821529941084,-12.436754429558412,3.988067100382672,0.30000000100000007,marked groups
+March 2021,T3.3,2020-21,section totals vs change,2,-86.60161030245717,-86.60161030245717,0.0,0.200000001,marked groups
+March 2021,T3.3,2021-22,section 'Underlying forecast changes since March 2020' vs its total,8,-69.92737927376999,-123.64101815404345,53.713638880273464,0.800000001,marked groups
+March 2021,T3.3,2021-22,section 'Direct effect of government decisions since March 2020' vs its total,3,-21.51003711890592,-26.391495113001223,4.881457994095303,0.30000000100000007,marked groups
+March 2021,T3.3,2021-22,section totals vs change,2,-91.43741639267591,-91.43741639267591,0.0,0.200000001,marked groups
+March 2021,T3.3,2022-23,section 'Underlying forecast changes since March 2020' vs its total,8,-55.959543471078206,-102.76080389833079,46.801260427252586,0.800000001,marked groups
+March 2021,T3.3,2022-23,section 'Direct effect of government decisions since March 2020' vs its total,3,-7.849788451213016,-6.833584788421201,1.0162036627918143,0.30000000100000007,marked groups
+March 2021,T3.3,2022-23,section totals vs change,2,-63.80933192229122,-63.80933192229122,0.0,0.200000001,marked groups
+March 2021,T3.3,2023-24,section 'Underlying forecast changes since March 2020' vs its total,8,-53.23384874225901,-103.53133287621283,50.297484133953816,0.800000001,marked groups
+March 2021,T3.3,2023-24,section 'Direct effect of government decisions since March 2020' vs its total,3,13.287953239188777,14.051445521867185,0.7634922826784081,0.30000000100000007,marked groups
+March 2021,T3.3,2023-24,section totals vs change,2,-39.94589550307023,-39.94589550307023,0.0,0.200000001,marked groups
+March 2021,T3.3,2024-25,section 'Underlying forecast changes since March 2020' vs its total,11,-53.03586693225795,-103.0460189314772,50.010151999219254,1.1000000010000002,marked groups
+March 2021,T3.3,2024-25,section 'Direct effect of government decisions since March 2020' vs its total,3,24.999832326111594,25.81591233378435,0.8160800076727561,0.30000000100000007,marked groups
+March 2021,T3.3,2024-25,section totals vs change,2,-28.03603460614636,-28.03603460614636,0.0,0.200000001,marked groups
+March 2021,T3.3,2025-26,section 'Direct effect of government decisions since March 2020' vs its total,3,29.678504233161696,30.473993668244024,0.7954894350823274,0.30000000100000007,marked groups
+March 2021,T3.7,2020-21,section 'Underlying forecast changes since March 2020' vs its total,2,-21.961457481785892,-21.961457481785892,0.0,0.200000001,marked groups
+March 2021,T3.7,2020-21,section totals vs change,2,-15.634948601214774,-15.634948601214774,0.0,0.200000001,marked groups
+March 2021,T3.7,2021-22,section 'Underlying forecast changes since March 2020' vs its total,2,-26.159518339337488,-26.159518339337488,0.0,0.200000001,marked groups
+March 2021,T3.7,2021-22,section totals vs change,2,-24.22516654636115,-24.22516654636115,0.0,0.200000001,marked groups
+March 2021,T3.7,2022-23,section 'Underlying forecast changes since March 2020' vs its total,2,-24.689691026136277,-24.689691026136277,0.0,0.200000001,marked groups
+March 2021,T3.7,2022-23,section totals vs change,2,-23.139983226490074,-23.139983226490074,0.0,0.200000001,marked groups
+March 2021,T3.7,2023-24,section 'Underlying forecast changes since March 2020' vs its total,2,-27.009117155144363,-27.009117155144363,0.0,0.200000001,marked groups
+March 2021,T3.7,2023-24,section totals vs change,2,-23.571590412900434,-23.571590412900434,0.0,0.200000001,marked groups
+March 2021,T3.7,2024-25,section 'Underlying forecast changes since March 2020' vs its total,2,-27.24910668878605,-27.24910668878605,0.0,0.200000001,marked groups
+March 2021,T3.7,2024-25,section totals vs change,2,-21.788931420296592,-21.788931420296592,0.0,0.200000001,marked groups
+March 2021,T3.8,2020-21,section 'Underlying forecast changes since March 2020' vs its total,4,-2.629882740988225,-2.629882740988225,0.0,0.40000000100000005,marked groups
+March 2021,T3.8,2020-21,section totals vs change,2,-3.515726487039114,-3.515726487039114,0.0,0.200000001,marked groups
+March 2021,T3.8,2021-22,section 'Underlying forecast changes since March 2020' vs its total,4,-8.291677203921903,-8.291677203921903,0.0,0.40000000100000005,marked groups
+March 2021,T3.8,2021-22,section totals vs change,2,-5.2365843695527445,-5.236584369552744,8.881784197001252e-16,0.200000001,marked groups
+March 2021,T3.8,2022-23,section 'Underlying forecast changes since March 2020' vs its total,4,-8.318797212614452,-8.318797212614452,0.0,0.40000000100000005,marked groups
+March 2021,T3.8,2022-23,section totals vs change,2,-6.867761042086467,-6.867761042086467,0.0,0.200000001,marked groups
+March 2021,T3.8,2023-24,section 'Underlying forecast changes since March 2020' vs its total,4,-6.364128062708517,-6.364128062708517,0.0,0.40000000100000005,marked groups
+March 2021,T3.8,2023-24,section totals vs change,2,-5.925859216936793,-5.925859216936793,0.0,0.200000001,marked groups
+March 2021,T3.8,2024-25,section 'Underlying forecast changes since March 2020' vs its total,4,-6.240726760395805,-6.2407267603958045,8.881784197001252e-16,0.40000000100000005,marked groups
+March 2021,T3.8,2024-25,section totals vs change,2,-5.1084373273548636,-5.1084373273548636,0.0,0.200000001,marked groups
+March 2021,T3.9,2020-21,section 'Underlying forecast changes since March 2020' vs its total,4,-13.724447479767562,-13.724447479767562,0.0,0.40000000100000005,marked groups
+March 2021,T3.9,2020-21,section 'Direct effect of Government decisions since March 2020' vs its total,2,-6.893820158742059,-6.893820158742059,0.0,0.200000001,marked groups
+March 2021,T3.9,2020-21,section totals vs change,2,-20.61826763850962,-20.61826763850962,0.0,0.200000001,marked groups
+March 2021,T3.9,2021-22,section 'Underlying forecast changes since March 2020' vs its total,4,-12.1343817022147,-12.1343817022147,0.0,0.40000000100000005,marked groups
+March 2021,T3.9,2021-22,section 'Direct effect of Government decisions since March 2020' vs its total,2,-5.820564185780495,-5.820564185780495,0.0,0.200000001,marked groups
+March 2021,T3.9,2021-22,section totals vs change,2,-17.954945887995194,-17.954945887995194,0.0,0.200000001,marked groups
+March 2021,T3.9,2022-23,section 'Underlying forecast changes since March 2020' vs its total,4,-4.68117122550788,-4.68117122550788,0.0,0.40000000100000005,marked groups
+March 2021,T3.9,2022-23,section 'Direct effect of Government decisions since March 2020' vs its total,2,-0.6560664001900157,-0.6560664001900157,0.0,0.200000001,marked groups
+March 2021,T3.9,2022-23,section totals vs change,2,-5.337237625697895,-5.337237625697895,0.0,0.200000001,marked groups
+March 2021,T3.9,2023-24,section 'Underlying forecast changes since March 2020' vs its total,4,-6.095576646826923,-6.095576646826924,8.881784197001252e-16,0.40000000100000005,marked groups
+March 2021,T3.9,2023-24,section 'Direct effect of Government decisions since March 2020' vs its total,2,-0.0213612603343923,-0.0213612603343923,0.0,0.200000001,marked groups
+March 2021,T3.9,2023-24,section totals vs change,2,-6.116937907161315,-6.116937907161315,0.0,0.200000001,marked groups
+March 2021,T3.9,2024-25,section 'Underlying forecast changes since March 2020' vs its total,4,-5.691258247185374,-5.691258247185374,0.0,0.40000000100000005,marked groups
+March 2021,T3.9,2024-25,section 'Direct effect of Government decisions since March 2020' vs its total,2,0.09152208005224377,0.09152208005224377,0.0,0.200000001,marked groups
+March 2021,T3.9,2024-25,section totals vs change,2,-5.5997361671331305,-5.5997361671331305,0.0,0.200000001,marked groups
+March 2021,T3.9,2025-26,section 'Direct effect of Government decisions since March 2020' vs its total,2,0.21989969720554914,0.21989969720554914,0.0,0.200000001,marked groups
+March 2022,T3.11,2020-21,all rows vs change,3,-4.798360527226002,-4.798360527226002,0.0,0.30000000100000007,marked groups
+March 2022,T3.11,2020-21,all rows vs change,2,1.2150000000000034,1.2150000000000034,0.0,0.200000001,marked groups
+March 2022,T3.11,2021-22,all rows vs change,3,-1.0617862438867505,-1.0617862438867505,0.0,0.30000000100000007,marked groups
+March 2022,T3.11,2021-22,all rows vs change,3,7.638563116224809,7.638563116224809,0.0,0.30000000100000007,marked groups
+March 2022,T3.11,2022-23,all rows vs change,3,-4.613278265553035,-4.613278265553035,0.0,0.30000000100000007,marked groups
+March 2022,T3.11,2022-23,all rows vs change,3,3.054487312747071,3.054487312747071,0.0,0.30000000100000007,marked groups
+March 2022,T3.11,2023-24,all rows vs change,3,13.865591577610317,13.865591577610317,0.0,0.30000000100000007,marked groups
+March 2022,T3.11,2023-24,all rows vs change,3,3.799534151780122,3.799534151780122,0.0,0.30000000100000007,marked groups
+March 2022,T3.11,2024-25,all rows vs change,3,21.808915071261325,21.808915071261325,0.0,0.30000000100000007,marked groups
+March 2022,T3.11,2024-25,all rows vs change,3,4.2182895208720765,4.2182895208720765,0.0,0.30000000100000007,marked groups
+March 2022,T3.11,2025-26,all rows vs change,3,4.522294071823708,4.522294071823708,0.0,0.30000000100000007,marked groups
+March 2022,T3.11,2026-27,all rows vs change,3,4.06209802835302,4.062098028353021,8.881784197001252e-16,0.30000000100000007,marked groups
+March 2022,T3.13,2020-21,all rows vs change,3,-6.553874409517007,-6.553874409517007,0.0,0.30000000100000007,marked groups
+March 2022,T3.13,2020-21,all rows vs change,3,0.02500000000000213,0.02500000000000213,0.0,0.30000000100000007,marked groups
+March 2022,T3.13,2021-22,all rows vs change,3,-1.9546619637850213,-1.9546619637850213,0.0,0.30000000100000007,marked groups
+March 2022,T3.13,2021-22,all rows vs change,3,-0.5750258327336049,-0.5750258327336049,0.0,0.30000000100000007,marked groups
+March 2022,T3.13,2022-23,all rows vs change,3,-4.332253038129213,-4.332253038129213,0.0,0.30000000100000007,marked groups
+March 2022,T3.13,2022-23,all rows vs change,3,-2.6017018513028987,-2.6017018513028987,0.0,0.30000000100000007,marked groups
+March 2022,T3.13,2023-24,all rows vs change,3,-1.3075356078823468,-1.3075356078823468,0.0,0.30000000100000007,marked groups
+March 2022,T3.13,2023-24,all rows vs change,3,-0.007946395650982652,-0.007946395650982652,0.0,0.30000000100000007,marked groups
+March 2022,T3.13,2024-25,all rows vs change,3,-1.5270633310631396,-1.5270633310631394,2.220446049250313e-16,0.30000000100000007,marked groups
+March 2022,T3.13,2024-25,all rows vs change,3,-0.2203206242281226,-0.2203206242281226,0.0,0.30000000100000007,marked groups
+March 2022,T3.13,2025-26,all rows vs change,3,-0.611458904053837,-0.611458904053837,0.0,0.30000000100000007,marked groups
+March 2022,T3.13,2026-27,all rows vs change,3,-1.0355271162154445,-1.0355271162154445,0.0,0.30000000100000007,marked groups
+March 2022,T3.3,2020-21,all rows vs change,8,-79.87504995974598,-79.87504995974598,0.0,0.800000001,marked groups
+March 2022,T3.3,2020-21,section '' vs its total,8,0.8307220461351703,-2.0439208177765957,2.874642863911766,0.800000001,marked groups
+March 2022,T3.3,2020-21,section totals vs change,1,-2.2069999999999936,0.8307220461351703,3.0377220461351637,0.100000001,marked groups
+March 2022,T3.3,2021-22,all rows vs change,8,-11.26351732467026,-11.263517324670262,1.7763568394002505e-15,0.800000001,marked groups
+March 2022,T3.3,2021-22,section '' vs its total,7,5.808025007594265,37.51003974068931,31.70201473309504,0.700000001,marked groups
+March 2022,T3.3,2021-22,section totals vs change,1,37.51003974068931,5.808025007594265,31.70201473309504,0.100000001,marked groups
+March 2022,T3.3,2022-23,all rows vs change,8,38.273495189927985,38.273495189927985,0.0,0.800000001,marked groups
+March 2022,T3.3,2022-23,section '' vs its total,7,14.626462520715004,25.08785337778284,10.461390857067835,0.700000001,marked groups
+March 2022,T3.3,2022-23,section totals vs change,1,25.087853377782835,14.626462520715004,10.461390857067832,0.100000001,marked groups
+March 2022,T3.3,2023-24,all rows vs change,8,65.43574253464521,65.43574253464521,0.0,0.800000001,marked groups
+March 2022,T3.3,2023-24,section '' vs its total,7,8.930387211085932,30.322700611437654,21.39231340035172,0.700000001,marked groups
+March 2022,T3.3,2023-24,section totals vs change,1,30.322700611437654,8.930387211085932,21.39231340035172,0.100000001,marked groups
+March 2022,T3.3,2024-25,all rows vs change,8,68.15858050409997,68.15858050409997,0.0,0.800000001,marked groups
+March 2022,T3.3,2024-25,section '' vs its total,7,10.235540634985817,29.133093080047274,18.897552445061457,0.700000001,marked groups
+March 2022,T3.3,2024-25,section totals vs change,1,29.133093080047274,10.235540634985817,18.897552445061457,0.100000001,marked groups
+March 2022,T3.3,2025-26,section '' vs its total,7,9.800664942883422,28.884021253106763,19.08335631022334,0.700000001,marked groups
+March 2022,T3.3,2025-26,section totals vs change,1,28.884021253106766,9.800664942883422,19.083356310223344,0.100000001,marked groups
+March 2022,T3.3,2026-27,section '' vs its total,7,8.115821855491559,26.785227136213962,18.6694052807224,0.700000001,marked groups
+March 2022,T3.3,2026-27,section totals vs change,1,26.785227136213962,8.115821855491559,18.6694052807224,0.100000001,marked groups
+March 2022,T3.7,2020-21,all rows vs change,3,-14.73057135820767,-14.730571358207726,5.684341886080802e-14,0.30000000100000007,marked groups
+March 2022,T3.7,2020-21,all rows vs change,4,-1.5179999999999723,-1.5179999999999723,0.0,0.40000000100000005,marked groups
+March 2022,T3.7,2021-22,all rows vs change,3,7.551020658750247,7.551020658750247,0.0,0.30000000100000007,marked groups
+March 2022,T3.7,2021-22,all rows vs change,4,7.550767049367323,7.550767049367323,0.0,0.40000000100000005,marked groups
+March 2022,T3.7,2022-23,all rows vs change,3,30.78633536423706,30.788828781042355,0.002493416805293691,0.30000000100000007,marked groups
+March 2022,T3.7,2022-23,all rows vs change,4,8.679855187680744,8.679855187680744,0.0,0.40000000100000005,marked groups
+March 2022,T3.7,2023-24,all rows vs change,3,29.484945275818575,29.484945275818518,5.684341886080802e-14,0.30000000100000007,marked groups
+March 2022,T3.7,2023-24,all rows vs change,4,6.819004089096097,6.819004089096097,0.0,0.40000000100000005,marked groups
+March 2022,T3.7,2024-25,all rows vs change,3,25.91921939942023,25.91921939942017,5.684341886080802e-14,0.30000000100000007,marked groups
+March 2022,T3.7,2024-25,all rows vs change,4,6.659402525455562,6.659402525455562,0.0,0.40000000100000005,marked groups
+March 2022,T3.7,2025-26,all rows vs change,4,7.991032352359696,7.991032352359695,8.881784197001252e-16,0.40000000100000005,marked groups
+March 2022,T3.7,2026-27,all rows vs change,4,7.824697008492194,7.824697008492193,8.881784197001252e-16,0.40000000100000005,marked groups
+March 2023,T4.1,2022-23,decomposition 'By policy and forecast differences' vs change,3,14.792254906586322,14.792254906586322,0.0,0.30000000100000007,marked groups
+March 2023,T4.1,2022-23,decomposition 'By tax head' vs change,8,14.792254906586322,14.792254906586322,0.0,0.800000001,marked groups
+March 2023,T4.1,2023-24,decomposition 'By policy and forecast differences' vs change,3,-1.1417190117185783,-1.1417190117185778,4.440892098500626e-16,0.30000000100000007,marked groups
+March 2023,T4.1,2023-24,decomposition 'By tax head' vs change,8,-1.1417190117185783,-1.1417190117185774,8.881784197001252e-16,0.800000001,marked groups
+March 2023,T4.1,2024-25,decomposition 'By policy and forecast differences' vs change,3,7.727220147496382,7.727220147496384,1.7763568394002505e-15,0.30000000100000007,marked groups
+March 2023,T4.1,2024-25,decomposition 'By tax head' vs change,8,7.727220147496382,7.727220147496382,0.0,0.800000001,marked groups
+March 2023,T4.1,2025-26,decomposition 'By policy and forecast differences' vs change,3,14.644116871463893,14.644116871463895,1.7763568394002505e-15,0.30000000100000007,marked groups
+March 2023,T4.1,2025-26,decomposition 'By tax head' vs change,8,14.644116871463893,14.644116871463897,3.552713678800501e-15,0.800000001,marked groups
+March 2023,T4.1,2026-27,decomposition 'By policy and forecast differences' vs change,3,24.34008343112464,24.34008343112464,0.0,0.30000000100000007,marked groups
+March 2023,T4.1,2026-27,decomposition 'By tax head' vs change,8,24.34008343112464,24.34008343112464,0.0,0.800000001,marked groups
+March 2023,T4.1,2027-28,decomposition 'By policy and forecast differences' vs change,3,28.329768020175607,28.329768020175607,0.0,0.30000000100000007,marked groups
+March 2023,T4.1,2027-28,decomposition 'By tax head' vs change,8,28.329768020175607,28.329768020175607,0.0,0.800000001,marked groups
+March 2023,T4.2,2022-23,all rows vs change,4,3.2864101049859187,3.286410104985919,4.440892098500626e-16,0.40000000100000005,marked groups
+March 2023,T4.2,2023-24,all rows vs change,4,7.78093192456555,7.780931924565549,8.881784197001252e-16,0.40000000100000005,marked groups
+March 2023,T4.2,2024-25,all rows vs change,4,9.926585456485043,9.926585456485043,0.0,0.40000000100000005,marked groups
+March 2023,T4.2,2025-26,all rows vs change,4,9.651082515185408,9.651082515185408,0.0,0.40000000100000005,marked groups
+March 2023,T4.2,2026-27,all rows vs change,4,7.543275459351946,7.543275459351946,0.0,0.40000000100000005,marked groups
+March 2023,T4.2,2027-28,all rows vs change,4,6.240551984187391,6.240551984187391,0.0,0.40000000100000005,marked groups
+March 2023,T4.4,2021-22,all rows vs change,4,2.2959999999999994,2.2959999999999994,0.0,0.40000000100000005,marked groups
+March 2023,T4.4,2022-23,all rows vs change,4,2.3944557502899073,2.3944557502899073,0.0,0.40000000100000005,marked groups
+March 2023,T4.4,2023-24,all rows vs change,4,-1.7764593097074197,-1.7764593097074197,0.0,0.40000000100000005,marked groups
+March 2023,T4.4,2024-25,all rows vs change,4,-3.9621988988738366,-3.962198898873836,4.440892098500626e-16,0.40000000100000005,marked groups
+March 2023,T4.4,2025-26,all rows vs change,4,-2.136520182535321,-2.13652018253532,8.881784197001252e-16,0.40000000100000005,marked groups
+March 2023,T4.4,2026-27,all rows vs change,4,4.566318570650324,4.566318570650324,0.0,0.40000000100000005,marked groups
+March 2023,T4.4,2027-28,all rows vs change,4,7.872932254087118,7.872932254087117,8.881784197001252e-16,0.40000000100000005,marked groups
+March 2024,T4.1,2022-23,all rows vs change,7,5.571000000000026,5.571000000000026,0.0,0.700000001,marked groups
+March 2024,T4.1,2023-24,decomposition 'By policy and forecast differences' vs change,4,3.766198998616801,3.766198998616801,0.0,0.40000000100000005,marked groups
+March 2024,T4.1,2023-24,decomposition 'By tax head' vs change,7,3.766198998616801,3.766198998616801,0.0,0.700000001,marked groups
+March 2024,T4.1,2024-25,decomposition 'By policy and forecast differences' vs change,4,-13.06456590354992,-13.06456590354992,0.0,0.40000000100000005,marked groups
+March 2024,T4.1,2024-25,decomposition 'By tax head' vs change,7,-13.06456590354992,-13.06456590354992,0.0,0.700000001,marked groups
+March 2024,T4.1,2025-26,decomposition 'By policy and forecast differences' vs change,4,-13.5156703539526,-13.5156703539526,0.0,0.40000000100000005,marked groups
+March 2024,T4.1,2025-26,decomposition 'By tax head' vs change,7,-13.5156703539526,-13.5156703539526,0.0,0.700000001,marked groups
+March 2024,T4.1,2026-27,decomposition 'By policy and forecast differences' vs change,4,-11.311322553419814,-11.311322553419815,1.7763568394002505e-15,0.40000000100000005,marked groups
+March 2024,T4.1,2026-27,decomposition 'By tax head' vs change,7,-11.311322553419814,-11.311322553419814,0.0,0.700000001,marked groups
+March 2024,T4.1,2027-28,decomposition 'By policy and forecast differences' vs change,4,-12.00628157821302,-12.006281578213018,1.7763568394002505e-15,0.40000000100000005,marked groups
+March 2024,T4.1,2027-28,decomposition 'By tax head' vs change,7,-12.00628157821302,-12.006281578213018,1.7763568394002505e-15,0.700000001,marked groups
+March 2024,T4.1,2028-29,decomposition 'By policy and forecast differences' vs change,4,-15.79222810644319,-15.792228106443186,3.552713678800501e-15,0.40000000100000005,marked groups
+March 2024,T4.1,2028-29,decomposition 'By tax head' vs change,7,-15.79222810644319,-15.79222810644319,0.0,0.700000001,marked groups
+March 2024,T4.2,2023-24,all rows vs change,4,7.574045039953376,7.574045039953376,0.0,0.40000000100000005,marked groups
+March 2024,T4.2,2024-25,all rows vs change,4,-5.299425744321127,-5.299425744321127,0.0,0.40000000100000005,marked groups
+March 2024,T4.2,2025-26,all rows vs change,4,-4.820134093306137,-4.820134093306137,0.0,0.40000000100000005,marked groups
+March 2024,T4.2,2026-27,all rows vs change,4,-6.188778225562032,-6.188778225562032,0.0,0.40000000100000005,marked groups
+March 2024,T4.2,2027-28,all rows vs change,4,-8.740721706973545,-8.740721706973545,0.0,0.40000000100000005,marked groups
+March 2024,T4.2,2028-29,all rows vs change,4,-10.903275527659389,-10.903275527659389,0.0,0.40000000100000005,marked groups
+March 2024,T4.3,2023-24,all rows vs change,4,-1.3768509153583324,-1.3768509153583324,0.0,0.40000000100000005,marked groups
+March 2024,T4.3,2024-25,all rows vs change,4,-2.4988504874752806,-2.4988504874752806,0.0,0.40000000100000005,marked groups
+March 2024,T4.3,2025-26,all rows vs change,4,-3.4801148155453774,-3.4801148155453774,0.0,0.40000000100000005,marked groups
+March 2024,T4.3,2026-27,all rows vs change,4,-3.2920700963359053,-3.2920700963359053,0.0,0.40000000100000005,marked groups
+March 2024,T4.3,2027-28,all rows vs change,4,-3.032402418658961,-3.032402418658961,0.0,0.40000000100000005,marked groups
+March 2024,T4.3,2028-29,all rows vs change,4,-2.4975819520228413,-2.4975819520228413,0.0,0.40000000100000005,marked groups
+March 2025,T4.2,2023-24,decomposition 'By policy and forecast differences' vs change,4,-2.2189999999998236,-2.2189999999998236,0.0,0.40000000100000005,marked groups
+March 2025,T4.2,2023-24,decomposition 'By tax head' vs change,9,-2.2189999999998236,-2.2189999999998236,0.0,0.900000001,marked groups
+March 2025,T4.2,2024-25,decomposition 'By policy and forecast differences' vs change,4,-7.457812877160222,-7.457812877160222,0.0,0.40000000100000005,marked groups
+March 2025,T4.2,2024-25,decomposition 'By tax head' vs change,9,-7.457812877160222,-7.4578128771602215,8.881784197001252e-16,0.900000001,marked groups
+March 2025,T4.2,2025-26,decomposition 'By policy and forecast differences' vs change,4,0.018839215554862676,0.018839215554862676,0.0,0.40000000100000005,marked groups
+March 2025,T4.2,2025-26,decomposition 'By tax head' vs change,9,0.018839215554862676,0.018839215554862676,0.0,0.900000001,marked groups
+March 2025,T4.2,2026-27,decomposition 'By policy and forecast differences' vs change,4,1.7723069191952163,1.7723069191952165,2.220446049250313e-16,0.40000000100000005,marked groups
+March 2025,T4.2,2026-27,decomposition 'By tax head' vs change,9,1.7723069191952163,1.772306919195216,2.220446049250313e-16,0.900000001,marked groups
+March 2025,T4.2,2027-28,decomposition 'By policy and forecast differences' vs change,4,4.675944186905781,4.675944186905781,0.0,0.40000000100000005,marked groups
+March 2025,T4.2,2027-28,decomposition 'By tax head' vs change,9,4.675944186905781,4.675944186905781,0.0,0.900000001,marked groups
+March 2025,T4.2,2028-29,decomposition 'By policy and forecast differences' vs change,4,4.25249487094311,4.25249487094311,0.0,0.40000000100000005,marked groups
+March 2025,T4.2,2028-29,decomposition 'By tax head' vs change,9,4.25249487094311,4.25249487094311,0.0,0.900000001,marked groups
+March 2025,T4.2,2029-30,decomposition 'By policy and forecast differences' vs change,4,5.092455931698851,5.092455931698851,0.0,0.40000000100000005,marked groups
+March 2025,T4.2,2029-30,decomposition 'By tax head' vs change,9,5.092455931698851,5.092455931698851,0.0,0.900000001,marked groups
+March 2025,T4.3,2024-25,all rows vs change,4,2.373550817310729,2.373550817310729,0.0,0.40000000100000005,marked groups
+March 2025,T4.3,2025-26,all rows vs change,4,7.0709623289100705,7.0709623289100705,0.0,0.40000000100000005,marked groups
+March 2025,T4.3,2026-27,all rows vs change,4,8.396859713299136,8.396859713299108,2.842170943040401e-14,0.40000000100000005,marked groups
+March 2025,T4.3,2027-28,all rows vs change,4,9.51815818254829,9.518158182548177,1.1368683772161603e-13,0.40000000100000005,marked groups
+March 2025,T4.3,2028-29,all rows vs change,4,10.42731552955479,10.427315529554562,2.2737367544323206e-13,0.40000000100000005,marked groups
+March 2025,T4.3,2029-30,all rows vs change,4,11.284925623118738,11.284925623118738,0.0,0.40000000100000005,marked groups
+March 2025,T4.4,2024-25,all rows vs change,6,-3.4780302221829373,-3.4780302221829382,8.881784197001252e-16,0.6000000010000001,marked groups
+March 2025,T4.4,2025-26,all rows vs change,6,-3.202451941059337,-3.2024519410593464,9.325873406851315e-15,0.6000000010000001,marked groups
+March 2025,T4.4,2026-27,all rows vs change,6,-3.5485475564372777,-3.5485475564372737,3.9968028886505635e-15,0.6000000010000001,marked groups
+March 2025,T4.4,2027-28,all rows vs change,6,-1.2077070781349022,-1.2077070781349124,1.021405182655144e-14,0.6000000010000001,marked groups
+March 2025,T4.4,2028-29,all rows vs change,6,-2.0468532343282106,-2.0468532343281907,1.9984014443252818e-14,0.6000000010000001,marked groups
+March 2025,T4.4,2029-30,all rows vs change,6,-2.1420669540191994,-2.1420669540192114,1.199040866595169e-14,0.6000000010000001,marked groups
+March 2025,T4.5,2024-25,all rows vs change,4,-2.39837501550533,-2.3983750155053314,1.3322676295501878e-15,0.40000000100000005,marked groups
+March 2025,T4.5,2025-26,all rows vs change,4,-2.8302519593416093,-2.830251959341607,2.220446049250313e-15,0.40000000100000005,marked groups
+March 2025,T4.5,2026-27,all rows vs change,4,-2.6000194674101422,-2.6000194674101405,1.7763568394002505e-15,0.40000000100000005,marked groups
+March 2025,T4.5,2027-28,all rows vs change,4,-4.612755600873193,-4.612755600873192,8.881784197001252e-16,0.40000000100000005,marked groups
+March 2025,T4.5,2028-29,all rows vs change,4,-5.0718925233301455,-5.0718925233301455,0.0,0.40000000100000005,marked groups
+March 2025,T4.5,2029-30,all rows vs change,4,-5.4860292052652255,-5.4860292052652255,0.0,0.40000000100000005,marked groups
+March 2026,T3.2,2024-25,decomposition 'By policy and forecast differences' vs change,3,0.4470000000001164,0.4470000000001164,0.0,0.30000000100000007,marked groups
+March 2026,T3.2,2024-25,decomposition 'By tax head' vs change,9,0.4470000000001164,0.4470000000001164,0.0,0.900000001,marked groups
+March 2026,T3.2,2025-26,decomposition 'By policy and forecast differences' vs change,3,3.7352232088385335,3.735223208838534,4.440892098500626e-16,0.30000000100000007,marked groups
+March 2026,T3.2,2025-26,decomposition 'By tax head' vs change,9,3.7352232088385335,3.7352232088385335,0.0,0.900000001,marked groups
+March 2026,T3.2,2026-27,decomposition 'By policy and forecast differences' vs change,3,0.03743991397368518,0.03743991397368518,0.0,0.30000000100000007,marked groups
+March 2026,T3.2,2026-27,decomposition 'By tax head' vs change,9,0.03743991397368518,0.03743991397368518,0.0,0.900000001,marked groups
+March 2026,T3.2,2027-28,decomposition 'By policy and forecast differences' vs change,3,5.131373193351465,5.131373193351465,0.0,0.30000000100000007,marked groups
+March 2026,T3.2,2027-28,decomposition 'By tax head' vs change,9,5.131373193351465,5.131373193351465,0.0,0.900000001,marked groups
+March 2026,T3.2,2028-29,decomposition 'By policy and forecast differences' vs change,3,6.73808953448588,6.73808953448588,0.0,0.30000000100000007,marked groups
+March 2026,T3.2,2028-29,decomposition 'By tax head' vs change,9,6.73808953448588,6.738089534485881,8.881784197001252e-16,0.900000001,marked groups
+March 2026,T3.2,2029-30,decomposition 'By policy and forecast differences' vs change,3,8.64951425283175,8.64951425283175,0.0,0.30000000100000007,marked groups
+March 2026,T3.2,2029-30,decomposition 'By tax head' vs change,9,8.64951425283175,8.64951425283175,0.0,0.900000001,marked groups
+March 2026,T3.2,2030-31,decomposition 'By policy and forecast differences' vs change,3,12.065049574320028,12.065049574320028,0.0,0.30000000100000007,marked groups
+March 2026,T3.2,2030-31,decomposition 'By tax head' vs change,9,12.065049574320028,12.065049574320028,0.0,0.900000001,marked groups
+March 2026,T3.3,2025-26,all rows vs change,3,-1.4939334901877714,-1.6078816167908165,0.1139481266030451,0.30000000100000007,marked groups
+March 2026,T3.3,2026-27,all rows vs change,4,-3.335877535273198,-3.2646965491873656,0.07118098608583256,0.40000000100000005,marked groups
+March 2026,T3.3,2027-28,all rows vs change,3,-2.5369316544064304,-2.393721305216115,0.1432103491903156,0.30000000100000007,marked groups
+March 2026,T3.3,2028-29,all rows vs change,2,-1.6984389858710074,-1.6984389858710074,0.0,0.200000001,marked groups
+March 2026,T3.3,2029-30,all rows vs change,2,-1.3909962968011769,-1.3909962968011769,0.0,0.200000001,marked groups
+March 2026,T3.3,2030-31,all rows vs change,2,-0.430306899892571,-0.430306899892571,0.0,0.200000001,marked groups
+March 2026,T3.4,2025-26,all rows vs change,3,2.592689038515317,2.592689038515317,0.0,0.30000000100000007,marked groups
+March 2026,T3.4,2026-27,all rows vs change,3,1.8845017954079992,1.8845017954079992,0.0,0.30000000100000007,marked groups
+March 2026,T3.4,2027-28,all rows vs change,3,2.336745651422362,2.336745651422362,0.0,0.30000000100000007,marked groups
+March 2026,T3.4,2028-29,all rows vs change,3,2.306411691972741,2.306411691972741,0.0,0.30000000100000007,marked groups
+March 2026,T3.4,2029-30,all rows vs change,3,2.674903223081884,2.674903223081884,0.0,0.30000000100000007,marked groups
+March 2026,T3.4,2030-31,all rows vs change,3,2.907133163845046,2.907133163845046,0.0,0.30000000100000007,marked groups
+March 2026,T3.5,2025-26,all rows vs change,4,1.3321044958343293,1.3321044958343293,0.0,0.40000000100000005,marked groups
+March 2026,T3.5,2026-27,all rows vs change,4,-0.1590195052802983,-0.1590195052802983,0.0,0.40000000100000005,marked groups
+March 2026,T3.5,2027-28,all rows vs change,4,-0.1487554946237708,-0.1487554946237707,1.1102230246251565e-16,0.40000000100000005,marked groups
+March 2026,T3.5,2028-29,all rows vs change,4,0.05177675192163633,0.05177675192163636,2.7755575615628914e-17,0.40000000100000005,marked groups
+March 2026,T3.5,2029-30,all rows vs change,4,-0.145054754652449,-0.14505475465244902,2.7755575615628914e-17,0.40000000100000005,marked groups
+March 2026,T3.5,2030-31,all rows vs change,4,-0.18566474256036258,-0.18566474256036253,5.551115123125783e-17,0.40000000100000005,marked groups
+March 2026,T3.6,2025-26,all rows vs change,6,-1.2071706318831161,-1.2071706318831161,0.0,0.6000000010000001,marked groups
+March 2026,T3.6,2026-27,all rows vs change,6,-1.8886647025170191,-1.8886647025170193,2.220446049250313e-16,0.6000000010000001,marked groups
+March 2026,T3.6,2027-28,all rows vs change,6,-0.8786666612437841,-0.8786666612437841,0.0,0.6000000010000001,marked groups
+March 2026,T3.6,2028-29,all rows vs change,6,-0.6372235102782753,-0.6372235102782752,1.1102230246251565e-16,0.6000000010000001,marked groups
+March 2026,T3.6,2029-30,all rows vs change,6,-0.034842060935801555,-0.03484206093580161,5.551115123125783e-17,0.6000000010000001,marked groups
+March 2026,T3.6,2030-31,all rows vs change,6,0.34636732826297134,0.3463673282629716,2.7755575615628914e-16,0.6000000010000001,marked groups
+November 2010,T4.10,2010-11,all rows vs change,4,0.1,-0.09999999999999998,0.19999999999999998,0.40000000100000005,marked groups
+November 2010,T4.10,2011-12,all rows vs change,4,-1.1,-1.8,0.7,0.40000000100000005,marked groups
+November 2010,T4.10,2012-13,all rows vs change,4,-1.9,-2.2,0.30000000000000027,0.40000000100000005,marked groups
+November 2010,T4.10,2013-14,all rows vs change,4,-2.0,-2.6999999999999997,0.6999999999999997,0.40000000100000005,marked groups
+November 2010,T4.10,2014-15,all rows vs change,4,-2.8,-3.2,0.40000000000000036,0.40000000100000005,marked groups
+November 2010,T4.10,2015-16,all rows vs change,4,-3.4,-3.8,0.3999999999999999,0.40000000100000005,marked groups
+November 2010,T4.8,2010-11,all rows vs change,5,0.4,-0.2999999999999999,0.7,0.500000001,marked groups
+November 2010,T4.8,2011-12,all rows vs change,5,0.3,-0.3999999999999999,0.7,0.500000001,marked groups
+November 2010,T4.8,2012-13,all rows vs change,5,-0.5,-1.0999999999999999,0.5999999999999999,0.500000001,marked groups
+November 2010,T4.8,2013-14,all rows vs change,5,-1.3,-1.5,0.19999999999999996,0.500000001,marked groups
+November 2010,T4.8,2014-15,all rows vs change,5,-1.0,-1.5000000000000004,0.5000000000000004,0.500000001,marked groups
+November 2010,T4.8,2015-16,all rows vs change,5,-1.0,-1.2000000000000002,0.20000000000000018,0.500000001,marked groups
+November 2010,T4.9,2010-11,all rows vs change,7,1.5,1.5,0.0,0.700000001,marked groups
+November 2010,T4.9,2011-12,all rows vs change,7,3.2,3.4,0.19999999999999973,0.700000001,marked groups
+November 2010,T4.9,2012-13,all rows vs change,7,3.7,3.8000000000000003,0.10000000000000009,0.700000001,marked groups
+November 2010,T4.9,2013-14,all rows vs change,7,4.3,4.4,0.10000000000000053,0.700000001,marked groups
+November 2010,T4.9,2014-15,all rows vs change,7,4.9,5.0,0.09999999999999964,0.700000001,marked groups
+November 2010,T4.9,2015-16,all rows vs change,7,5.7,5.7,0.0,0.700000001,marked groups
+November 2011,T4.11,2011-12,all rows vs change,11,-0.5,-0.9,0.4,1.1000000010000002,marked groups
+November 2011,T4.11,2012-13,all rows vs change,11,-5.8,-11.7,5.8999999999999995,1.1000000010000002,marked groups
+November 2011,T4.11,2013-14,all rows vs change,11,-10.9,-21.9,10.999999999999998,1.1000000010000002,marked groups
+November 2011,T4.11,2014-15,all rows vs change,11,-12.1,-24.4,12.299999999999999,1.1000000010000002,marked groups
+November 2011,T4.11,2015-16,all rows vs change,11,-11.2,-22.6,11.400000000000002,1.1000000010000002,marked groups
+November 2011,T4.12,2011-12,all rows vs change,6,-3.2,-3.2,0.0,0.6000000010000001,marked groups
+November 2011,T4.12,2012-13,all rows vs change,6,-3.3,-3.4000000000000004,0.10000000000000053,0.6000000010000001,marked groups
+November 2011,T4.12,2013-14,all rows vs change,6,-4.0,-4.0,0.0,0.6000000010000001,marked groups
+November 2011,T4.12,2014-15,all rows vs change,6,-3.9,-3.9,0.0,0.6000000010000001,marked groups
+November 2011,T4.12,2015-16,all rows vs change,6,-4.1,-4.1,0.0,0.6000000010000001,marked groups
+November 2011,T4.13,2011-12,all rows vs change,3,-2.9,-3.1,0.20000000000000018,0.30000000100000007,inferred groups
+November 2011,T4.13,2012-13,all rows vs change,9,-4.7,-9.3,4.6000000000000005,0.900000001,marked groups
+November 2011,T4.13,2013-14,all rows vs change,9,-6.3,-12.5,6.2,0.900000001,marked groups
+November 2011,T4.13,2014-15,all rows vs change,9,-6.7,-13.5,6.8,0.900000001,marked groups
+November 2011,T4.13,2015-16,all rows vs change,9,-6.7,-13.4,6.7,0.900000001,marked groups
+November 2015,T4.10,2015-16,section totals vs change,5,1.4,1.5,0.10000000000000009,0.500000001,inferred groups
+November 2015,T4.10,2016-17,section totals vs change,3,3.3,3.4000000000000004,0.10000000000000053,0.30000000100000007,inferred groups
+November 2015,T4.10,2017-18,section totals vs change,5,4.5,4.7,0.20000000000000018,0.500000001,inferred groups
+November 2015,T4.10,2018-19,section totals vs change,4,4.3,4.0,0.2999999999999998,0.40000000100000005,inferred groups
+November 2015,T4.10,2019-20,section totals vs change,13,1.7,2.7,1.0000000000000002,1.3000000010000001,marked groups
+November 2015,T4.10,2020-21,section totals vs change,13,0.7,1.9,1.2,1.3000000010000001,marked groups
+November 2015,T4.11,2015-16,section 'Underlying OBR forecast changes' vs its total,5,-0.3,-0.3,0.0,0.500000001,marked groups
+November 2015,T4.11,2015-16,section totals vs change,3,-0.3,-0.3,0.0,0.30000000100000007,marked groups
+November 2015,T4.11,2016-17,section 'Underlying OBR forecast changes' vs its total,5,0.6,0.6,0.0,0.500000001,marked groups
+November 2015,T4.11,2016-17,section totals vs change,3,0.8,0.8,0.0,0.30000000100000007,marked groups
+November 2015,T4.11,2017-18,section 'Underlying OBR forecast changes' vs its total,5,1.6,1.6,0.0,0.500000001,marked groups
+November 2015,T4.11,2017-18,section totals vs change,3,1.8,1.8,0.0,0.30000000100000007,marked groups
+November 2015,T4.11,2018-19,section 'Underlying OBR forecast changes' vs its total,5,2.2,2.1999999999999997,4.440892098500626e-16,0.500000001,marked groups
+November 2015,T4.11,2018-19,section totals vs change,3,2.4,2.3000000000000003,0.09999999999999964,0.30000000100000007,marked groups
+November 2015,T4.11,2019-20,section 'Underlying OBR forecast changes' vs its total,5,2.7,2.6999999999999997,4.440892098500626e-16,0.500000001,marked groups
+November 2015,T4.11,2019-20,section totals vs change,3,3.0,3.0,0.0,0.30000000100000007,marked groups
+November 2015,T4.11,2020-21,section 'Underlying OBR forecast changes' vs its total,5,3.2,3.1999999999999997,4.440892098500626e-16,0.500000001,marked groups
+November 2015,T4.11,2020-21,section totals vs change,3,3.2,3.2,0.0,0.30000000100000007,marked groups
+November 2015,T4.12,2015-16,section 'Underlying OBR forecast changes' vs its total,5,0.6,0.6000000000000001,1.1102230246251565e-16,0.500000001,marked groups
+November 2015,T4.12,2015-16,section totals vs change,3,0.9,0.8999999999999999,1.1102230246251565e-16,0.30000000100000007,marked groups
+November 2015,T4.12,2016-17,section 'Underlying OBR forecast changes' vs its total,5,1.2,1.2,0.0,0.500000001,marked groups
+November 2015,T4.12,2016-17,section totals vs change,3,1.4,1.4,0.0,0.30000000100000007,marked groups
+November 2015,T4.12,2017-18,section 'Underlying OBR forecast changes' vs its total,5,1.9,2.0,0.10000000000000009,0.500000001,marked groups
+November 2015,T4.12,2017-18,section totals vs change,3,2.0,2.0,0.0,0.30000000100000007,marked groups
+November 2015,T4.12,2018-19,section 'Underlying OBR forecast changes' vs its total,5,1.9,1.8,0.09999999999999987,0.500000001,marked groups
+November 2015,T4.12,2018-19,section totals vs change,3,2.0,2.0,0.0,0.30000000100000007,marked groups
+November 2015,T4.12,2019-20,section 'Underlying OBR forecast changes' vs its total,5,1.5,1.4000000000000001,0.09999999999999987,0.500000001,marked groups
+November 2015,T4.12,2019-20,section totals vs change,3,1.6,1.6,0.0,0.30000000100000007,marked groups
+November 2015,T4.12,2020-21,section 'Underlying OBR forecast changes' vs its total,5,1.6,1.7,0.09999999999999987,0.500000001,marked groups
+November 2015,T4.12,2020-21,section totals vs change,3,1.7,1.6,0.09999999999999987,0.30000000100000007,marked groups
+November 2015,T4.8,2015-16,section 'Underlying OBR forecast changes' vs its total,24,2.5,4.8,2.3,2.4000000010000004,marked groups
+November 2015,T4.8,2015-16,section 'Effect of Government decisions' vs its total,3,0.3,0.3,0.0,0.30000000100000007,marked groups
+November 2015,T4.8,2015-16,section totals vs change,2,2.8,2.8,0.0,0.200000001,marked groups
+November 2015,T4.8,2016-17,section 'Underlying OBR forecast changes' vs its total,24,4.1,7.8,3.7,2.4000000010000004,marked groups
+November 2015,T4.8,2016-17,section 'Effect of Government decisions' vs its total,3,1.7,1.8,0.10000000000000009,0.30000000100000007,marked groups
+November 2015,T4.8,2016-17,section totals vs change,2,5.8,5.8,0.0,0.200000001,marked groups
+November 2015,T4.8,2017-18,section 'Underlying OBR forecast changes' vs its total,9,6.3,6.0,0.2999999999999998,0.900000001,inferred groups
+November 2015,T4.8,2017-18,section 'Effect of Government decisions' vs its total,3,6.1,6.0,0.09999999999999964,0.30000000100000007,marked groups
+November 2015,T4.8,2017-18,section totals vs change,2,12.4,12.399999999999999,1.7763568394002505e-15,0.200000001,marked groups
+November 2015,T4.8,2018-19,section 'Underlying OBR forecast changes' vs its total,9,5.4,5.1,0.3000000000000007,0.900000001,inferred groups
+November 2015,T4.8,2018-19,section 'Effect of Government decisions' vs its total,3,6.8,6.8,0.0,0.30000000100000007,marked groups
+November 2015,T4.8,2018-19,section totals vs change,2,12.3,12.2,0.10000000000000142,0.200000001,marked groups
+November 2015,T4.8,2019-20,section 'Underlying OBR forecast changes' vs its total,7,2.8,2.8000000000000003,4.440892098500626e-16,0.700000001,inferred groups
+November 2015,T4.8,2019-20,section 'Effect of Government decisions' vs its total,3,7.8,7.8,0.0,0.30000000100000007,marked groups
+November 2015,T4.8,2019-20,section totals vs change,2,10.6,10.6,0.0,0.200000001,marked groups
+November 2015,T4.8,2020-21,section 'Underlying OBR forecast changes' vs its total,7,2.8,2.8,0.0,0.700000001,inferred groups
+November 2015,T4.8,2020-21,section 'Effect of Government decisions' vs its total,3,6.5,6.5,0.0,0.30000000100000007,marked groups
+November 2015,T4.8,2020-21,section totals vs change,2,9.3,9.3,0.0,0.200000001,marked groups
+November 2016,T4.11,2016-17,section totals vs change,2,-10.522137158899682,-10.524290684854012,0.002153525954330604,0.200000001,inferred groups
+November 2016,T4.11,2017-18,section totals vs change,5,-15.513102125780733,-15.087852104036868,0.4252500217438655,0.500000001,inferred groups
+November 2016,T4.11,2018-19,section totals vs change,4,-20.62030128211029,-20.617823889654534,0.0024773924557557336,0.40000000100000005,inferred groups
+November 2016,T4.11,2019-20,section totals vs change,5,-21.26988929677384,-20.795032394836365,0.4748569019374749,0.500000001,inferred groups
+November 2016,T4.11,2020-21,section totals vs change,4,-22.513145139134394,-22.512826930433167,0.0003182087012270074,0.40000000100000005,inferred groups
+November 2016,T4.12,2016-17,section 'Underlying OBR forecast changes' vs its total,4,-0.0335944650601765,-0.03359446506017652,2.0816681711721685e-17,0.40000000100000005,marked groups
+November 2016,T4.12,2016-17,section totals vs change,1,-0.053210606418261364,-0.0335944650601765,0.019616141358084864,0.100000001,marked groups
+November 2016,T4.12,2017-18,section 'Underlying OBR forecast changes' vs its total,4,-0.38476588944300494,-0.3847658894430049,5.551115123125783e-17,0.40000000100000005,marked groups
+November 2016,T4.12,2017-18,section totals vs change,3,-0.1723349537732588,-0.15976588944300493,0.01256906433025387,0.30000000100000007,marked groups
+November 2016,T4.12,2018-19,section 'Underlying OBR forecast changes' vs its total,4,-0.6250671568500699,-0.6250671568500699,0.0,0.40000000100000005,marked groups
+November 2016,T4.12,2018-19,section totals vs change,3,-0.41289492461402233,-0.4000671568500699,0.012827767763952447,0.30000000100000007,marked groups
+November 2016,T4.12,2019-20,section 'Underlying OBR forecast changes' vs its total,4,-0.02125930337423685,-0.02125930337423687,2.0816681711721685e-17,0.40000000100000005,marked groups
+November 2016,T4.12,2019-20,section totals vs change,3,0.19738941204741423,0.19874069662576316,0.0013512845783489325,0.30000000100000007,marked groups
+November 2016,T4.12,2020-21,section 'Underlying OBR forecast changes' vs its total,4,-0.10693666947641026,-0.10693666947641023,2.7755575615628914e-17,0.40000000100000005,marked groups
+November 2016,T4.12,2020-21,section totals vs change,3,0.008651314106231212,0.008063330523589735,0.000587983582641477,0.30000000100000007,marked groups
+November 2016,T4.13,2016-17,section 'Underlying OBR forecast changes' vs its total,7,2.5084526174136172,2.5084526174136172,0.0,0.700000001,marked groups
+November 2016,T4.13,2016-17,section totals vs change,1,2.5084526174136172,2.5084526174136172,0.0,0.100000001,marked groups
+November 2016,T4.13,2017-18,section 'Underlying OBR forecast changes' vs its total,7,2.9693035089735034,2.9693035089735034,0.0,0.700000001,marked groups
+November 2016,T4.13,2017-18,section totals vs change,1,2.9693035089735034,2.9693035089735034,0.0,0.100000001,marked groups
+November 2016,T4.13,2018-19,section 'Underlying OBR forecast changes' vs its total,7,3.388684981932869,3.388684981932869,0.0,0.700000001,marked groups
+November 2016,T4.13,2018-19,section totals vs change,1,3.388684981932869,3.388684981932869,0.0,0.100000001,marked groups
+November 2016,T4.13,2019-20,section 'Underlying OBR forecast changes' vs its total,7,3.587658890716966,3.587658890716966,0.0,0.700000001,marked groups
+November 2016,T4.13,2019-20,section totals vs change,1,3.587658890716966,3.587658890716966,0.0,0.100000001,marked groups
+November 2016,T4.13,2020-21,section 'Underlying OBR forecast changes' vs its total,7,4.83089531498922,4.83089531498922,0.0,0.700000001,marked groups
+November 2016,T4.13,2020-21,section totals vs change,1,4.83089531498922,4.83089531498922,0.0,0.100000001,marked groups
+November 2016,T4.8,2016-17,section 'Underlying OBR forecast changes' vs its total,7,-6.722855396586571,-6.722855396586572,8.881784197001252e-16,0.700000001,inferred groups
+November 2016,T4.8,2016-17,section 'Effect of Government decisions' vs its total,3,0.005,0.005000000000000001,8.673617379884035e-19,0.30000000100000007,marked groups
+November 2016,T4.8,2016-17,section totals vs change,2,-6.7163180119903245,-6.717855396586571,0.001537384596246305,0.200000001,marked groups
+November 2016,T4.8,2017-18,section 'Underlying OBR forecast changes' vs its total,28,-9.310949454970743,-17.601249601175276,8.290300146204533,2.8000000010000003,marked groups
+November 2016,T4.8,2017-18,section 'Effect of Government decisions' vs its total,3,0.67,0.67,0.0,0.30000000100000007,marked groups
+November 2016,T4.8,2017-18,section totals vs change,2,-8.639010444457426,-8.640949454970743,0.0019390105133165747,0.200000001,marked groups
+November 2016,T4.8,2018-19,section 'Underlying OBR forecast changes' vs its total,9,-13.078621718050622,-12.997737579220987,0.08088413882963508,0.900000001,inferred groups
+November 2016,T4.8,2018-19,section 'Effect of Government decisions' vs its total,3,0.665,0.665,0.0,0.30000000100000007,marked groups
+November 2016,T4.8,2018-19,section totals vs change,2,-12.41566525110261,-12.41362171805062,0.0020435330519887884,0.200000001,marked groups
+November 2016,T4.8,2019-20,section 'Underlying OBR forecast changes' vs its total,9,-15.185189916034409,-15.527187443326039,0.34199752729163,0.900000001,inferred groups
+November 2016,T4.8,2019-20,section 'Effect of Government decisions' vs its total,3,1.12,1.115,0.0050000000000001155,0.30000000100000007,marked groups
+November 2016,T4.8,2019-20,section totals vs change,2,-14.067080653643075,-14.06518991603441,0.001890737608665205,0.200000001,marked groups
+November 2016,T4.8,2020-21,section 'Underlying OBR forecast changes' vs its total,13,-15.311968160446147,-16.004357505704057,0.6923893452579097,1.3000000010000001,inferred groups
+November 2016,T4.8,2020-21,section 'Effect of Government decisions' vs its total,3,0.5750000000000001,0.5700000000000001,0.0050000000000000044,0.30000000100000007,marked groups
+November 2016,T4.8,2020-21,section totals vs change,2,-14.738454949682705,-14.736968160446148,0.0014867892365568736,0.200000001,marked groups
+November 2017,T4.10,2017-18,section totals vs change,7,1.87010109505934,1.7615419814939057,0.10855911356543424,0.700000001,inferred groups
+November 2017,T4.10,2018-19,section totals vs change,12,-0.010554427391923582,-0.4043282399902652,0.3937738125983416,1.2000000010000003,marked groups
+November 2017,T4.10,2019-20,section totals vs change,7,-3.567168982711337,-3.501848205457234,0.06532077725410268,0.700000001,inferred groups
+November 2017,T4.10,2020-21,section totals vs change,6,-6.675840133474253,-6.500826062888431,0.17501407058582164,0.6000000010000001,inferred groups
+November 2017,T4.10,2021-22,section totals vs change,6,-9.884024380602114,-10.009451805673256,0.1254274250711429,0.6000000010000001,inferred groups
+November 2017,T4.11,2017-18,section totals vs change,10,0.6898045715897112,1.382644416668328,0.6928398450786168,1.000000001,marked groups
+November 2017,T4.11,2018-19,section totals vs change,10,0.713491153434159,1.382838461789047,0.669347308354888,1.000000001,marked groups
+November 2017,T4.11,2019-20,section totals vs change,10,0.6344362950199063,1.1014312341453292,0.4669949391254229,1.000000001,marked groups
+November 2017,T4.11,2020-21,section totals vs change,10,1.0197943208575992,1.843137157546369,0.8233428366887698,1.000000001,marked groups
+November 2017,T4.11,2021-22,section totals vs change,10,-0.09721135124210178,0.846708097537288,0.9439194487793898,1.000000001,marked groups
+November 2017,T4.12,2017-18,section '' vs its total,7,0.2852780960329026,0.39700622188597373,0.11172812585307113,0.700000001,marked groups
+November 2017,T4.12,2017-18,section totals vs change,1,0.3970062218859738,0.2852780960329026,0.11172812585307118,0.100000001,marked groups
+November 2017,T4.12,2018-19,section '' vs its total,7,-0.6182074971309116,-0.47710705000542936,0.14110044712548225,0.700000001,marked groups
+November 2017,T4.12,2018-19,section totals vs change,1,-0.4771070500054293,-0.6182074971309116,0.1411004471254823,0.100000001,marked groups
+November 2017,T4.12,2019-20,section '' vs its total,7,-2.327302874077605,-1.9144831689951618,0.41281970508244314,0.700000001,marked groups
+November 2017,T4.12,2019-20,section totals vs change,1,-1.9144831689951616,-2.327302874077605,0.41281970508244337,0.100000001,marked groups
+November 2017,T4.12,2020-21,section '' vs its total,7,-3.2142799222181933,-2.7700282940173793,0.444251628200814,0.700000001,marked groups
+November 2017,T4.12,2020-21,section totals vs change,1,-2.7700282940173793,-3.2142799222181933,0.444251628200814,0.100000001,marked groups
+November 2017,T4.12,2021-22,section '' vs its total,7,-3.982399658267647,-3.5317645187162725,0.4506351395513746,0.700000001,marked groups
+November 2017,T4.12,2021-22,section totals vs change,1,-3.5317645187162725,-3.982399658267647,0.4506351395513746,0.100000001,marked groups
+November 2017,T4.13,2017-18,section '' vs its total,7,-1.2210603200632741,-1.1615558479382173,0.05950447212505683,0.700000001,marked groups
+November 2017,T4.13,2017-18,section totals vs change,1,-1.1615558479382173,-1.2210603200632741,0.05950447212505683,0.100000001,marked groups
+November 2017,T4.13,2018-19,section '' vs its total,7,-0.08647200281506495,0.2260104850910309,0.31248248790609584,0.700000001,marked groups
+November 2017,T4.13,2018-19,section totals vs change,1,0.22601048509103094,-0.08647200281506495,0.3124824879060959,0.100000001,marked groups
+November 2017,T4.13,2019-20,section '' vs its total,7,-0.6418548639826641,-0.08419646399193682,0.5576583999907273,0.700000001,marked groups
+November 2017,T4.13,2019-20,section totals vs change,1,-0.08419646399193681,-0.6418548639826641,0.5576583999907273,0.100000001,marked groups
+November 2017,T4.13,2020-21,section '' vs its total,7,-0.15148181043187664,1.1524260172031617,1.3039078276350384,0.700000001,marked groups
+November 2017,T4.13,2020-21,section totals vs change,1,1.1524260172031617,-0.15148181043187664,1.3039078276350384,0.100000001,marked groups
+November 2017,T4.13,2021-22,section '' vs its total,7,-0.5765942198876362,0.7277820318379185,1.3043762517255546,0.700000001,marked groups
+November 2017,T4.13,2021-22,section totals vs change,1,0.7277820318379185,-0.5765942198876362,1.3043762517255546,0.100000001,marked groups
+November 2017,T4.14,2017-18,section '' vs its total,6,0.26482562441011137,0.1619014931111543,0.10292413129895708,0.6000000010000001,marked groups
+November 2017,T4.14,2017-18,section totals vs change,1,0.16190149311115398,0.26482562441011137,0.10292413129895739,0.100000001,marked groups
+November 2017,T4.14,2018-19,section '' vs its total,6,-0.062335079062033935,-0.5129445203578606,0.4506094412958267,0.6000000010000001,marked groups
+November 2017,T4.14,2018-19,section totals vs change,1,-0.5129445203578609,-0.062335079062033935,0.4506094412958269,0.100000001,marked groups
+November 2017,T4.14,2019-20,section '' vs its total,6,-0.39422924809360393,-0.8764389926908025,0.48220974459719856,0.6000000010000001,marked groups
+November 2017,T4.14,2019-20,section totals vs change,1,-0.8764389926908027,-0.39422924809360393,0.4822097445971988,0.100000001,marked groups
+November 2017,T4.14,2020-21,section '' vs its total,6,-0.7507668800342215,-1.265707478493276,0.5149405984590545,0.6000000010000001,marked groups
+November 2017,T4.14,2020-21,section totals vs change,1,-1.265707478493276,-0.7507668800342215,0.5149405984590545,0.100000001,marked groups
+November 2017,T4.14,2021-22,section '' vs its total,6,-1.0835752587803373,-1.6428750235224927,0.5592997647421554,0.6000000010000001,marked groups
+November 2017,T4.14,2021-22,section totals vs change,1,-1.6428750235224925,-1.0835752587803373,0.5592997647421551,0.100000001,marked groups
+November 2017,T4.8,2017-18,section '' vs its total,26,3.1470083639480158,7.644562334685973,4.4975539707379575,2.600000001,marked groups
+November 2017,T4.8,2017-18,section totals vs change,3,3.1949022201632715,1.892250469588585,1.3026517505746866,0.30000000100000007,marked groups
+November 2017,T4.8,2018-19,section '' vs its total,26,-0.378317579719638,4.303609560212274,4.681927139931911,2.600000001,marked groups
+November 2017,T4.8,2018-19,section totals vs change,3,-0.9065424828404502,-6.495012105612816,5.588469622772366,0.30000000100000007,marked groups
+November 2017,T4.8,2019-20,section '' vs its total,26,-8.392295741640387,-6.38501083489402,2.007284906746367,2.600000001,marked groups
+November 2017,T4.8,2019-20,section totals vs change,3,-9.06899011903647,-20.145265144819312,11.076275025782842,0.30000000100000007,marked groups
+November 2017,T4.8,2020-21,section '' vs its total,26,-12.97713383768828,-7.963678784285926,5.013455053402354,2.600000001,marked groups
+November 2017,T4.8,2020-21,section totals vs change,3,-11.735128681828087,-28.483712417058527,16.74858373523044,0.30000000100000007,marked groups
+November 2017,T4.8,2021-22,section '' vs its total,26,-20.63188626738779,-20.681040600177337,0.04915433278954495,2.600000001,marked groups
+November 2017,T4.8,2021-22,section totals vs change,3,-21.649885863430995,-43.25061739407245,21.600731530641454,0.30000000100000007,marked groups
+November 2023,T4.1,2022-23,decomposition 'By policy and forecast differences' vs change,3,3.508247060267763,3.508247060267763,0.0,0.30000000100000007,marked groups
+November 2023,T4.1,2022-23,decomposition 'By tax head' vs change,8,3.508247060267763,3.5082470602677627,4.440892098500626e-16,0.800000001,marked groups
+November 2023,T4.1,2023-24,decomposition 'By policy and forecast differences' vs change,3,40.81843364652855,40.81843364652855,0.0,0.30000000100000007,marked groups
+November 2023,T4.1,2023-24,decomposition 'By tax head' vs change,8,40.81843364652855,40.81843364652854,7.105427357601002e-15,0.800000001,marked groups
+November 2023,T4.1,2024-25,decomposition 'By policy and forecast differences' vs change,3,48.44407638874873,48.44407638874873,0.0,0.30000000100000007,marked groups
+November 2023,T4.1,2024-25,decomposition 'By tax head' vs change,8,48.44407638874873,48.444076388748734,7.105427357601002e-15,0.800000001,marked groups
+November 2023,T4.1,2025-26,decomposition 'By policy and forecast differences' vs change,3,50.76030055442084,50.76030055442084,0.0,0.30000000100000007,marked groups
+November 2023,T4.1,2025-26,decomposition 'By tax head' vs change,8,50.76030055442084,50.760300554420844,7.105427357601002e-15,0.800000001,marked groups
+November 2023,T4.1,2026-27,decomposition 'By policy and forecast differences' vs change,3,49.197987931474245,49.197987931474245,0.0,0.30000000100000007,marked groups
+November 2023,T4.1,2026-27,decomposition 'By tax head' vs change,8,49.197987931474245,49.19798793147424,7.105427357601002e-15,0.800000001,marked groups
+November 2023,T4.1,2027-28,decomposition 'By policy and forecast differences' vs change,3,54.22451337820348,54.22451337820348,0.0,0.30000000100000007,marked groups
+November 2023,T4.1,2027-28,decomposition 'By tax head' vs change,8,54.22451337820348,54.22451337820349,7.105427357601002e-15,0.800000001,marked groups
+November 2023,T4.2,2023-24,all rows vs change,4,12.525167198305553,12.525167198305553,0.0,0.40000000100000005,marked groups
+November 2023,T4.2,2024-25,all rows vs change,4,13.074755235471628,13.074755235471628,0.0,0.40000000100000005,marked groups
+November 2023,T4.2,2025-26,all rows vs change,4,15.637945398217255,15.637945398217255,0.0,0.40000000100000005,marked groups
+November 2023,T4.2,2026-27,all rows vs change,4,18.83809696416415,18.83809696416415,0.0,0.40000000100000005,marked groups
+November 2023,T4.2,2027-28,all rows vs change,4,21.8822203272436,21.8822203272436,0.0,0.40000000100000005,marked groups
+November 2023,T4.3,2023-24,all rows vs change,4,16.96993297033083,16.96993297033083,0.0,0.40000000100000005,marked groups
+November 2023,T4.3,2024-25,all rows vs change,4,15.87594734613657,15.87594734613657,0.0,0.40000000100000005,marked groups
+November 2023,T4.3,2025-26,all rows vs change,4,11.244491044901721,11.244491044901721,0.0,0.40000000100000005,marked groups
+November 2023,T4.3,2026-27,all rows vs change,4,4.287618471015762,4.287618471015762,0.0,0.40000000100000005,marked groups
+November 2023,T4.3,2027-28,all rows vs change,4,2.185030372497053,2.185030372497053,0.0,0.40000000100000005,marked groups
+November 2025,T4.2,2024-25,decomposition 'By policy and forecast differences' vs change,4,-2.632445996775914,-2.632445996775914,0.0,0.40000000100000005,marked groups
+November 2025,T4.2,2024-25,decomposition 'By tax head' vs change,10,-2.632445996775914,-2.632445996775914,0.0,1.000000001,marked groups
+November 2025,T4.2,2025-26,decomposition 'By policy and forecast differences' vs change,4,2.0195077651753763,2.0195077651753763,0.0,0.40000000100000005,marked groups
+November 2025,T4.2,2025-26,decomposition 'By tax head' vs change,10,2.0195077651753763,2.0195077651753763,0.0,1.000000001,marked groups
+November 2025,T4.2,2026-27,decomposition 'By policy and forecast differences' vs change,4,11.449664924048193,11.449664924048193,0.0,0.40000000100000005,marked groups
+November 2025,T4.2,2026-27,decomposition 'By tax head' vs change,10,11.449664924048193,11.449664924048193,0.0,1.000000001,marked groups
+November 2025,T4.2,2027-28,decomposition 'By policy and forecast differences' vs change,4,19.620952584336692,19.620952584336692,0.0,0.40000000100000005,marked groups
+November 2025,T4.2,2027-28,decomposition 'By tax head' vs change,10,19.620952584336692,19.620952584336692,0.0,1.000000001,marked groups
+November 2025,T4.2,2028-29,decomposition 'By policy and forecast differences' vs change,4,26.679536798733352,26.67953679873335,3.552713678800501e-15,0.40000000100000005,marked groups
+November 2025,T4.2,2028-29,decomposition 'By tax head' vs change,10,26.679536798733352,26.679536798733352,0.0,1.000000001,marked groups
+November 2025,T4.2,2029-30,decomposition 'By policy and forecast differences' vs change,4,38.28839647810537,38.28839647810537,0.0,0.40000000100000005,marked groups
+November 2025,T4.2,2029-30,decomposition 'By tax head' vs change,10,38.28839647810537,38.28839647810537,0.0,1.000000001,marked groups
+November 2025,T4.3,2025-26,all rows vs change,4,-1.7722223284965821,-1.699199410861681,0.0730229176349011,0.40000000100000005,inferred groups
+November 2025,T4.3,2026-27,all rows vs change,3,2.395000395329987,2.395000395329987,0.0,0.30000000100000007,inferred groups
+November 2025,T4.3,2027-28,all rows vs change,3,4.201276092987314,4.201276092987314,0.0,0.30000000100000007,inferred groups
+November 2025,T4.3,2028-29,all rows vs change,3,7.6788366798141965,7.6788366798141965,0.0,0.30000000100000007,inferred groups
+November 2025,T4.3,2029-30,all rows vs change,3,15.331218321601568,15.331218321601568,0.0,0.30000000100000007,inferred groups
+November 2025,T4.4,2025-26,all rows vs change,4,4.724903531239676,4.719854607941987,0.005048923297688468,0.40000000100000005,marked groups
+November 2025,T4.4,2026-27,all rows vs change,4,6.885985841589218,6.811338547796825,0.07464729379239277,0.40000000100000005,marked groups
+November 2025,T4.4,2027-28,all rows vs change,4,7.803376261958334,7.828623694589121,0.025247432630786548,0.40000000100000005,marked groups
+November 2025,T4.4,2028-29,all rows vs change,3,8.715555570704169,8.715555570704167,1.7763568394002505e-15,0.30000000100000007,marked groups
+November 2025,T4.4,2029-30,all rows vs change,3,12.994851564850904,12.994851564850906,1.7763568394002505e-15,0.30000000100000007,marked groups
+November 2025,T4.5,2025-26,all rows vs change,4,0.016973005423622567,0.014657328697119358,0.002315676726503209,0.40000000100000005,marked groups
+November 2025,T4.5,2026-27,all rows vs change,4,0.5382484324937096,0.6061614268865203,0.06791299439281073,0.40000000100000005,marked groups
+November 2025,T4.5,2027-28,all rows vs change,3,0.3103630176889567,0.3103630176889567,0.0,0.30000000100000007,marked groups
+November 2025,T4.5,2028-29,all rows vs change,3,0.40772098145053803,0.40772098145053803,0.0,0.30000000100000007,marked groups
+November 2025,T4.5,2029-30,all rows vs change,3,-2.5473870090273323,-2.5473870090273323,0.0,0.30000000100000007,marked groups
+November 2025,T4.6,2025-26,all rows vs change,5,-0.7825350529809327,-0.8225350529809327,0.039999999999999925,0.500000001,marked groups
+November 2025,T4.6,2026-27,all rows vs change,5,1.3989436885095188,1.3533150143940973,0.045628674115421486,0.500000001,marked groups
+November 2025,T4.6,2027-28,all rows vs change,5,2.1506519350368762,2.165241115084577,0.014589180047700712,0.500000001,marked groups
+November 2025,T4.6,2028-29,all rows vs change,5,3.041228542451705,3.11298274878322,0.07175420633151486,0.500000001,marked groups
+November 2025,T4.6,2029-30,all rows vs change,4,3.7529349798471685,3.8071105559755045,0.05417557612833601,0.40000000100000005,marked groups
+October 2021,T3.10,2020-21,all rows vs change,3,-6.013360527226006,-6.013360527226006,0.0,0.30000000100000007,marked groups
+October 2021,T3.10,2020-21,all rows vs change,2,6.192799393166027,6.192799393166027,0.0,0.200000001,marked groups
+October 2021,T3.10,2021-22,all rows vs change,3,-8.70034936011156,-8.70034936011156,0.0,0.30000000100000007,marked groups
+October 2021,T3.10,2021-22,all rows vs change,3,10.681099455928312,10.681099455928312,0.0,0.30000000100000007,marked groups
+October 2021,T3.10,2022-23,all rows vs change,3,-7.667765578300106,-7.667765578300106,0.0,0.30000000100000007,marked groups
+October 2021,T3.10,2022-23,all rows vs change,3,5.633824973987672,5.633824973987672,0.0,0.30000000100000007,marked groups
+October 2021,T3.10,2023-24,all rows vs change,3,10.066057425830195,10.066057425830195,0.0,0.30000000100000007,marked groups
+October 2021,T3.10,2023-24,all rows vs change,3,2.904376806680915,2.904376806680915,0.0,0.30000000100000007,marked groups
+October 2021,T3.10,2024-25,all rows vs change,3,17.590625550389248,17.590625550389248,0.0,0.30000000100000007,marked groups
+October 2021,T3.10,2024-25,all rows vs change,3,2.2919611447473898,2.2919611447473898,0.0,0.30000000100000007,marked groups
+October 2021,T3.10,2025-26,all rows vs change,3,2.796030906692721,2.2012624916734964,0.5947684150192245,0.30000000100000007,marked groups
+October 2021,T3.3,2020-21,all rows vs change,8,-77.66804995974599,-77.66804995974599,0.0,0.800000001,marked groups
+October 2021,T3.3,2020-21,all rows vs change,8,8.933560342711417,8.933560342711417,0.0,0.800000001,marked groups
+October 2021,T3.3,2021-22,all rows vs change,8,-48.77355706535957,-48.77355706535957,0.0,0.800000001,marked groups
+October 2021,T3.3,2021-22,all rows vs change,8,42.66385932731657,42.66385932731658,7.105427357601002e-15,0.800000001,marked groups
+October 2021,T3.3,2022-23,all rows vs change,8,13.18564181214515,13.18564181214515,0.0,0.800000001,marked groups
+October 2021,T3.3,2022-23,all rows vs change,8,76.99497373443637,76.99497373443637,0.0,0.800000001,marked groups
+October 2021,T3.3,2023-24,all rows vs change,8,35.11304192320756,35.11304192320756,0.0,0.800000001,marked groups
+October 2021,T3.3,2023-24,all rows vs change,8,75.0589374262778,75.0589374262778,0.0,0.800000001,marked groups
+October 2021,T3.3,2024-25,all rows vs change,8,39.0254874240527,39.0254874240527,0.0,0.800000001,marked groups
+October 2021,T3.3,2024-25,all rows vs change,8,67.06152203019906,67.06152203019906,0.0,0.800000001,marked groups
+October 2021,T3.3,2025-26,all rows vs change,8,64.14327326430134,64.14327326430134,0.0,0.800000001,marked groups
+October 2021,T3.7,2020-21,all rows vs change,3,-13.212571358207697,-13.212571358207697,0.0,0.30000000100000007,marked groups
+October 2021,T3.7,2020-21,all rows vs change,4,2.4223772430070767,2.4223772430070767,0.0,0.40000000100000005,marked groups
+October 2021,T3.7,2021-22,all rows vs change,3,0.0002536093829235142,0.0002536093829235142,0.0,0.30000000100000007,marked groups
+October 2021,T3.7,2021-22,all rows vs change,4,24.225420155744075,24.225420155744075,0.0,0.40000000100000005,marked groups
+October 2021,T3.7,2022-23,all rows vs change,3,22.106480176556317,22.106480176556317,0.0,0.30000000100000007,marked groups
+October 2021,T3.7,2022-23,all rows vs change,4,45.24646340304639,45.24646340304639,0.0,0.40000000100000005,marked groups
+October 2021,T3.7,2023-24,all rows vs change,3,22.665941186722478,22.665941186722478,0.0,0.30000000100000007,marked groups
+October 2021,T3.7,2023-24,all rows vs change,4,46.23753159962291,46.23753159962291,0.0,0.40000000100000005,marked groups
+October 2021,T3.7,2024-25,all rows vs change,3,19.259816873964667,19.259816873964667,0.0,0.30000000100000007,marked groups
+October 2021,T3.7,2024-25,all rows vs change,4,41.04874829426126,41.04874829426126,0.0,0.40000000100000005,marked groups
+October 2021,T3.7,2025-26,all rows vs change,4,39.96850281493266,39.96850281493266,0.0,0.40000000100000005,marked groups
+October 2024,T4.2,2023-24,decomposition 'By policy and forecast differences' vs change,4,-1.377979705382586,-1.377979705382586,0.0,0.40000000100000005,marked groups
+October 2024,T4.2,2023-24,decomposition 'By tax head' vs change,9,-1.377979705382586,-1.3779797053825855,4.440892098500626e-16,0.900000001,marked groups
+October 2024,T4.2,2024-25,decomposition 'By policy and forecast differences' vs change,4,9.565634526671602,9.565634526671602,0.0,0.40000000100000005,marked groups
+October 2024,T4.2,2024-25,decomposition 'By tax head' vs change,9,9.565634526671602,9.565634526671602,0.0,0.900000001,marked groups
+October 2024,T4.2,2025-26,decomposition 'By policy and forecast differences' vs change,4,55.304807398029425,55.304807398029425,0.0,0.40000000100000005,marked groups
+October 2024,T4.2,2025-26,decomposition 'By tax head' vs change,9,55.304807398029425,55.304807398029425,0.0,0.900000001,marked groups
+October 2024,T4.2,2026-27,decomposition 'By policy and forecast differences' vs change,4,68.94163817382037,68.94163817382037,0.0,0.40000000100000005,marked groups
+October 2024,T4.2,2026-27,decomposition 'By tax head' vs change,9,68.94163817382037,68.94163817382037,0.0,0.900000001,marked groups
+October 2024,T4.2,2027-28,decomposition 'By policy and forecast differences' vs change,4,73.48073318213437,73.4797331821344,0.0009999999999763531,0.40000000100000005,marked groups
+October 2024,T4.2,2027-28,decomposition 'By tax head' vs change,9,73.48073318213437,73.48073318213436,1.4210854715202004e-14,0.900000001,marked groups
+October 2024,T4.2,2028-29,decomposition 'By policy and forecast differences' vs change,4,67.52847374095018,67.52647374095022,0.0019999999999527063,0.40000000100000005,marked groups
+October 2024,T4.2,2028-29,decomposition 'By tax head' vs change,9,67.52847374095018,67.52847374095018,0.0,0.900000001,marked groups
+October 2024,T4.3,2024-25,all rows vs change,4,10.924289454433875,10.924289454433875,0.0,0.40000000100000005,marked groups
+October 2024,T4.3,2025-26,all rows vs change,4,14.929789054222283,14.929789054222283,0.0,0.40000000100000005,marked groups
+October 2024,T4.3,2026-27,all rows vs change,4,19.698141813697134,19.698141813697134,0.0,0.40000000100000005,marked groups
+October 2024,T4.3,2027-28,all rows vs change,4,23.009235295064798,23.009235295064798,0.0,0.40000000100000005,marked groups
+October 2024,T4.3,2028-29,all rows vs change,4,14.879356380087927,14.879356380087925,1.7763568394002505e-15,0.40000000100000005,marked groups
+October 2024,T4.4,2024-25,all rows vs change,4,-0.6867578947984896,-0.6867578947984894,2.220446049250313e-16,0.40000000100000005,marked groups
+October 2024,T4.4,2025-26,all rows vs change,4,25.215766477264367,25.215766477264367,0.0,0.40000000100000005,marked groups
+October 2024,T4.4,2026-27,all rows vs change,4,24.95352529763747,24.95352529763747,0.0,0.40000000100000005,marked groups
+October 2024,T4.4,2027-28,all rows vs change,4,24.327849470552792,24.327849470552792,0.0,0.40000000100000005,marked groups
+October 2024,T4.4,2028-29,all rows vs change,4,24.65639207168303,24.65639207168303,0.0,0.40000000100000005,marked groups

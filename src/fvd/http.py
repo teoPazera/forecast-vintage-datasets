@@ -154,9 +154,12 @@ def check_integrity(path: Path) -> str:
                 bad = z.testzip()
             return f"corrupt member {bad}" if bad else ""
         if kind == "xls":
+            import io
+
             import xlrd
-            xlrd.open_workbook(str(path), on_demand=True).release_resources()
-            return ""
+            log = io.StringIO()   # xlrd reports truncation as a warning, not an error
+            xlrd.open_workbook(str(path), on_demand=True, logfile=log).release_resources()
+            return "OLE2 file truncated" if "truncated" in log.getvalue().lower() else ""
         if kind == "pdf":
             with open(path, "rb") as f:
                 f.seek(max(0, path.stat().st_size - 2048))
