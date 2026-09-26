@@ -1,0 +1,51 @@
+table: inventory/sources
+description: Provenance of every raw file and every refused or failed request.
+columns:
+- name: path
+  type: string
+  unit: ''
+  description: repository-relative path of the stored raw file; empty for failed requests
+- name: url
+  type: string
+  unit: ''
+  description: the source's own URL for the file (obr.uk cache-buster query removed)
+- name: via
+  type: string
+  unit: ''
+  description: direct | wayback | wayback-alternate (same document archived under another URL)
+- name: fetched_url
+  type: string
+  unit: ''
+  description: URL actually requested (Wayback URL when via is not direct)
+- name: capture_time
+  type: datetime
+  unit: UTC
+  description: Wayback capture time
+- name: retrieved_at
+  type: datetime
+  unit: UTC
+  description: time of our download
+- name: sha256
+  type: string
+  unit: ''
+  description: SHA-256 of the stored bytes
+- name: bytes
+  type: integer
+  unit: bytes
+  description: size of the stored file
+- name: last_modified
+  type: string
+  unit: ''
+  description: Last-Modified header of the original server (from the archive when archived)
+- name: content_type
+  type: string
+  unit: ''
+  description: MIME type served
+- name: status
+  type: integer
+  unit: ''
+  description: HTTP status; 200 for stored files
+- name: note
+  type: string
+  unit: ''
+  description: 'free text: capture counts, alternate URL, refusal reason'

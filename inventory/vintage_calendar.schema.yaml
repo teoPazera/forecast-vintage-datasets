@@ -1,0 +1,68 @@
+table: inventory/vintage_calendar
+description: Every forecast vintage with its publication date.
+columns:
+- name: source
+  type: string
+  unit: ''
+  description: OBR | CBO
+- name: vintage_id
+  type: string
+  unit: ''
+  description: obr_YYYY-MM[_memo], hmt_YYYY-MM or cbo_YYYY-MM
+- name: label
+  type: string
+  unit: ''
+  description: label as the source writes it (normalized 'Month YYYY'; memo type in brackets)
+- name: forecaster
+  type: string
+  unit: ''
+  description: OBR | HM Treasury | CBO
+- name: publication_date
+  type: date
+  unit: ''
+  description: exact, or last day of the month when month-only (D5)
+- name: date_certainty
+  type: string
+  unit: ''
+  description: exact | month_only | unknown
+- name: date_basis
+  type: string
+  unit: ''
+  description: where the date comes from
+- name: landing_url
+  type: string
+  unit: ''
+  description: OBR EFO landing page
+- name: primary_document_id
+  type: string
+  unit: ''
+  description: doc_id of the vintage's main report in inventory/documents
+- name: flags
+  type: string
+  unit: ''
+  description: 'semicolon list: memo:<type>, hmt, june2010_budget_assumed, spring, winter, no_season_flag'
+- name: n_sheets
+  type: integer
+  unit: sheets
+  description: 'OBR: number of HOFD sheets carrying the vintage'
+- name: notes
+  type: string
+  unit: ''
+  description: free text
+- name: components
+  type: string
+  unit: ''
+  description: 'CBO: components present in baselines.csv'
+- name: n_candidates
+  type: integer
+  unit: documents
+  description: 'CBO: listed outlook or budget-analysis reports in the baseline month'
+- name: related_date
+  type: date
+  unit: ''
+  description: 'CBO month-only vintages: earliest dated CBO statement or testimony on the outlook in that
+    month (candidate proxy date, not used)'
+- name: document_url
+  type: string
+  unit: ''
+  description: 'CBO: URL of the matched report'

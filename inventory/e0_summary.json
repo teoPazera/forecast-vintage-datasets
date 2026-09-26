@@ -1,0 +1,35 @@
+{
+  "databases": {
+    "hofd": "raw/obr/Historical_official_forecasts_database_Spring_2026.xlsx",
+    "pmd": "raw/obr/Policy_measures_database_March_2026.xlsx",
+    "frd": "raw/obr/Fiscal_forecast_revisions_database_March_2026.xlsx"
+  },
+  "cbo_repo": "raw/cbo/eval-projections-682559c",
+  "efo_landing_pages": 34,
+  "fer_landing_pages": 16,
+  "documents_by_collection": {
+    "cbo_accuracy": 10,
+    "cbo_apb": 73,
+    "cbo_beo": 130,
+    "cbo_evaluation": 3,
+    "cbo_mbr": 192,
+    "cbo_testimony": 121,
+    "efo": 690,
+    "fer": 69,
+    "psf_commentary": 160
+  },
+  "documents_by_certainty": {
+    "exact": 1166,
+    "month_only": 256,
+    "unknown": 26
+  },
+  "obr_vintages": 33,
+  "obr_vintages_exact": 33,
+  "hmt_vintages": 73,
+  "memo_vintages": 3,
+  "efo_primary_reports": 34,
+  "efo_reports_unavailable": 0,
+  "cbo_baselines": 117,
+  "cbo_baselines_exact": 53,
+  "cbo_exact_share": 0.453
+}

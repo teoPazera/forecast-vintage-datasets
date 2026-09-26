@@ -1,0 +1,35 @@
+table: inventory/hofd_vintage_labels
+description: Every vintage row label found in the unsuffixed HOFD series sheets.
+columns:
+- name: sheet
+  type: string
+  unit: ''
+  description: HOFD sheet name
+- name: row
+  type: integer
+  unit: ''
+  description: 1-based Excel row
+- name: raw
+  type: string
+  unit: ''
+  description: cell value as written
+- name: label
+  type: string
+  unit: ''
+  description: normalized 'Month YYYY'
+- name: kind
+  type: string
+  unit: ''
+  description: regular | memo
+- name: memo_type
+  type: string
+  unit: ''
+  description: restated | supplementary for memo rows
+- name: vintage_label
+  type: string
+  unit: ''
+  description: label plus memo type
+- name: footnote
+  type: string
+  unit: ''
+  description: footnote marker stripped, '[year corrected]' or '[date cell]'

@@ -1,0 +1,61 @@
+table: inventory/documents
+description: Every inventoried document (forecast narratives and tables, in-period commentary, post-hoc
+  evaluations, other forecaster text).
+columns:
+- name: doc_id
+  type: string
+  unit: ''
+  description: 'stable id: source prefix + SHA-1 of the URL'
+- name: source
+  type: string
+  unit: ''
+  description: OBR | CBO
+- name: collection
+  type: string
+  unit: ''
+  description: efo | fer | psf_commentary | cbo_beo | cbo_apb | cbo_mbr | cbo_accuracy | cbo_evaluation
+    | cbo_testimony
+- name: doc_type
+  type: string
+  unit: ''
+  description: forecast_narrative | forecast_tables | in_period_commentary | post_hoc_evaluation | other
+- name: title
+  type: string
+  unit: ''
+  description: title as listed by the source
+- name: url
+  type: string
+  unit: ''
+  description: the source's own link to the document
+- name: landing_url
+  type: string
+  unit: ''
+  description: page the document was listed on
+- name: publication_date
+  type: date
+  unit: ''
+  description: exact date, or the last day of the month when only the month is known (D5); empty if unknown
+- name: date_certainty
+  type: string
+  unit: ''
+  description: exact | month_only | unknown
+- name: date_basis
+  type: string
+  unit: ''
+  description: where the date comes from
+- name: related_date
+  type: date
+  unit: ''
+  description: not used for documents (see vintage_calendar)
+- name: vintage_label
+  type: string
+  unit: ''
+  description: OBR vintage label ('Month YYYY') for EFO documents
+- name: primary
+  type: boolean
+  unit: ''
+  description: true for the main report of an EFO, FER or CBO outlook
+- name: notes
+  type: string
+  unit: ''
+  description: availability of the main report; data month of commentaries

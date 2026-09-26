@@ -22,7 +22,7 @@ The full extraction plan is in [`Claude.md`](Claude.md). Stage notes are in
 
 | Stage | Content | Status |
 |---|---|---|
-| E0 | Inventory and vintage calendar | in progress |
+| E0 | Inventory and vintage calendar | done; OBR gate passed, CBO date gate failed (see [note](notes/extraction/E0-inventory.md)) |
 | E1–E9 | see plan | not started |
 
 ## Reproducing
@@ -32,7 +32,20 @@ python -m venv .venv
 .venv/Scripts/activate        # Windows; use .venv/bin/activate elsewhere
 pip install -e .
 python -m fvd.e0_inventory    # downloads raw files into raw/ and writes inventory/
+python -m fvd.e0_factcheck    # checks the plan's source facts against the files
 ```
+
+## Layout
+
+| Path | Content |
+|---|---|
+| `src/fvd/` | extraction code, one module per stage (`e0_*`, `e1_*`, ...) plus shared parsers |
+| `inventory/` | provenance of raw files, document list, vintage calendar |
+| `notes/extraction/` | one note per stage: what was done, findings, open questions, gate result |
+| `raw/` | downloads (not committed; reproducible from `inventory/sources.csv`) |
+
+Every table has a `<table>.schema.yaml` next to it stating the type, unit and sign
+convention of each column.
 
 Raw downloads are not committed. Every raw file is listed in
 [`inventory/sources.csv`](inventory/sources.csv) with its original URL,

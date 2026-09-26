@@ -1,0 +1,27 @@
+table: inventory/e0_fact_checks
+description: Checks of the plan's section 5 source facts against the downloaded files.
+columns:
+- name: claim_id
+  type: string
+  unit: ''
+  description: H* HOFD, F* FRD, P* PMD, C* CBO
+- name: section
+  type: string
+  unit: ''
+  description: plan section
+- name: claim
+  type: string
+  unit: ''
+  description: the plan's statement
+- name: status
+  type: string
+  unit: ''
+  description: confirmed | partly | discrepancy | deferred
+- name: finding
+  type: string
+  unit: ''
+  description: what the file shows
+- name: evidence
+  type: string
+  unit: ''
+  description: file, sheet, row or column

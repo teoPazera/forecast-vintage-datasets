@@ -1,0 +1,227 @@
+source,vintage_id,label,forecaster,publication_date,date_certainty,date_basis,landing_url,primary_document_id,flags,n_sheets,notes,components,n_candidates,related_date,document_url
+CBO,cbo_1982-02,1982-02,CBO,1982-02-28,month_only,baseline month; last day of month (D5),,cbo_6ec5088f35,winter,,earliest dated CBO statement or testimony on the outlook that month: 1982-02-24,revenue,2.0,1982-02-24,http://www.cbo.gov/doc.cfm?index=5138
+CBO,cbo_1982-09,1982-09,CBO,1982-09-30,month_only,baseline month; last day of month (D5),,cbo_2b8b858fbc,no_season_flag,,earliest dated CBO statement or testimony on the outlook that month: 1982-09-16,revenue,2.0,1982-09-16,http://www.cbo.gov/doc.cfm?index=10949
+CBO,cbo_1983-02,1983-02,CBO,1983-02-28,month_only,baseline month; last day of month (D5),,cbo_f88caabb54,winter,,earliest dated CBO statement or testimony on the outlook that month: 1983-02-15,revenue,3.0,1983-02-15,http://www.cbo.gov/doc.cfm?index=5054
+CBO,cbo_1983-08,1983-08,CBO,1983-08-31,month_only,baseline month; last day of month (D5),,cbo_6991fbfff3,no_season_flag,,,revenue,1.0,,http://www.cbo.gov/doc.cfm?index=5042
+CBO,cbo_1984-02,1984-02,CBO,1984-02-29,month_only,baseline month; last day of month (D5),,cbo_33d2892dd8,spring;winter,,earliest dated CBO statement or testimony on the outlook that month: 1984-02-22,"debt,deficit,outlay,revenue",3.0,1984-02-22,http://www.cbo.gov/doc.cfm?index=10955
+CBO,cbo_1984-08,1984-08,CBO,1984-08-31,month_only,baseline month; last day of month (D5),,cbo_42f33813ee,no_season_flag,,,revenue,1.0,,http://www.cbo.gov/doc.cfm?index=10974
+CBO,cbo_1985-02,1985-02,CBO,1985-02-28,month_only,baseline month; last day of month (D5),,cbo_5d0a0f7ac4,spring;winter,,earliest dated CBO statement or testimony on the outlook that month: 1985-02-06,"debt,deficit,outlay,revenue",2.0,1985-02-06,http://www.cbo.gov/doc.cfm?index=9464
+CBO,cbo_1985-08,1985-08,CBO,1985-08-31,month_only,baseline month; last day of month (D5),,cbo_0032f48fed,no_season_flag,,,revenue,1.0,,http://www.cbo.gov/doc.cfm?index=9453
+CBO,cbo_1986-02,1986-02,CBO,1986-02-28,month_only,baseline month; last day of month (D5),,cbo_616936e5ab,spring;winter,,earliest dated CBO statement or testimony on the outlook that month: 1986-02-18,"debt,deficit,outlay,revenue",2.0,1986-02-18,http://www.cbo.gov/doc.cfm?index=5960
+CBO,cbo_1986-08,1986-08,CBO,1986-08-31,month_only,baseline month; last day of month (D5),,cbo_ab71083002,no_season_flag,,,revenue,1.0,,http://www.cbo.gov/doc.cfm?index=5972
+CBO,cbo_1987-01,1987-01,CBO,1987-01-31,month_only,baseline month; last day of month (D5),,cbo_b7ded92341,winter,,earliest dated CBO statement or testimony on the outlook that month: 1987-01-27,revenue,1.0,1987-01-27,http://www.cbo.gov/doc.cfm?index=6196
+CBO,cbo_1987-02,1987-02,CBO,1987-02-28,month_only,baseline month; last day of month (D5),,cbo_97d1c708d4,spring,,earliest dated CBO statement or testimony on the outlook that month: 1987-02-04,"debt,deficit,outlay,revenue",1.0,1987-02-04,http://www.cbo.gov/doc.cfm?index=6198
+CBO,cbo_1987-08,1987-08,CBO,1987-08-31,month_only,baseline month; last day of month (D5),,cbo_a4f6b47bd4,no_season_flag,,,revenue,1.0,,http://www.cbo.gov/doc.cfm?index=6203
+CBO,cbo_1988-02,1988-02,CBO,1988-02-29,month_only,baseline month; last day of month (D5),,cbo_3ff1c907a3,winter,,earliest dated CBO statement or testimony on the outlook that month: 1988-02-04,revenue,1.0,1988-02-04,http://www.cbo.gov/doc.cfm?index=8447
+CBO,cbo_1988-03,1988-03,CBO,1988-03-31,month_only,baseline month; last day of month (D5),,cbo_9c67f7362a,spring,,earliest dated CBO statement or testimony on the outlook that month: 1988-03-04,"debt,deficit,outlay,revenue",1.0,1988-03-04,http://www.cbo.gov/doc.cfm?index=8445
+CBO,cbo_1988-08,1988-08,CBO,1988-08-31,month_only,baseline month; last day of month (D5),,cbo_aa363cf58e,no_season_flag,,,revenue,1.0,,http://www.cbo.gov/doc.cfm?index=6255
+CBO,cbo_1989-01,1989-01,CBO,1989-01-31,month_only,baseline month; last day of month (D5),,cbo_45d21f16a5,spring;winter,,earliest dated CBO statement or testimony on the outlook that month: 1989-01-18,revenue,1.0,1989-01-18,http://www.cbo.gov/doc.cfm?index=6757
+CBO,cbo_1989-02,1989-02,CBO,1989-02-28,month_only,baseline month; last day of month (D5),,cbo_e1fab5db09,spring,,earliest dated CBO statement or testimony on the outlook that month: 1989-02-09,"debt,deficit,outlay",1.0,1989-02-09,http://www.cbo.gov/doc.cfm?index=10577
+CBO,cbo_1989-08,1989-08,CBO,1989-08-31,month_only,baseline month; last day of month (D5),,cbo_3459528ba2,no_season_flag,,earliest dated CBO statement or testimony on the outlook that month: 1989-08-01,revenue,1.0,1989-08-01,http://www.cbo.gov/doc.cfm?index=6752
+CBO,cbo_1990-01,1990-01,CBO,1990-01-31,month_only,baseline month; last day of month (D5),,cbo_d5ff85ac47,spring;winter,,earliest dated CBO statement or testimony on the outlook that month: 1990-01-24,revenue,1.0,1990-01-24,http://www.cbo.gov/doc.cfm?index=7740
+CBO,cbo_1990-03,1990-03,CBO,1990-03-31,month_only,baseline month; last day of month (D5),,cbo_18fad2679f,spring,,earliest dated CBO statement or testimony on the outlook that month: 1990-03-08,"debt,deficit,outlay",1.0,1990-03-08,http://www.cbo.gov/doc.cfm?index=7742
+CBO,cbo_1990-07,1990-07,CBO,1990-07-31,month_only,baseline month; last day of month (D5),,cbo_ae8c9bba2b,no_season_flag,,earliest dated CBO statement or testimony on the outlook that month: 1990-07-31,revenue,1.0,1990-07-31,http://www.cbo.gov/doc.cfm?index=9662
+CBO,cbo_1991-01,1991-01,CBO,1991-01-31,month_only,baseline month; last day of month (D5),,cbo_70b1662538,winter,,earliest dated CBO statement or testimony on the outlook that month: 1991-01-23,revenue,1.0,1991-01-23,http://www.cbo.gov/doc.cfm?index=7664
+CBO,cbo_1991-03,1991-03,CBO,1991-03-31,month_only,baseline month; last day of month (D5),,cbo_f4479336ee,spring,,,"debt,deficit,outlay,revenue",1.0,,http://www.cbo.gov/doc.cfm?index=9667
+CBO,cbo_1991-08,1991-08,CBO,1991-08-31,month_only,baseline month; last day of month (D5),,cbo_471f006e9b,no_season_flag,,,revenue,1.0,,http://www.cbo.gov/doc.cfm?index=10083
+CBO,cbo_1992-01,1992-01,CBO,1992-01-31,month_only,baseline month; last day of month (D5),,cbo_168ff93033,winter,,earliest dated CBO statement or testimony on the outlook that month: 1992-01-22,"deficit,outlay,revenue",1.0,1992-01-22,http://www.cbo.gov/doc.cfm?index=9500
+CBO,cbo_1992-03,1992-03,CBO,1992-03-31,month_only,baseline month; last day of month (D5),,cbo_6de3e88eb6,spring,,,"debt,deficit,outlay,revenue",1.0,,http://www.cbo.gov/doc.cfm?index=10578
+CBO,cbo_1992-08,1992-08,CBO,1992-08-31,month_only,baseline month; last day of month (D5),,cbo_0d5d4a286f,no_season_flag,,,"deficit,outlay,revenue",1.0,,http://www.cbo.gov/doc.cfm?index=9505
+CBO,cbo_1993-01,1993-01,CBO,1993-01-31,month_only,baseline month; last day of month (D5),,cbo_af9f02f70c,winter,,earliest dated CBO statement or testimony on the outlook that month: 1993-01-26,"deficit,outlay,revenue",2.0,1993-01-26,http://www.cbo.gov/doc.cfm?index=7521
+CBO,cbo_1993-03,1993-03,CBO,1993-03-31,month_only,baseline month; last day of month (D5),,cbo_c863b4e06f,spring,,,"debt,deficit,outlay,revenue",1.0,,http://www.cbo.gov/doc.cfm?index=7531
+CBO,cbo_1993-09,1993-09,CBO,1993-09-30,month_only,baseline month; last day of month (D5),,cbo_1597c12603,no_season_flag,,earliest dated CBO statement or testimony on the outlook that month: 1993-09-14,"deficit,outlay,revenue",2.0,1993-09-14,http://www.cbo.gov/doc.cfm?index=7670
+CBO,cbo_1994-01,1994-01,CBO,1994-01-31,month_only,baseline month; last day of month (D5),,cbo_c787764ad5,spring;winter,,earliest dated CBO statement or testimony on the outlook that month: 1994-01-27,"deficit,outlay,revenue",1.0,1994-01-27,http://www.cbo.gov/doc.cfm?index=4912
+CBO,cbo_1994-04,1994-04,CBO,1994-04-30,month_only,baseline month; last day of month (D5),,cbo_c42b8c4548,spring,,,"debt,deficit,outlay",1.0,,http://www.cbo.gov/doc.cfm?index=4913
+CBO,cbo_1994-08,1994-08,CBO,1994-08-31,month_only,baseline month; last day of month (D5),,cbo_82522ccba2,no_season_flag,,,"deficit,outlay,revenue",1.0,,http://www.cbo.gov/doc.cfm?index=4847
+CBO,cbo_1995-01,1995-01,CBO,1995-01-31,month_only,baseline month; last day of month (D5),,cbo_a15415fe04,spring;winter,,earliest dated CBO statement or testimony on the outlook that month: 1995-01-25,"deficit,outlay,revenue",1.0,1995-01-25,http://www.cbo.gov/doc.cfm?index=5506
+CBO,cbo_1995-04,1995-04,CBO,1995-04-30,month_only,baseline month; last day of month (D5),,cbo_d4df227da1,spring,,,"debt,deficit,outlay",1.0,,http://www.cbo.gov/doc.cfm?index=5505
+CBO,cbo_1995-08,1995-08,CBO,1995-08-31,month_only,baseline month; last day of month (D5),,cbo_c680372b47,no_season_flag,,earliest dated CBO statement or testimony on the outlook that month: 1995-08-03,"deficit,outlay,revenue",1.0,1995-08-03,http://www.cbo.gov/doc.cfm?index=4805
+CBO,cbo_1995-12,1995-12,CBO,1995-12-31,month_only,baseline month; last day of month (D5),,cbo_c32f0f682d,no_season_flag,,,"deficit,outlay,revenue",1.0,,http://www.cbo.gov/doc.cfm?index=8147
+CBO,cbo_1996-05,1996-05,CBO,1996-05-31,month_only,baseline month; last day of month (D5),,cbo_87ab056090,spring;winter,,,"debt,deficit,outlay,revenue",1.0,,http://www.cbo.gov/doc.cfm?index=4755
+CBO,cbo_1997-01,1997-01,CBO,1997-01-31,month_only,baseline month; last day of month (D5),,cbo_f5f7f682a2,winter,,earliest dated CBO statement or testimony on the outlook that month: 1997-01-28,"deficit,outlay,revenue",1.0,1997-01-28,http://www.cbo.gov/doc.cfm?index=2
+CBO,cbo_1997-03,1997-03,CBO,1997-03-31,month_only,baseline month; last day of month (D5),,cbo_2210dedd65,spring,,,"debt,deficit,outlay,revenue",1.0,,http://www.cbo.gov/doc.cfm?index=3
+CBO,cbo_1997-09,1997-09,CBO,1997-09-30,month_only,baseline month; last day of month (D5),,cbo_ce77c71bd7,no_season_flag,,,"deficit,outlay,revenue",1.0,,http://www.cbo.gov/doc.cfm?index=31
+CBO,cbo_1998-01,1998-01,CBO,1998-01-31,month_only,baseline month; last day of month (D5),,cbo_cefa2455bb,winter,,earliest dated CBO statement or testimony on the outlook that month: 1998-01-28,"deficit,outlay,revenue",1.0,1998-01-28,http://www.cbo.gov/doc.cfm?index=316
+CBO,cbo_1998-03,1998-03,CBO,1998-03-31,month_only,baseline month; last day of month (D5),,cbo_a6c78a393f,spring,,,"debt,deficit,outlay,revenue",1.0,,http://www.cbo.gov/doc.cfm?index=387
+CBO,cbo_1998-08,1998-08,CBO,1998-08-31,month_only,baseline month; last day of month (D5),,cbo_f9443af161,no_season_flag,,,"deficit,outlay,revenue",1.0,,http://www.cbo.gov/doc.cfm?index=828
+CBO,cbo_1999-01,1999-01,CBO,1999-01-31,month_only,baseline month; last day of month (D5),,cbo_9d0664ede6,spring;winter,,earliest dated CBO statement or testimony on the outlook that month: 1999-01-29,"deficit,outlay,revenue",1.0,1999-01-29,http://www.cbo.gov/doc.cfm?index=1059
+CBO,cbo_1999-04,1999-04,CBO,1999-04-30,month_only,baseline month; last day of month (D5),,cbo_fe875a0b44,spring,,,"debt,deficit,outlay",1.0,,http://www.cbo.gov/doc.cfm?index=1209
+CBO,cbo_1999-07,1999-07,CBO,1999-07-31,month_only,baseline month; last day of month (D5),,cbo_c495d09990,no_season_flag,,earliest dated CBO statement or testimony on the outlook that month: 1999-07-21,"deficit,outlay,revenue",2.0,1999-07-21,http://www.cbo.gov/doc.cfm?index=1386
+CBO,cbo_2000-01,2000-01,CBO,2000-01-31,month_only,baseline month; last day of month (D5),,cbo_732858b795,spring;winter,,earliest dated CBO statement or testimony on the outlook that month: 2000-01-26,"deficit,outlay,revenue",1.0,2000-01-26,https://www.cbo.gov/publication/12069
+CBO,cbo_2000-04,2000-04,CBO,2000-04-30,month_only,baseline month; last day of month (D5),,cbo_c1a7769fd6,spring,,,"debt,deficit,outlay",1.0,,https://www.cbo.gov/publication/12150
+CBO,cbo_2000-07,2000-07,CBO,2000-07-31,month_only,baseline month; last day of month (D5),,cbo_a4daee0b2b,no_season_flag,,,"deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/12477
+CBO,cbo_2001-01,2001-01,CBO,2001-01-31,month_only,baseline month; last day of month (D5),,cbo_aa0e117ebf,winter,,earliest dated CBO statement or testimony on the outlook that month: 2001-01-31,"deficit,outlay,revenue",1.0,2001-01-31,https://www.cbo.gov/publication/12958
+CBO,cbo_2001-05,2001-05,CBO,2001-05-31,month_only,baseline month; last day of month (D5),,cbo_1d2ef52a7f,spring,,,"debt,deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/13050
+CBO,cbo_2001-08,2001-08,CBO,2001-08-31,month_only,baseline month; last day of month (D5),,cbo_1ce98244d7,no_season_flag,,,"deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/13249
+CBO,cbo_2002-01,2002-01,CBO,2002-01-31,month_only,baseline month; last day of month (D5),,cbo_14cf952a13,winter,,earliest dated CBO statement or testimony on the outlook that month: 2002-01-23,"deficit,outlay,revenue",1.0,2002-01-23,https://www.cbo.gov/publication/13504
+CBO,cbo_2002-03,2002-03,CBO,2002-03-31,month_only,baseline month; last day of month (D5),,cbo_84cefaec6d,spring,,earliest dated CBO statement or testimony on the outlook that month: 2002-03-06,"debt,deficit,outlay,revenue",1.0,2002-03-06,https://www.cbo.gov/publication/13539
+CBO,cbo_2002-08,2002-08,CBO,2002-08-27,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_1001b05f63,no_season_flag,,,"deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/13956
+CBO,cbo_2003-01,2003-01,CBO,2003-01-31,month_only,baseline month; last day of month (D5),,cbo_2d1b7aae6a,winter,,earliest dated CBO statement or testimony on the outlook that month: 2003-01-30,"deficit,outlay,revenue",1.0,2003-01-30,https://www.cbo.gov/publication/14254
+CBO,cbo_2003-03,2003-03,CBO,2003-03-31,month_only,baseline month; last day of month (D5),,cbo_98cc44598e,spring,,,"debt,deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/14347
+CBO,cbo_2003-08,2003-08,CBO,2003-08-31,month_only,baseline month; last day of month (D5),,cbo_5d37a22737,no_season_flag,,,"deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/14691
+CBO,cbo_2004-01,2004-01,CBO,2004-01-31,month_only,baseline month; last day of month (D5),,cbo_c3272e414a,winter,,earliest dated CBO statement or testimony on the outlook that month: 2004-01-27,"deficit,outlay,revenue",1.0,2004-01-27,https://www.cbo.gov/publication/15179
+CBO,cbo_2004-03,2004-03,CBO,2004-03-31,month_only,baseline month; last day of month (D5),,cbo_570dda33c1,spring,,,"debt,deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/15345
+CBO,cbo_2004-09,2004-09,CBO,2004-09-30,month_only,baseline month; last day of month (D5),,cbo_0c59acd690,no_season_flag,,earliest dated CBO statement or testimony on the outlook that month: 2004-09-08,"deficit,outlay,revenue",1.0,2004-09-08,https://www.cbo.gov/publication/15945
+CBO,cbo_2005-01,2005-01,CBO,2005-01-25,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_ccc0e43a3f,winter,,,"deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/16221
+CBO,cbo_2005-03,2005-03,CBO,2005-03-15,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_7226ab64b3,spring,,,"debt,deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/16305
+CBO,cbo_2005-08,2005-08,CBO,2005-08-15,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_22e37edeae,no_season_flag,,,"deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/17091
+CBO,cbo_2006-01,2006-01,CBO,2006-01-31,month_only,baseline month; last day of month (D5),,cbo_8431326403,winter,,,"deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/17601
+CBO,cbo_2006-03,2006-03,CBO,2006-03-14,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_1e79838353,spring,,,"debt,deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/17643
+CBO,cbo_2006-08,2006-08,CBO,2006-08-31,month_only,baseline month; last day of month (D5),,cbo_095a2fe132,no_season_flag,,,"deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/18056
+CBO,cbo_2007-01,2007-01,CBO,2007-01-24,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_8161812012,winter,,,"deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/18291
+CBO,cbo_2007-03,2007-03,CBO,2007-03-21,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_7003c4915e,spring,,,"debt,deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/18437
+CBO,cbo_2007-08,2007-08,CBO,2007-08-23,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_60c7c986db,no_season_flag,,,"deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/19079
+CBO,cbo_2008-01,2008-01,CBO,2008-01-23,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_8861b3a936,winter,,,"deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/41661
+CBO,cbo_2008-03,2008-03,CBO,2008-03-19,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_90e961135d,spring,,,"debt,deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/41671
+CBO,cbo_2008-09,2008-09,CBO,2008-09-09,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_7051ad4f5b,no_season_flag,,,"deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/41729
+CBO,cbo_2009-01,2009-01,CBO,2009-01-07,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_aad8af62e6,winter,,,"deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/41753
+CBO,cbo_2009-03,2009-03,CBO,2009-03-20,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_4a3f6d5fe2,spring,,,"debt,deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/41166
+CBO,cbo_2009-08,2009-08,CBO,2009-08-25,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_d8a01a9e36,no_season_flag,,,"deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/41215
+CBO,cbo_2010-01,2010-01,CBO,2010-01-26,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_4f84a7e8a9,winter,,,"deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/41880
+CBO,cbo_2010-03,2010-03,CBO,2010-03-24,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_29db9d37c4,spring,,,"debt,deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/21252
+CBO,cbo_2010-08,2010-08,CBO,2010-08-18,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_d9a8786b6c,no_season_flag,,,"deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/21670
+CBO,cbo_2011-01,2011-01,CBO,2011-01-26,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_11f6be43a1,winter,,,"deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/21999
+CBO,cbo_2011-03,2011-03,CBO,2011-03-18,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_f878712c23,spring,,,"debt,deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/22061
+CBO,cbo_2011-08,2011-08,CBO,2011-08-24,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_027c4de8dd,no_season_flag,,,"deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/41586
+CBO,cbo_2012-01,2012-01,CBO,2012-01-31,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_f0cd62d715,winter,,,"deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/42905
+CBO,cbo_2012-03,2012-03,CBO,2012-03-13,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_e7033d7b2d,spring,,"several exact-dated reports in the month: cbo_beo 2012-03-13, cbo_apb 2012-03-16","debt,deficit,outlay,revenue",2.0,,https://www.cbo.gov/publication/43119
+CBO,cbo_2012-08,2012-08,CBO,2012-08-22,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_5e3d7adced,no_season_flag,,,"deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/43539
+CBO,cbo_2013-02,2013-02,CBO,2013-02-05,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_7ddb1b1774,winter,,,"deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/43907
+CBO,cbo_2013-05,2013-05,CBO,2013-05-14,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_ad7a886ed0,spring,,"several exact-dated reports in the month: cbo_beo 2013-05-14, cbo_apb 2013-05-17","debt,deficit,outlay,revenue",2.0,,https://www.cbo.gov/publication/44172
+CBO,cbo_2014-02,2014-02,CBO,2014-02-04,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_5ed147fb5a,winter,,,"deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/45010
+CBO,cbo_2014-04,2014-04,CBO,2014-04-14,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_d11a0da2b3,spring,,"several exact-dated reports in the month: cbo_beo 2014-04-14, cbo_apb 2014-04-17","debt,deficit,outlay,revenue",2.0,,https://www.cbo.gov/publication/45229
+CBO,cbo_2014-08,2014-08,CBO,2014-08-27,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_650247df4d,no_season_flag,,,"deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/45653
+CBO,cbo_2015-01,2015-01,CBO,2015-01-26,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_a0d7d4564e,winter,,,"deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/49892
+CBO,cbo_2015-03,2015-03,CBO,2015-03-09,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_3b1f04fbf5,spring,,"several exact-dated reports in the month: cbo_beo 2015-03-09, cbo_apb 2015-03-12","debt,deficit,outlay,revenue",2.0,,https://www.cbo.gov/publication/49973
+CBO,cbo_2015-08,2015-08,CBO,2015-08-25,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_216d2ee23d,no_season_flag,,"several exact-dated reports in the month: cbo_beo 2015-08-25, cbo_apb 2015-08-21","deficit,outlay,revenue",2.0,,https://www.cbo.gov/publication/50724
+CBO,cbo_2016-01,2016-01,CBO,2016-01-25,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_6ff08bf9a3,winter,,,"deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/51129
+CBO,cbo_2016-03,2016-03,CBO,2016-03-24,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_78ec67bffd,spring,,"several exact-dated reports in the month: cbo_beo 2016-03-24, cbo_apb 2016-03-29","debt,deficit,outlay,revenue",2.0,,https://www.cbo.gov/publication/51384
+CBO,cbo_2016-08,2016-08,CBO,2016-08-23,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_72a4742108,no_season_flag,,,"deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/51908
+CBO,cbo_2017-01,2017-01,CBO,2017-01-24,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_88449d080f,winter,,,"deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/52370
+CBO,cbo_2017-06,2017-06,CBO,2017-06-29,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_a32de21b17,spring,,,"debt,deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/52801
+CBO,cbo_2018-04,2018-04,CBO,2018-04-09,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_c788cbb348,winter,,,"deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/53651
+CBO,cbo_2018-05,2018-05,CBO,2018-05-24,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_02f040dac1,spring,,,"debt,deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/53884
+CBO,cbo_2019-01,2019-01,CBO,2019-01-28,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_8e4f2bc301,winter,,,"deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/54918
+CBO,cbo_2019-05,2019-05,CBO,2019-05-02,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_14f5fb2509,spring,,"several exact-dated reports in the month: cbo_beo 2019-05-02, cbo_apb 2019-05-09","debt,deficit,outlay,revenue",2.0,,https://www.cbo.gov/publication/55151
+CBO,cbo_2019-08,2019-08,CBO,2019-08-21,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_8a457ab353,no_season_flag,,,"deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/55551
+CBO,cbo_2020-01,2020-01,CBO,2020-01-28,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_d22b498ad0,winter,,,"deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/56020
+CBO,cbo_2020-03,2020-03,CBO,2020-03-19,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_cb544d41f4,spring,,"several exact-dated reports in the month: cbo_beo 2020-03-19, cbo_apb 2020-03-30","debt,deficit,outlay,revenue",2.0,,https://www.cbo.gov/publication/56268
+CBO,cbo_2020-09,2020-09,CBO,2020-09-02,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_67dc949f34,no_season_flag,,,"deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/56517
+CBO,cbo_2021-02,2021-02,CBO,2021-02-11,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_78f99b6cea,winter,,"several exact-dated reports in the month: cbo_beo 2021-02-11, cbo_beo 2021-02-23","deficit,outlay,revenue",2.0,,https://www.cbo.gov/publication/56970
+CBO,cbo_2021-07,2021-07,CBO,2021-07-01,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_2d6a97e68e,spring,,"several exact-dated reports in the month: cbo_beo 2021-07-01, cbo_beo 2021-07-21, cbo_apb 2021-07-30","debt,deficit,outlay,revenue",3.0,,https://www.cbo.gov/publication/57218
+CBO,cbo_2022-05,2022-05,CBO,2022-05-25,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_8b1555ccc3,spring;winter,,,"debt,deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/57950
+CBO,cbo_2023-02,2023-02,CBO,2023-02-15,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_72234d6054,winter,,,"debt,deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/58848
+CBO,cbo_2023-05,2023-05,CBO,2023-05-12,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_910aabd4f6,spring,,"several exact-dated reports in the month: cbo_beo 2023-05-12, cbo_apb 2023-05-18","debt,deficit,outlay,revenue",2.0,,https://www.cbo.gov/publication/59096
+CBO,cbo_2024-02,2024-02,CBO,2024-02-07,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_dee9824f61,winter,,,"debt,deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/59710
+CBO,cbo_2024-06,2024-06,CBO,2024-06-18,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_545b4c4173,spring,,"several exact-dated reports in the month: cbo_beo 2024-06-18, cbo_apb 2024-06-27","debt,deficit,outlay,revenue",2.0,,https://www.cbo.gov/publication/60039
+CBO,cbo_2025-01,2025-01,CBO,2025-01-17,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_852c91278f,spring;winter,,"several exact-dated reports in the month: cbo_beo 2025-01-17, cbo_beo 2025-01-30","debt,deficit,outlay,revenue",2.0,,https://www.cbo.gov/publication/60870
+CBO,cbo_2026-02,2026-02,CBO,2026-02-11,exact,cbo.gov recurring-reports listing <time datetime>,,cbo_17b51cada2,winter,,,"debt,deficit,outlay,revenue",1.0,,https://www.cbo.gov/publication/61882
+OBR,hmt_0203-03,March 0203,HM Treasury,0203-03-31,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,1.0,,,,,
+OBR,hmt_1970-04,April 1970,HM Treasury,1970-04-30,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,1.0,,,,,
+OBR,hmt_1971-03,March 1971,HM Treasury,1971-03-31,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,1.0,,,,,
+OBR,hmt_1972-03,March 1972,HM Treasury,1972-03-31,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,1.0,,,,,
+OBR,hmt_1973-03,March 1973,HM Treasury,1973-03-31,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,1.0,,,,,
+OBR,hmt_1974-03,March 1974,HM Treasury,1974-03-31,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,1.0,,,,,
+OBR,hmt_1975-04,April 1975,HM Treasury,1975-04-30,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,1.0,,,,,
+OBR,hmt_1976-04,April 1976,HM Treasury,1976-04-30,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,1.0,,,,,
+OBR,hmt_1977-01,January 1977,HM Treasury,1977-01-31,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,1.0,,,,,
+OBR,hmt_1977-03,March 1977,HM Treasury,1977-03-31,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,2.0,,,,,
+OBR,hmt_1977-11,November 1977,HM Treasury,1977-11-30,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,1.0,,,,,
+OBR,hmt_1978-04,April 1978,HM Treasury,1978-04-30,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,2.0,,,,,
+OBR,hmt_1978-11,November 1978,HM Treasury,1978-11-30,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,1.0,,,,,
+OBR,hmt_1979-06,June 1979,HM Treasury,1979-06-30,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,2.0,,,,,
+OBR,hmt_1980-03,March 1980,HM Treasury,1980-03-31,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,2.0,,,,,
+OBR,hmt_1981-03,March 1981,HM Treasury,1981-03-31,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,2.0,,,,,
+OBR,hmt_1982-03,March 1982,HM Treasury,1982-03-31,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,3.0,,,,,
+OBR,hmt_1982-11,November 1982,HM Treasury,1982-11-30,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,1.0,,,,,
+OBR,hmt_1983-03,March 1983,HM Treasury,1983-03-31,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,3.0,,,,,
+OBR,hmt_1983-11,November 1983,HM Treasury,1983-11-30,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,4.0,,,,,
+OBR,hmt_1984-03,March 1984,HM Treasury,1984-03-31,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,4.0,,,,,
+OBR,hmt_1984-11,November 1984,HM Treasury,1984-11-30,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,4.0,,,,,
+OBR,hmt_1985-03,March 1985,HM Treasury,1985-03-31,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,4.0,,,,,
+OBR,hmt_1985-11,November 1985,HM Treasury,1985-11-30,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,4.0,,,,,
+OBR,hmt_1986-03,March 1986,HM Treasury,1986-03-31,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,4.0,,,,,
+OBR,hmt_1986-11,November 1986,HM Treasury,1986-11-30,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,4.0,,,,,
+OBR,hmt_1987-03,March 1987,HM Treasury,1987-03-31,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,4.0,,,,,
+OBR,hmt_1987-11,November 1987,HM Treasury,1987-11-30,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,4.0,,,,,
+OBR,hmt_1988-03,March 1988,HM Treasury,1988-03-31,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,4.0,,,,,
+OBR,hmt_1988-11,November 1988,HM Treasury,1988-11-30,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,4.0,,,,,
+OBR,hmt_1989-03,March 1989,HM Treasury,1989-03-31,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,4.0,,,,,
+OBR,hmt_1989-11,November 1989,HM Treasury,1989-11-30,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,4.0,,,,,
+OBR,hmt_1990-03,March 1990,HM Treasury,1990-03-31,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,8.0,,,,,
+OBR,hmt_1990-11,November 1990,HM Treasury,1990-11-30,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,8.0,,,,,
+OBR,hmt_1991-03,March 1991,HM Treasury,1991-03-31,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,8.0,,,,,
+OBR,hmt_1991-11,November 1991,HM Treasury,1991-11-30,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,8.0,,,,,
+OBR,hmt_1992-03,March 1992,HM Treasury,1992-03-31,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,8.0,,,,,
+OBR,hmt_1992-11,November 1992,HM Treasury,1992-11-30,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,8.0,,,,,
+OBR,hmt_1993-03,March 1993,HM Treasury,1993-03-31,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,8.0,,,,,
+OBR,hmt_1993-11,November 1993,HM Treasury,1993-11-30,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,8.0,,,,,
+OBR,hmt_1994-06,June 1994,HM Treasury,1994-06-30,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,8.0,,,,,
+OBR,hmt_1994-11,November 1994,HM Treasury,1994-11-30,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,8.0,,,,,
+OBR,hmt_1995-06,June 1995,HM Treasury,1995-06-30,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,8.0,,,,,
+OBR,hmt_1995-11,November 1995,HM Treasury,1995-11-30,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,8.0,,,,,
+OBR,hmt_1996-07,July 1996,HM Treasury,1996-07-31,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,8.0,,,,,
+OBR,hmt_1996-11,November 1996,HM Treasury,1996-11-30,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,8.0,,,,,
+OBR,hmt_1997-07,July 1997,HM Treasury,1997-07-31,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,8.0,,,,,
+OBR,hmt_1997-11,November 1997,HM Treasury,1997-11-30,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,8.0,,,,,
+OBR,hmt_1998-06,June 1998,HM Treasury,1998-06-30,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,9.0,,,,,
+OBR,hmt_1998-11,November 1998,HM Treasury,1998-11-30,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,9.0,,,,,
+OBR,hmt_1999-03,March 1999,HM Treasury,1999-03-31,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,9.0,,,,,
+OBR,hmt_1999-11,November 1999,HM Treasury,1999-11-30,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,9.0,,,,,
+OBR,hmt_2000-03,March 2000,HM Treasury,2000-03-31,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,9.0,,,,,
+OBR,hmt_2000-11,November 2000,HM Treasury,2000-11-30,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,9.0,,,,,
+OBR,hmt_2001-03,March 2001,HM Treasury,2001-03-31,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,9.0,,,,,
+OBR,hmt_2001-11,November 2001,HM Treasury,2001-11-30,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,9.0,,,,,
+OBR,hmt_2002-04,April 2002,HM Treasury,2002-04-30,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,9.0,,,,,
+OBR,hmt_2002-11,November 2002,HM Treasury,2002-11-30,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,9.0,,,,,
+OBR,hmt_2003-04,April 2003,HM Treasury,2003-04-30,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,11.0,,,,,
+OBR,hmt_2003-12,December 2003,HM Treasury,2003-12-31,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,11.0,,,,,
+OBR,hmt_2004-03,March 2004,HM Treasury,2004-03-31,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,11.0,,,,,
+OBR,hmt_2004-12,December 2004,HM Treasury,2004-12-31,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,11.0,,,,,
+OBR,hmt_2005-03,March 2005,HM Treasury,2005-03-31,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,11.0,,,,,
+OBR,hmt_2005-12,December 2005,HM Treasury,2005-12-31,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,11.0,,,,,
+OBR,hmt_2006-03,March 2006,HM Treasury,2006-03-31,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,11.0,,,,,
+OBR,hmt_2006-12,December 2006,HM Treasury,2006-12-31,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,11.0,,,,,
+OBR,hmt_2007-03,March 2007,HM Treasury,2007-03-31,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,11.0,,,,,
+OBR,hmt_2007-10,October 2007,HM Treasury,2007-10-31,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,11.0,,,,,
+OBR,hmt_2008-03,March 2008,HM Treasury,2008-03-31,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,11.0,,,,,
+OBR,hmt_2008-11,November 2008,HM Treasury,2008-11-30,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,11.0,,,,,
+OBR,hmt_2009-04,April 2009,HM Treasury,2009-04-30,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,11.0,,,,,
+OBR,hmt_2009-11,November 2009,HM Treasury,2009-11-30,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,11.0,,,,,
+OBR,hmt_2010-03,March 2010,HM Treasury,2010-03-31,month_only,HM Treasury vintage label; last day of month (D5),,,hmt,11.0,,,,,
+OBR,obr_2010-06,June 2010,OBR,2010-06-22,exact,EFO landing page,https://obr.uk/efo/budget-2010/,obr_7e9c2e0744,june2010_budget_assumed,114.0,"HOFD 'June 2010' mapped to the June Budget 2010 EFO (22 June), not the Pre-Budget forecast (14 June); check values in E2",,,,
+OBR,obr_2010-11,November 2010,OBR,2010-11-29,exact,EFO landing page,https://obr.uk/efo/economic-and-fiscal-outlook-november-2010/,obr_2978ad8e5a,,114.0,,,,,
+OBR,obr_2011-03,March 2011,OBR,2011-03-23,exact,EFO landing page,https://obr.uk/efo/economic-and-fiscal-outlook-march-2011/,obr_63cc632899,,114.0,,,,,
+OBR,obr_2011-11,November 2011,OBR,2011-11-29,exact,EFO landing page,https://obr.uk/efo/economic-and-fiscal-outlook-november-2011/,obr_16574c4caf,,114.0,,,,,
+OBR,obr_2012-03,March 2012,OBR,2012-03-21,exact,EFO landing page,https://obr.uk/efo/economic-and-fiscal-outlook-march-2012/,obr_675b494209,,114.0,,,,,
+OBR,obr_2012-12,December 2012,OBR,2012-12-05,exact,EFO landing page,https://obr.uk/efo/economic-and-fiscal-outlook-december-2012/,obr_3816adcc29,,114.0,,,,,
+OBR,obr_2013-03,March 2013,OBR,2013-03-20,exact,EFO landing page,https://obr.uk/efo/economic-and-fiscal-outlook-march-2013/,obr_ae6c9d669b,,114.0,,,,,
+OBR,obr_2013-12,December 2013,OBR,2013-12-05,exact,EFO landing page,https://obr.uk/efo/economic-fiscal-outlook-december-2013/,obr_ca766d2baa,,114.0,,,,,
+OBR,obr_2014-03,March 2014,OBR,2014-03-19,exact,EFO landing page,https://obr.uk/efo/economic-fiscal-outlook-march-2014/,obr_d762a26cdf,,114.0,,,,,
+OBR,obr_2014-12,December 2014,OBR,2014-12-03,exact,EFO landing page,https://obr.uk/efo/economic-fiscal-outlook-december-2014/,obr_e3ac9255d4,,114.0,,,,,
+OBR,obr_2015-03,March 2015,OBR,2015-03-18,exact,EFO landing page,https://obr.uk/efo/economic-fiscal-outlook-march-2015/,obr_a00de498a3,,114.0,,,,,
+OBR,obr_2015-07,July 2015,OBR,2015-07-08,exact,EFO landing page,https://obr.uk/efo/economic-fiscal-outlook-july-2015/,obr_b551bac32e,,114.0,,,,,
+OBR,obr_2015-11,November 2015,OBR,2015-11-25,exact,EFO landing page,https://obr.uk/efo/economic-and-fiscal-outlook-november-2015/,obr_b011b118ae,,114.0,,,,,
+OBR,obr_2016-03,March 2016,OBR,2016-03-16,exact,EFO landing page,https://obr.uk/efo/economic-fiscal-outlook-march-2016/,obr_c94d151322,,114.0,,,,,
+OBR,obr_2016-11,November 2016,OBR,2016-11-23,exact,EFO landing page,https://obr.uk/efo/economic-and-fiscal-outlook-november-2016/,obr_ad2123e1dc,,114.0,,,,,
+OBR,obr_2017-03,March 2017,OBR,2017-03-08,exact,EFO landing page,https://obr.uk/efo/economic-fiscal-outlook-march-2017/,obr_9a7ae381d2,,112.0,,,,,
+OBR,obr_2017-11,November 2017,OBR,2017-11-22,exact,EFO landing page,https://obr.uk/efo/economic-fiscal-outlook-november-2017/,obr_ba14db8f1d,,111.0,,,,,
+OBR,obr_2018-03,March 2018,OBR,2018-03-13,exact,EFO landing page,https://obr.uk/efo/economic-fiscal-outlook-march-2018/,obr_9f16fdbc54,,111.0,,,,,
+OBR,obr_2018-10,October 2018,OBR,2018-10-29,exact,EFO landing page,https://obr.uk/efo/economic-fiscal-outlook-october-2018/,obr_35098fbe71,,111.0,,,,,
+OBR,obr_2019-03,March 2019,OBR,2019-03-13,exact,EFO landing page,https://obr.uk/efo/economic-fiscal-outlook-march-2019/,obr_a34b082f1c,,111.0,,,,,
+OBR,obr_2019-03_restated,March 2019 (restated),OBR,,unknown,,,,memo:restated,16.0,memo vintage; publication date to be established in E1,,,,
+OBR,obr_2020-03,March 2020,OBR,2020-03-11,exact,EFO landing page,https://obr.uk/efo/economic-and-fiscal-outlook-march-2020/,obr_b0e050a0d5,,111.0,,,,,
+OBR,obr_2020-03_supplementary,March 2020 (supplementary),OBR,,unknown,,,,memo:supplementary,14.0,memo vintage; publication date to be established in E1,,,,
+OBR,obr_2020-11,November 2020,OBR,2020-11-25,exact,EFO landing page,https://obr.uk/efo/economic-and-fiscal-outlook-november-2020/,obr_be526fbaaf,,111.0,,,,,
+OBR,obr_2021-03,March 2021,OBR,2021-03-03,exact,EFO landing page,https://obr.uk/efo/economic-and-fiscal-outlook-march-2021/,obr_7885b5dff8,,111.0,,,,,
+OBR,obr_2021-10,October 2021,OBR,2021-10-27,exact,EFO landing page,https://obr.uk/efo/economic-and-fiscal-outlook-october-2021/,obr_ce8e8a3bb8,,111.0,,,,,
+OBR,obr_2022-03,March 2022,OBR,2022-03-23,exact,EFO landing page,https://obr.uk/efo/economic-and-fiscal-outlook-march-2022/,obr_d272caca2f,,111.0,,,,,
+OBR,obr_2022-11,November 2022,OBR,2022-11-16,exact,EFO landing page,https://obr.uk/efo/economic-and-fiscal-outlook-november-2022/,obr_415b46c022,,111.0,,,,,
+OBR,obr_2023-03,March 2023,OBR,2023-03-15,exact,EFO landing page,https://obr.uk/efo/economic-and-fiscal-outlook-march-2023/,obr_5e9980b881,,110.0,,,,,
+OBR,obr_2023-11,November 2023,OBR,2023-11-22,exact,EFO landing page,https://obr.uk/efo/economic-and-fiscal-outlook-november-2023/,obr_ea891ae18b,,111.0,,,,,
+OBR,obr_2024-03,March 2024,OBR,2024-03-06,exact,EFO landing page,https://obr.uk/efo/economic-and-fiscal-outlook-march-2024/,obr_a44fe668ad,,111.0,,,,,
+OBR,obr_2024-03_restated,March 2024 (restated),OBR,,unknown,,,,memo:restated,1.0,memo vintage; publication date to be established in E1,,,,
+OBR,obr_2024-10,October 2024,OBR,2024-10-30,exact,EFO landing page,https://obr.uk/efo/economic-and-fiscal-outlook-october-2024/,obr_66cadfbefb,,108.0,,,,,
+OBR,obr_2025-03,March 2025,OBR,2025-03-26,exact,EFO landing page,https://obr.uk/efo/economic-and-fiscal-outlook-march-2025/,obr_570ac1898f,,108.0,,,,,
+OBR,obr_2025-11,November 2025,OBR,2025-11-26,exact,EFO landing page,https://obr.uk/efo/economic-and-fiscal-outlook-november-2025/,obr_d1e44aaf15,,108.0,,,,,
+OBR,obr_2026-03,March 2026,OBR,2026-03-03,exact,EFO landing page,https://obr.uk/efo/economic-and-fiscal-outlook-march-2026/,obr_8ae3960c28,,107.0,,,,,
