@@ -152,6 +152,39 @@ SCHEMAS: dict[str, dict] = {
             ("origin", "string", "", "file, sheet and cell of value_latest"),
         ],
     },
+    "tables/attribution": {
+        "description": "The forecaster's own split of each revision into causes. Partitioned by "
+                       "source and origin table: tables/attribution/<SOURCE>_<TABLE>.parquet.",
+        "columns": [
+            ("source", "string", "", "OBR | CBO"),
+            ("series_id", "string", "", "series the revision applies to (component or aggregate)"),
+            ("target_period", "string", "", "see tables/forecasts"),
+            ("vintage_id", "string", "", "the vintage whose revision is attributed"),
+            ("previous_vintage_id", "string", "", "the forecast the revision is measured against (may be an intermediate forecast, see vintages/OBR_intermediate)"),
+            ("category_raw", "string", "", "label as published, prefixed with its table (e.g. 'FRD:policy/receipts (of which: receipts)')"),
+            ("category", "string", "", "harmonized category (D3 default): total | policy | economic_determinants | calibration_to_outturn | classification_one_offs | modelling_other | underlying_unsplit"),
+            ("value", "float", "series.unit_harmonized", "revision in the series' own convention: positive = the series was revised up (receipts raised, spending raised, borrowing raised)"),
+            ("flags", "string", "", "pre_measures_year: revision relative to the pre-measures forecast in a year the previous forecast did not cover (FRD note *)"),
+            ("origin", "string", "", "file, sheet and cell"),
+        ],
+    },
+    "tables/policy_measures": {
+        "description": "Costings of individual policy measures (OBR Policy Measures Database). Partitioned by source.",
+        "columns": [
+            ("source", "string", "", "OBR"),
+            ("measure_type", "string", "", "tax | spending"),
+            ("event_raw", "string", "", "fiscal event as the PMD writes it"),
+            ("vintage_id", "string", "", "vintage the event maps to (crosswalks/pmd_events.csv)"),
+            ("measure", "string", "", "measure description"),
+            ("head_raw", "string", "", "tax or spending head as the PMD writes it"),
+            ("series_id", "string", "", "HOFD series of the head (crosswalks/pmd_heads.csv); empty when the HOFD has no such series"),
+            ("target_period", "string", "", "UK fiscal year"),
+            ("value_gbp_m", "float", "GBP m", "costing as published: positive = gain to the Exchequer"),
+            ("value", "float", "GBP bn", "costing in the affected series' convention: tax gain = receipts up (+), spending gain = spending down (-)"),
+            ("extrapolated", "boolean", "", "true if extended beyond the original scorecard period with nominal GDP growth (PMD cell shading)"),
+            ("origin", "string", "", "file, sheet and cell"),
+        ],
+    },
 }
 
 

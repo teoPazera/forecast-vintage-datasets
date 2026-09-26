@@ -1,0 +1,53 @@
+table: tables/policy_measures
+description: Costings of individual policy measures (OBR Policy Measures Database). Partitioned by source.
+columns:
+- name: source
+  type: string
+  unit: ''
+  description: OBR
+- name: measure_type
+  type: string
+  unit: ''
+  description: tax | spending
+- name: event_raw
+  type: string
+  unit: ''
+  description: fiscal event as the PMD writes it
+- name: vintage_id
+  type: string
+  unit: ''
+  description: vintage the event maps to (crosswalks/pmd_events.csv)
+- name: measure
+  type: string
+  unit: ''
+  description: measure description
+- name: head_raw
+  type: string
+  unit: ''
+  description: tax or spending head as the PMD writes it
+- name: series_id
+  type: string
+  unit: ''
+  description: HOFD series of the head (crosswalks/pmd_heads.csv); empty when the HOFD has no such series
+- name: target_period
+  type: string
+  unit: ''
+  description: UK fiscal year
+- name: value_gbp_m
+  type: float
+  unit: GBP m
+  description: 'costing as published: positive = gain to the Exchequer'
+- name: value
+  type: float
+  unit: GBP bn
+  description: 'costing in the affected series'' convention: tax gain = receipts up (+), spending gain
+    = spending down (-)'
+- name: extrapolated
+  type: boolean
+  unit: ''
+  description: true if extended beyond the original scorecard period with nominal GDP growth (PMD cell
+    shading)
+- name: origin
+  type: string
+  unit: ''
+  description: file, sheet and cell

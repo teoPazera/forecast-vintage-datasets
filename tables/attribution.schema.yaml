@@ -1,0 +1,47 @@
+table: tables/attribution
+description: 'The forecaster''s own split of each revision into causes. Partitioned by source and origin
+  table: tables/attribution/<SOURCE>_<TABLE>.parquet.'
+columns:
+- name: source
+  type: string
+  unit: ''
+  description: OBR | CBO
+- name: series_id
+  type: string
+  unit: ''
+  description: series the revision applies to (component or aggregate)
+- name: target_period
+  type: string
+  unit: ''
+  description: see tables/forecasts
+- name: vintage_id
+  type: string
+  unit: ''
+  description: the vintage whose revision is attributed
+- name: previous_vintage_id
+  type: string
+  unit: ''
+  description: the forecast the revision is measured against (may be an intermediate forecast, see vintages/OBR_intermediate)
+- name: category_raw
+  type: string
+  unit: ''
+  description: 'label as published, prefixed with its table (e.g. ''FRD:policy/receipts (of which: receipts)'')'
+- name: category
+  type: string
+  unit: ''
+  description: 'harmonized category (D3 default): total | policy | economic_determinants | calibration_to_outturn
+    | classification_one_offs | modelling_other | underlying_unsplit'
+- name: value
+  type: float
+  unit: series.unit_harmonized
+  description: 'revision in the series'' own convention: positive = the series was revised up (receipts
+    raised, spending raised, borrowing raised)'
+- name: flags
+  type: string
+  unit: ''
+  description: 'pre_measures_year: revision relative to the pre-measures forecast in a year the previous
+    forecast did not cover (FRD note *)'
+- name: origin
+  type: string
+  unit: ''
+  description: file, sheet and cell

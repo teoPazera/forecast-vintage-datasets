@@ -1,0 +1,46 @@
+{
+  "frd_blocks": 34,
+  "frd_rows_gbp": 1639,
+  "frd_rows_pct": 1643,
+  "attribution_rows": 4379,
+  "attribution_rows_by_series": {
+    "obr.pscr_gbp": 460,
+    "obr.psnb": 1643,
+    "obr.psnb_gbp": 1639,
+    "obr.tme_gbp": 637
+  },
+  "frd_vs_hofd_cells": 187,
+  "frd_vs_hofd_within_0.1": 161,
+  "frd_vs_hofd_within_rounding_tolerance": 181,
+  "frd_vs_hofd_restated_block_cells": 6,
+  "frd_vs_hofd_share_within_tolerance_excl_restated": 1.0,
+  "frd_parts_sum_cells": 182,
+  "frd_parts_sum_within_0.1": 180,
+  "fsr_2020_vintage": {
+    "source": "OBR",
+    "vintage_id": "obr_2020-07_fsr",
+    "label": "FSR+SEU 2020",
+    "publication_date": "2020-07-14",
+    "date_certainty": "exact",
+    "date_basis": "landing page https://obr.uk/frs/fiscal-sustainability-report-july-2020/",
+    "forecaster": "OBR",
+    "flags": "intermediate:frd_only",
+    "primary_document_id": null
+  },
+  "pmd_rows": 73450,
+  "pmd_measures": 4522,
+  "pmd_extrapolated_cells": 48902,
+  "pmd_events": 85,
+  "pmd_events_mapped": 85,
+  "pmd_events_since_june_2010": 33,
+  "obr_vintages_without_event": [],
+  "pmd_heads": 94,
+  "pmd_heads_by_confidence": {
+    "spending/assumed": 6,
+    "spending/exact": 10,
+    "spending/none": 16,
+    "tax/assumed": 3,
+    "tax/exact": 28,
+    "tax/none": 31
+  }
+}

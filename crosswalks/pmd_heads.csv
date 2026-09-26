@@ -1,0 +1,95 @@
+measure_type,head_raw,hofd_sheet,series_id,aggregate_series_id,confidence,note,n_measures,reviewed
+spending,BBC current expenditure,BBCcur,obr.bbccur,obr.tme_gbp,exact,,2,False
+spending,Company and other credits,Ctaxcreds,obr.ctaxcreds,obr.tme_gbp,assumed,HOFD 'company tax credits',32,False
+spending,Current VAT refunds,VATrefunds,obr.vatrefunds,obr.tme_gbp,assumed,,3,False
+spending,Debt interest,Netdebtint,obr.netdebtint,obr.tme_gbp,assumed,central government debt interest net of APF,7,False
+spending,Energy bills subsidies,,,obr.tme_gbp,none,,7,False
+spending,Environmental levies,,,obr.tme_gbp,none,,5,False
+spending,Income subsidies,,,obr.tme_gbp,none,,6,False
+spending,LA other capital income,,,obr.tme_gbp,none,,8,False
+spending,Locally-financed capital expenditure,LASFEcap,obr.lasfecap,obr.tme_gbp,exact,,20,False
+spending,Locally-financed current expenditure,LASFEcurr,obr.lasfecurr,obr.tme_gbp,exact,,118,False
+spending,National Accounting Adjustment (capital),,,obr.tme_gbp,none,,1,False
+spending,National Accounting Adjustment measures (current),,,obr.tme_gbp,none,,3,False
+spending,Net public service pension payments,Pensions,obr.pensions,obr.tme_gbp,exact,,20,False
+spending,Other AME (capital),,,obr.tme_gbp,none,,2,False
+spending,Other AME (current),,,obr.tme_gbp,none,,30,False
+spending,Other departmental expenditure (capital),,,obr.tme_gbp,none,,27,False
+spending,Other departmental expenditure (current),,,obr.tme_gbp,none,,29,False
+spending,PSCE in RDEL,RDEL,obr.rdel,obr.tme_gbp,exact,,593,False
+spending,PSGI in CDEL,CDEL,obr.cdel,obr.tme_gbp,exact,,196,False
+spending,Public corporations capital expenditure,PCcapex,obr.pccapex,obr.tme_gbp,exact,,30,False
+spending,Public corporations own-financed capital expenditure,,,obr.tme_gbp,none,,1,False
+spending,Scottish AME (capital),,,obr.tme_gbp,none,,2,False
+spending,Scottish AME (current),,,obr.tme_gbp,none,,6,False
+spending,Scottish BGA (capital),,,obr.tme_gbp,none,,39,False
+spending,Scottish BGA (current),,,obr.tme_gbp,none,,313,False
+spending,Social security benefits,Total welfare,obr.total_welfare,obr.tme_gbp,assumed,benefits are part of welfare spending,70,False
+spending,Student loans,Studentloans,obr.studentloans,obr.tme_gbp,exact,,19,False
+spending,Tax credits,Total welfare,obr.total_welfare,obr.tme_gbp,assumed,tax credits are part of welfare spending,46,False
+spending,VAT refunds,VATrefunds,obr.vatrefunds,obr.tme_gbp,assumed,,3,False
+spending,Welfare inside cap,Welfare in,obr.welfare_in,obr.tme_gbp,exact,,207,False
+spending,Welfare outside cap,Welfare out,obr.welfare_out,obr.tme_gbp,exact,,60,False
+spending,Welsh BGA (current),,,obr.tme_gbp,none,,5,False
+tax,Aggregates levy,,,obr.pscr_gbp,none,,17,False
+tax,Air passenger duty,APD,obr.apd,obr.pscr_gbp,exact,,18,False
+tax,Alcohol duty,Alcohol,obr.alcohol,obr.pscr_gbp,exact,,50,False
+tax,Apprenticeship levy,,,obr.pscr_gbp,none,,1,False
+tax,Bank levy,Bank,obr.bank,obr.pscr_gbp,exact,,2,False
+tax,Bank surcharge,Onshore,obr.onshore,obr.pscr_gbp,assumed,"surcharge on bank profits, recorded in onshore CT",10,False
+tax,Betting,,,obr.pscr_gbp,none,,19,False
+tax,Building safety levy,,,obr.pscr_gbp,none,,1,False
+tax,Business Rates,Business,obr.business,obr.pscr_gbp,exact,,1,False
+tax,Business rates,Business,obr.business,obr.pscr_gbp,exact,,73,False
+tax,CBAM,CBAM,obr.cbam,obr.pscr_gbp,exact,,3,False
+tax,Capital gains tax,CGT,obr.cgt,obr.pscr_gbp,exact,,145,False
+tax,Climate change levy,CCL,obr.ccl,obr.pscr_gbp,exact,,34,False
+tax,Corporation tax (onshore),Onshore,obr.onshore,obr.pscr_gbp,exact,,417,False
+tax,Council Tax,Council,obr.council,obr.pscr_gbp,exact,,8,False
+tax,Council tax,Council,obr.council,obr.pscr_gbp,exact,,11,False
+tax,Crime levy,,,obr.pscr_gbp,none,,3,False
+tax,Customs duty,,,obr.pscr_gbp,none,,23,False
+tax,Digital services tax,,,obr.pscr_gbp,none,,2,False
+tax,Diverted profits tax,,,obr.pscr_gbp,none,,1,False
+tax,Domestic minimum tax,,,obr.pscr_gbp,none,,2,False
+tax,Electricity generators levy,EGL,obr.egl,obr.pscr_gbp,exact,,3,False
+tax,Emissions trading scheme,ETS,obr.ets,obr.pscr_gbp,exact,,4,False
+tax,Energy bills tax,,,obr.pscr_gbp,none,,2,False
+tax,Energy profits levy,Oilandgas,obr.oilandgas,obr.pscr_gbp,assumed,levy on oil and gas profits,4,False
+tax,Environmental levies,,,obr.pscr_gbp,none,,4,False
+tax,Fuel Duty,Fuel,obr.fuel,obr.pscr_gbp,exact,,5,False
+tax,Fuel duty,Fuel,obr.fuel,obr.pscr_gbp,exact,,68,False
+tax,Gross operating surplus,,,obr.pscr_gbp,none,,12,False
+tax,Health and social care levy,HSC,obr.hsc,obr.pscr_gbp,exact,,6,False
+tax,High-value council tax surcharge,,,obr.pscr_gbp,none,,1,False
+tax,Immigration health surcharge,,,obr.pscr_gbp,none,,4,False
+tax,Immigration skills charge,,,obr.pscr_gbp,none,,1,False
+tax,Income tax,IT,obr.it,obr.pscr_gbp,exact,,611,False
+tax,Inheritance tax,IHT,obr.iht,obr.pscr_gbp,exact,,54,False
+tax,Insurance premium tax,IPT,obr.ipt,obr.pscr_gbp,exact,,13,False
+tax,Interest and dividend receipts,,,obr.pscr_gbp,none,,12,False
+tax,International student levy,,,obr.pscr_gbp,none,,1,False
+tax,Land registry receipts,,,obr.pscr_gbp,none,,1,False
+tax,Landfill tax,,,obr.pscr_gbp,none,,24,False
+tax,Licence fee receipts,Licence,obr.licence,obr.pscr_gbp,exact,,1,False
+tax,Multinational top-up tax,,,obr.pscr_gbp,none,,3,False
+tax,NICs,NICS,obr.nics,obr.pscr_gbp,exact,,247,False
+tax,North sea taxes,Oilandgas,obr.oilandgas,obr.pscr_gbp,exact,,28,False
+tax,Other tax,,,obr.pscr_gbp,none,,86,False
+tax,Passport fees,,,obr.pscr_gbp,none,,1,False
+tax,Pay to stay,,,obr.pscr_gbp,none,,3,False
+tax,Penalties,,,obr.pscr_gbp,none,,13,False
+tax,Plastic packaging tax,,,obr.pscr_gbp,none,,2,False
+tax,Probate fees,,,obr.pscr_gbp,none,,2,False
+tax,Retail property developers surcharge,,,obr.pscr_gbp,none,,1,False
+tax,Soft drinks Levy,,,obr.pscr_gbp,none,,2,False
+tax,Soft drinks levy,,,obr.pscr_gbp,none,,2,False
+tax,Stamp duty,PTT,obr.ptt,obr.pscr_gbp,assumed,covers property and shares; HOFD splits PTT and Shares,95,False
+tax,Statutory gaming levy,,,obr.pscr_gbp,none,,1,False
+tax,Tobacco duty,Tobacco,obr.tobacco,obr.pscr_gbp,exact,,50,False
+tax,VAT,VAT,obr.vat,obr.pscr_gbp,exact,,163,False
+tax,VAT refunds,VATrefunds,obr.vatrefunds,obr.pscr_gbp,exact,,2,False
+tax,Vaping duty,Vapes,obr.vapes,obr.pscr_gbp,exact,,4,False
+tax,Vehicle excise duty,VED,obr.ved,obr.pscr_gbp,exact,,42,False
+tax,Visa fees,,,obr.pscr_gbp,none,,3,False
+tax,income tax,IT,obr.it,obr.pscr_gbp,exact,,2,False
