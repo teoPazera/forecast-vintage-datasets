@@ -1,0 +1,4555 @@
+{
+  "description": "Calibration targets for the synthetic generator (plan E5). Error basis: log error for pooled level series, series unit otherwise. Buckets in months to the end of the target period (D6). Episodes included.",
+  "targets": {
+    "CBO/aggregate/cbo.deficit.total": {
+      "error_basis": "level (series unit)",
+      "policy_adjusted": {
+        "0-6": {
+          "sd_error": 96.12621705598903,
+          "bias": -3.5501707317073055,
+          "n_cells": 41,
+          "n_targets": 33
+        },
+        "12-24": {
+          "sd_error": 247.41283534020076,
+          "bias": -59.51321428571427,
+          "n_cells": 98,
+          "n_targets": 41
+        },
+        "24-36": {
+          "sd_error": 323.57823555044695,
+          "bias": -62.055127659574474,
+          "n_cells": 94,
+          "n_targets": 40
+        },
+        "36+": {
+          "sd_error": 386.3465951666743,
+          "bias": -109.9692146507666,
+          "n_cells": 587,
+          "n_targets": 39
+        },
+        "6-12": {
+          "sd_error": 140.38144659010146,
+          "bias": -34.8156557377049,
+          "n_cells": 61,
+          "n_targets": 40
+        }
+      },
+      "raw": {
+        "0-6": {
+          "sd_error": 97.78766056328497,
+          "bias": 0.0590975609756188,
+          "n_cells": 41,
+          "n_targets": 33
+        },
+        "12-24": {
+          "sd_error": 507.1462624971952,
+          "bias": 209.99936734693878,
+          "n_cells": 98,
+          "n_targets": 41
+        },
+        "24-36": {
+          "sd_error": 543.3976796984698,
+          "bias": 296.85422340425544,
+          "n_cells": 94,
+          "n_targets": 40
+        },
+        "36+": {
+          "sd_error": 687.5970501446983,
+          "bias": 668.6203458262352,
+          "n_cells": 587,
+          "n_targets": 39
+        },
+        "6-12": {
+          "sd_error": 399.6880340541981,
+          "bias": 84.09508196721313,
+          "n_cells": 61,
+          "n_targets": 40
+        }
+      },
+      "revision_autocorrelation": 0.07638578572120176,
+      "same_sign_share": 0.547699214365881,
+      "n_revision_pairs": 891
+    },
+    "CBO/aggregate/pooled_levels": {
+      "error_basis": "log",
+      "policy_adjusted": {
+        "0-6": {
+          "sd_error": 0.01303955297636453,
+          "bias": 0.0012370609858743848,
+          "n_cells": 103,
+          "n_targets": 91
+        },
+        "12-24": {
+          "sd_error": 0.05750739625372416,
+          "bias": 0.003312965134527011,
+          "n_cells": 249,
+          "n_targets": 125
+        },
+        "24-36": {
+          "sd_error": 0.07821617714350279,
+          "bias": 0.008364983952382079,
+          "n_cells": 240,
+          "n_targets": 122
+        },
+        "36+": {
+          "sd_error": 0.11773704757949678,
+          "bias": 0.03264663699239449,
+          "n_cells": 1473,
+          "n_targets": 119
+        },
+        "6-12": {
+          "sd_error": 0.03189546349773563,
+          "bias": 0.0006962271845541536,
+          "n_cells": 157,
+          "n_targets": 111
+        },
+        "<0": {
+          "sd_error": 0.0001461885717149892,
+          "bias": -7.807199222638007e-05,
+          "n_cells": 57,
+          "n_targets": 41
+        }
+      },
+      "raw": {
+        "0-6": {
+          "sd_error": 0.01475553452084918,
+          "bias": 0.0008496515200956333,
+          "n_cells": 103,
+          "n_targets": 91
+        },
+        "12-24": {
+          "sd_error": 0.08872251632545539,
+          "bias": -0.005735412488685408,
+          "n_cells": 249,
+          "n_targets": 125
+        },
+        "24-36": {
+          "sd_error": 0.11863868063900365,
+          "bias": -0.007322460646642637,
+          "n_cells": 240,
+          "n_targets": 122
+        },
+        "36+": {
+          "sd_error": 0.29022588346627215,
+          "bias": -0.04435018556591299,
+          "n_cells": 1473,
+          "n_targets": 119
+        },
+        "6-12": {
+          "sd_error": 0.052988984445999705,
+          "bias": -0.003963587170740239,
+          "n_cells": 157,
+          "n_targets": 111
+        },
+        "<0": {
+          "sd_error": 0.0001461885717149892,
+          "bias": -7.807199222638007e-05,
+          "n_cells": 57,
+          "n_targets": 41
+        }
+      },
+      "revision_autocorrelation": 0.4589205193778716,
+      "same_sign_share": 0.588261253309797,
+      "n_revision_pairs": 2266
+    },
+    "CBO/outlay_discretionary/pooled_levels": {
+      "error_basis": "log",
+      "policy_adjusted": {
+        "0-6": {
+          "sd_error": 0.013849694432081516,
+          "bias": 0.003048079527000992,
+          "n_cells": 107,
+          "n_targets": 87
+        },
+        "12-24": {
+          "sd_error": 0.016817693380460852,
+          "bias": 0.015837389086634845,
+          "n_cells": 236,
+          "n_targets": 87
+        },
+        "24-36": {
+          "sd_error": 0.020647755547733144,
+          "bias": 0.019747713442102015,
+          "n_cells": 228,
+          "n_targets": 84
+        },
+        "36+": {
+          "sd_error": 0.02437941856041615,
+          "bias": 0.02758889573738332,
+          "n_cells": 1547,
+          "n_targets": 81
+        },
+        "6-12": {
+          "sd_error": 0.012718769162801454,
+          "bias": 0.008884477525116235,
+          "n_cells": 137,
+          "n_targets": 84
+        }
+      },
+      "raw": {
+        "0-6": {
+          "sd_error": 0.012955795833747197,
+          "bias": 0.0011353156477504254,
+          "n_cells": 107,
+          "n_targets": 87
+        },
+        "12-24": {
+          "sd_error": 0.06701691753608725,
+          "bias": -0.03499006798530667,
+          "n_cells": 236,
+          "n_targets": 87
+        },
+        "24-36": {
+          "sd_error": 0.0981601486715129,
+          "bias": -0.0676979913271363,
+          "n_cells": 228,
+          "n_targets": 84
+        },
+        "36+": {
+          "sd_error": 0.20296289647318863,
+          "bias": -0.15952055205219995,
+          "n_cells": 1547,
+          "n_targets": 81
+        },
+        "6-12": {
+          "sd_error": 0.042409257192060165,
+          "bias": -0.010006731934896502,
+          "n_cells": 137,
+          "n_targets": 84
+        }
+      },
+      "revision_autocorrelation": -0.18655994946033055,
+      "same_sign_share": 0.4879518072289157,
+      "n_revision_pairs": 2324
+    },
+    "CBO/outlay_mandatory/cbo.outlay.fannie_freddie": {
+      "error_basis": "level (series unit)",
+      "policy_adjusted": {
+        "0-6": {
+          "sd_error": 45.07251320223656,
+          "bias": 8.640049999999999,
+          "n_cells": 20,
+          "n_targets": 17
+        },
+        "12-24": {
+          "sd_error": 37.28409189472172,
+          "bias": 16.875023809523807,
+          "n_cells": 42,
+          "n_targets": 17
+        },
+        "24-36": {
+          "sd_error": 31.475309246194705,
+          "bias": 22.7341,
+          "n_cells": 40,
+          "n_targets": 16
+        },
+        "36+": {
+          "sd_error": 21.488702170903576,
+          "bias": 17.143653061224498,
+          "n_cells": 245,
+          "n_targets": 15
+        },
+        "6-12": {
+          "sd_error": 53.06818420777813,
+          "bias": 17.342739130434783,
+          "n_cells": 23,
+          "n_targets": 16
+        }
+      },
+      "raw": {
+        "0-6": {
+          "sd_error": 45.07251320223656,
+          "bias": 8.640049999999999,
+          "n_cells": 20,
+          "n_targets": 17
+        },
+        "12-24": {
+          "sd_error": 37.239348412476694,
+          "bias": 17.0967619047619,
+          "n_cells": 42,
+          "n_targets": 17
+        },
+        "24-36": {
+          "sd_error": 32.12293946216229,
+          "bias": 23.55095000000001,
+          "n_cells": 40,
+          "n_targets": 16
+        },
+        "36+": {
+          "sd_error": 22.02255546350206,
+          "bias": 19.402020408163274,
+          "n_cells": 245,
+          "n_targets": 15
+        },
+        "6-12": {
+          "sd_error": 53.064092260127325,
+          "bias": 17.341130434782606,
+          "n_cells": 23,
+          "n_targets": 16
+        }
+      },
+      "revision_autocorrelation": 0.29482427080728935,
+      "same_sign_share": 0.4577114427860697,
+      "n_revision_pairs": 201
+    },
+    "CBO/outlay_mandatory/pooled_levels": {
+      "error_basis": "log",
+      "policy_adjusted": {
+        "0-6": {
+          "sd_error": 0.01613889478217526,
+          "bias": 0.002706282248013769,
+          "n_cells": 205,
+          "n_targets": 165
+        },
+        "12-24": {
+          "sd_error": 0.06246202400454214,
+          "bias": 0.014784906668048204,
+          "n_cells": 450,
+          "n_targets": 165
+        },
+        "24-36": {
+          "sd_error": 0.06824150651079132,
+          "bias": 0.013311927652323334,
+          "n_cells": 430,
+          "n_targets": 160
+        },
+        "36+": {
+          "sd_error": 0.09877393178616327,
+          "bias": 0.017633050362681417,
+          "n_cells": 2815,
+          "n_targets": 155
+        },
+        "6-12": {
+          "sd_error": 0.04496985000539631,
+          "bias": 0.011953046824277298,
+          "n_cells": 265,
+          "n_targets": 160
+        }
+      },
+      "raw": {
+        "0-6": {
+          "sd_error": 0.017106900762328067,
+          "bias": 0.0021653365282274517,
+          "n_cells": 205,
+          "n_targets": 165
+        },
+        "12-24": {
+          "sd_error": 0.1762790179716421,
+          "bias": -0.027443868424126754,
+          "n_cells": 450,
+          "n_targets": 165
+        },
+        "24-36": {
+          "sd_error": 0.18415719007888037,
+          "bias": -0.039509281725699494,
+          "n_cells": 430,
+          "n_targets": 160
+        },
+        "36+": {
+          "sd_error": 0.22947155114639328,
+          "bias": -0.06376929449578218,
+          "n_cells": 2815,
+          "n_targets": 155
+        },
+        "6-12": {
+          "sd_error": 0.1272292351578535,
+          "bias": -0.007188736564248789,
+          "n_cells": 265,
+          "n_targets": 160
+        }
+      },
+      "revision_autocorrelation": 0.20874139760572158,
+      "same_sign_share": 0.5785573122529645,
+      "n_revision_pairs": 4048
+    },
+    "CBO/outlay_net_interest/cbo.outlay.net_interest": {
+      "error_basis": "level (series unit)",
+      "policy_adjusted": {
+        "0-6": {
+          "sd_error": 13.251324502552608,
+          "bias": -2.8883170731707355,
+          "n_cells": 41,
+          "n_targets": 33
+        },
+        "12-24": {
+          "sd_error": 49.85027914043863,
+          "bias": 3.692188888888887,
+          "n_cells": 90,
+          "n_targets": 33
+        },
+        "24-36": {
+          "sd_error": 93.23359624616413,
+          "bias": 16.106174418604656,
+          "n_cells": 86,
+          "n_targets": 32
+        },
+        "36+": {
+          "sd_error": 164.57518595725927,
+          "bias": 140.26600888099466,
+          "n_cells": 563,
+          "n_targets": 31
+        },
+        "6-12": {
+          "sd_error": 12.956157173620086,
+          "bias": -0.16884905660377977,
+          "n_cells": 53,
+          "n_targets": 32
+        }
+      },
+      "raw": {
+        "0-6": {
+          "sd_error": 13.255074915282675,
+          "bias": -2.9071219512195157,
+          "n_cells": 41,
+          "n_targets": 33
+        },
+        "12-24": {
+          "sd_error": 49.5477994924731,
+          "bias": 1.7466444444444478,
+          "n_cells": 90,
+          "n_targets": 33
+        },
+        "24-36": {
+          "sd_error": 91.91641774080213,
+          "bias": 8.84719767441861,
+          "n_cells": 86,
+          "n_targets": 32
+        },
+        "36+": {
+          "sd_error": 161.77869633226595,
+          "bias": 45.626021314387216,
+          "n_cells": 563,
+          "n_targets": 31
+        },
+        "6-12": {
+          "sd_error": 12.940514171712882,
+          "bias": -0.38183018867925006,
+          "n_cells": 53,
+          "n_targets": 32
+        }
+      },
+      "revision_autocorrelation": 0.2263260757459381,
+      "same_sign_share": 0.5582750582750583,
+      "n_revision_pairs": 858
+    },
+    "CBO/revenue_corporate_income_taxes/pooled_levels": {
+      "error_basis": "log",
+      "policy_adjusted": {
+        "0-6": {
+          "sd_error": 0.09846221543266973,
+          "bias": -0.0042187946248509745,
+          "n_cells": 47,
+          "n_targets": 43
+        },
+        "12-24": {
+          "sd_error": 0.24513685054560277,
+          "bias": 0.006589288875851473,
+          "n_cells": 105,
+          "n_targets": 43
+        },
+        "24-36": {
+          "sd_error": 0.26642095995336323,
+          "bias": 0.038218536697407206,
+          "n_cells": 102,
+          "n_targets": 42
+        },
+        "36+": {
+          "sd_error": 0.25974410956514765,
+          "bias": 0.032104714457666966,
+          "n_cells": 653,
+          "n_targets": 41
+        },
+        "6-12": {
+          "sd_error": 0.17018937692088032,
+          "bias": -0.012415626479376109,
+          "n_cells": 64,
+          "n_targets": 42
+        },
+        "<0": {
+          "sd_error": 3.8526638785342755e-07,
+          "bias": -5.102977968014358e-08,
+          "n_cells": 57,
+          "n_targets": 41
+        }
+      },
+      "raw": {
+        "0-6": {
+          "sd_error": 0.10583614449682403,
+          "bias": -0.0004482326767272616,
+          "n_cells": 47,
+          "n_targets": 43
+        },
+        "12-24": {
+          "sd_error": 0.278125755379515,
+          "bias": 0.07002907346546768,
+          "n_cells": 105,
+          "n_targets": 43
+        },
+        "24-36": {
+          "sd_error": 0.31235788832736305,
+          "bias": 0.10741592763200107,
+          "n_cells": 102,
+          "n_targets": 42
+        },
+        "36+": {
+          "sd_error": 0.33579686095005323,
+          "bias": 0.13259370572633958,
+          "n_cells": 653,
+          "n_targets": 41
+        },
+        "6-12": {
+          "sd_error": 0.17799212137969014,
+          "bias": 0.014135660918217201,
+          "n_cells": 64,
+          "n_targets": 42
+        },
+        "<0": {
+          "sd_error": 3.8526638785342755e-07,
+          "bias": -5.102977968014358e-08,
+          "n_cells": 57,
+          "n_targets": 41
+        }
+      },
+      "revision_autocorrelation": -0.00825871968650746,
+      "same_sign_share": 0.5317997293640054,
+      "n_revision_pairs": 739
+    },
+    "CBO/revenue_customs_duties/pooled_levels": {
+      "error_basis": "log",
+      "policy_adjusted": {
+        "0-6": {
+          "sd_error": 0.049169936390971614,
+          "bias": -0.003683255496031412,
+          "n_cells": 47,
+          "n_targets": 43
+        },
+        "12-24": {
+          "sd_error": 0.1707517654196266,
+          "bias": -0.017805155819707923,
+          "n_cells": 105,
+          "n_targets": 43
+        },
+        "24-36": {
+          "sd_error": 0.17790969633337397,
+          "bias": -0.025133275736350998,
+          "n_cells": 102,
+          "n_targets": 42
+        },
+        "36+": {
+          "sd_error": 0.3023902052550947,
+          "bias": -0.056498618171805015,
+          "n_cells": 653,
+          "n_targets": 41
+        },
+        "6-12": {
+          "sd_error": 0.1297037830565071,
+          "bias": -0.007844716947561515,
+          "n_cells": 64,
+          "n_targets": 42
+        },
+        "<0": {
+          "sd_error": 1.1415221816628753e-05,
+          "bias": -9.09961514338692e-07,
+          "n_cells": 57,
+          "n_targets": 41
+        }
+      },
+      "raw": {
+        "0-6": {
+          "sd_error": 0.049167197885177004,
+          "bias": -0.003680561915100523,
+          "n_cells": 47,
+          "n_targets": 43
+        },
+        "12-24": {
+          "sd_error": 0.17484506625779542,
+          "bias": -0.000396595953773584,
+          "n_cells": 105,
+          "n_targets": 43
+        },
+        "24-36": {
+          "sd_error": 0.18429404711332042,
+          "bias": 0.003072270203244201,
+          "n_cells": 102,
+          "n_targets": 42
+        },
+        "36+": {
+          "sd_error": 0.3210420311184302,
+          "bias": -0.002442757231219901,
+          "n_cells": 653,
+          "n_targets": 41
+        },
+        "6-12": {
+          "sd_error": 0.1300828798860003,
+          "bias": -0.005130296605693459,
+          "n_cells": 64,
+          "n_targets": 42
+        },
+        "<0": {
+          "sd_error": 1.1415221816628753e-05,
+          "bias": -9.09961514338692e-07,
+          "n_cells": 57,
+          "n_targets": 41
+        }
+      },
+      "revision_autocorrelation": 0.03222486325424045,
+      "same_sign_share": 0.3793103448275862,
+      "n_revision_pairs": 609
+    },
+    "CBO/revenue_estate_and_gift_taxes/cbo.revenue.estate_and_gift_taxes": {
+      "error_basis": "level (series unit)",
+      "policy_adjusted": {
+        "0-6": {
+          "sd_error": 1.4064708873904144,
+          "bias": -0.19476595744680847,
+          "n_cells": 47,
+          "n_targets": 43
+        },
+        "12-24": {
+          "sd_error": 3.0159513331848036,
+          "bias": -1.101190476190476,
+          "n_cells": 105,
+          "n_targets": 43
+        },
+        "24-36": {
+          "sd_error": 3.8528122376032794,
+          "bias": -1.8009803921568632,
+          "n_cells": 102,
+          "n_targets": 42
+        },
+        "36+": {
+          "sd_error": 8.685238049553098,
+          "bias": -2.2074042879019897,
+          "n_cells": 653,
+          "n_targets": 41
+        },
+        "6-12": {
+          "sd_error": 2.0855140880983627,
+          "bias": -0.7578593749999997,
+          "n_cells": 64,
+          "n_targets": 42
+        },
+        "<0": {
+          "sd_error": 0.0,
+          "bias": 0.0,
+          "n_cells": 57,
+          "n_targets": 41
+        }
+      },
+      "raw": {
+        "0-6": {
+          "sd_error": 1.4064708873904144,
+          "bias": -0.19476595744680847,
+          "n_cells": 47,
+          "n_targets": 43
+        },
+        "12-24": {
+          "sd_error": 3.2956386995687557,
+          "bias": -0.9798476190476189,
+          "n_cells": 105,
+          "n_targets": 43
+        },
+        "24-36": {
+          "sd_error": 7.0551214582199,
+          "bias": 0.10477450980392128,
+          "n_cells": 102,
+          "n_targets": 42
+        },
+        "36+": {
+          "sd_error": 19.643259484009445,
+          "bias": 10.299427258805508,
+          "n_cells": 653,
+          "n_targets": 41
+        },
+        "6-12": {
+          "sd_error": 2.085532074907089,
+          "bias": -0.7578906249999996,
+          "n_cells": 64,
+          "n_targets": 42
+        },
+        "<0": {
+          "sd_error": 0.0,
+          "bias": 0.0,
+          "n_cells": 57,
+          "n_targets": 41
+        }
+      },
+      "revision_autocorrelation": -0.05505491105588438,
+      "same_sign_share": 0.5357142857142857,
+      "n_revision_pairs": 560
+    },
+    "CBO/revenue_excise_taxes/pooled_levels": {
+      "error_basis": "log",
+      "policy_adjusted": {
+        "0-6": {
+          "sd_error": 0.0406090224449501,
+          "bias": 0.0050784976013054485,
+          "n_cells": 47,
+          "n_targets": 43
+        },
+        "12-24": {
+          "sd_error": 0.06953917822672347,
+          "bias": 0.03334168305258925,
+          "n_cells": 105,
+          "n_targets": 43
+        },
+        "24-36": {
+          "sd_error": 0.0836402175508978,
+          "bias": 0.06406374353359584,
+          "n_cells": 102,
+          "n_targets": 42
+        },
+        "36+": {
+          "sd_error": 0.12583723089881574,
+          "bias": 0.12384013182355373,
+          "n_cells": 653,
+          "n_targets": 41
+        },
+        "6-12": {
+          "sd_error": 0.06506963912599957,
+          "bias": 0.015666468755272896,
+          "n_cells": 64,
+          "n_targets": 42
+        },
+        "<0": {
+          "sd_error": 0.0010667740440523628,
+          "bias": 0.00015145398390353215,
+          "n_cells": 57,
+          "n_targets": 41
+        }
+      },
+      "raw": {
+        "0-6": {
+          "sd_error": 0.04062899967020552,
+          "bias": 0.005057730609561201,
+          "n_cells": 47,
+          "n_targets": 43
+        },
+        "12-24": {
+          "sd_error": 0.08158893920375085,
+          "bias": 0.016756822257511395,
+          "n_cells": 105,
+          "n_targets": 43
+        },
+        "24-36": {
+          "sd_error": 0.13237711734145335,
+          "bias": 0.028037345455854595,
+          "n_cells": 102,
+          "n_targets": 42
+        },
+        "36+": {
+          "sd_error": 0.19695653148561806,
+          "bias": 0.052478274074335134,
+          "n_cells": 653,
+          "n_targets": 41
+        },
+        "6-12": {
+          "sd_error": 0.0623960813815732,
+          "bias": 0.011285876051378308,
+          "n_cells": 64,
+          "n_targets": 42
+        },
+        "<0": {
+          "sd_error": 0.0010667740440523628,
+          "bias": 0.00015145398390353215,
+          "n_cells": 57,
+          "n_targets": 41
+        }
+      },
+      "revision_autocorrelation": -0.03326743938855972,
+      "same_sign_share": 0.5,
+      "n_revision_pairs": 766
+    },
+    "CBO/revenue_individual_income_taxes/pooled_levels": {
+      "error_basis": "log",
+      "policy_adjusted": {
+        "0-6": {
+          "sd_error": 0.02691993461221488,
+          "bias": 0.0023218995115841723,
+          "n_cells": 47,
+          "n_targets": 43
+        },
+        "12-24": {
+          "sd_error": 0.10968068713811285,
+          "bias": -0.013262408987486691,
+          "n_cells": 105,
+          "n_targets": 43
+        },
+        "24-36": {
+          "sd_error": 0.14113705927383802,
+          "bias": -0.005176971339738724,
+          "n_cells": 102,
+          "n_targets": 42
+        },
+        "36+": {
+          "sd_error": 0.17324832755557373,
+          "bias": 0.009858014231011717,
+          "n_cells": 653,
+          "n_targets": 41
+        },
+        "6-12": {
+          "sd_error": 0.06667974128562407,
+          "bias": -0.013459986557387511,
+          "n_cells": 64,
+          "n_targets": 42
+        },
+        "<0": {
+          "sd_error": 3.025668014717314e-07,
+          "bias": -8.753857316672813e-08,
+          "n_cells": 57,
+          "n_targets": 41
+        }
+      },
+      "raw": {
+        "0-6": {
+          "sd_error": 0.028411158143559875,
+          "bias": 0.0030796991001602434,
+          "n_cells": 47,
+          "n_targets": 43
+        },
+        "12-24": {
+          "sd_error": 0.11620143177828272,
+          "bias": 0.031492326933430556,
+          "n_cells": 105,
+          "n_targets": 43
+        },
+        "24-36": {
+          "sd_error": 0.16153764786475464,
+          "bias": 0.057508422876831916,
+          "n_cells": 102,
+          "n_targets": 42
+        },
+        "36+": {
+          "sd_error": 0.2015793195072491,
+          "bias": 0.14256549329647883,
+          "n_cells": 653,
+          "n_targets": 41
+        },
+        "6-12": {
+          "sd_error": 0.06386388281300073,
+          "bias": 0.0020693436233284205,
+          "n_cells": 64,
+          "n_targets": 42
+        },
+        "<0": {
+          "sd_error": 3.025668014717314e-07,
+          "bias": -8.753857316672813e-08,
+          "n_cells": 57,
+          "n_targets": 41
+        }
+      },
+      "revision_autocorrelation": 0.20603500911883865,
+      "same_sign_share": 0.6039260969976905,
+      "n_revision_pairs": 866
+    },
+    "CBO/revenue_miscellaneous_receipts/pooled_levels": {
+      "error_basis": "log",
+      "policy_adjusted": {
+        "0-6": {
+          "sd_error": 0.055898699005511664,
+          "bias": -0.018731384733321577,
+          "n_cells": 47,
+          "n_targets": 43
+        },
+        "12-24": {
+          "sd_error": 0.17172527387527936,
+          "bias": -0.0505345430282573,
+          "n_cells": 105,
+          "n_targets": 43
+        },
+        "24-36": {
+          "sd_error": 0.3162895350156094,
+          "bias": -0.056297958528461436,
+          "n_cells": 102,
+          "n_targets": 42
+        },
+        "36+": {
+          "sd_error": 0.43328184656080776,
+          "bias": -0.035166786341700715,
+          "n_cells": 653,
+          "n_targets": 41
+        },
+        "6-12": {
+          "sd_error": 0.08913124620560922,
+          "bias": -0.040079986240744894,
+          "n_cells": 64,
+          "n_targets": 42
+        },
+        "<0": {
+          "sd_error": 0.005471100781572751,
+          "bias": -0.0019611733860338248,
+          "n_cells": 57,
+          "n_targets": 41
+        }
+      },
+      "raw": {
+        "0-6": {
+          "sd_error": 0.05588918895490174,
+          "bias": -0.01873551287429705,
+          "n_cells": 47,
+          "n_targets": 43
+        },
+        "12-24": {
+          "sd_error": 0.17315843945777945,
+          "bias": -0.05868294566734922,
+          "n_cells": 105,
+          "n_targets": 43
+        },
+        "24-36": {
+          "sd_error": 0.3201798442332712,
+          "bias": -0.06803706588034188,
+          "n_cells": 102,
+          "n_targets": 42
+        },
+        "36+": {
+          "sd_error": 0.48843665541026077,
+          "bias": -0.10705588701583335,
+          "n_cells": 653,
+          "n_targets": 41
+        },
+        "6-12": {
+          "sd_error": 0.08907007639422203,
+          "bias": -0.04009042091430591,
+          "n_cells": 64,
+          "n_targets": 42
+        },
+        "<0": {
+          "sd_error": 0.005471100781572751,
+          "bias": -0.0019611733860338248,
+          "n_cells": 57,
+          "n_targets": 41
+        }
+      },
+      "revision_autocorrelation": -0.0005072899855614224,
+      "same_sign_share": 0.48255234297108673,
+      "n_revision_pairs": 1003
+    },
+    "CBO/revenue_payroll_taxes/pooled_levels": {
+      "error_basis": "log",
+      "policy_adjusted": {
+        "0-6": {
+          "sd_error": 0.00824100594857288,
+          "bias": -0.0007140293538686049,
+          "n_cells": 47,
+          "n_targets": 43
+        },
+        "12-24": {
+          "sd_error": 0.03043973624699152,
+          "bias": 0.007479633489288652,
+          "n_cells": 105,
+          "n_targets": 43
+        },
+        "24-36": {
+          "sd_error": 0.0464034701539437,
+          "bias": 0.015197452894434825,
+          "n_cells": 102,
+          "n_targets": 42
+        },
+        "36+": {
+          "sd_error": 0.09084124792421774,
+          "bias": 0.044414834327284894,
+          "n_cells": 653,
+          "n_targets": 41
+        },
+        "6-12": {
+          "sd_error": 0.014627076344150553,
+          "bias": 0.0026255259733654673,
+          "n_cells": 64,
+          "n_targets": 42
+        },
+        "<0": {
+          "sd_error": 7.200002991290293e-05,
+          "bias": 1.535641786613541e-05,
+          "n_cells": 57,
+          "n_targets": 41
+        }
+      },
+      "raw": {
+        "0-6": {
+          "sd_error": 0.008235250507324567,
+          "bias": -0.0007106927121561398,
+          "n_cells": 47,
+          "n_targets": 43
+        },
+        "12-24": {
+          "sd_error": 0.03922250121155552,
+          "bias": 0.012359728327469323,
+          "n_cells": 105,
+          "n_targets": 43
+        },
+        "24-36": {
+          "sd_error": 0.0570161654455411,
+          "bias": 0.01984924705518737,
+          "n_cells": 102,
+          "n_targets": 42
+        },
+        "36+": {
+          "sd_error": 0.10238281602300445,
+          "bias": 0.04802012419543761,
+          "n_cells": 653,
+          "n_targets": 41
+        },
+        "6-12": {
+          "sd_error": 0.015371262890220458,
+          "bias": 0.0037274098312957225,
+          "n_cells": 64,
+          "n_targets": 42
+        },
+        "<0": {
+          "sd_error": 7.200002991290293e-05,
+          "bias": 1.535641786613541e-05,
+          "n_cells": 57,
+          "n_targets": 41
+        }
+      },
+      "revision_autocorrelation": 0.14510150981696454,
+      "same_sign_share": 0.5829145728643216,
+      "n_revision_pairs": 796
+    },
+    "HMT/aggregate/obr.cacb": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 0.5217265058418941,
+          "bias": -0.8195201446572069,
+          "n_cells": 21,
+          "n_targets": 12
+        },
+        "12-24": {
+          "sd_error": 1.6085057572721266,
+          "bias": -1.3130352418546163,
+          "n_cells": 23,
+          "n_targets": 12
+        },
+        "24-36": {
+          "sd_error": 1.744164177206701,
+          "bias": -1.8483576118992013,
+          "n_cells": 23,
+          "n_targets": 12
+        },
+        "36+": {
+          "sd_error": 1.6793216765224854,
+          "bias": -2.971825471750431,
+          "n_cells": 69,
+          "n_targets": 14
+        },
+        "6-12": {
+          "sd_error": 1.2991685794155379,
+          "bias": -1.145175944099893,
+          "n_cells": 11,
+          "n_targets": 11
+        },
+        "<0": {
+          "sd_error": 0.2383908252847997,
+          "bias": -0.7623937222092074,
+          "n_cells": 43,
+          "n_targets": 12
+        }
+      },
+      "revision_autocorrelation": 0.2648653349432216,
+      "same_sign_share": 0.6666666666666666,
+      "n_revision_pairs": 90
+    },
+    "HMT/aggregate/obr.capsnb": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 0.7661780566333036,
+          "bias": -0.7689428120178018,
+          "n_cells": 13,
+          "n_targets": 7
+        },
+        "12-24": {
+          "sd_error": 2.156976834493174,
+          "bias": -1.48566863219791,
+          "n_cells": 13,
+          "n_targets": 7
+        },
+        "24-36": {
+          "sd_error": 2.349540167306203,
+          "bias": -2.0864142572671023,
+          "n_cells": 14,
+          "n_targets": 7
+        },
+        "36+": {
+          "sd_error": 2.382723226189243,
+          "bias": -3.29721200188322,
+          "n_cells": 45,
+          "n_targets": 13
+        },
+        "6-12": {
+          "sd_error": 1.795884771093936,
+          "bias": -1.1271042372734037,
+          "n_cells": 7,
+          "n_targets": 7
+        },
+        "<0": {
+          "sd_error": 0.3271941933209329,
+          "bias": -0.9051830734456128,
+          "n_cells": 32,
+          "n_targets": 9
+        }
+      },
+      "revision_autocorrelation": 0.25137507517266283,
+      "same_sign_share": 0.6263736263736264,
+      "n_revision_pairs": 91
+    },
+    "HMT/aggregate/obr.pscr": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 1.5828322302126172,
+          "bias": 3.674742245609909,
+          "n_cells": 33,
+          "n_targets": 21
+        },
+        "12-24": {
+          "sd_error": 1.7200158857490806,
+          "bias": 3.895665251539872,
+          "n_cells": 35,
+          "n_targets": 19
+        },
+        "24-36": {
+          "sd_error": 1.7529800447749297,
+          "bias": 3.770050202042941,
+          "n_cells": 31,
+          "n_targets": 20
+        },
+        "36+": {
+          "sd_error": 1.4731002747085724,
+          "bias": 4.019880135085797,
+          "n_cells": 93,
+          "n_targets": 23
+        },
+        "6-12": {
+          "sd_error": 1.9270100648581043,
+          "bias": 3.954808423812611,
+          "n_cells": 18,
+          "n_targets": 18
+        },
+        "<0": {
+          "sd_error": 1.6635740078265504,
+          "bias": 4.1055247979378695,
+          "n_cells": 9,
+          "n_targets": 9
+        }
+      },
+      "revision_autocorrelation": 0.08961285984869974,
+      "same_sign_share": 0.5915492957746479,
+      "n_revision_pairs": 142
+    },
+    "HMT/aggregate/obr.psnb": {
+      "error_basis": "level (series unit)",
+      "policy_adjusted": {
+        "0-6": {
+          "sd_error": 1.2388954775162249,
+          "bias": -0.17395009171857123,
+          "n_cells": 51,
+          "n_targets": 32
+        },
+        "12-24": {
+          "sd_error": 2.1518031018621295,
+          "bias": -0.5350077366802904,
+          "n_cells": 45,
+          "n_targets": 28
+        },
+        "24-36": {
+          "sd_error": 2.523351816797953,
+          "bias": -1.1357712832082518,
+          "n_cells": 37,
+          "n_targets": 26
+        },
+        "36+": {
+          "sd_error": 2.975978910934565,
+          "bias": -2.742161322425604,
+          "n_cells": 104,
+          "n_targets": 31
+        },
+        "6-12": {
+          "sd_error": 1.5691129418521101,
+          "bias": -0.10907096416528402,
+          "n_cells": 29,
+          "n_targets": 29
+        },
+        "<0": {
+          "sd_error": 0.6421657312124047,
+          "bias": -0.2675829332844741,
+          "n_cells": 47,
+          "n_targets": 24
+        }
+      },
+      "raw": {
+        "0-6": {
+          "sd_error": 1.2388954775162249,
+          "bias": -0.17395009171857123,
+          "n_cells": 51,
+          "n_targets": 32
+        },
+        "12-24": {
+          "sd_error": 2.15315832890885,
+          "bias": -0.534253418207031,
+          "n_cells": 45,
+          "n_targets": 28
+        },
+        "24-36": {
+          "sd_error": 2.5156767179313815,
+          "bias": -1.1405119737682845,
+          "n_cells": 37,
+          "n_targets": 26
+        },
+        "36+": {
+          "sd_error": 2.931004531385188,
+          "bias": -2.5403074931634464,
+          "n_cells": 104,
+          "n_targets": 31
+        },
+        "6-12": {
+          "sd_error": 1.5700804839777558,
+          "bias": -0.10848571707396205,
+          "n_cells": 29,
+          "n_targets": 29
+        },
+        "<0": {
+          "sd_error": 0.6421657312124047,
+          "bias": -0.2675829332844741,
+          "n_cells": 47,
+          "n_targets": 24
+        }
+      },
+      "revision_autocorrelation": 0.2453236015134246,
+      "same_sign_share": 0.6067415730337079,
+      "n_revision_pairs": 178
+    },
+    "HMT/aggregate/obr.psnb_gbp": {
+      "error_basis": "level (series unit)",
+      "policy_adjusted": {
+        "0-6": {
+          "sd_error": 7.8482533106452275,
+          "bias": -3.8361525423728815,
+          "n_cells": 59,
+          "n_targets": 38
+        },
+        "12-24": {
+          "sd_error": 25.002371343760295,
+          "bias": -9.252595744680846,
+          "n_cells": 47,
+          "n_targets": 29
+        },
+        "24-36": {
+          "sd_error": 35.4778388178334,
+          "bias": -19.26701644652778,
+          "n_cells": 36,
+          "n_targets": 25
+        },
+        "36+": {
+          "sd_error": 44.19170942916813,
+          "bias": -42.193658344706634,
+          "n_cells": 103,
+          "n_targets": 30
+        },
+        "6-12": {
+          "sd_error": 15.162524111780868,
+          "bias": -4.886028571428572,
+          "n_cells": 35,
+          "n_targets": 35
+        },
+        "<0": {
+          "sd_error": 6.490675135127017,
+          "bias": -5.955121951219514,
+          "n_cells": 41,
+          "n_targets": 29
+        }
+      },
+      "raw": {
+        "0-6": {
+          "sd_error": 7.8482533106452275,
+          "bias": -3.8361525423728815,
+          "n_cells": 59,
+          "n_targets": 38
+        },
+        "12-24": {
+          "sd_error": 25.02046798032906,
+          "bias": -9.241957446808506,
+          "n_cells": 47,
+          "n_targets": 29
+        },
+        "24-36": {
+          "sd_error": 35.36405473757979,
+          "bias": -19.344055555555556,
+          "n_cells": 36,
+          "n_targets": 25
+        },
+        "36+": {
+          "sd_error": 42.858707235569355,
+          "bias": -38.962378640776706,
+          "n_cells": 103,
+          "n_targets": 30
+        },
+        "6-12": {
+          "sd_error": 15.175019044026095,
+          "bias": -4.8788857142857145,
+          "n_cells": 35,
+          "n_targets": 35
+        },
+        "<0": {
+          "sd_error": 6.490675135127017,
+          "bias": -5.955121951219514,
+          "n_cells": 41,
+          "n_targets": 29
+        }
+      },
+      "revision_autocorrelation": 0.4735879358208614,
+      "same_sign_share": 0.6598984771573604,
+      "n_revision_pairs": 197
+    },
+    "HMT/aggregate/obr.psnd": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 5.003381465227274,
+          "bias": -0.6561284048996139,
+          "n_cells": 13,
+          "n_targets": 7
+        },
+        "12-24": {
+          "sd_error": 8.64728355062503,
+          "bias": -4.021239066526587,
+          "n_cells": 13,
+          "n_targets": 7
+        },
+        "24-36": {
+          "sd_error": 10.82460100173113,
+          "bias": -7.176090537789156,
+          "n_cells": 14,
+          "n_targets": 7
+        },
+        "36+": {
+          "sd_error": 13.718493324367873,
+          "bias": -17.052428289273497,
+          "n_cells": 41,
+          "n_targets": 9
+        },
+        "6-12": {
+          "sd_error": 5.979078455164816,
+          "bias": -3.065086642056007,
+          "n_cells": 7,
+          "n_targets": 7
+        },
+        "<0": {
+          "sd_error": 2.524153809236416,
+          "bias": 0.9155223164084423,
+          "n_cells": 32,
+          "n_targets": 9
+        }
+      },
+      "revision_autocorrelation": 0.4302301999072525,
+      "same_sign_share": 0.7415730337078652,
+      "n_revision_pairs": 89
+    },
+    "HMT/aggregate/obr.tme": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 1.6076820882599556,
+          "bias": 3.547464447979703,
+          "n_cells": 33,
+          "n_targets": 21
+        },
+        "12-24": {
+          "sd_error": 2.3948340390778844,
+          "bias": 3.449517787927661,
+          "n_cells": 35,
+          "n_targets": 19
+        },
+        "24-36": {
+          "sd_error": 2.588022133565234,
+          "bias": 2.3629331284938235,
+          "n_cells": 30,
+          "n_targets": 19
+        },
+        "36+": {
+          "sd_error": 2.9052521760433394,
+          "bias": 1.1623247165128678,
+          "n_cells": 90,
+          "n_targets": 23
+        },
+        "6-12": {
+          "sd_error": 2.069658939186545,
+          "bias": 3.670366645065185,
+          "n_cells": 18,
+          "n_targets": 18
+        },
+        "<0": {
+          "sd_error": 2.28720295074949,
+          "bias": 4.036416769273821,
+          "n_cells": 9,
+          "n_targets": 9
+        }
+      },
+      "revision_autocorrelation": 0.24216758273092334,
+      "same_sign_share": 0.503448275862069,
+      "n_revision_pairs": 145
+    },
+    "HMT/aggregate/pooled_levels": {
+      "error_basis": "log",
+      "policy_adjusted": {
+        "0-6": {
+          "sd_error": 0.01841979607979243,
+          "bias": -0.06797508495474916,
+          "n_cells": 66,
+          "n_targets": 42
+        },
+        "12-24": {
+          "sd_error": 0.03394887449759155,
+          "bias": -0.05911401342904747,
+          "n_cells": 70,
+          "n_targets": 38
+        },
+        "24-36": {
+          "sd_error": 0.046182840436424545,
+          "bias": -0.0577099061535549,
+          "n_cells": 60,
+          "n_targets": 38
+        },
+        "36+": {
+          "sd_error": 0.06915455192064464,
+          "bias": -0.050717367935906345,
+          "n_cells": 180,
+          "n_targets": 46
+        },
+        "6-12": {
+          "sd_error": 0.02685755102045491,
+          "bias": -0.06241153789016911,
+          "n_cells": 36,
+          "n_targets": 36
+        },
+        "<0": {
+          "sd_error": 0.016817167546554677,
+          "bias": -0.061156204407237943,
+          "n_cells": 18,
+          "n_targets": 18
+        }
+      },
+      "raw": {
+        "0-6": {
+          "sd_error": 0.01841979607979243,
+          "bias": -0.06797508495474916,
+          "n_cells": 66,
+          "n_targets": 42
+        },
+        "12-24": {
+          "sd_error": 0.0339504462981431,
+          "bias": -0.05910386756246414,
+          "n_cells": 70,
+          "n_targets": 38
+        },
+        "24-36": {
+          "sd_error": 0.046168859652393465,
+          "bias": -0.05739749458191111,
+          "n_cells": 60,
+          "n_targets": 38
+        },
+        "36+": {
+          "sd_error": 0.06758204740531693,
+          "bias": -0.050501041390496035,
+          "n_cells": 180,
+          "n_targets": 46
+        },
+        "6-12": {
+          "sd_error": 0.026860682051669128,
+          "bias": -0.0624016718706096,
+          "n_cells": 36,
+          "n_targets": 36
+        },
+        "<0": {
+          "sd_error": 0.016817167546554677,
+          "bias": -0.061156204407237943,
+          "n_cells": 18,
+          "n_targets": 18
+        }
+      },
+      "revision_autocorrelation": 0.345240256592096,
+      "same_sign_share": 0.6145833333333334,
+      "n_revision_pairs": 288
+    },
+    "HMT/economy/obr.ukgdp": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 0.7202880707931298,
+          "bias": -0.4776819267751594,
+          "n_cells": 29,
+          "n_targets": 27
+        },
+        "12-24": {
+          "sd_error": 1.797877891679674,
+          "bias": 0.17627719976736844,
+          "n_cells": 52,
+          "n_targets": 28
+        },
+        "24-36": {
+          "sd_error": 2.238683527664673,
+          "bias": 0.6975610807751537,
+          "n_cells": 39,
+          "n_targets": 26
+        },
+        "36+": {
+          "sd_error": 2.0003386427186145,
+          "bias": 0.8228902824552397,
+          "n_cells": 88,
+          "n_targets": 27
+        },
+        "6-12": {
+          "sd_error": 1.0498851888383014,
+          "bias": -0.1999578568736991,
+          "n_cells": 28,
+          "n_targets": 25
+        },
+        "<0": {
+          "sd_error": 0.6873048205868147,
+          "bias": -0.40992841571237154,
+          "n_cells": 65,
+          "n_targets": 28
+        }
+      },
+      "revision_autocorrelation": 0.39186165306393106,
+      "same_sign_share": 0.5694444444444444,
+      "n_revision_pairs": 72
+    },
+    "HMT/economy/pooled_levels": {
+      "error_basis": "log",
+      "raw": {
+        "0-6": {
+          "sd_error": 0.032390578065374216,
+          "bias": -0.1685917782183876,
+          "n_cells": 48,
+          "n_targets": 29
+        },
+        "12-24": {
+          "sd_error": 0.04698475784289977,
+          "bias": -0.1701781513938453,
+          "n_cells": 49,
+          "n_targets": 28
+        },
+        "24-36": {
+          "sd_error": 0.05959286387189175,
+          "bias": -0.15569290390351506,
+          "n_cells": 39,
+          "n_targets": 26
+        },
+        "36+": {
+          "sd_error": 0.0845426731487271,
+          "bias": -0.14132348144788678,
+          "n_cells": 109,
+          "n_targets": 30
+        },
+        "6-12": {
+          "sd_error": 0.03967741680451097,
+          "bias": -0.1694737558338665,
+          "n_cells": 24,
+          "n_targets": 24
+        },
+        "<0": {
+          "sd_error": 0.03309020497016518,
+          "bias": -0.1623841361923121,
+          "n_cells": 52,
+          "n_targets": 27
+        }
+      },
+      "revision_autocorrelation": 0.2270191458164718,
+      "same_sign_share": 0.537117903930131,
+      "n_revision_pairs": 229
+    },
+    "OBR/aggregate/obr.cacb": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 0.9736491825428472,
+          "bias": 0.1985841485950269,
+          "n_cells": 29,
+          "n_targets": 15
+        },
+        "12-24": {
+          "sd_error": 2.3501105974229555,
+          "bias": -0.9431821740421023,
+          "n_cells": 29,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 3.1244744413554826,
+          "bias": -2.3029681311491075,
+          "n_cells": 27,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 3.4326858983452357,
+          "bias": -3.6006562013276118,
+          "n_cells": 70,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 0.730951087577538,
+          "bias": -0.09075568112513144,
+          "n_cells": 2,
+          "n_targets": 2
+        },
+        "<0": {
+          "sd_error": 0.4069716441683532,
+          "bias": -0.14382096743415493,
+          "n_cells": 34,
+          "n_targets": 17
+        }
+      },
+      "revision_autocorrelation": -0.020332328377661607,
+      "same_sign_share": 0.4971751412429379,
+      "n_revision_pairs": 177
+    },
+    "OBR/aggregate/obr.capsnb": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 1.2894558697695928,
+          "bias": 0.057490550591139854,
+          "n_cells": 28,
+          "n_targets": 15
+        },
+        "12-24": {
+          "sd_error": 2.492632159078513,
+          "bias": -0.9682139630604818,
+          "n_cells": 28,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 3.3958998752147305,
+          "bias": -2.448040515356225,
+          "n_cells": 26,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 3.6346491468259328,
+          "bias": -3.9821825161315454,
+          "n_cells": 71,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 0.9095594538072344,
+          "bias": -0.0827118527079096,
+          "n_cells": 2,
+          "n_targets": 2
+        },
+        "<0": {
+          "sd_error": 0.6762249557138437,
+          "bias": -0.2216566089159353,
+          "n_cells": 33,
+          "n_targets": 17
+        }
+      },
+      "revision_autocorrelation": 0.0073981540973430664,
+      "same_sign_share": 0.5794871794871795,
+      "n_revision_pairs": 195
+    },
+    "OBR/aggregate/obr.cb": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 1.0782860109153274,
+          "bias": 0.39856371738067453,
+          "n_cells": 29,
+          "n_targets": 15
+        },
+        "12-24": {
+          "sd_error": 2.521054866365762,
+          "bias": -0.3941986208805184,
+          "n_cells": 29,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 3.284011577648146,
+          "bias": -1.7514033800805153,
+          "n_cells": 27,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 3.6544027394406213,
+          "bias": -3.1309746583328417,
+          "n_cells": 68,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 1.1271880381015587,
+          "bias": 0.49309928437222794,
+          "n_cells": 2,
+          "n_targets": 2
+        },
+        "<0": {
+          "sd_error": 0.42114411417922626,
+          "bias": 0.021832217122200098,
+          "n_cells": 34,
+          "n_targets": 17
+        }
+      },
+      "revision_autocorrelation": 0.003992950314231489,
+      "same_sign_share": 0.4838709677419355,
+      "n_revision_pairs": 186
+    },
+    "OBR/aggregate/obr.cb_gbp": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 22.536117549258073,
+          "bias": 3.604234026850045,
+          "n_cells": 29,
+          "n_targets": 15
+        },
+        "12-24": {
+          "sd_error": 53.80168334470225,
+          "bias": -14.063124058242652,
+          "n_cells": 29,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 69.67145433894528,
+          "bias": -42.93973769893492,
+          "n_cells": 27,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 78.69910153781551,
+          "bias": -72.00909406404566,
+          "n_cells": 68,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 11.740421315211519,
+          "bias": 0.852467046309787,
+          "n_cells": 2,
+          "n_targets": 2
+        },
+        "<0": {
+          "sd_error": 8.507152208135121,
+          "bias": -2.8877322637590495,
+          "n_cells": 34,
+          "n_targets": 17
+        }
+      },
+      "revision_autocorrelation": 0.008207585486222305,
+      "same_sign_share": 0.4838709677419355,
+      "n_revision_pairs": 186
+    },
+    "OBR/aggregate/obr.pscr": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 0.8619603743950012,
+          "bias": 0.3025476458229542,
+          "n_cells": 29,
+          "n_targets": 15
+        },
+        "12-24": {
+          "sd_error": 1.1475194591592714,
+          "bias": 0.4327792413020205,
+          "n_cells": 29,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 1.2042650229365641,
+          "bias": 0.45002712278346846,
+          "n_cells": 27,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 1.2914816453963438,
+          "bias": 0.10352330081423203,
+          "n_cells": 69,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 0.8278914266885485,
+          "bias": -0.19277062099164866,
+          "n_cells": 2,
+          "n_targets": 2
+        },
+        "<0": {
+          "sd_error": 0.6840332076596815,
+          "bias": 0.2574313809452113,
+          "n_cells": 34,
+          "n_targets": 17
+        }
+      },
+      "revision_autocorrelation": -0.04039005049246192,
+      "same_sign_share": 0.5119047619047619,
+      "n_revision_pairs": 168
+    },
+    "OBR/aggregate/obr.psnb": {
+      "error_basis": "level (series unit)",
+      "policy_adjusted": {
+        "0-6": {
+          "sd_error": 1.3882487658665226,
+          "bias": 0.32394862395467927,
+          "n_cells": 29,
+          "n_targets": 15
+        },
+        "12-24": {
+          "sd_error": 1.5792350795279877,
+          "bias": 0.21180781721973288,
+          "n_cells": 29,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 1.5507125643673558,
+          "bias": -0.44055971396373594,
+          "n_cells": 27,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 1.3351077606449833,
+          "bias": -1.021658174758542,
+          "n_cells": 69,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 1.1363297059314854,
+          "bias": 0.5846387106363216,
+          "n_cells": 2,
+          "n_targets": 2
+        },
+        "<0": {
+          "sd_error": 0.6897746681806506,
+          "bias": -0.055034728087833315,
+          "n_cells": 34,
+          "n_targets": 17
+        }
+      },
+      "raw": {
+        "0-6": {
+          "sd_error": 1.3579807038575533,
+          "bias": 0.31853730873548725,
+          "n_cells": 29,
+          "n_targets": 15
+        },
+        "12-24": {
+          "sd_error": 2.6826032425258997,
+          "bias": -0.4374172723526003,
+          "n_cells": 29,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 3.5308433187748127,
+          "bias": -1.8662270682666833,
+          "n_cells": 27,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 3.871099311906577,
+          "bias": -3.502394095069503,
+          "n_cells": 69,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 1.3126305125442335,
+          "bias": 0.4769473804001261,
+          "n_cells": 2,
+          "n_targets": 2
+        },
+        "<0": {
+          "sd_error": 0.6897746681806506,
+          "bias": -0.055034728087833315,
+          "n_cells": 34,
+          "n_targets": 17
+        }
+      },
+      "revision_autocorrelation": 0.016055811817826823,
+      "same_sign_share": 0.5454545454545454,
+      "n_revision_pairs": 176
+    },
+    "OBR/aggregate/obr.psnb_gbp": {
+      "error_basis": "level (series unit)",
+      "policy_adjusted": {
+        "0-6": {
+          "sd_error": 28.716606421720417,
+          "bias": 1.1509392139037402,
+          "n_cells": 29,
+          "n_targets": 15
+        },
+        "12-24": {
+          "sd_error": 33.80707905912354,
+          "bias": -1.2486964746425238,
+          "n_cells": 29,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 27.371746740023557,
+          "bias": -13.352153363160168,
+          "n_cells": 27,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 24.72551223496213,
+          "bias": -26.4228825965751,
+          "n_cells": 69,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 9.644354478556947,
+          "bias": 0.04941154804553349,
+          "n_cells": 2,
+          "n_targets": 2
+        },
+        "<0": {
+          "sd_error": 11.831879230445915,
+          "bias": -6.525508981760058,
+          "n_cells": 34,
+          "n_targets": 17
+        }
+      },
+      "raw": {
+        "0-6": {
+          "sd_error": 28.182125144192206,
+          "bias": 1.0274745349529475,
+          "n_cells": 29,
+          "n_targets": 15
+        },
+        "12-24": {
+          "sd_error": 55.987596439929725,
+          "bias": -16.41955548555826,
+          "n_cells": 29,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 73.03590090058498,
+          "bias": -46.87752037707423,
+          "n_cells": 27,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 81.08484817439428,
+          "bias": -81.52772241016714,
+          "n_cells": 69,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 12.948539377088057,
+          "bias": -2.036999999999999,
+          "n_cells": 2,
+          "n_targets": 2
+        },
+        "<0": {
+          "sd_error": 11.831879230445915,
+          "bias": -6.525508981760058,
+          "n_cells": 34,
+          "n_targets": 17
+        }
+      },
+      "revision_autocorrelation": 0.03096473350328525,
+      "same_sign_share": 0.5396825396825397,
+      "n_revision_pairs": 189
+    },
+    "OBR/aggregate/obr.psnd": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 5.213826171506163,
+          "bias": 1.0379064969472984,
+          "n_cells": 29,
+          "n_targets": 15
+        },
+        "12-24": {
+          "sd_error": 7.15728040680102,
+          "bias": 0.9988949888392107,
+          "n_cells": 29,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 8.864198399997397,
+          "bias": -0.6280201141984503,
+          "n_cells": 27,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 9.015956633334255,
+          "bias": -7.91961733420288,
+          "n_cells": 69,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 5.949289212626414,
+          "bias": -4.518750391996278,
+          "n_cells": 2,
+          "n_targets": 2
+        },
+        "<0": {
+          "sd_error": 4.735843793710481,
+          "bias": -0.8733033646655298,
+          "n_cells": 34,
+          "n_targets": 17
+        }
+      },
+      "revision_autocorrelation": -0.04072175251335863,
+      "same_sign_share": 0.5492227979274611,
+      "n_revision_pairs": 193
+    },
+    "OBR/aggregate/obr.psnfl": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 4.008964680714076,
+          "bias": 3.079923632555426,
+          "n_cells": 17,
+          "n_targets": 9
+        },
+        "12-24": {
+          "sd_error": 8.168468729784152,
+          "bias": 3.066672655452349,
+          "n_cells": 15,
+          "n_targets": 8
+        },
+        "24-36": {
+          "sd_error": 10.916643066069437,
+          "bias": 0.19926456945621984,
+          "n_cells": 13,
+          "n_targets": 7
+        },
+        "36+": {
+          "sd_error": 9.506212903009914,
+          "bias": -9.14214070690835,
+          "n_cells": 27,
+          "n_targets": 6
+        },
+        "<0": {
+          "sd_error": 2.4037457696307616,
+          "bias": 1.318340590555179,
+          "n_cells": 19,
+          "n_targets": 10
+        }
+      },
+      "revision_autocorrelation": 0.048740830839277764,
+      "same_sign_share": 0.5841584158415841,
+      "n_revision_pairs": 101
+    },
+    "OBR/aggregate/obr.psni": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 0.6932325318495991,
+          "bias": -0.07842097094118733,
+          "n_cells": 29,
+          "n_targets": 15
+        },
+        "12-24": {
+          "sd_error": 0.5299855811421288,
+          "bias": 0.0005543939844893262,
+          "n_cells": 29,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 0.5672333452670469,
+          "bias": -0.1047351401804918,
+          "n_cells": 27,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 0.5758452645248451,
+          "bias": -0.3704841864475423,
+          "n_cells": 69,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 0.1922865870803913,
+          "bias": -0.0022389953938025675,
+          "n_cells": 2,
+          "n_targets": 2
+        },
+        "<0": {
+          "sd_error": 0.5761723699485009,
+          "bias": -0.07026870055550695,
+          "n_cells": 34,
+          "n_targets": 17
+        }
+      },
+      "revision_autocorrelation": -0.0405255076686299,
+      "same_sign_share": 0.5347593582887701,
+      "n_revision_pairs": 187
+    },
+    "OBR/aggregate/obr.tme": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 1.4184925622997362,
+          "bias": 0.6176366786963741,
+          "n_cells": 29,
+          "n_targets": 15
+        },
+        "12-24": {
+          "sd_error": 2.7306883299226827,
+          "bias": 0.0022585206735602718,
+          "n_cells": 29,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 3.9360534229219364,
+          "bias": -1.4199036491869188,
+          "n_cells": 27,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 4.45947345248978,
+          "bias": -3.3945229681683133,
+          "n_cells": 69,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 2.140521939232774,
+          "bias": 0.2841767594084743,
+          "n_cells": 2,
+          "n_targets": 2
+        },
+        "<0": {
+          "sd_error": 0.9777098909414855,
+          "bias": 0.20239672891648694,
+          "n_cells": 34,
+          "n_targets": 17
+        }
+      },
+      "revision_autocorrelation": 0.04215992879759088,
+      "same_sign_share": 0.5449438202247191,
+      "n_revision_pairs": 178
+    },
+    "OBR/aggregate/pooled_levels": {
+      "error_basis": "log",
+      "policy_adjusted": {
+        "0-6": {
+          "sd_error": 0.039302400325835214,
+          "bias": -0.036031359110296514,
+          "n_cells": 58,
+          "n_targets": 30
+        },
+        "12-24": {
+          "sd_error": 0.03655048585625087,
+          "bias": -0.038680823785274494,
+          "n_cells": 58,
+          "n_targets": 28
+        },
+        "24-36": {
+          "sd_error": 0.04092961289248154,
+          "bias": -0.03731609201827658,
+          "n_cells": 54,
+          "n_targets": 26
+        },
+        "36+": {
+          "sd_error": 0.04821576038837508,
+          "bias": -0.017027362909083035,
+          "n_cells": 138,
+          "n_targets": 24
+        },
+        "6-12": {
+          "sd_error": 0.02035410746626896,
+          "bias": -0.06431754989416112,
+          "n_cells": 4,
+          "n_targets": 4
+        },
+        "<0": {
+          "sd_error": 0.037522197163964745,
+          "bias": -0.03982823016065474,
+          "n_cells": 68,
+          "n_targets": 34
+        }
+      },
+      "raw": {
+        "0-6": {
+          "sd_error": 0.03633727480275316,
+          "bias": -0.03974984877892769,
+          "n_cells": 58,
+          "n_targets": 30
+        },
+        "12-24": {
+          "sd_error": 0.03447289902606997,
+          "bias": -0.05352648253993865,
+          "n_cells": 58,
+          "n_targets": 28
+        },
+        "24-36": {
+          "sd_error": 0.05362503298688782,
+          "bias": -0.06912741911429082,
+          "n_cells": 54,
+          "n_targets": 26
+        },
+        "36+": {
+          "sd_error": 0.0792301253345407,
+          "bias": -0.08809729254961868,
+          "n_cells": 138,
+          "n_targets": 24
+        },
+        "6-12": {
+          "sd_error": 0.015406937568197271,
+          "bias": -0.07050784334218956,
+          "n_cells": 4,
+          "n_targets": 4
+        },
+        "<0": {
+          "sd_error": 0.03594931903614655,
+          "bias": -0.04084510295036337,
+          "n_cells": 68,
+          "n_targets": 34
+        }
+      },
+      "revision_autocorrelation": 0.018856225658166206,
+      "same_sign_share": 0.5261780104712042,
+      "n_revision_pairs": 382
+    },
+    "OBR/business_taxes/pooled_levels": {
+      "error_basis": "log",
+      "policy_adjusted": {
+        "0-6": {
+          "sd_error": 0.27431787204845914,
+          "bias": 0.006619181434281087,
+          "n_cells": 144,
+          "n_targets": 75
+        },
+        "12-24": {
+          "sd_error": 0.41189271680003936,
+          "bias": 0.05069212069825121,
+          "n_cells": 141,
+          "n_targets": 70
+        },
+        "24-36": {
+          "sd_error": 0.41014918605261785,
+          "bias": 0.11876622173508898,
+          "n_cells": 127,
+          "n_targets": 64
+        },
+        "36+": {
+          "sd_error": 0.43005211501658835,
+          "bias": 0.08114251365987214,
+          "n_cells": 317,
+          "n_targets": 58
+        },
+        "6-12": {
+          "sd_error": 0.10530971543393935,
+          "bias": 0.06270308799803305,
+          "n_cells": 7,
+          "n_targets": 7
+        },
+        "<0": {
+          "sd_error": 0.071540202095868,
+          "bias": 0.005468134585238274,
+          "n_cells": 150,
+          "n_targets": 75
+        }
+      },
+      "raw": {
+        "0-6": {
+          "sd_error": 0.27593361836911096,
+          "bias": 0.0075657231746809805,
+          "n_cells": 144,
+          "n_targets": 75
+        },
+        "12-24": {
+          "sd_error": 0.42718718141997514,
+          "bias": 0.03775199936088905,
+          "n_cells": 141,
+          "n_targets": 70
+        },
+        "24-36": {
+          "sd_error": 0.5814254404857149,
+          "bias": 0.04744002933995295,
+          "n_cells": 128,
+          "n_targets": 64
+        },
+        "36+": {
+          "sd_error": 0.6023370085221675,
+          "bias": -0.015307523837209791,
+          "n_cells": 318,
+          "n_targets": 58
+        },
+        "6-12": {
+          "sd_error": 0.1063180547868004,
+          "bias": 0.06173160878398243,
+          "n_cells": 7,
+          "n_targets": 7
+        },
+        "<0": {
+          "sd_error": 0.071540202095868,
+          "bias": 0.005468134585238274,
+          "n_cells": 150,
+          "n_targets": 75
+        }
+      },
+      "revision_autocorrelation": 0.06910929299312624,
+      "same_sign_share": 0.5365535248041775,
+      "n_revision_pairs": 766
+    },
+    "OBR/capital_taxes/pooled_levels": {
+      "error_basis": "log",
+      "policy_adjusted": {
+        "0-6": {
+          "sd_error": 0.08634055801260843,
+          "bias": -0.01764427283199347,
+          "n_cells": 87,
+          "n_targets": 45
+        },
+        "12-24": {
+          "sd_error": 0.14116687684697082,
+          "bias": -0.04832504307671494,
+          "n_cells": 87,
+          "n_targets": 42
+        },
+        "24-36": {
+          "sd_error": 0.1878759878685632,
+          "bias": -0.05079064030649708,
+          "n_cells": 81,
+          "n_targets": 39
+        },
+        "36+": {
+          "sd_error": 0.2006411507493982,
+          "bias": -0.03589006012064586,
+          "n_cells": 207,
+          "n_targets": 36
+        },
+        "6-12": {
+          "sd_error": 0.13906068947678107,
+          "bias": -0.11669990251517272,
+          "n_cells": 6,
+          "n_targets": 6
+        },
+        "<0": {
+          "sd_error": 0.006490544681500431,
+          "bias": -0.001659985915921165,
+          "n_cells": 102,
+          "n_targets": 51
+        }
+      },
+      "raw": {
+        "0-6": {
+          "sd_error": 0.07846124931237204,
+          "bias": -0.015819012931177604,
+          "n_cells": 116,
+          "n_targets": 60
+        },
+        "12-24": {
+          "sd_error": 0.14870482393061765,
+          "bias": -0.03439878782636668,
+          "n_cells": 116,
+          "n_targets": 56
+        },
+        "24-36": {
+          "sd_error": 0.1923796408598979,
+          "bias": -0.02614055788142202,
+          "n_cells": 108,
+          "n_targets": 52
+        },
+        "36+": {
+          "sd_error": 0.2090396710257768,
+          "bias": -0.020602712756710474,
+          "n_cells": 276,
+          "n_targets": 48
+        },
+        "6-12": {
+          "sd_error": 0.13119753199937043,
+          "bias": -0.0871946734577639,
+          "n_cells": 8,
+          "n_targets": 8
+        },
+        "<0": {
+          "sd_error": 0.006966422547874673,
+          "bias": -0.0019139876228286934,
+          "n_cells": 136,
+          "n_targets": 68
+        }
+      },
+      "revision_autocorrelation": -0.17531285783037995,
+      "same_sign_share": 0.5080128205128205,
+      "n_revision_pairs": 624
+    },
+    "OBR/consumption_taxes/pooled_levels": {
+      "error_basis": "log",
+      "policy_adjusted": {
+        "0-6": {
+          "sd_error": 0.08079606819776976,
+          "bias": -0.03944712143716655,
+          "n_cells": 87,
+          "n_targets": 45
+        },
+        "12-24": {
+          "sd_error": 0.08156155097764753,
+          "bias": -0.05977897943325897,
+          "n_cells": 87,
+          "n_targets": 42
+        },
+        "24-36": {
+          "sd_error": 0.09510173719597868,
+          "bias": -0.07911744749939144,
+          "n_cells": 81,
+          "n_targets": 39
+        },
+        "36+": {
+          "sd_error": 0.12794684318068025,
+          "bias": -0.11760920520201787,
+          "n_cells": 207,
+          "n_targets": 36
+        },
+        "6-12": {
+          "sd_error": 0.09061049035851486,
+          "bias": -0.09841661577000323,
+          "n_cells": 6,
+          "n_targets": 6
+        },
+        "<0": {
+          "sd_error": 0.07450120742346718,
+          "bias": -0.03711815248413372,
+          "n_cells": 98,
+          "n_targets": 49
+        }
+      },
+      "raw": {
+        "0-6": {
+          "sd_error": 0.08081836689681006,
+          "bias": -0.03941249117903634,
+          "n_cells": 87,
+          "n_targets": 45
+        },
+        "12-24": {
+          "sd_error": 0.08394592264470714,
+          "bias": -0.06316801621784433,
+          "n_cells": 87,
+          "n_targets": 42
+        },
+        "24-36": {
+          "sd_error": 0.11127029712135744,
+          "bias": -0.0976933833719288,
+          "n_cells": 81,
+          "n_targets": 39
+        },
+        "36+": {
+          "sd_error": 0.1744011727733513,
+          "bias": -0.17472718489902547,
+          "n_cells": 207,
+          "n_targets": 36
+        },
+        "6-12": {
+          "sd_error": 0.09061049035851486,
+          "bias": -0.09841661577000323,
+          "n_cells": 6,
+          "n_targets": 6
+        },
+        "<0": {
+          "sd_error": 0.07450120742346718,
+          "bias": -0.03711815248413372,
+          "n_cells": 98,
+          "n_targets": 49
+        }
+      },
+      "revision_autocorrelation": -0.21012369271999654,
+      "same_sign_share": 0.4676724137931034,
+      "n_revision_pairs": 464
+    },
+    "OBR/duties/pooled_levels": {
+      "error_basis": "log",
+      "policy_adjusted": {
+        "0-6": {
+          "sd_error": 0.037964019331279415,
+          "bias": 0.002438054209834304,
+          "n_cells": 145,
+          "n_targets": 75
+        },
+        "12-24": {
+          "sd_error": 0.17692344240672925,
+          "bias": 0.016615965352197146,
+          "n_cells": 145,
+          "n_targets": 70
+        },
+        "24-36": {
+          "sd_error": 0.2677126278097131,
+          "bias": 0.03441942516540325,
+          "n_cells": 135,
+          "n_targets": 65
+        },
+        "36+": {
+          "sd_error": 0.3147172017706526,
+          "bias": 0.07356903272855371,
+          "n_cells": 345,
+          "n_targets": 60
+        },
+        "6-12": {
+          "sd_error": 0.02087518905455367,
+          "bias": 0.007369691014207534,
+          "n_cells": 10,
+          "n_targets": 10
+        },
+        "<0": {
+          "sd_error": 0.06892804495291359,
+          "bias": -0.0074819138732117475,
+          "n_cells": 150,
+          "n_targets": 75
+        }
+      },
+      "raw": {
+        "0-6": {
+          "sd_error": 0.035833198947282464,
+          "bias": 0.003899668096672394,
+          "n_cells": 232,
+          "n_targets": 120
+        },
+        "12-24": {
+          "sd_error": 0.1449760661717302,
+          "bias": 0.013530328609264081,
+          "n_cells": 232,
+          "n_targets": 112
+        },
+        "24-36": {
+          "sd_error": 0.21537244162503827,
+          "bias": 0.041021472545983664,
+          "n_cells": 216,
+          "n_targets": 104
+        },
+        "36+": {
+          "sd_error": 0.25412944573144847,
+          "bias": 0.08750656955290728,
+          "n_cells": 552,
+          "n_targets": 96
+        },
+        "6-12": {
+          "sd_error": 0.020813984609330684,
+          "bias": 0.005714728695903094,
+          "n_cells": 16,
+          "n_targets": 16
+        },
+        "<0": {
+          "sd_error": 0.055690342709031816,
+          "bias": -0.005373463121226203,
+          "n_cells": 240,
+          "n_targets": 120
+        }
+      },
+      "revision_autocorrelation": -0.075863573588233,
+      "same_sign_share": 0.4862710363153233,
+      "n_revision_pairs": 1129
+    },
+    "OBR/economy/obr.businessinv": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 4.395544710631636,
+          "bias": -3.1701139505981373,
+          "n_cells": 15,
+          "n_targets": 14
+        },
+        "12-24": {
+          "sd_error": 4.536999076492244,
+          "bias": 1.3770575556501428,
+          "n_cells": 28,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 3.8318185523878516,
+          "bias": 3.1508268897453195,
+          "n_cells": 26,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 5.101586879353945,
+          "bias": 3.596263839845517,
+          "n_cells": 57,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 4.849162040492237,
+          "bias": -1.443990704380807,
+          "n_cells": 15,
+          "n_targets": 15
+        },
+        "<0": {
+          "sd_error": 3.323936499799098,
+          "bias": -1.7524594425274314,
+          "n_cells": 44,
+          "n_targets": 16
+        }
+      },
+      "revision_autocorrelation": -0.1048713368985383,
+      "same_sign_share": 0.4915254237288136,
+      "n_revision_pairs": 177
+    },
+    "OBR/economy/obr.cpi": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 0.09015160501799913,
+          "bias": 0.020733887676483567,
+          "n_cells": 16,
+          "n_targets": 15
+        },
+        "12-24": {
+          "sd_error": 1.8888781262042487,
+          "bias": -0.6611249642557286,
+          "n_cells": 30,
+          "n_targets": 15
+        },
+        "24-36": {
+          "sd_error": 2.472891354431544,
+          "bias": -1.0414329193474385,
+          "n_cells": 28,
+          "n_targets": 14
+        },
+        "36+": {
+          "sd_error": 2.4194347237548737,
+          "bias": -0.6985292080225545,
+          "n_cells": 62,
+          "n_targets": 13
+        },
+        "6-12": {
+          "sd_error": 0.6000283052314618,
+          "bias": -0.21677348641254593,
+          "n_cells": 16,
+          "n_targets": 16
+        },
+        "<0": {
+          "sd_error": 0.020808856325109926,
+          "bias": 0.00794038008040329,
+          "n_cells": 44,
+          "n_targets": 17
+        }
+      },
+      "revision_autocorrelation": 0.1490254223846577,
+      "same_sign_share": 0.48412698412698413,
+      "n_revision_pairs": 126
+    },
+    "OBR/economy/obr.currentacc_gbp": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 30.347011093478088,
+          "bias": -9.664509556019576,
+          "n_cells": 15,
+          "n_targets": 14
+        },
+        "12-24": {
+          "sd_error": 47.15476008882375,
+          "bias": -6.352079316549346,
+          "n_cells": 28,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 45.99973907073939,
+          "bias": 6.5837987375628355,
+          "n_cells": 26,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 49.31915316668927,
+          "bias": 17.05195708843367,
+          "n_cells": 57,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 47.06098420398454,
+          "bias": -11.439098860600003,
+          "n_cells": 15,
+          "n_targets": 15
+        },
+        "<0": {
+          "sd_error": 21.207286853018473,
+          "bias": -4.351968077744679,
+          "n_cells": 47,
+          "n_targets": 16
+        }
+      },
+      "revision_autocorrelation": -0.22937117174889135,
+      "same_sign_share": 0.4648648648648649,
+      "n_revision_pairs": 185
+    },
+    "OBR/economy/obr.currentacc_pct_gdp": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 1.314082366625457,
+          "bias": -0.5267023533384438,
+          "n_cells": 15,
+          "n_targets": 14
+        },
+        "12-24": {
+          "sd_error": 2.2846339640925715,
+          "bias": -0.2541918994087211,
+          "n_cells": 28,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 2.2510102266688694,
+          "bias": 0.3458418898558316,
+          "n_cells": 26,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 2.4263555634473395,
+          "bias": 0.84908785692352,
+          "n_cells": 57,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 2.1441564481204565,
+          "bias": -0.5151351656177644,
+          "n_cells": 15,
+          "n_targets": 15
+        },
+        "<0": {
+          "sd_error": 0.9620865596029997,
+          "bias": -0.3068867857165675,
+          "n_cells": 47,
+          "n_targets": 16
+        }
+      },
+      "revision_autocorrelation": -0.24172528619737288,
+      "same_sign_share": 0.43575418994413406,
+      "n_revision_pairs": 179
+    },
+    "OBR/economy/obr.deflator": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 0.8658517223692199,
+          "bias": 0.24950388792253364,
+          "n_cells": 15,
+          "n_targets": 14
+        },
+        "12-24": {
+          "sd_error": 1.8605180405695305,
+          "bias": -0.8063506666766616,
+          "n_cells": 28,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 1.9830805250201762,
+          "bias": -0.8904895786558987,
+          "n_cells": 26,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 1.9920216322602131,
+          "bias": -0.6249730851092877,
+          "n_cells": 57,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 1.6507558269654417,
+          "bias": -0.49664868139064067,
+          "n_cells": 15,
+          "n_targets": 15
+        },
+        "<0": {
+          "sd_error": 0.6066373637977656,
+          "bias": 0.08333493716271219,
+          "n_cells": 44,
+          "n_targets": 16
+        }
+      },
+      "revision_autocorrelation": -0.15269625659639302,
+      "same_sign_share": 0.5234899328859061,
+      "n_revision_pairs": 149
+    },
+    "OBR/economy/obr.demand": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 0.9779675065166988,
+          "bias": -0.7029016700061376,
+          "n_cells": 15,
+          "n_targets": 14
+        },
+        "12-24": {
+          "sd_error": 3.1254459782803896,
+          "bias": 0.051780261153857164,
+          "n_cells": 28,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 3.9354291051245887,
+          "bias": 0.4277899390932138,
+          "n_cells": 26,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 4.942073692958723,
+          "bias": 0.6270581320720761,
+          "n_cells": 57,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 3.43584498788535,
+          "bias": 0.1808048682946919,
+          "n_cells": 15,
+          "n_targets": 15
+        },
+        "<0": {
+          "sd_error": 0.4928706541938187,
+          "bias": -0.46358829528647194,
+          "n_cells": 44,
+          "n_targets": 16
+        }
+      },
+      "revision_autocorrelation": -0.21943012516406032,
+      "same_sign_share": 0.4666666666666667,
+      "n_revision_pairs": 150
+    },
+    "OBR/economy/obr.earnings": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 1.0411678617035882,
+          "bias": 0.2044936418091287,
+          "n_cells": 15,
+          "n_targets": 14
+        },
+        "12-24": {
+          "sd_error": 1.6884081420527866,
+          "bias": -0.3329777214899459,
+          "n_cells": 28,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 2.15610820215976,
+          "bias": -0.0004929097202115706,
+          "n_cells": 26,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 2.320084113194684,
+          "bias": 0.5905855847818956,
+          "n_cells": 57,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 1.6324221536642354,
+          "bias": -0.015821287070765563,
+          "n_cells": 15,
+          "n_targets": 15
+        },
+        "<0": {
+          "sd_error": 0.861370308286448,
+          "bias": 0.319424644662553,
+          "n_cells": 44,
+          "n_targets": 16
+        }
+      },
+      "revision_autocorrelation": 0.1224909919897517,
+      "same_sign_share": 0.5632911392405063,
+      "n_revision_pairs": 158
+    },
+    "OBR/economy/obr.eurogdp": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 0.7945406583975099,
+          "bias": -0.44456757210049447,
+          "n_cells": 15,
+          "n_targets": 14
+        },
+        "12-24": {
+          "sd_error": 2.1493856806875664,
+          "bias": 0.17911439005873478,
+          "n_cells": 27,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 2.731619371283788,
+          "bias": 0.6919732342712692,
+          "n_cells": 25,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 3.1127692885683773,
+          "bias": 0.36054773517865385,
+          "n_cells": 57,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 2.2599823930904663,
+          "bias": 0.035168501592419285,
+          "n_cells": 14,
+          "n_targets": 14
+        },
+        "<0": {
+          "sd_error": 0.46932936468030023,
+          "bias": -0.2424459776567132,
+          "n_cells": 45,
+          "n_targets": 16
+        }
+      },
+      "revision_autocorrelation": -0.05783070894194239,
+      "same_sign_share": 0.5227272727272727,
+      "n_revision_pairs": 132
+    },
+    "OBR/economy/obr.exports": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 2.6488623050900157,
+          "bias": -1.833716564423786,
+          "n_cells": 15,
+          "n_targets": 14
+        },
+        "12-24": {
+          "sd_error": 4.151128972928681,
+          "bias": 0.2720383632537182,
+          "n_cells": 28,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 6.146397126924751,
+          "bias": 1.0411831521546644,
+          "n_cells": 26,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 6.463732319949827,
+          "bias": 1.1362304089281803,
+          "n_cells": 57,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 4.251925099749319,
+          "bias": -0.4943433570416706,
+          "n_cells": 15,
+          "n_targets": 15
+        },
+        "<0": {
+          "sd_error": 2.217977440261236,
+          "bias": -1.2656651965761512,
+          "n_cells": 44,
+          "n_targets": 16
+        }
+      },
+      "revision_autocorrelation": 0.08498771051127477,
+      "same_sign_share": 0.5625,
+      "n_revision_pairs": 176
+    },
+    "OBR/economy/obr.fixedinv": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 2.4565005955067085,
+          "bias": -1.961197778032877,
+          "n_cells": 15,
+          "n_targets": 14
+        },
+        "12-24": {
+          "sd_error": 3.6886742129739827,
+          "bias": 0.6816368044760592,
+          "n_cells": 28,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 3.9106993539017556,
+          "bias": 2.269395982841171,
+          "n_cells": 26,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 5.4044227765119235,
+          "bias": 2.510560992563392,
+          "n_cells": 57,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 3.7435966495836484,
+          "bias": -1.13058361591552,
+          "n_cells": 15,
+          "n_targets": 15
+        },
+        "<0": {
+          "sd_error": 1.9990929059107914,
+          "bias": -1.1438781615331115,
+          "n_cells": 44,
+          "n_targets": 16
+        }
+      },
+      "revision_autocorrelation": -0.092619618973885,
+      "same_sign_share": 0.5141242937853108,
+      "n_revision_pairs": 177
+    },
+    "OBR/economy/obr.gilts": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 0.21780816552047141,
+          "bias": -0.06460666255246574,
+          "n_cells": 29,
+          "n_targets": 15
+        },
+        "12-24": {
+          "sd_error": 0.8344372691474686,
+          "bias": 0.1456850427452921,
+          "n_cells": 29,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 1.5946087486788985,
+          "bias": 0.3414381717037325,
+          "n_cells": 27,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 1.9960079049910275,
+          "bias": 0.8841339869444474,
+          "n_cells": 69,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 0.3595435215502957,
+          "bias": 0.0542356622199055,
+          "n_cells": 2,
+          "n_targets": 2
+        },
+        "<0": {
+          "sd_error": 0.25271637699533606,
+          "bias": -0.13750162289804507,
+          "n_cells": 34,
+          "n_targets": 17
+        }
+      },
+      "revision_autocorrelation": -0.00047553337963140746,
+      "same_sign_share": 0.48554913294797686,
+      "n_revision_pairs": 173
+    },
+    "OBR/economy/obr.govconsumption": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 1.304549146845329,
+          "bias": 0.4021384789020165,
+          "n_cells": 15,
+          "n_targets": 14
+        },
+        "12-24": {
+          "sd_error": 3.221992688984303,
+          "bias": -0.34853848145160693,
+          "n_cells": 28,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 3.461545440928711,
+          "bias": -1.3766453098302789,
+          "n_cells": 26,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 4.445964938092291,
+          "bias": -1.914471223040192,
+          "n_cells": 57,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 2.6733454648571184,
+          "bias": 0.9571497834420082,
+          "n_cells": 15,
+          "n_targets": 15
+        },
+        "<0": {
+          "sd_error": 0.9317473144852931,
+          "bias": 0.2331961177185653,
+          "n_cells": 44,
+          "n_targets": 16
+        }
+      },
+      "revision_autocorrelation": -0.34423821879196886,
+      "same_sign_share": 0.5493827160493827,
+      "n_revision_pairs": 162
+    },
+    "OBR/economy/obr.govtinv": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 3.321463677033238,
+          "bias": 0.5437227170916821,
+          "n_cells": 15,
+          "n_targets": 14
+        },
+        "12-24": {
+          "sd_error": 4.759175640431838,
+          "bias": -0.9816848858889797,
+          "n_cells": 28,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 4.74130040444079,
+          "bias": -1.72776287422444,
+          "n_cells": 26,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 4.430552178370305,
+          "bias": -2.45878018746246,
+          "n_cells": 57,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 5.690231556523029,
+          "bias": 0.28923031516597203,
+          "n_cells": 15,
+          "n_targets": 15
+        },
+        "<0": {
+          "sd_error": 6.307988208349429,
+          "bias": -0.02889121172789414,
+          "n_cells": 44,
+          "n_targets": 16
+        }
+      },
+      "revision_autocorrelation": -0.2509071364119233,
+      "same_sign_share": 0.4581005586592179,
+      "n_revision_pairs": 179
+    },
+    "OBR/economy/obr.hhconsumption": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 1.1001153979307574,
+          "bias": -0.8394439722779398,
+          "n_cells": 15,
+          "n_targets": 14
+        },
+        "12-24": {
+          "sd_error": 3.2828746514953964,
+          "bias": 0.2034670220426641,
+          "n_cells": 28,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 4.39608311391986,
+          "bias": 0.6249637968510504,
+          "n_cells": 26,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 5.353502429976002,
+          "bias": 0.8875981165787593,
+          "n_cells": 57,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 4.106549591628488,
+          "bias": -0.014841519938000758,
+          "n_cells": 15,
+          "n_targets": 15
+        },
+        "<0": {
+          "sd_error": 0.9199087804293871,
+          "bias": -0.4293988698394468,
+          "n_cells": 44,
+          "n_targets": 16
+        }
+      },
+      "revision_autocorrelation": -0.18337096685342694,
+      "same_sign_share": 0.44171779141104295,
+      "n_revision_pairs": 163
+    },
+    "OBR/economy/obr.hhnetworthtoincome": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 52.322145210333694,
+          "bias": 60.03174875501492,
+          "n_cells": 15,
+          "n_targets": 14
+        },
+        "12-24": {
+          "sd_error": 53.34406711053352,
+          "bias": 52.3466519683213,
+          "n_cells": 28,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 66.1649947969455,
+          "bias": 52.06577622285192,
+          "n_cells": 26,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 84.29045749341466,
+          "bias": 37.64197378197996,
+          "n_cells": 57,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 42.85301960571912,
+          "bias": 52.60820016176903,
+          "n_cells": 15,
+          "n_targets": 15
+        },
+        "<0": {
+          "sd_error": 40.82744704680246,
+          "bias": 52.1639657560438,
+          "n_cells": 45,
+          "n_targets": 16
+        }
+      },
+      "revision_autocorrelation": -0.03518491984040106,
+      "same_sign_share": 0.46153846153846156,
+      "n_revision_pairs": 182
+    },
+    "OBR/economy/obr.houseprices": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 0.6588230024194996,
+          "bias": 0.6196743596877122,
+          "n_cells": 15,
+          "n_targets": 14
+        },
+        "12-24": {
+          "sd_error": 3.6229243399143813,
+          "bias": -2.052866072655346,
+          "n_cells": 28,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 3.459900637681693,
+          "bias": -0.9958171895903002,
+          "n_cells": 26,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 3.3577441484273525,
+          "bias": -0.12710809895646796,
+          "n_cells": 57,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 1.3665025893386729,
+          "bias": -0.6121938700435448,
+          "n_cells": 15,
+          "n_targets": 15
+        },
+        "<0": {
+          "sd_error": 0.6504158335185186,
+          "bias": 0.7264713072314143,
+          "n_cells": 46,
+          "n_targets": 16
+        }
+      },
+      "revision_autocorrelation": -0.08616867421078023,
+      "same_sign_share": 0.5833333333333334,
+      "n_revision_pairs": 156
+    },
+    "OBR/economy/obr.imports": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 2.072781761902171,
+          "bias": -2.121721463452593,
+          "n_cells": 15,
+          "n_targets": 14
+        },
+        "12-24": {
+          "sd_error": 4.657187844333812,
+          "bias": 0.10474861848158731,
+          "n_cells": 28,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 5.979796112970723,
+          "bias": -0.029480178367667156,
+          "n_cells": 26,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 7.018797533682084,
+          "bias": 0.5997928298530198,
+          "n_cells": 57,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 5.025598572076581,
+          "bias": 0.016411385143214746,
+          "n_cells": 15,
+          "n_targets": 15
+        },
+        "<0": {
+          "sd_error": 1.662784323626348,
+          "bias": -1.1741097199303845,
+          "n_cells": 44,
+          "n_targets": 16
+        }
+      },
+      "revision_autocorrelation": -0.10377297034430198,
+      "same_sign_share": 0.524390243902439,
+      "n_revision_pairs": 164
+    },
+    "OBR/economy/obr.inventories": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 1.1295465646342941,
+          "bias": -0.21799476049636693,
+          "n_cells": 15,
+          "n_targets": 14
+        },
+        "12-24": {
+          "sd_error": 0.6643416663740521,
+          "bias": -0.03922571834142927,
+          "n_cells": 28,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 0.4327906287620203,
+          "bias": -0.02154841667952833,
+          "n_cells": 26,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 0.433339968216538,
+          "bias": 0.020115520600336306,
+          "n_cells": 57,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 0.7765306971619282,
+          "bias": 0.1476850323290324,
+          "n_cells": 15,
+          "n_targets": 15
+        },
+        "<0": {
+          "sd_error": 0.7115416722274678,
+          "bias": 0.005276222097485693,
+          "n_cells": 44,
+          "n_targets": 16
+        }
+      },
+      "revision_autocorrelation": -0.6882790323848362,
+      "same_sign_share": 0.3076923076923077,
+      "n_revision_pairs": 130
+    },
+    "OBR/economy/obr.non_oilpnfcprofits": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 3.8411571524853834,
+          "bias": -1.181233455744264,
+          "n_cells": 15,
+          "n_targets": 14
+        },
+        "12-24": {
+          "sd_error": 4.378363179417954,
+          "bias": -0.9580514502117957,
+          "n_cells": 28,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 3.2939087161473455,
+          "bias": 0.4828949566886668,
+          "n_cells": 26,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 3.673781342432513,
+          "bias": 0.8978235053890249,
+          "n_cells": 57,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 4.039751924823247,
+          "bias": -2.2548005778007063,
+          "n_cells": 15,
+          "n_targets": 15
+        },
+        "<0": {
+          "sd_error": 3.3346583660704385,
+          "bias": -0.5504122615351944,
+          "n_cells": 47,
+          "n_targets": 16
+        }
+      },
+      "revision_autocorrelation": -0.2506087611970753,
+      "same_sign_share": 0.46153846153846156,
+      "n_revision_pairs": 169
+    },
+    "OBR/economy/obr.privatedwellingsinv": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 4.429151891770029,
+          "bias": -1.0078997373102514,
+          "n_cells": 15,
+          "n_targets": 14
+        },
+        "12-24": {
+          "sd_error": 7.713289643243016,
+          "bias": -0.7261549985976745,
+          "n_cells": 28,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 7.903808319743509,
+          "bias": 1.1355280199753792,
+          "n_cells": 26,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 9.415508632550088,
+          "bias": 1.367163034082601,
+          "n_cells": 57,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 7.278373853060281,
+          "bias": -2.2406844081372728,
+          "n_cells": 15,
+          "n_targets": 15
+        },
+        "<0": {
+          "sd_error": 4.711286434525321,
+          "bias": 0.11623496952294676,
+          "n_cells": 42,
+          "n_targets": 16
+        }
+      },
+      "revision_autocorrelation": -0.24874645395255127,
+      "same_sign_share": 0.4642857142857143,
+      "n_revision_pairs": 168
+    },
+    "OBR/economy/obr.prod": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 0.7744881625210024,
+          "bias": -0.14804120703683385,
+          "n_cells": 15,
+          "n_targets": 14
+        },
+        "12-24": {
+          "sd_error": 0.9167309060308301,
+          "bias": 0.8355690548017198,
+          "n_cells": 28,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 0.9604730760879171,
+          "bias": 1.209302203551247,
+          "n_cells": 26,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 0.7730762279672767,
+          "bias": 1.3347179540048066,
+          "n_cells": 57,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 1.0041540675351293,
+          "bias": 0.23834185201016533,
+          "n_cells": 15,
+          "n_targets": 15
+        },
+        "<0": {
+          "sd_error": 0.49562699947808325,
+          "bias": -0.21255037175748098,
+          "n_cells": 45,
+          "n_targets": 16
+        }
+      },
+      "revision_autocorrelation": -0.22828557485694442,
+      "same_sign_share": 0.45625,
+      "n_revision_pairs": 160
+    },
+    "OBR/economy/obr.rhhdi": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 1.0372586054113742,
+          "bias": -0.7963233754836632,
+          "n_cells": 15,
+          "n_targets": 14
+        },
+        "12-24": {
+          "sd_error": 2.416584593595649,
+          "bias": -0.7156313345752523,
+          "n_cells": 28,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 2.059419879148692,
+          "bias": -0.34158915561626785,
+          "n_cells": 26,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 2.0346632909230027,
+          "bias": 0.059790931348397205,
+          "n_cells": 57,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 1.6674002738385034,
+          "bias": -0.9637530637163175,
+          "n_cells": 15,
+          "n_targets": 15
+        },
+        "<0": {
+          "sd_error": 1.106246966794551,
+          "bias": -0.5632793125825752,
+          "n_cells": 47,
+          "n_targets": 16
+        }
+      },
+      "revision_autocorrelation": 0.06993173728391296,
+      "same_sign_share": 0.519774011299435,
+      "n_revision_pairs": 177
+    },
+    "OBR/economy/obr.rpi": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 0.16948138248461248,
+          "bias": 0.008965805505894452,
+          "n_cells": 16,
+          "n_targets": 15
+        },
+        "12-24": {
+          "sd_error": 2.4321334419992438,
+          "bias": -0.7967620245118608,
+          "n_cells": 30,
+          "n_targets": 15
+        },
+        "24-36": {
+          "sd_error": 3.1680859981380443,
+          "bias": -1.1371613205800453,
+          "n_cells": 28,
+          "n_targets": 14
+        },
+        "36+": {
+          "sd_error": 3.0658480057037534,
+          "bias": -0.5594169236390568,
+          "n_cells": 62,
+          "n_targets": 13
+        },
+        "6-12": {
+          "sd_error": 0.6609515341953153,
+          "bias": -0.20242127034975707,
+          "n_cells": 16,
+          "n_targets": 16
+        },
+        "<0": {
+          "sd_error": 0.007505813488249389,
+          "bias": 0.00010662628177380521,
+          "n_cells": 44,
+          "n_targets": 17
+        }
+      },
+      "revision_autocorrelation": 0.13106255181128387,
+      "same_sign_share": 0.49044585987261147,
+      "n_revision_pairs": 157
+    },
+    "OBR/economy/obr.savingratio": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 3.025204873972675,
+          "bias": -1.5220577738409693,
+          "n_cells": 15,
+          "n_targets": 14
+        },
+        "12-24": {
+          "sd_error": 2.848540889615191,
+          "bias": -2.6623137976011453,
+          "n_cells": 28,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 3.76731021903714,
+          "bias": -3.0690795072005037,
+          "n_cells": 26,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 3.755911628842888,
+          "bias": -3.498018158861369,
+          "n_cells": 57,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 2.9137950690488705,
+          "bias": -2.6359514148411023,
+          "n_cells": 15,
+          "n_targets": 15
+        },
+        "<0": {
+          "sd_error": 2.374661600297337,
+          "bias": -1.753156210169873,
+          "n_cells": 47,
+          "n_targets": 16
+        }
+      },
+      "revision_autocorrelation": -0.006898515885101395,
+      "same_sign_share": 0.5393258426966292,
+      "n_revision_pairs": 178
+    },
+    "OBR/economy/obr.shorttermrates": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 0.12432100435308677,
+          "bias": 0.09970866926721743,
+          "n_cells": 29,
+          "n_targets": 15
+        },
+        "12-24": {
+          "sd_error": 0.614933943854915,
+          "bias": 0.12707214087665952,
+          "n_cells": 29,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 1.5334372307590896,
+          "bias": 0.08424190341380844,
+          "n_cells": 27,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 2.2371400228678753,
+          "bias": 0.5584672211072633,
+          "n_cells": 69,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 0.33849307681417207,
+          "bias": 0.38342875000000004,
+          "n_cells": 2,
+          "n_targets": 2
+        },
+        "<0": {
+          "sd_error": 0.13661988360030017,
+          "bias": 0.11225163351000667,
+          "n_cells": 34,
+          "n_targets": 16
+        }
+      },
+      "revision_autocorrelation": -0.10422096900532611,
+      "same_sign_share": 0.5747126436781609,
+      "n_revision_pairs": 174
+    },
+    "OBR/economy/obr.ukexportmarkets": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 1.0882120345887811,
+          "bias": -0.6586188157362222,
+          "n_cells": 15,
+          "n_targets": 14
+        },
+        "12-24": {
+          "sd_error": 3.1220749124312657,
+          "bias": 0.6376261881839701,
+          "n_cells": 27,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 3.986099300201932,
+          "bias": 2.0443814658259134,
+          "n_cells": 25,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 4.658120777875849,
+          "bias": 1.997652488415488,
+          "n_cells": 57,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 3.6313122223791114,
+          "bias": 0.33198666845228486,
+          "n_cells": 14,
+          "n_targets": 14
+        },
+        "<0": {
+          "sd_error": 0.6191925074012973,
+          "bias": -0.30850979718681315,
+          "n_cells": 45,
+          "n_targets": 16
+        }
+      },
+      "revision_autocorrelation": -0.09221664271437796,
+      "same_sign_share": 0.5590062111801242,
+      "n_revision_pairs": 161
+    },
+    "OBR/economy/obr.ukgdp": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 0.7618797031195848,
+          "bias": -0.5258820252803356,
+          "n_cells": 15,
+          "n_targets": 14
+        },
+        "12-24": {
+          "sd_error": 2.7851289559303276,
+          "bias": 0.13494422647970802,
+          "n_cells": 28,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 3.5915602790429566,
+          "bias": 0.7847145893179471,
+          "n_cells": 26,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 4.536637632077209,
+          "bias": 0.8369946625633197,
+          "n_cells": 57,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 3.2818557933522405,
+          "bias": 0.06648879394003088,
+          "n_cells": 15,
+          "n_targets": 15
+        },
+        "<0": {
+          "sd_error": 0.4959176134698287,
+          "bias": -0.3947290375532585,
+          "n_cells": 44,
+          "n_targets": 16
+        }
+      },
+      "revision_autocorrelation": -0.0932422413583141,
+      "same_sign_share": 0.43478260869565216,
+      "n_revision_pairs": 161
+    },
+    "OBR/economy/obr.unemplrate": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 0.13175117401390343,
+          "bias": 0.022571604319356037,
+          "n_cells": 15,
+          "n_targets": 14
+        },
+        "12-24": {
+          "sd_error": 0.7099739985523766,
+          "bias": 0.5315655692005783,
+          "n_cells": 28,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 0.9139124483215394,
+          "bias": 0.7708774810758557,
+          "n_cells": 26,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 0.8303964907478624,
+          "bias": 0.959110161460237,
+          "n_cells": 57,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 0.4179919485325823,
+          "bias": 0.2571760280500899,
+          "n_cells": 15,
+          "n_targets": 15
+        },
+        "<0": {
+          "sd_error": 0.03937030976869435,
+          "bias": -0.006534268388884772,
+          "n_cells": 45,
+          "n_targets": 16
+        }
+      },
+      "revision_autocorrelation": 0.005334557516452996,
+      "same_sign_share": 0.5107913669064749,
+      "n_revision_pairs": 139
+    },
+    "OBR/economy/obr.wages_salaries": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 1.1956738707432537,
+          "bias": 0.028821749709158753,
+          "n_cells": 15,
+          "n_targets": 14
+        },
+        "12-24": {
+          "sd_error": 2.117592943322184,
+          "bias": -1.0620171069704654,
+          "n_cells": 28,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 2.3439767588973157,
+          "bias": -0.6442618849717137,
+          "n_cells": 26,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 2.5597631512181285,
+          "bias": 0.00850312961884847,
+          "n_cells": 57,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 1.9223110863244566,
+          "bias": -0.6287202374839407,
+          "n_cells": 15,
+          "n_targets": 15
+        },
+        "<0": {
+          "sd_error": 0.9063604348124921,
+          "bias": 0.2603011246185479,
+          "n_cells": 44,
+          "n_targets": 16
+        }
+      },
+      "revision_autocorrelation": 0.16540143919524675,
+      "same_sign_share": 0.5527950310559007,
+      "n_revision_pairs": 161
+    },
+    "OBR/economy/obr.worldgdp": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 0.3763060941542118,
+          "bias": -0.4470780075115923,
+          "n_cells": 15,
+          "n_targets": 14
+        },
+        "12-24": {
+          "sd_error": 1.4578800754431749,
+          "bias": 0.2638723512298748,
+          "n_cells": 28,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 1.8473324301719252,
+          "bias": 0.8550304507288498,
+          "n_cells": 26,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 2.2565475583916483,
+          "bias": 0.97935226821487,
+          "n_cells": 57,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 1.625396390393418,
+          "bias": 0.19393165816876257,
+          "n_cells": 15,
+          "n_targets": 15
+        },
+        "<0": {
+          "sd_error": 0.23126019836306433,
+          "bias": -0.2659453225279882,
+          "n_cells": 47,
+          "n_targets": 16
+        }
+      },
+      "revision_autocorrelation": -0.012492643356733921,
+      "same_sign_share": 0.5906040268456376,
+      "n_revision_pairs": 149
+    },
+    "OBR/economy/obr.worldtrade": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 1.0947797832503023,
+          "bias": -0.6319097946369336,
+          "n_cells": 15,
+          "n_targets": 14
+        },
+        "12-24": {
+          "sd_error": 3.1944542968987824,
+          "bias": 1.0595102868266535,
+          "n_cells": 27,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 3.819832169338692,
+          "bias": 2.293940122620404,
+          "n_cells": 25,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 4.635442094535629,
+          "bias": 2.444111498408937,
+          "n_cells": 57,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 3.623066158444539,
+          "bias": 0.5097504328767184,
+          "n_cells": 14,
+          "n_targets": 14
+        },
+        "<0": {
+          "sd_error": 0.6775832464166869,
+          "bias": -0.4817505627687734,
+          "n_cells": 44,
+          "n_targets": 16
+        }
+      },
+      "revision_autocorrelation": 0.03767815098384977,
+      "same_sign_share": 0.6047904191616766,
+      "n_revision_pairs": 167
+    },
+    "OBR/economy/pooled_levels": {
+      "error_basis": "log",
+      "raw": {
+        "0-6": {
+          "sd_error": 0.07928714304920574,
+          "bias": -0.003625768036717935,
+          "n_cells": 160,
+          "n_targets": 113
+        },
+        "12-24": {
+          "sd_error": 0.28810960863659396,
+          "bias": -0.017563869255850153,
+          "n_cells": 222,
+          "n_targets": 110
+        },
+        "24-36": {
+          "sd_error": 0.3550131059569642,
+          "bias": -0.025338769487497775,
+          "n_cells": 205,
+          "n_targets": 102
+        },
+        "36+": {
+          "sd_error": 0.3601576475818012,
+          "bias": -0.0018884973228619965,
+          "n_cells": 474,
+          "n_targets": 94
+        },
+        "6-12": {
+          "sd_error": 0.2265477288907987,
+          "bias": -0.01769542579139341,
+          "n_cells": 77,
+          "n_targets": 77
+        },
+        "<0": {
+          "sd_error": 0.07246108408270807,
+          "bias": -0.00023908520793014486,
+          "n_cells": 312,
+          "n_targets": 128
+        }
+      },
+      "revision_autocorrelation": 0.05385626762500263,
+      "same_sign_share": 0.5022455089820359,
+      "n_revision_pairs": 1336
+    },
+    "OBR/income_taxes/pooled_levels": {
+      "error_basis": "log",
+      "policy_adjusted": {
+        "0-6": {
+          "sd_error": 0.013774458220029925,
+          "bias": -0.005869415548524542,
+          "n_cells": 58,
+          "n_targets": 30
+        },
+        "12-24": {
+          "sd_error": 0.03994691885882776,
+          "bias": -0.01058815175771248,
+          "n_cells": 58,
+          "n_targets": 28
+        },
+        "24-36": {
+          "sd_error": 0.06772959364436976,
+          "bias": -0.011642889279439187,
+          "n_cells": 54,
+          "n_targets": 26
+        },
+        "36+": {
+          "sd_error": 0.10036319030377994,
+          "bias": 0.009797159767465365,
+          "n_cells": 138,
+          "n_targets": 24
+        },
+        "6-12": {
+          "sd_error": 0.014557991566361648,
+          "bias": 0.001504389197532252,
+          "n_cells": 4,
+          "n_targets": 4
+        },
+        "<0": {
+          "sd_error": 0.004631278235113203,
+          "bias": 0.0003322317798933302,
+          "n_cells": 68,
+          "n_targets": 34
+        }
+      },
+      "raw": {
+        "0-6": {
+          "sd_error": 0.0381544494435476,
+          "bias": -0.006275530993863758,
+          "n_cells": 116,
+          "n_targets": 60
+        },
+        "12-24": {
+          "sd_error": 0.06899815172864354,
+          "bias": 0.003301067782637373,
+          "n_cells": 116,
+          "n_targets": 56
+        },
+        "24-36": {
+          "sd_error": 0.10766388340803101,
+          "bias": 0.004534955978947984,
+          "n_cells": 108,
+          "n_targets": 52
+        },
+        "36+": {
+          "sd_error": 0.13181303321039997,
+          "bias": 0.021265110924606808,
+          "n_cells": 276,
+          "n_targets": 48
+        },
+        "6-12": {
+          "sd_error": 0.021402288226089767,
+          "bias": -0.0004828061645157783,
+          "n_cells": 8,
+          "n_targets": 8
+        },
+        "<0": {
+          "sd_error": 0.006389348319544835,
+          "bias": -0.00015431064757799172,
+          "n_cells": 136,
+          "n_targets": 68
+        }
+      },
+      "revision_autocorrelation": 0.13615328337655,
+      "same_sign_share": 0.5951359084406295,
+      "n_revision_pairs": 699
+    },
+    "OBR/other_receipts/pooled_levels": {
+      "error_basis": "log",
+      "policy_adjusted": {
+        "0-6": {
+          "sd_error": 0.16036338966649732,
+          "bias": 0.027859408342883692,
+          "n_cells": 86,
+          "n_targets": 45
+        },
+        "12-24": {
+          "sd_error": 0.26459323190979683,
+          "bias": 0.0507969154063181,
+          "n_cells": 84,
+          "n_targets": 42
+        },
+        "24-36": {
+          "sd_error": 0.4650281844700151,
+          "bias": 0.021866649523597737,
+          "n_cells": 78,
+          "n_targets": 39
+        },
+        "36+": {
+          "sd_error": 0.6692720647464778,
+          "bias": -0.09417441902917917,
+          "n_cells": 198,
+          "n_targets": 36
+        },
+        "6-12": {
+          "sd_error": 0.2524096157188978,
+          "bias": -0.13831509808714978,
+          "n_cells": 4,
+          "n_targets": 4
+        },
+        "<0": {
+          "sd_error": 0.054189391298747884,
+          "bias": 0.013096192818861974,
+          "n_cells": 86,
+          "n_targets": 43
+        }
+      },
+      "raw": {
+        "0-6": {
+          "sd_error": 0.16036338966649732,
+          "bias": 0.027859408342883692,
+          "n_cells": 86,
+          "n_targets": 45
+        },
+        "12-24": {
+          "sd_error": 0.26370816767399025,
+          "bias": 0.052319401983223615,
+          "n_cells": 84,
+          "n_targets": 42
+        },
+        "24-36": {
+          "sd_error": 0.43485704653044915,
+          "bias": 0.02886920107735008,
+          "n_cells": 78,
+          "n_targets": 39
+        },
+        "36+": {
+          "sd_error": 0.635173292679335,
+          "bias": -0.09698833630727816,
+          "n_cells": 198,
+          "n_targets": 36
+        },
+        "6-12": {
+          "sd_error": 0.2524096157188978,
+          "bias": -0.13831509808714978,
+          "n_cells": 4,
+          "n_targets": 4
+        },
+        "<0": {
+          "sd_error": 0.054189391298747884,
+          "bias": 0.013096192818861974,
+          "n_cells": 86,
+          "n_targets": 43
+        }
+      },
+      "revision_autocorrelation": 0.16444954122673378,
+      "same_sign_share": 0.5732484076433121,
+      "n_revision_pairs": 471
+    },
+    "OBR/spending_debt_interest/obr.apf": {
+      "error_basis": "level (series unit)",
+      "raw": {
+        "0-6": {
+          "sd_error": 0.7948977936175462,
+          "bias": -0.23083818407211015,
+          "n_cells": 21,
+          "n_targets": 11
+        },
+        "12-24": {
+          "sd_error": 4.600289939324277,
+          "bias": -1.5911778497497018,
+          "n_cells": 20,
+          "n_targets": 10
+        },
+        "24-36": {
+          "sd_error": 12.576826862539312,
+          "bias": -4.351472999055673,
+          "n_cells": 18,
+          "n_targets": 9
+        },
+        "36+": {
+          "sd_error": 16.540965900974367,
+          "bias": -5.682619207572628,
+          "n_cells": 42,
+          "n_targets": 8
+        },
+        "6-12": {
+          "sd_error": NaN,
+          "bias": -0.3657361913337489,
+          "n_cells": 1,
+          "n_targets": 1
+        },
+        "<0": {
+          "sd_error": 0.22404532322305307,
+          "bias": -0.00981542715964933,
+          "n_cells": 24,
+          "n_targets": 12
+        }
+      },
+      "revision_autocorrelation": 0.030000487058156673,
+      "same_sign_share": 0.5403225806451613,
+      "n_revision_pairs": 124
+    },
+    "OBR/spending_debt_interest/pooled_levels": {
+      "error_basis": "log",
+      "policy_adjusted": {
+        "0-6": {
+          "sd_error": 0.1081519274899062,
+          "bias": 0.02546531691292163,
+          "n_cells": 29,
+          "n_targets": 15
+        },
+        "12-24": {
+          "sd_error": 0.3730492220491869,
+          "bias": -0.03857303813203803,
+          "n_cells": 29,
+          "n_targets": 14
+        },
+        "24-36": {
+          "sd_error": 0.5872416143403626,
+          "bias": -0.048228052090856795,
+          "n_cells": 27,
+          "n_targets": 13
+        },
+        "36+": {
+          "sd_error": 0.6518812794919109,
+          "bias": 0.06433012843723901,
+          "n_cells": 69,
+          "n_targets": 12
+        },
+        "6-12": {
+          "sd_error": 0.038574461783554136,
+          "bias": 0.02604947078987384,
+          "n_cells": 2,
+          "n_targets": 2
+        },
+        "<0": {
+          "sd_error": 0.0866239281500699,
+          "bias": 0.007786276670606081,
+          "n_cells": 30,
+          "n_targets": 15
+        }
+      },
+      "raw": {
+        "0-6": {
+          "sd_error": 0.176274995172787,
+          "bias": -0.0726311225506154,
+          "n_cells": 106,
+          "n_targets": 55
+        },
+        "12-24": {
+          "sd_error": 0.29191048128511876,
+          "bias": -0.1075954160325434,
+          "n_cells": 104,
+          "n_targets": 51
+        },
+        "24-36": {
+          "sd_error": 0.5225615128349707,
+          "bias": -0.07669397496619829,
+          "n_cells": 96,
+          "n_targets": 47
+        },
+        "36+": {
+          "sd_error": 0.6644669136901965,
+          "bias": 0.07112127963855445,
+          "n_cells": 240,
+          "n_targets": 43
+        },
+        "6-12": {
+          "sd_error": 0.18809210235430857,
+          "bias": -0.1252983114459378,
+          "n_cells": 6,
+          "n_targets": 6
+        },
+        "<0": {
+          "sd_error": 0.21753647375942664,
+          "bias": -0.09970096001104331,
+          "n_cells": 111,
+          "n_targets": 56
+        }
+      },
+      "revision_autocorrelation": -0.19807678773122447,
+      "same_sign_share": 0.48214285714285715,
+      "n_revision_pairs": 616
+    },
+    "OBR/spending_del/pooled_levels": {
+      "error_basis": "log",
+      "policy_adjusted": {
+        "0-6": {
+          "sd_error": 0.49696674256420725,
+          "bias": -0.10396969101359511,
+          "n_cells": 58,
+          "n_targets": 30
+        },
+        "12-24": {
+          "sd_error": 0.09514277284461303,
+          "bias": -0.010417049461240113,
+          "n_cells": 58,
+          "n_targets": 28
+        },
+        "24-36": {
+          "sd_error": 0.09480056796875046,
+          "bias": -0.00885350881068929,
+          "n_cells": 54,
+          "n_targets": 26
+        },
+        "36+": {
+          "sd_error": 0.11211314836283763,
+          "bias": -0.007337810676453938,
+          "n_cells": 138,
+          "n_targets": 24
+        },
+        "6-12": {
+          "sd_error": 0.1661621879817679,
+          "bias": 0.016339110000859483,
+          "n_cells": 4,
+          "n_targets": 4
+        },
+        "<0": {
+          "sd_error": 0.0762432926790725,
+          "bias": -0.01359346098837588,
+          "n_cells": 60,
+          "n_targets": 30
+        }
+      },
+      "raw": {
+        "0-6": {
+          "sd_error": 0.49707210589184797,
+          "bias": -0.10173095567946738,
+          "n_cells": 58,
+          "n_targets": 30
+        },
+        "12-24": {
+          "sd_error": 0.09152209321271063,
+          "bias": -0.013803970742217493,
+          "n_cells": 58,
+          "n_targets": 28
+        },
+        "24-36": {
+          "sd_error": 0.10825372718720243,
+          "bias": -0.043779549562366224,
+          "n_cells": 54,
+          "n_targets": 26
+        },
+        "36+": {
+          "sd_error": 0.12364165255766728,
+          "bias": -0.11108590322160498,
+          "n_cells": 138,
+          "n_targets": 24
+        },
+        "6-12": {
+          "sd_error": 0.16548712606486202,
+          "bias": 0.016482380430005508,
+          "n_cells": 4,
+          "n_targets": 4
+        },
+        "<0": {
+          "sd_error": 0.0762432926790725,
+          "bias": -0.01359346098837588,
+          "n_cells": 60,
+          "n_targets": 30
+        }
+      },
+      "revision_autocorrelation": -0.0019179726935851299,
+      "same_sign_share": 0.5645161290322581,
+      "n_revision_pairs": 372
+    },
+    "OBR/spending_local/pooled_levels": {
+      "error_basis": "log",
+      "policy_adjusted": {
+        "0-6": {
+          "sd_error": 0.16926172067423356,
+          "bias": -0.08251990683350019,
+          "n_cells": 87,
+          "n_targets": 45
+        },
+        "12-24": {
+          "sd_error": 0.259594094421211,
+          "bias": -0.17148503726562342,
+          "n_cells": 87,
+          "n_targets": 42
+        },
+        "24-36": {
+          "sd_error": 0.27426849418640725,
+          "bias": -0.2156950869129535,
+          "n_cells": 81,
+          "n_targets": 39
+        },
+        "36+": {
+          "sd_error": 0.35681677377906995,
+          "bias": -0.371486106878052,
+          "n_cells": 207,
+          "n_targets": 36
+        },
+        "6-12": {
+          "sd_error": 0.18530930546910002,
+          "bias": -0.21358136955804963,
+          "n_cells": 6,
+          "n_targets": 6
+        },
+        "<0": {
+          "sd_error": 0.13648910338344405,
+          "bias": -0.04032100850475699,
+          "n_cells": 90,
+          "n_targets": 45
+        }
+      },
+      "raw": {
+        "0-6": {
+          "sd_error": 0.16926978871570586,
+          "bias": -0.08274291565654895,
+          "n_cells": 87,
+          "n_targets": 45
+        },
+        "12-24": {
+          "sd_error": 0.26214595057098916,
+          "bias": -0.1706199870156084,
+          "n_cells": 87,
+          "n_targets": 42
+        },
+        "24-36": {
+          "sd_error": 0.2800811442135355,
+          "bias": -0.2216507407670125,
+          "n_cells": 81,
+          "n_targets": 39
+        },
+        "36+": {
+          "sd_error": 0.3916192399307947,
+          "bias": -0.40980885905671904,
+          "n_cells": 207,
+          "n_targets": 36
+        },
+        "6-12": {
+          "sd_error": 0.18530930546910002,
+          "bias": -0.21358136955804963,
+          "n_cells": 6,
+          "n_targets": 6
+        },
+        "<0": {
+          "sd_error": 0.13648910338344405,
+          "bias": -0.04032100850475699,
+          "n_cells": 90,
+          "n_targets": 45
+        }
+      },
+      "revision_autocorrelation": -0.18377808937462728,
+      "same_sign_share": 0.44861660079051385,
+      "n_revision_pairs": 506
+    },
+    "OBR/spending_other/pooled_levels": {
+      "error_basis": "log",
+      "policy_adjusted": {
+        "0-6": {
+          "sd_error": 0.34888174894466734,
+          "bias": -0.0496122934068095,
+          "n_cells": 98,
+          "n_targets": 51
+        },
+        "12-24": {
+          "sd_error": 0.481715547282073,
+          "bias": -0.07814805553251247,
+          "n_cells": 96,
+          "n_targets": 47
+        },
+        "24-36": {
+          "sd_error": 0.47927776504855896,
+          "bias": -0.025952364466210867,
+          "n_cells": 88,
+          "n_targets": 43
+        },
+        "36+": {
+          "sd_error": 0.4917013476630846,
+          "bias": 0.0018712645988262495,
+          "n_cells": 216,
+          "n_targets": 39
+        },
+        "6-12": {
+          "sd_error": 0.45598729169269975,
+          "bias": -0.29271091396696036,
+          "n_cells": 6,
+          "n_targets": 6
+        },
+        "<0": {
+          "sd_error": 0.2373611823684524,
+          "bias": -0.060595297617263316,
+          "n_cells": 103,
+          "n_targets": 52
+        }
+      },
+      "raw": {
+        "0-6": {
+          "sd_error": 0.34589966013399076,
+          "bias": -0.0520594622314987,
+          "n_cells": 236,
+          "n_targets": 123
+        },
+        "12-24": {
+          "sd_error": 0.4681997022592833,
+          "bias": -0.06461191582554614,
+          "n_cells": 228,
+          "n_targets": 112
+        },
+        "24-36": {
+          "sd_error": 0.6006112094633366,
+          "bias": -0.06893970529062698,
+          "n_cells": 206,
+          "n_targets": 101
+        },
+        "36+": {
+          "sd_error": 0.5481981999439132,
+          "bias": -0.008971317624017636,
+          "n_cells": 477,
+          "n_targets": 89
+        },
+        "6-12": {
+          "sd_error": 0.4358879220102988,
+          "bias": -0.05489506443169741,
+          "n_cells": 14,
+          "n_targets": 14
+        },
+        "<0": {
+          "sd_error": 0.24629877970593417,
+          "bias": -0.06811299200139476,
+          "n_cells": 254,
+          "n_targets": 128
+        }
+      },
+      "revision_autocorrelation": 0.060994174842586645,
+      "same_sign_share": 0.4991258741258741,
+      "n_revision_pairs": 1144
+    },
+    "OBR/spending_welfare/pooled_levels": {
+      "error_basis": "log",
+      "policy_adjusted": {
+        "0-6": {
+          "sd_error": 0.011674153546097752,
+          "bias": -0.0002797591622863779,
+          "n_cells": 71,
+          "n_targets": 37
+        },
+        "12-24": {
+          "sd_error": 0.0281162372194662,
+          "bias": -0.0017958643713323883,
+          "n_cells": 69,
+          "n_targets": 34
+        },
+        "24-36": {
+          "sd_error": 0.04078485119609426,
+          "bias": -0.015181120701861082,
+          "n_cells": 63,
+          "n_targets": 31
+        },
+        "36+": {
+          "sd_error": 0.06740779760088847,
+          "bias": -0.03372713161619289,
+          "n_cells": 153,
+          "n_targets": 28
+        },
+        "6-12": {
+          "sd_error": 0.012642345566322486,
+          "bias": -0.0034345632644120078,
+          "n_cells": 4,
+          "n_targets": 4
+        },
+        "<0": {
+          "sd_error": 0.016754103021168313,
+          "bias": -0.0006900901326222042,
+          "n_cells": 78,
+          "n_targets": 39
+        }
+      },
+      "raw": {
+        "0-6": {
+          "sd_error": 0.011674764749598436,
+          "bias": -0.0002979310203432581,
+          "n_cells": 71,
+          "n_targets": 37
+        },
+        "12-24": {
+          "sd_error": 0.026544038975548568,
+          "bias": -0.004417107003453876,
+          "n_cells": 69,
+          "n_targets": 34
+        },
+        "24-36": {
+          "sd_error": 0.04187993051445536,
+          "bias": -0.019870496177050962,
+          "n_cells": 63,
+          "n_targets": 31
+        },
+        "36+": {
+          "sd_error": 0.07048090569862113,
+          "bias": -0.034723925708633745,
+          "n_cells": 153,
+          "n_targets": 28
+        },
+        "6-12": {
+          "sd_error": 0.012642345566322486,
+          "bias": -0.0034345632644120078,
+          "n_cells": 4,
+          "n_targets": 4
+        },
+        "<0": {
+          "sd_error": 0.016754103021168313,
+          "bias": -0.0006900901326222042,
+          "n_cells": 78,
+          "n_targets": 39
+        }
+      },
+      "revision_autocorrelation": 0.02763349096242725,
+      "same_sign_share": 0.4883720930232558,
+      "n_revision_pairs": 430
+    }
+  }
+}

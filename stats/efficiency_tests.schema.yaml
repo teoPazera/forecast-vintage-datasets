@@ -1,0 +1,64 @@
+table: stats/efficiency_tests
+description: Numbers-only predictability tests (E5).
+columns:
+- name: group
+  type: string
+  unit: ''
+  description: OBR | HMT | CBO
+- name: family
+  type: string
+  unit: ''
+  description: series family
+- name: unit
+  type: string
+  unit: ''
+  description: as in stats/stylized_facts
+- name: episodes
+  type: string
+  unit: ''
+  description: with | without
+- name: errors
+  type: string
+  unit: ''
+  description: raw | policy_adjusted | empty for revision tests
+- name: bucket
+  type: string
+  unit: months
+  description: horizon bucket, or 'all'
+- name: test
+  type: string
+  unit: ''
+  description: mincer_zarnowitz | error_on_revision | revision_autocorrelation | same_sign_share | calibration_on_previous_revision
+- name: n_cells
+  type: integer
+  unit: ''
+  description: observations
+- name: n_targets
+  type: integer
+  unit: ''
+  description: clusters (series x target period)
+- name: coef
+  type: float
+  unit: ''
+  description: 'slope (MZ: forecast; CG: revision; autocorrelation: previous revision); same_sign_share:
+    the share'
+- name: intercept
+  type: float
+  unit: ''
+  description: intercept where applicable
+- name: se
+  type: float
+  unit: ''
+  description: clustered standard error of coef
+- name: stat
+  type: float
+  unit: ''
+  description: 'MZ: Wald statistic; CG: t; autocorrelation: correlation; same_sign: count'
+- name: p_value
+  type: float
+  unit: ''
+  description: p-value of the test named in note
+- name: note
+  type: string
+  unit: ''
+  description: hypothesis and sign convention

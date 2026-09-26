@@ -1,0 +1,64 @@
+table: stats/stylized_facts
+description: Error moments by forecaster, family, unit of analysis and horizon bucket (E5).
+columns:
+- name: group
+  type: string
+  unit: ''
+  description: OBR | HMT | CBO (forecaster)
+- name: family
+  type: string
+  unit: ''
+  description: series family (D7)
+- name: unit
+  type: string
+  unit: ''
+  description: '''pooled_levels'' (log errors of the family''s level series) or a series_id (balance/rate
+    series, own unit)'
+- name: episodes
+  type: string
+  unit: ''
+  description: with | without (episode windows, D8)
+- name: errors
+  type: string
+  unit: ''
+  description: raw | policy_adjusted
+- name: bucket
+  type: string
+  unit: months
+  description: 'horizon bucket (D6): <0, 0-6, 6-12, 12-24, 24-36, 36+'
+- name: n_cells
+  type: integer
+  unit: ''
+  description: number of forecast cells
+- name: n_targets
+  type: integer
+  unit: ''
+  description: number of distinct series x target period (clusters)
+- name: n_series
+  type: integer
+  unit: ''
+  description: number of series
+- name: mean_error
+  type: float
+  unit: log points or series unit
+  description: mean of e = F - A (positive = over-forecast)
+- name: se_clustered
+  type: float
+  unit: as mean_error
+  description: standard error clustered by target
+- name: p_bias
+  type: float
+  unit: ''
+  description: p-value of mean error = 0
+- name: sd_error
+  type: float
+  unit: as mean_error
+  description: standard deviation of errors
+- name: mae
+  type: float
+  unit: as mean_error
+  description: mean absolute error
+- name: rmse
+  type: float
+  unit: as mean_error
+  description: root mean squared error

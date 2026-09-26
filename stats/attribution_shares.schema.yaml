@@ -1,0 +1,39 @@
+table: stats/attribution_shares
+description: Share of the absolute revision by harmonized attribution category (E5).
+columns:
+- name: group
+  type: string
+  unit: ''
+  description: OBR | HMT | CBO
+- name: series_id
+  type: string
+  unit: ''
+  description: series
+- name: family
+  type: string
+  unit: ''
+  description: series family
+- name: bucket
+  type: string
+  unit: months
+  description: horizon bucket
+- name: category
+  type: string
+  unit: ''
+  description: harmonized category (D3)
+- name: abs_sum
+  type: float
+  unit: series unit
+  description: sum of absolute attributed revisions
+- name: n
+  type: integer
+  unit: ''
+  description: attribution rows
+- name: total
+  type: float
+  unit: series unit
+  description: sum over categories
+- name: share_of_abs_revision
+  type: float
+  unit: ''
+  description: abs_sum / total
