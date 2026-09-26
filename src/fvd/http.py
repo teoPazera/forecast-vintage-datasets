@@ -183,7 +183,10 @@ def _wayback_lookup(url: str, prefer: str) -> tuple[dict, int] | None:
     on obr.uk), and redirect captures count, since /download/ links redirect."""
     p = urlparse(url)
     base = p.netloc + p.path
-    if p.path.rstrip("/"):
+    if p.query:
+        # a real query selects content (e.g. ?cat=0): match the full URL
+        caps = wayback_captures(f"{base}?{p.query}", filter="statuscode:[23]..")
+    elif p.path.rstrip("/"):
         # Captures carrying a query string (e.g. ?tmstv=...) only match as a
         # prefix; the prefix also returns deeper paths, so keep this path only.
         caps = wayback_captures(base.rstrip("/"), match="prefix",
@@ -242,6 +245,42 @@ def cached_path(url: str) -> Path | None:
     hits = [(row["retrieved_at"], rel) for rel, row in load_sources().items()
             if row["url"] == url and row["status"] == "200" and (ROOT / rel).exists()]
     return ROOT / max(hits)[1] if hits else None
+
+
+def fetch_capture(original_url: str, capture_of: str, dest_dir: Path, note: str,
+                  verify=None) -> Path | None:
+    """Store the Wayback capture of `capture_of` as the raw copy of `original_url`.
+
+    Used when the source's own link was never archived but the same document
+    was archived under another URL (e.g. the OBR's former domain). The
+    manifest keeps both URLs. If `verify(tmp_path)` returns False the download
+    is discarded unrecorded and None is returned.
+    """
+    hit = cached_path(original_url)
+    if hit is not None:
+        return hit
+    r, meta = _get_wayback(capture_of, "latest")
+    dest_dir.mkdir(parents=True, exist_ok=True)
+    dest = dest_dir / safe_name(meta["resolved_url"])
+    if dest.exists():
+        dest = dest.with_name(f"{dest.stem}_{hashlib.sha1(original_url.encode()).hexdigest()[:8]}"
+                              f"{dest.suffix}")
+    tmp = dest.with_suffix(dest.suffix + ".part")
+    _write(r, tmp)
+    if verify is not None and not verify(tmp):
+        tmp.unlink()
+        return None
+    tmp.rename(dest)
+    _append_source({
+        "path": dest.relative_to(ROOT).as_posix(), "url": normalize_url(original_url),
+        "via": "wayback-alternate", "fetched_url": meta["fetched_url"],
+        "capture_time": meta["capture_time"], "retrieved_at": _now(),
+        "sha256": sha256_file(dest), "bytes": dest.stat().st_size,
+        "last_modified": meta["last_modified"],
+        "content_type": r.headers.get("Content-Type", "").split(";")[0], "status": 200,
+        "note": f"{note}; capture of {capture_of}",
+    })
+    return dest
 
 
 def fetch(url: str, dest_dir: Path, name: str | None = None, note: str = "",
