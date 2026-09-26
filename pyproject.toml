@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fvd"
+version = "0.1.0"
+description = "Public forecast-vintage datasets (UK OBR, US CBO): extraction, harmonization and case preparation"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=2.2",
+    "pyarrow>=15",
+    "openpyxl>=3.1",
+    "requests>=2.31",
+    "beautifulsoup4>=4.12",
+    "lxml>=5",
+    "pymupdf>=1.24",
+    "statsmodels>=0.14",
+    "pyyaml>=6",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,17 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Raw downloads are large and reproducible from inventory/sources.csv
+# (URL, retrieval time, SHA-256). Fetch them with `python -m fvd.e0_inventory`.
+raw/
+
+# Local scratch and editor state
+scratch/
+.claude/settings.local.json
+.vscode/
+.DS_Store
+Thumbs.db
