@@ -1,0 +1,32 @@
+table: crosswalks/pmd_events
+description: PMD fiscal events -> the vintage published with each event (reviewed by Teo). A row with
+  reviewed = true keeps its mapping on reruns.
+columns:
+- name: event_raw
+  type: string
+  unit: ''
+  description: event as the PMD writes it
+- name: vintage_label
+  type: string
+  unit: ''
+  description: HOFD vintage label the event maps to
+- name: vintage_id
+  type: string
+  unit: ''
+  description: see tables/vintages (derived from vintage_label)
+- name: rule
+  type: string
+  unit: ''
+  description: how the mapping was made
+- name: confidence
+  type: string
+  unit: ''
+  description: exact | assumed
+- name: reviewed
+  type: boolean
+  unit: ''
+  description: true once Teo has checked the row
+- name: comment
+  type: string
+  unit: ''
+  description: reviewer's comment

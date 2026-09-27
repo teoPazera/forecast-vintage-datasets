@@ -32,7 +32,7 @@ from . import crosswalks as X
 from .efo_tables import contents_titles, workbook_sheets
 from .paths import CROSSWALKS, ROOT, STATS, TABLES
 from .periods import normalize_uk_fiscal
-from .schemas import check_columns
+from .schemas import check_columns, write_schema
 
 CHECKS = STATS / "e2_checks"
 MONTHS = "|".join(calendar.month_name[1:])
@@ -178,19 +178,25 @@ def resolve_forecast_label(text: str, vintage_label: str, vint_labels: list[str]
     return max(cands, key=lambda l: pd.Timestamp(f"1 {l}")) if cands else None
 
 
-def load_label_crosswalk() -> dict[str, tuple[str, str]]:
-    p = CROSSWALKS / "attribution_labels.csv"
-    if not p.exists():
-        return {}
-    d = pd.read_csv(p).fillna("")
-    return {r.label_key: (r.category, r.note) for r in d.itertuples() if r.source_table == "EFO"}
+def load_label_crosswalk() -> dict[str, dict]:
+    """EFO rows of crosswalks/attribution_labels.csv by label key (reviewed or not)."""
+    return {k[1]: r for k, r in X.previous_rows("attribution_labels", ["source_table", "label_key"]).items()
+            if k[0] == "EFO"}
 
 
 def default_category(label: str, section: str, table_kind: str) -> tuple[str, str]:
     """Default D3 category for an EFO driver label, by keyword. Written once from the
     label vocabulary, before any outcome is looked at (plan 8.6); reviewed by Teo."""
-    t = f"{section} | {label}".lower()
     lab = label.lower()
+    # 'By tax head' and 'By policy and forecast differences' head alternative splits of
+    # the same change: the heading names the split, not the cause of each row.
+    if section.lower().startswith("by tax head"):
+        return "by_tax_head", "split by tax head, not by cause"
+    if section.lower().startswith("by "):
+        section = ""
+    if re.match(r"^underlying (obr )?forecast (differences|changes)\b", lab):
+        return "underlying_unsplit", "the non-policy total, not split by cause in this block"
+    t = f"{section} | {label}".lower()
     if re.search(r"government decisions|policy|measures|scorecard|sr20|budget|statement", t) and \
             not re.search(r"pre-measures", lab):
         return "policy", ""
@@ -372,18 +378,28 @@ def _top_level(part: pd.DataFrame, tol: float = 0.051, infer: bool = False) -> l
     return top
 
 
-def attribution_rows(rows: pd.DataFrame, lab2vid: dict, cw: dict) -> tuple[pd.DataFrame, pd.DataFrame]:
+def driver_rows(rows: pd.DataFrame) -> pd.DataFrame:
+    """Rows of efo_table_rows that become attribution, with their crosswalk key."""
     drv = rows[rows.kind.isin(["tax_drivers", "receipts_sources"]) & (rows.role == "component")
                & rows.block.notna()].copy()
+    drv["text"] = drv.sublabel.where(drv.sublabel.fillna("") != "", drv.label)
+    drv["section"] = drv.section.where(drv.section.map(lambda s: isinstance(s, str)), "")
+    drv["label_key"] = drv.kind + "|" + drv.section.str.lower() + "|" + drv.text.str.lower()
+    return drv
+
+
+def attribution_rows(rows: pd.DataFrame, lab2vid: dict, cw: dict) -> tuple[pd.DataFrame, pd.DataFrame]:
+    drv = driver_rows(rows)
     labels = []
     out = []
     for _, r in drv.iterrows():
-        text = r.sublabel or r.label
-        section = r.section if isinstance(r.section, str) else ""
-        key = f"{r.kind}|{section.lower()}|{text.lower()}"
-        cat, note = cw.get(key) or default_category(text, section, r.kind)
+        text, section, key = r.text, r.section, r.label_key
+        old = cw.get(key, {})
+        done = X.is_true(old.get("reviewed", ""))
+        cat, note = (old["category"], old["note"]) if done else default_category(text, section, r.kind)
         labels.append({"source_table": "EFO", "label_key": key, "table_kind": r.kind, "section": section,
-                       "label": text, "category": cat, "note": note})
+                       "label": text, "category": cat, "note": note, "reviewed": done,
+                       "comment": old.get("comment", "")})
         prev = r.block_previous if isinstance(r.block_previous, str) else None
         out.append({"source": "OBR", "series_id": r.series_id, "target_period": r.target_period,
                     "vintage_id": lab2vid.get(r.vintage_label), "previous_vintage_id": lab2vid.get(prev),
@@ -394,7 +410,8 @@ def attribution_rows(rows: pd.DataFrame, lab2vid: dict, cw: dict) -> tuple[pd.Da
                     "origin": f"{r.file}#{r.sheet}!row{r.row + 1}"})
     lab = pd.DataFrame(labels).drop_duplicates("label_key")
     lab["n_rows"] = lab.label_key.map(pd.Series([l["label_key"] for l in labels]).value_counts())
-    lab["reviewed"] = False
+    lab = lab[["source_table", "label_key", "table_kind", "section", "label", "category", "note",
+               "n_rows", "reviewed", "comment"]]
     return pd.DataFrame(out), lab
 
 
@@ -458,15 +475,26 @@ def main() -> None:
     pp = policy_vs_pmd(att)
     pp.to_csv(CHECKS / "efo_direct_effects_vs_pmd.csv", index=False)
 
-    # attribution label crosswalk: FRD, CBO and EFO labels in one reviewed file
+    # attribution label crosswalk: FRD, CBO and EFO labels in one reviewed file. FRD
+    # and CBO categories are the D3 mapping in code (crosswalks.FRD_PATHS, e3_cbo.D3);
+    # their rows keep Teo's review flag and comment.
+    old = X.previous_rows("attribution_labels", ["source_table", "label_key"])
+
+    def kept(src, k):
+        o = old.get((src, k), {})
+        return {"reviewed": X.is_true(o.get("reviewed", "")), "comment": o.get("comment", "")}
+
     frd = pd.DataFrame([{"source_table": "FRD", "label_key": k, "table_kind": "frd", "section": "",
-                         "label": k, "category": v[0], "note": v[1], "n_rows": None, "reviewed": False}
+                         "label": k, "category": v[0], "note": v[1], "n_rows": None, **kept("FRD", k)}
                         for k, v in X.FRD_PATHS.items()])
     cbo = pd.DataFrame([{"source_table": "CBO", "label_key": k, "table_kind": "baseline_changes", "section": "",
-                         "label": k, "category": v, "note": "D3 default", "n_rows": None, "reviewed": False}
+                         "label": k, "category": v, "note": "D3 default", "n_rows": None, **kept("CBO", k)}
                         for k, v in {"Legislative": "policy", "Economic": "economic_determinants",
                                      "Technical": "modelling_other"}.items()])
-    pd.concat([frd, cbo, lab]).to_csv(CROSSWALKS / "attribution_labels.csv", index=False)
+    labels = pd.concat([frd, cbo, lab])
+    check_columns("crosswalks/attribution_labels", labels)
+    labels.to_csv(CROSSWALKS / "attribution_labels.csv", index=False)
+    write_schema("crosswalks/attribution_labels", ROOT)
 
     coverage = (rows[rows.kind.isin(["tax_drivers", "receipts_sources", "receipts_by_head"])]
                 .groupby(["vintage_label", "kind", "subject"]).table.first().unstack(["kind", "subject"]))

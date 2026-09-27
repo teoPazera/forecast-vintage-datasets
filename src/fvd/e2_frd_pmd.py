@@ -244,19 +244,33 @@ def parse_pmd() -> pd.DataFrame:
 def build_crosswalks(pmd: pd.DataFrame, vint: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     hmt = vint[vint.forecaster == "HM Treasury"].label.tolist()
     lab2id = dict(zip(vint.label, vint.vintage_id))
+    # rows Teo marked reviewed keep their mapping; the rest follow the rules
+    old_ev = X.previous_rows("pmd_events", ["event_raw"])
     ev = []
     for e in pd.unique(pmd.event_raw):
         lab, rule, conf = X.map_event(e, hmt)
+        old = old_ev.get((e,), {})
+        done = X.is_true(old.get("reviewed", ""))
+        if done:
+            lab, rule, conf = old["vintage_label"] or None, old["rule"], old["confidence"]
         ev.append({"event_raw": e, "vintage_label": lab, "vintage_id": lab2id.get(lab),
-                   "rule": rule, "confidence": conf, "reviewed": False})
+                   "rule": rule, "confidence": conf, "reviewed": done,
+                   "comment": old.get("comment", "")})
+    old_heads = X.previous_rows("pmd_heads", ["measure_type", "head_raw"])
     heads = []
     for (mt, h), g in pmd.groupby(["measure_type", "head_raw"]):
         sheet, conf = X.map_head(h, mt)
+        conf, note = conf.split(":")[0], conf.partition(":")[2].strip()
+        old = old_heads.get((mt, h), {})
+        done = X.is_true(old.get("reviewed", ""))
+        if done:
+            sheet, conf, note = old["hofd_sheet"] or None, old["confidence"], old["note"]
         heads.append({"measure_type": mt, "head_raw": h, "hofd_sheet": sheet,
                       "series_id": S.series_id(sheet) if sheet else None,
                       "aggregate_series_id": S.series_id("£PSCR" if mt == "tax" else "£TME"),
-                      "confidence": conf.split(":")[0], "note": conf.partition(":")[2].strip(),
-                      "n_measures": g.measure.nunique(), "reviewed": False})
+                      "confidence": conf, "note": note,
+                      "n_measures": g.measure.nunique(), "reviewed": done,
+                      "comment": old.get("comment", "")})
     return pd.DataFrame(ev), pd.DataFrame(heads)
 
 
@@ -305,8 +319,10 @@ def main() -> None:
 
     pmd = parse_pmd()
     events, heads = build_crosswalks(pmd, pd.concat([vint, inter]))
-    events.to_csv(CROSSWALKS / "pmd_events.csv", index=False)
-    heads.to_csv(CROSSWALKS / "pmd_heads.csv", index=False)
+    for name, df in (("pmd_events", events), ("pmd_heads", heads)):
+        check_columns(f"crosswalks/{name}", df)
+        df.to_csv(CROSSWALKS / f"{name}.csv", index=False)
+        write_schema(f"crosswalks/{name}", ROOT)
     pm = policy_measures(pmd, events, heads)
     check_columns("tables/policy_measures", pm)
     (TABLES / "policy_measures").mkdir(parents=True, exist_ok=True)

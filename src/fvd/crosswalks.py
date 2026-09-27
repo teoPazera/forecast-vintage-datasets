@@ -5,12 +5,35 @@ The mappings below are defaults written before any outcome is looked at
 (plan section 8, rule 6). `confidence` says how sure the mapping is:
 exact (same concept, same name), assumed (same concept, needs checking) or
 none (no HOFD series; the measure counts only towards the aggregate).
+
+Each crosswalk file has `reviewed` and `comment` columns. A row marked
+reviewed keeps its mapping on every rerun; other rows are rebuilt from the
+rules here. Comments are kept either way.
 """
 
 from __future__ import annotations
 
 import calendar
 import re
+
+import pandas as pd
+
+from .paths import CROSSWALKS
+
+
+def is_true(v) -> bool:
+    return str(v).strip().lower() in ("true", "1", "yes", "y", "x")
+
+
+def previous_rows(name: str, key: list[str]) -> dict[tuple, dict]:
+    """Rows of crosswalks/<name>.csv as last written or edited, keyed by `key`."""
+    p = CROSSWALKS / f"{name}.csv"
+    if not p.exists():
+        return {}
+    d = pd.read_csv(p, dtype=str, keep_default_na=False)
+    if "comment" not in d:
+        d["comment"] = ""
+    return {tuple(r[k] for k in key): r for r in d.to_dict("records")}
 
 # --- PMD events -> vintage labels ------------------------------------------------
 # From June 2010 each fiscal event maps to the OBR forecast published with it.

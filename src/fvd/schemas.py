@@ -175,10 +175,56 @@ SCHEMAS: dict[str, dict] = {
             ("vintage_id", "string", "", "the vintage whose revision is attributed"),
             ("previous_vintage_id", "string", "", "the forecast the revision is measured against (may be an intermediate forecast, see vintages/OBR_intermediate)"),
             ("category_raw", "string", "", "label as published, prefixed with its table (e.g. 'FRD:policy/receipts (of which: receipts)')"),
-            ("category", "string", "", "harmonized category (D3 default): total | policy | economic_determinants | calibration_to_outturn | classification_one_offs | modelling_other | underlying_unsplit"),
+            ("category", "string", "", "harmonized category (D3 default): total | policy | economic_determinants | calibration_to_outturn | classification_one_offs | modelling_other | underlying_unsplit (non-policy total not split by cause) | by_tax_head (a split of the change by tax head, not by cause)"),
             ("value", "float", "series.unit_harmonized", "revision in the series' own convention: positive = the series was revised up (receipts raised, spending raised, borrowing raised)"),
             ("flags", "string", "", "pre_measures_year: revision relative to the pre-measures forecast in a year the previous forecast did not cover (FRD note *)"),
             ("origin", "string", "", "file, sheet and cell"),
+        ],
+    },
+    "crosswalks/pmd_events": {
+        "description": "PMD fiscal events -> the vintage published with each event (reviewed by Teo). "
+                       "A row with reviewed = true keeps its mapping on reruns.",
+        "columns": [
+            ("event_raw", "string", "", "event as the PMD writes it"),
+            ("vintage_label", "string", "", "HOFD vintage label the event maps to"),
+            ("vintage_id", "string", "", "see tables/vintages (derived from vintage_label)"),
+            ("rule", "string", "", "how the mapping was made"),
+            ("confidence", "string", "", "exact | assumed"),
+            ("reviewed", "boolean", "", "true once Teo has checked the row"),
+            ("comment", "string", "", "reviewer's comment"),
+        ],
+    },
+    "crosswalks/pmd_heads": {
+        "description": "PMD tax and spending heads -> HOFD series (reviewed by Teo). "
+                       "A row with reviewed = true keeps its mapping on reruns.",
+        "columns": [
+            ("measure_type", "string", "", "tax | spending"),
+            ("head_raw", "string", "", "head as the PMD writes it"),
+            ("hofd_sheet", "string", "", "HOFD sheet the head maps to; empty if the HOFD has no such series"),
+            ("series_id", "string", "", "see tables/series (derived from hofd_sheet)"),
+            ("aggregate_series_id", "string", "", "the total the head belongs to (receipts or TME)"),
+            ("confidence", "string", "", "exact | assumed | none (no HOFD series)"),
+            ("note", "string", "", "why an assumed mapping was made"),
+            ("n_measures", "integer", "", "number of distinct measures with this head"),
+            ("reviewed", "boolean", "", "true once Teo has checked the row"),
+            ("comment", "string", "", "reviewer's comment"),
+        ],
+    },
+    "crosswalks/attribution_labels": {
+        "description": "Attribution labels -> harmonized categories (D3; reviewed by Teo). EFO rows "
+                       "with reviewed = true keep their category on reruns; FRD and CBO rows show "
+                       "the D3 mapping set in code.",
+        "columns": [
+            ("source_table", "string", "", "EFO | FRD | CBO"),
+            ("label_key", "string", "", "table kind | section | label, lower case"),
+            ("table_kind", "string", "", "tax_drivers | receipts_sources | frd | baseline_changes"),
+            ("section", "string", "", "heading the label sits under in its table"),
+            ("label", "string", "", "label as published"),
+            ("category", "string", "", "harmonized category; see tables/attribution"),
+            ("note", "string", "", "why the default category was chosen, or what is uncertain"),
+            ("n_rows", "integer", "", "attribution rows (label x target period x vintage) with this label"),
+            ("reviewed", "boolean", "", "true once Teo has checked the row"),
+            ("comment", "string", "", "reviewer's comment"),
         ],
     },
     "tables/policy_measures": {

@@ -30,7 +30,8 @@ columns:
   type: string
   unit: ''
   description: 'harmonized category (D3 default): total | policy | economic_determinants | calibration_to_outturn
-    | classification_one_offs | modelling_other | underlying_unsplit'
+    | classification_one_offs | modelling_other | underlying_unsplit (non-policy total not split by cause)
+    | by_tax_head (a split of the change by tax head, not by cause)'
 - name: value
   type: float
   unit: series.unit_harmonized

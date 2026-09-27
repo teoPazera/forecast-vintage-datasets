@@ -94,6 +94,13 @@ def load_sources() -> dict[str, dict]:
 def _append_source(row: dict) -> None:
     SOURCES_CSV.parent.mkdir(parents=True, exist_ok=True)
     new = not SOURCES_CSV.exists()
+    if not new and not row.get("path"):
+        # a failure already on record (same URL, capture, status and reason) is not logged again
+        same = ("url", "fetched_url", "status", "note")
+        with open(SOURCES_CSV, newline="", encoding="utf-8") as f:
+            if any(all(str(r[k]) == str(row.get(k, "")) for k in same)
+                   for r in csv.DictReader(f) if not r["path"]):
+                return
     with open(SOURCES_CSV, "a", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=SOURCES_FIELDS)
         if new:

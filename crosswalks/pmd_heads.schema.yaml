@@ -1,0 +1,44 @@
+table: crosswalks/pmd_heads
+description: PMD tax and spending heads -> HOFD series (reviewed by Teo). A row with reviewed = true keeps
+  its mapping on reruns.
+columns:
+- name: measure_type
+  type: string
+  unit: ''
+  description: tax | spending
+- name: head_raw
+  type: string
+  unit: ''
+  description: head as the PMD writes it
+- name: hofd_sheet
+  type: string
+  unit: ''
+  description: HOFD sheet the head maps to; empty if the HOFD has no such series
+- name: series_id
+  type: string
+  unit: ''
+  description: see tables/series (derived from hofd_sheet)
+- name: aggregate_series_id
+  type: string
+  unit: ''
+  description: the total the head belongs to (receipts or TME)
+- name: confidence
+  type: string
+  unit: ''
+  description: exact | assumed | none (no HOFD series)
+- name: note
+  type: string
+  unit: ''
+  description: why an assumed mapping was made
+- name: n_measures
+  type: integer
+  unit: ''
+  description: number of distinct measures with this head
+- name: reviewed
+  type: boolean
+  unit: ''
+  description: true once Teo has checked the row
+- name: comment
+  type: string
+  unit: ''
+  description: reviewer's comment

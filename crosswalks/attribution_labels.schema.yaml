@@ -1,0 +1,44 @@
+table: crosswalks/attribution_labels
+description: Attribution labels -> harmonized categories (D3; reviewed by Teo). EFO rows with reviewed
+  = true keep their category on reruns; FRD and CBO rows show the D3 mapping set in code.
+columns:
+- name: source_table
+  type: string
+  unit: ''
+  description: EFO | FRD | CBO
+- name: label_key
+  type: string
+  unit: ''
+  description: table kind | section | label, lower case
+- name: table_kind
+  type: string
+  unit: ''
+  description: tax_drivers | receipts_sources | frd | baseline_changes
+- name: section
+  type: string
+  unit: ''
+  description: heading the label sits under in its table
+- name: label
+  type: string
+  unit: ''
+  description: label as published
+- name: category
+  type: string
+  unit: ''
+  description: harmonized category; see tables/attribution
+- name: note
+  type: string
+  unit: ''
+  description: why the default category was chosen, or what is uncertain
+- name: n_rows
+  type: integer
+  unit: ''
+  description: attribution rows (label x target period x vintage) with this label
+- name: reviewed
+  type: boolean
+  unit: ''
+  description: true once Teo has checked the row
+- name: comment
+  type: string
+  unit: ''
+  description: reviewer's comment
