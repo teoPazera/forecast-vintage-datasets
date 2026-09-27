@@ -114,54 +114,60 @@ And are these tables consistent with the HOFD forecasts parsed in E1?
 **EFO receipts tables** (`stats/e2_checks/summary_efo_tables.json`,
 `efo_table_coverage.csv`)
 
-- **Workbooks.** 92 of 97 workbooks retrieved, 6 of them via verified alternate
-  captures. Not available anywhere in the archive: March 2011 and December 2014
-  (single workbooks), October 2018 fiscal, and two parts without receipts tables.
-- **Coverage.** Receipts tables were found for 29 of the 33 regular OBR vintages.
-  None for June 2010 (the first OBR forecast, which has no "changes since" tables) or
-  for the three missing workbooks. There are no per-tax driver tables in November
-  2020 or November 2022.
-- **Per-tax driver tables.** 94 tables:
-  - onshore CT 24;
-  - VAT 22;
-  - income tax and NICs 12 (to 2016), then non-SA income tax and NICs 12;
-  - SA income tax 10;
-  - property transaction taxes 7;
-  - CGT 2, NICs 2, non-SA income tax 2, fuel 1.
-- **Other tables.** 23 receipts-by-type tables and 32 receipts-by-head tables.
-- **Attribution.** 6,221 rows with 527 distinct labels. Default categories: 249
-  modelling/other, 153 economic determinants, 81 policy, 41 calibration to outturn,
+- **Workbooks.** 95 of 97 workbooks retrieved:
+  - 85 via Wayback captures of their own link and 7 via verified alternate captures;
+  - 3 downloaded in a browser by Teo, because the archive never saved them: March
+    2011 and December 2014 (single workbooks) and October 2018 fiscal. They are in
+    `raw/manual/`, recorded with `via = manual` (`python -m fvd.manual`).
+  - The two missing parts (March 2026 chapter 6 and November 2017 economy) have no
+    receipts tables.
+  - The March 2011 workbook names its sheets by code (`t4.9`) and titles them only
+    on its Contents sheet; titles are taken from there.
+- **Coverage.** Receipts tables were found for 32 of the 33 regular OBR vintages.
+  None for June 2010, the first OBR forecast, which has no "changes since" tables.
+  There are no per-tax driver tables in November 2020 or November 2022.
+- **Per-tax driver tables.** 106 tables:
+  - onshore CT 27;
+  - VAT 25;
+  - income tax and NICs 14 (to 2016), then non-SA income tax and NICs 13;
+  - SA income tax 11;
+  - property transaction taxes 8;
+  - CGT 2, NICs 2, non-SA income tax 2, fuel 2.
+- **Other tables.** 25 receipts-by-type tables and 36 receipts-by-head tables.
+- **Attribution.** 6,822 rows with 559 distinct labels. Default categories: 269
+  modelling/other, 159 economic determinants, 87 policy, 41 calibration to outturn,
   3 classification.
 - **Consistency checks:**
-  - **Forecast levels vs the HOFD** (0.05 + 0.5% of the value): **95.6%** of 1,505
-    cells pass (current forecast 96.4%, previous 94.8%). Single-tax tables for SA IT,
-    NICs, CGT, property taxes and fuel match 100%, VAT 98% and onshore CT 92%.
+  - **Forecast levels vs the HOFD** (0.05 + 0.5% of the value): **95.9%** of 1,643
+    cells pass (current forecast 96.7%, previous 95.2%). Single-tax tables for SA IT,
+    NICs, CGT, property taxes and fuel match 100%, VAT 98% and onshore CT 93%. The
+    three hand-downloaded workbooks pass all 130 of their level checks.
   - **"Non-SA income tax".** It is *not* the HOFD's PAYE sheet: there is a steady gap
     of about £8bn. It equals income tax minus self-assessed income tax, which matches
     100%.
-  - **Where levels fail:** combined income tax + NICs tables before 2017 (90%),
-    non-SA income tax + NICs (94%), onshore CT (92%), and total receipts in December
+  - **Where levels fail:** combined income tax + NICs tables before 2017 (91%),
+    non-SA income tax + NICs (94%), onshore CT (93%), and total receipts in December
     2013 and March 2014. There, "current receipts" in the
     EFO table is about £12bn below the HOFD's £PSCR; the table uses a different
     receipts measure.
-  - **Drivers add up to the stated change** (0.1 × number of rows): **92.0%** of
-    1,039 checks.
-    - 85.7% pass using the groupings the tables mark ("of which:" lines and indented
+  - **Drivers add up to the stated change** (0.1 × number of rows): **92.4%** of
+    1,133 checks.
+    - 86.0% pass using the groupings the tables mark ("of which:" lines and indented
       labels).
-    - The other 6.3 points pass only when groupings are inferred from sums, because
+    - The other 6.4 points pass only when groupings are inferred from sums, because
       some tables indent sub-items by formatting alone. The `nesting` column of
       `efo_driver_sums.csv` says which applied.
     - Remaining failures are mostly receipts-by-type tables whose totals include
       items not listed as rows (e.g. "Total (including indirect effects)").
   - **EFO "direct effect of Government decisions" rows vs PMD costings** of the same
-    event (the E4 cross-check): within 0.1 in 99 of 151 cells; median absolute
+    event (the E4 cross-check): within 0.1 in 104 of 156 cells; median absolute
     difference £0.02bn (`efo_direct_effects_vs_pmd.csv`).
 
 ## 4. Open questions
 
 1. **Review of the three crosswalks** (gate item).
    - Most uncertain: pre-2010 event → HM Treasury vintage (rule-based), the three
-     assumed tax heads, and the keyword-based D3 categories of 527 EFO labels.
+     assumed tax heads, and the keyword-based D3 categories of 559 EFO labels.
    - For example, "Outturn receipts and modelling" and "IT and NICs receipts and
      modelling" mix calibration with modelling. They are mapped to
      `calibration_to_outturn` and flagged in the `note` column.
@@ -197,7 +203,7 @@ And are these tables consistent with the HOFD forecasts parsed in E1?
 
 | Criterion | Measured | Result |
 |---|---|---|
-| ≥ 95% of matched cells pass the checks | levels 1,438 / 1,505; driver sums 956 / 1,039; FRD totals 181 / 181; combined 2,575 / 2,725 = **94.5%** | **fail** (narrowly). Causes identified: different receipts definitions in two tables and totals that include unlisted items. No parsing errors found in the single-tax tables |
+| ≥ 95% of matched cells pass the checks | levels 1,576 / 1,643; driver sums 1,047 / 1,133; FRD totals 181 / 181; combined 2,804 / 2,957 = **94.8%** | **fail** (narrowly). Causes identified: different receipts definitions in two tables and totals that include unlisted items. No parsing errors found in the single-tax tables |
 | Event crosswalk covers every event since June 2010 | 33 / 33 events → 33 / 33 OBR vintages | **pass** |
 | Coverage of per-tax driver tables reported by vintage and tax | `stats/e2_checks/efo_table_coverage.csv` | **pass** |
 | Teo reviews the three crosswalks | pending | **open** |

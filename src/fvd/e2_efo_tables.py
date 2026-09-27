@@ -29,7 +29,7 @@ from pathlib import Path
 import pandas as pd
 
 from . import crosswalks as X
-from .efo_tables import workbook_sheets
+from .efo_tables import contents_titles, workbook_sheets
 from .paths import CROSSWALKS, ROOT, STATS, TABLES
 from .periods import normalize_uk_fiscal
 from .schemas import check_columns
@@ -220,8 +220,11 @@ def collect(located: pd.DataFrame, vint_labels: list[str]) -> pd.DataFrame:
             sheets = workbook_sheets(p)
         except Exception:
             continue
+        codes = contents_titles(sheets)
         for sheet, rows in sheets:
             title, trows = read_table(rows)
+            # early workbooks title their sheets only on the Contents sheet ('t4.9')
+            title = title or codes.get(re.sub(r"\s+", "", sheet).lower(), "")
             m = _TITLE.match(title) if title else None
             if not m:
                 continue

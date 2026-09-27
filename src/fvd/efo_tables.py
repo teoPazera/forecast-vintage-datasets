@@ -130,6 +130,27 @@ def first_text(rows: list[list], n: int = 6) -> str:
     return " | ".join(out)[:300]
 
 
+_NUMBERED = re.compile(r"^\s*(table|chart)\s+([a-z]?\d+\.\d+)\b", re.IGNORECASE)
+
+
+def contents_titles(sheets: list[tuple[str, list[list]]]) -> dict[str, str]:
+    """Sheet code ('t4.9', 'c2.1') -> 'Table 4.9: ...' from a Contents sheet.
+
+    Some early workbooks (March 2011) name their sheets by code and give the
+    titles only on the Contents sheet.
+    """
+    out = {}
+    for name, data in sheets:
+        if name.strip().lower() not in ("contents", "index"):
+            continue
+        for row in data:
+            for v in row:
+                m = _NUMBERED.match(v) if isinstance(v, str) else None
+                if m:
+                    out.setdefault(f"{m.group(1)[0].lower()}{m.group(2).lower()}", v.strip())
+    return out
+
+
 def sheet_index(located: pd.DataFrame) -> pd.DataFrame:
     rows = []
     for _, r in located.dropna(subset=["path"]).iterrows():
@@ -140,7 +161,12 @@ def sheet_index(located: pd.DataFrame) -> pd.DataFrame:
             rows.append({"vintage_label": r.vintage_label, "file": p.relative_to(ROOT).as_posix(),
                          "sheet": None, "title": f"ERROR {type(exc).__name__}: {exc}"[:200]})
             continue
+        codes = contents_titles(sheets)
         for name, data in sheets:
+            title = first_text(data)
+            code = re.sub(r"\s+", "", name).lower()
+            if code in codes and not _NUMBERED.match(title):
+                title = f"{codes[code]} | {title}"[:300]
             rows.append({"vintage_label": r.vintage_label, "file": p.relative_to(ROOT).as_posix(),
-                         "sheet": name, "title": first_text(data)})
+                         "sheet": name, "title": title})
     return pd.DataFrame(rows)

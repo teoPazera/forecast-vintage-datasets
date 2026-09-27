@@ -388,6 +388,30 @@ def _store(tmp: Path, dest_dir: Path, name: str, url: str, meta: dict, ctype: st
     return dest
 
 
+def record_manual(path: Path, url: str, note: str = "") -> Path:
+    """Record a file downloaded by hand in a browser as the raw copy of `url`.
+
+    Used where a host refuses scripts and no archived capture exists. The file
+    stays where it was saved; its hash makes a later download checkable.
+    """
+    path = Path(path).resolve()
+    rel = path.relative_to(ROOT).as_posix()
+    if rel in load_sources():
+        return path
+    problem = check_integrity(path)
+    if problem:
+        raise FetchError(f"{rel}: {problem}")
+    saved = datetime.fromtimestamp(path.stat().st_mtime, timezone.utc).isoformat(timespec="seconds")
+    _append_source({
+        "path": rel, "url": normalize_url(url), "via": "manual", "fetched_url": url,
+        "retrieved_at": saved, "sha256": sha256_file(path), "bytes": path.stat().st_size,
+        "content_type": sniff(path), "status": 200,
+        "note": "; ".join(x for x in ["downloaded in a browser; the server's Last-Modified "
+                                      "header is not kept", note] if x),
+    })
+    return path
+
+
 def fetch_capture(original_url: str, capture_of: str, dest_dir: Path, note: str,
                   verify=None) -> Path | None:
     """Store the Wayback capture of `capture_of` as the raw copy of `original_url`.

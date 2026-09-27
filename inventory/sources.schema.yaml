@@ -12,7 +12,7 @@ columns:
 - name: via
   type: string
   unit: ''
-  description: direct | wayback | wayback-alternate (same document archived under another URL)
+  description: direct | wayback | wayback-alternate (same document archived under another URL) | manual (downloaded in a browser)
 - name: fetched_url
   type: string
   unit: ''

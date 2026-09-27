@@ -31,7 +31,7 @@ questions and its gate result.
 |---|---|---|
 | E0 | Inventory and vintage calendar | done. OBR gate passed; CBO date gate failed (CBO lists pre-2000 reports by month only). [note](notes/extraction/E0-inventory.md) |
 | E1 | OBR forecasts and outturns | done. 26,423 cells; chart-copy check 99.4% (the failures are errors in the copies). [note](notes/extraction/E1-obr-forecasts.md) |
-| E2 | OBR attribution and policy measures | done, awaiting crosswalk review; 94.5% of consistency checks pass (gate 95%). [note](notes/extraction/E2-obr-attribution.md) |
+| E2 | OBR attribution and policy measures | done, awaiting crosswalk review; 94.8% of consistency checks pass (gate 95%). [note](notes/extraction/E2-obr-attribution.md) |
 | E3 | CBO data and replication | done. CBO's published errors reproduced exactly. [note](notes/extraction/E3-cbo.md) |
 | E4 | Harmonized cells, policy adjustment | done. Identity holds to 1e-12. [note](notes/extraction/E4-cells.md) |
 | E5 | Stylized facts, efficiency tests | done, awaiting review. [note](notes/extraction/E5-stylized-facts.md) |
@@ -65,6 +65,7 @@ python -m fvd.e0_inventory        # sources, documents, vintage calendar
 python -m fvd.e0_factcheck        # plan section 5 facts against the files
 python -m fvd.e1_obr_forecasts    # OBR forecasts and outturns
 python -m fvd.e2_frd_pmd          # FRD attribution, PMD measures, crosswalks
+python -m fvd.manual              # record the hand-downloaded files (see Access)
 python -m fvd.e2_efo_tables       # EFO receipts attribution
 python -m fvd.e3_cbo              # CBO tables and replication
 python -m fvd.e4_cells            # harmonized cells, policy adjustment
@@ -89,6 +90,11 @@ to get past those challenges.
   domain, and only after its content has been checked (`via = wayback-alternate`).
 - **Integrity.** Every download is checked for integrity, and truncated captures are
   rejected (`status = invalid`).
+- **Manual downloads.** Three EFO workbooks were never archived. They were downloaded
+  in a browser from the OBR's own links into `raw/manual/` (`via = manual`). The
+  links are listed in [`src/fvd/manual.py`](src/fvd/manual.py). To reproduce, save
+  them there before running `python -m fvd.manual`; the SHA-256 in `sources.csv`
+  shows whether a new download is the same file.
 
 ## Licences
 

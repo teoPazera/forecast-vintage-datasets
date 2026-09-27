@@ -114,12 +114,12 @@ against 0.5).
   - **OBR PSNB (FRD):** "underlying" 50–68% by bucket, policy 27–49%,
     classification 0–8%.
   - **OBR tax drivers (EFO):** economic determinants 20–38%, modelling and other
-    28–50%, calibration to outturn 6–30% (highest at 6–12 months), policy 9–29%.
+    28–50%, calibration to outturn 6–30% (highest at 6–12 months), policy 9–28%.
   - **CBO:** policy 57–71%, economic 5–25%, technical 19–26%. The policy share is
     inflated because CBO revenue changes are legislative-only before 2024 (E3).
-- **Calibration to outturn** (OBR EFO driver tables, 177 cells, 68 targets): not
-  predictable from the previous revision overall (slope −0.03, p = 0.73). At 36+
-  months, however, the slope is −0.19 (p = 0.002, 71 cells): long-horizon calibration
+- **Calibration to outturn** (OBR EFO driver tables, 192 cells, 68 targets): not
+  predictable from the previous revision overall (slope −0.02, p = 0.83). At 36+
+  months, however, the slope is −0.17 (p = 0.010, 77 cells): long-horizon calibration
   revisions partly reverse the previous revision.
 - **Episodes.** Excluding the GFC, COVID and energy windows changes the pooled 12–24
   month biases only slightly. Exceptions:

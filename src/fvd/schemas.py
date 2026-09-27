@@ -17,7 +17,7 @@ SCHEMAS: dict[str, dict] = {
         "columns": [
             ("path", "string", "", "repository-relative path of the stored raw file; empty for failed requests"),
             ("url", "string", "", "the source's own URL for the file (obr.uk cache-buster query removed)"),
-            ("via", "string", "", "direct | wayback | wayback-alternate (same document archived under another URL)"),
+            ("via", "string", "", "direct | wayback | wayback-alternate (same document archived under another URL) | manual (downloaded in a browser)"),
             ("fetched_url", "string", "", "URL actually requested (Wayback URL when via is not direct)"),
             ("capture_time", "datetime", "UTC", "Wayback capture time"),
             ("retrieved_at", "datetime", "UTC", "time of our download"),

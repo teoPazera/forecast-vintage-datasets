@@ -12,30 +12,30 @@ FRD,underlying/spending,frd,,underlying/spending,underlying_unsplit,,,False
 CBO,Legislative,baseline_changes,,Legislative,policy,D3 default,,False
 CBO,Economic,baseline_changes,,Economic,economic_determinants,D3 default,,False
 CBO,Technical,baseline_changes,,Technical,modelling_other,D3 default,,False
-EFO,tax_drivers|(by economic determinant)|average earnings,tax_drivers,(by economic determinant),Average earnings,economic_determinants,,61,False
-EFO,tax_drivers|(by economic determinant)|employee numbers,tax_drivers,(by economic determinant),Employee numbers,economic_determinants,,61,False
+EFO,tax_drivers|(by economic determinant)|average earnings,tax_drivers,(by economic determinant),Average earnings,economic_determinants,,66,False
+EFO,tax_drivers|(by economic determinant)|employee numbers,tax_drivers,(by economic determinant),Employee numbers,economic_determinants,,66,False
 EFO,tax_drivers|(by economic determinant)|sa determinants,tax_drivers,(by economic determinant),SA determinants,modelling_other,no keyword matched; default,40,False
 EFO,tax_drivers|(by economic determinant)|other determinants,tax_drivers,(by economic determinant),Other determinants,modelling_other,,22,False
 EFO,tax_drivers|(by other category)|latest receipts data,tax_drivers,(by other category),Latest receipts data,modelling_other,no keyword matched; default,16,False
 EFO,tax_drivers|(by other category)|income tax repayments,tax_drivers,(by other category),Income tax repayments,modelling_other,no keyword matched; default,5,False
 EFO,tax_drivers|(by other category)|high income child benefit charge,tax_drivers,(by other category),High income child benefit charge,modelling_other,no keyword matched; default,5,False
 EFO,tax_drivers|(by other category)|other (including modelling changes),tax_drivers,(by other category),Other (including modelling changes),modelling_other,,5,False
-EFO,tax_drivers|(by other category)|autumn statement measures,tax_drivers,(by other category),Autumn Statement measures,policy,,10,False
+EFO,tax_drivers|(by other category)|autumn statement measures,tax_drivers,(by other category),Autumn Statement measures,policy,,15,False
 EFO,tax_drivers||outturn vat receipts,tax_drivers,,Outturn VAT receipts,calibration_to_outturn,,17,False
-EFO,tax_drivers||vat debt,tax_drivers,,VAT debt,modelling_other,no keyword matched; default,28,False
-EFO,tax_drivers||srs of consumer spending,tax_drivers,,SRS of consumer spending,economic_determinants,,22,False
+EFO,tax_drivers||vat debt,tax_drivers,,VAT debt,modelling_other,no keyword matched; default,33,False
+EFO,tax_drivers||srs of consumer spending,tax_drivers,,SRS of consumer spending,economic_determinants,,27,False
 EFO,tax_drivers||consumer spending,tax_drivers,,Consumer spending,economic_determinants,,11,False
-EFO,tax_drivers||other spending,tax_drivers,,Other spending,economic_determinants,,29,False
+EFO,tax_drivers||other spending,tax_drivers,,Other spending,economic_determinants,,34,False
 EFO,tax_drivers||other (including modelling),tax_drivers,,Other (including modelling),modelling_other,,11,False
 EFO,tax_drivers||place of supply policy,tax_drivers,,Place of supply policy,policy,,5,False
-EFO,tax_drivers||measures,tax_drivers,,Measures,policy,,5,False
-EFO,tax_drivers||industrial and commercial profits,tax_drivers,,Industrial and commercial profits,economic_determinants,,11,False
+EFO,tax_drivers||measures,tax_drivers,,Measures,policy,,29,False
+EFO,tax_drivers||industrial and commercial profits,tax_drivers,,Industrial and commercial profits,economic_determinants,,17,False
 EFO,tax_drivers||financial company profits,tax_drivers,,Financial company profits,economic_determinants,,22,False
 EFO,tax_drivers||investment,tax_drivers,,Investment,economic_determinants,,17,False
-EFO,tax_drivers||other economic determinants,tax_drivers,,Other economic determinants,economic_determinants,,48,False
+EFO,tax_drivers||other economic determinants,tax_drivers,,Other economic determinants,economic_determinants,,65,False
 EFO,tax_drivers||industrial and commercial losses assumption,tax_drivers,,Industrial and commercial losses assumption,modelling_other,,5,False
 EFO,tax_drivers||receipts outturns and other modelling changes,tax_drivers,,Receipts outturns and other modelling changes,calibration_to_outturn,label mixes outturn with modelling or other,5,False
-EFO,tax_drivers||autumn statement measures,tax_drivers,,Autumn Statement measures,policy,,10,False
+EFO,tax_drivers||autumn statement measures,tax_drivers,,Autumn Statement measures,policy,,20,False
 EFO,receipts_sources||income and expenditure,receipts_sources,,Income and expenditure,economic_determinants,,11,False
 EFO,receipts_sources||wages and salaries,receipts_sources,,Wages and salaries,economic_determinants,,34,False
 EFO,receipts_sources||non-financial company profits,receipts_sources,,Non-financial company profits,economic_determinants,,11,False
@@ -75,17 +75,26 @@ EFO,tax_drivers|(by other category)|other modelling updates,tax_drivers,(by othe
 EFO,tax_drivers|(by other category)|revised pension tax relief costing,tax_drivers,(by other category),Revised pension tax relief costing,modelling_other,no keyword matched; default,5,False
 EFO,tax_drivers|(by other category)|revised swiss yield,tax_drivers,(by other category),Revised Swiss yield,modelling_other,no keyword matched; default,5,False
 EFO,tax_drivers|(by other category)|revisions to other costings,tax_drivers,(by other category),Revisions to other costings,modelling_other,,5,False
-EFO,tax_drivers||latest receipts,tax_drivers,,Latest receipts,modelling_other,,17,False
-EFO,tax_drivers||household spending,tax_drivers,,Household spending,economic_determinants,,28,False
+EFO,tax_drivers||latest receipts,tax_drivers,,Latest receipts,modelling_other,,22,False
+EFO,tax_drivers||household spending,tax_drivers,,Household spending,economic_determinants,,33,False
 EFO,tax_drivers||household investment,tax_drivers,,Household investment,economic_determinants,,5,False
 EFO,tax_drivers||other,tax_drivers,,Other,modelling_other,,49,False
-EFO,tax_drivers||industrial and commercial company profits,tax_drivers,,Industrial and commercial company profits,economic_determinants,,28,False
-EFO,tax_drivers||industrial and commercial company investment,tax_drivers,,Industrial and commercial company investment,economic_determinants,,22,False
+EFO,tax_drivers||industrial and commercial company profits,tax_drivers,,Industrial and commercial company profits,economic_determinants,,33,False
+EFO,tax_drivers||industrial and commercial company investment,tax_drivers,,Industrial and commercial company investment,economic_determinants,,27,False
 EFO,tax_drivers||modelling updates and latest receipts data,tax_drivers,,Modelling updates and latest receipts data,modelling_other,,11,False
 EFO,tax_drivers||residential property prices,tax_drivers,,Residential property prices,economic_determinants,,5,False
 EFO,tax_drivers||residential property transactions,tax_drivers,,Residential property transactions,economic_determinants,,10,False
 EFO,tax_drivers||commercial property market,tax_drivers,,Commercial property market,economic_determinants,,10,False
 EFO,tax_drivers||latest receipts data and modelling changes,tax_drivers,,Latest receipts data and modelling changes,modelling_other,,5,False
+EFO,tax_drivers|(by economic determinant)|self-employment income,tax_drivers,(by economic determinant),Self-employment income,economic_determinants,,11,False
+EFO,tax_drivers|(by economic determinant)|savings income,tax_drivers,(by economic determinant),Savings income,modelling_other,no keyword matched; default,10,False
+EFO,tax_drivers|(by economic determinant)|other economic determinants,tax_drivers,(by economic determinant),Other economic determinants,economic_determinants,,49,False
+EFO,tax_drivers|(by other category)|lower paye and nics effective tax rate,tax_drivers,(by other category),Lower PAYE and NICs effective tax rate,modelling_other,no keyword matched; default,5,False
+EFO,tax_drivers|(by other category)|other modelling and receipts changes,tax_drivers,(by other category),Other modelling and receipts changes,modelling_other,,49,False
+EFO,tax_drivers||vat on defined benefit pension schemes,tax_drivers,,VAT on defined benefit pension schemes,modelling_other,no keyword matched; default,5,False
+EFO,tax_drivers||financial sector losses profile,tax_drivers,,Financial sector losses profile,modelling_other,no keyword matched; default,5,False
+EFO,tax_drivers||latest receipts data,tax_drivers,,Latest receipts data,modelling_other,no keyword matched; default,17,False
+EFO,tax_drivers||modelling updates,tax_drivers,,Modelling updates,modelling_other,,17,False
 EFO,receipts_sources|underlying obr forecast changes|income and expenditure,receipts_sources,Underlying OBR forecast changes,Income and expenditure,economic_determinants,,34,False
 EFO,receipts_sources|underlying obr forecast changes|average earnings,receipts_sources,Underlying OBR forecast changes,Average earnings,economic_determinants,,34,False
 EFO,receipts_sources|underlying obr forecast changes|employee numbers,receipts_sources,Underlying OBR forecast changes,Employee numbers,economic_determinants,,34,False
@@ -117,12 +126,10 @@ EFO,receipts_sources|underlying obr forecast changes|other judgements and modell
 EFO,receipts_sources|effect of government decisions|scorecard receipts measures,receipts_sources,Effect of Government decisions,Scorecard receipts measures,policy,,5,False
 EFO,receipts_sources|effect of government decisions|indirect effects of government decisions,receipts_sources,Effect of Government decisions,Indirect effects of Government decisions,policy,,22,False
 EFO,tax_drivers|(by economic determinant)|inflation,tax_drivers,(by economic determinant),Inflation,economic_determinants,,33,False
-EFO,tax_drivers|(by economic determinant)|other economic determinants,tax_drivers,(by economic determinant),Other economic determinants,economic_determinants,,44,False
 EFO,tax_drivers|(by other category)|outturn paye and nics receipts,tax_drivers,(by other category),Outturn PAYE and NICs receipts,calibration_to_outturn,,17,False
 EFO,tax_drivers|(by other category)|other it receipts,tax_drivers,(by other category),Other IT receipts,modelling_other,,5,False
 EFO,tax_drivers|(by other category)|outturn sa receipts,tax_drivers,(by other category),Outturn SA receipts,calibration_to_outturn,,23,False
 EFO,tax_drivers|(by other category)|revisions to costings,tax_drivers,(by other category),Revisions to costings,modelling_other,no keyword matched; default,11,False
-EFO,tax_drivers|(by other category)|other modelling and receipts changes,tax_drivers,(by other category),Other modelling and receipts changes,modelling_other,,44,False
 EFO,tax_drivers|changes due to government decisions|scorecard measures,tax_drivers,Changes due to Government decisions,Scorecard measures,policy,,79,False
 EFO,tax_drivers|changes due to government decisions|personal allowance and higher rate threshold,tax_drivers,Changes due to Government decisions,Personal allowance and higher rate threshold,policy,,5,False
 EFO,tax_drivers|changes due to government decisions|pensions tax relief,tax_drivers,Changes due to Government decisions,Pensions tax relief,policy,,5,False
@@ -137,27 +144,41 @@ EFO,tax_drivers|underlying obr forecast changes|standard rated share,tax_drivers
 EFO,tax_drivers|underlying obr forecast changes|other determinants and modelling,tax_drivers,Underlying OBR forecast changes,Other determinants and modelling,modelling_other,,11,False
 EFO,tax_drivers|underlying obr forecast changes|industrial and commercial company profits,tax_drivers,Underlying OBR forecast changes,Industrial and commercial company profits,economic_determinants,,28,False
 EFO,tax_drivers|underlying obr forecast changes|industrial and commercial company investment,tax_drivers,Underlying OBR forecast changes,Industrial and commercial company investment,economic_determinants,,28,False
-EFO,tax_drivers|underlying obr forecast changes|other economic determinants,tax_drivers,Underlying OBR forecast changes,Other economic determinants,economic_determinants,,45,False
+EFO,tax_drivers|underlying obr forecast changes|other economic determinants,tax_drivers,Underlying OBR forecast changes,Other economic determinants,economic_determinants,,50,False
 EFO,tax_drivers|underlying obr forecast changes|latest receipts data,tax_drivers,Underlying OBR forecast changes,Latest receipts data,modelling_other,no keyword matched; default,17,False
 EFO,tax_drivers|underlying obr forecast changes|modelling and costings updates,tax_drivers,Underlying OBR forecast changes,Modelling and costings updates,modelling_other,,11,False
 EFO,tax_drivers|changes due to government decisions|main rate cut to 19 per cent in april 2017 and to 18 per cent in april 2020,tax_drivers,Changes due to Government decisions,Main rate cut to 19 per cent in April 2017 and to 18 per cent in April 2020,policy,,5,False
 EFO,"tax_drivers|changes due to government decisions|increase in the aia to £200,000",tax_drivers,Changes due to Government decisions,"Increase in the AIA to £200,000",policy,,5,False
 EFO,tax_drivers|changes due to government decisions|bringing forward payments for large groups,tax_drivers,Changes due to Government decisions,Bringing forward payments for large groups,policy,,5,False
+EFO,tax_drivers||wages and salaries,tax_drivers,,Wages and salaries,economic_determinants,,40,False
+EFO,tax_drivers||inflation,tax_drivers,,Inflation,economic_determinants,,6,False
+EFO,tax_drivers||other economic changes,tax_drivers,,Other economic changes,economic_determinants,,6,False
+EFO,tax_drivers||lower 10-11 financial sector bonuses,tax_drivers,,Lower 10-11 financial sector bonuses,modelling_other,no keyword matched; default,6,False
+EFO,tax_drivers||lower paye and nic for given level of wages and salaries and bonuses,tax_drivers,,Lower PAYE and NIC for given level of wages and salaries and bonuses,economic_determinants,,6,False
+EFO,tax_drivers||revised 2010 sa forecast (it and nic),tax_drivers,,Revised 2010 SA forecast (IT and NIC),modelling_other,no keyword matched; default,6,False
+EFO,tax_drivers||sa - adjustments for forestalling and lower savings income in future,tax_drivers,,SA - adjustments for forestalling and lower savings income in future,modelling_other,no keyword matched; default,6,False
+EFO,tax_drivers||modelling changes,tax_drivers,,Modelling changes,modelling_other,,18,False
+EFO,tax_drivers||revisions to pensions tax costing,tax_drivers,,Revisions to pensions tax costing,modelling_other,no keyword matched; default,6,False
+EFO,tax_drivers||nominal consumer expenditure,tax_drivers,,Nominal consumer expenditure,economic_determinants,,6,False
+EFO,tax_drivers||standard rated share of consumer spending,tax_drivers,,Standard rated share of consumer spending,economic_determinants,,12,False
+EFO,tax_drivers||litigation estimates,tax_drivers,,Litigation estimates,modelling_other,,6,False
+EFO,tax_drivers||vat gap,tax_drivers,,VAT gap,modelling_other,,12,False
+EFO,tax_drivers||receipts data,tax_drivers,,Receipts data,modelling_other,no keyword matched; default,12,False
+EFO,tax_drivers||rpi,tax_drivers,,RPI,modelling_other,no keyword matched; default,6,False
+EFO,tax_drivers||oil prices,tax_drivers,,Oil prices,economic_determinants,,6,False
+EFO,tax_drivers||fuel efficiency,tax_drivers,,Fuel efficiency,modelling_other,no keyword matched; default,6,False
 EFO,tax_drivers||srs of household consumption,tax_drivers,,SRS of household consumption,economic_determinants,,6,False
 EFO,tax_drivers||budget measures,tax_drivers,,Budget measures,policy,,36,False
 EFO,tax_drivers||non-financial company profits,tax_drivers,,Non-financial company profits,economic_determinants,,6,False
 EFO,tax_drivers||other income and asset prices,tax_drivers,,Other income and asset prices,economic_determinants,,6,False
 EFO,tax_drivers||outturn corporation tax receipts,tax_drivers,,Outturn corporation tax receipts,calibration_to_outturn,,6,False
 EFO,tax_drivers||repayments,tax_drivers,,Repayments,modelling_other,no keyword matched; default,6,False
-EFO,tax_drivers||modelling updates,tax_drivers,,Modelling updates,modelling_other,,12,False
 EFO,tax_drivers|(by other category)|latest paye and nic1 receipts data,tax_drivers,(by other category),Latest PAYE and NIC1 receipts data,modelling_other,no keyword matched; default,6,False
 EFO,tax_drivers|(by other category)|latest sa income tax receipts data,tax_drivers,(by other category),Latest SA income tax receipts data,modelling_other,no keyword matched; default,6,False
 EFO,tax_drivers|(by other category)|revised paye forestalling estimate,tax_drivers,(by other category),Revised PAYE forestalling estimate,modelling_other,no keyword matched; default,6,False
 EFO,tax_drivers|(by other category)|lower sa effective tax rate,tax_drivers,(by other category),Lower SA effective tax rate,modelling_other,no keyword matched; default,6,False
 EFO,tax_drivers|(by other category)|other,tax_drivers,(by other category),Other,modelling_other,,6,False
 EFO,tax_drivers|(by other category)|budget measures,tax_drivers,(by other category),Budget measures,policy,,18,False
-EFO,tax_drivers||latest receipts data,tax_drivers,,Latest receipts data,modelling_other,no keyword matched; default,12,False
-EFO,tax_drivers||modelling changes,tax_drivers,,Modelling changes,modelling_other,,6,False
 EFO,receipts_sources||expenditure,receipts_sources,,Expenditure,modelling_other,no keyword matched; default,6,False
 EFO,receipts_sources||cgt modelling and outturns,receipts_sources,,CGT modelling and outturns,calibration_to_outturn,label mixes outturn with modelling or other,6,False
 EFO,receipts_sources||vat receipts and modelling,receipts_sources,,VAT receipts and modelling,modelling_other,,11,False
@@ -212,84 +233,83 @@ EFO,receipts_sources|underlying obr forecast changes|gross operating surplus,rec
 EFO,receipts_sources|underlying obr forecast changes|environmental levies modelling,receipts_sources,Underlying OBR forecast changes,Environmental levies modelling,modelling_other,,11,False
 EFO,receipts_sources|underlying obr forecast changes|business rates outturn and modelling,receipts_sources,Underlying OBR forecast changes,Business rates outturn and modelling,calibration_to_outturn,label mixes outturn with modelling or other,6,False
 EFO,receipts_sources|effect of government decisions|non-scorecard measures,receipts_sources,Effect of Government decisions,Non-scorecard measures,policy,,23,False
-EFO,tax_drivers|(by economic determinant)|self-employment income,tax_drivers,(by economic determinant),Self-employment income,economic_determinants,,6,False
 EFO,tax_drivers|(by other category)|outturn sa receipts (exc. forestalling),tax_drivers,(by other category),Outturn SA receipts (exc. forestalling),calibration_to_outturn,,6,False
 EFO,tax_drivers|(by other category)|dividend forestalling,tax_drivers,(by other category),Dividend forestalling,modelling_other,no keyword matched; default,6,False
 EFO,tax_drivers|(by other category)|pensions flexibility re-costing,tax_drivers,(by other category),Pensions flexibility re-costing,modelling_other,no keyword matched; default,6,False
 EFO,tax_drivers|underlying obr forecast changes|modelling and recostings,tax_drivers,Underlying OBR forecast changes,Modelling and recostings,modelling_other,,6,False
 EFO,tax_drivers|underlying obr forecast changes|outturn receipts,tax_drivers,Underlying OBR forecast changes,Outturn receipts,calibration_to_outturn,,6,False
-EFO,receipts_sources|underlying forecast changes|income and expenditure,receipts_sources,Underlying forecast changes,Income and expenditure,economic_determinants,,17,False
-EFO,receipts_sources|underlying forecast changes|average earnings,receipts_sources,Underlying forecast changes,Average earnings,economic_determinants,,17,False
-EFO,receipts_sources|underlying forecast changes|employee numbers,receipts_sources,Underlying forecast changes,Employee numbers,economic_determinants,,17,False
-EFO,receipts_sources|underlying forecast changes|non-financial company profits,receipts_sources,Underlying forecast changes,Non-financial company profits,economic_determinants,,17,False
-EFO,receipts_sources|underlying forecast changes|consumer expenditure,receipts_sources,Underlying forecast changes,Consumer expenditure,economic_determinants,,17,False
-EFO,receipts_sources|underlying forecast changes|self-assessment income streams,receipts_sources,Underlying forecast changes,Self-assessment income streams,modelling_other,no keyword matched; default,17,False
-EFO,receipts_sources|underlying forecast changes|other,receipts_sources,Underlying forecast changes,Other,modelling_other,,17,False
-EFO,receipts_sources|underlying forecast changes|north sea,receipts_sources,Underlying forecast changes,North Sea,modelling_other,no keyword matched; default,6,False
-EFO,receipts_sources|underlying forecast changes|oil and gas prices,receipts_sources,Underlying forecast changes,Oil and gas prices,economic_determinants,,17,False
-EFO,receipts_sources|underlying forecast changes|production and expenditure,receipts_sources,Underlying forecast changes,Production and expenditure,economic_determinants,,17,False
-EFO,receipts_sources|underlying forecast changes|property markets,receipts_sources,Underlying forecast changes,Property markets,economic_determinants,,17,False
-EFO,receipts_sources|underlying forecast changes|market-derived assumptions,receipts_sources,Underlying forecast changes,Market-derived assumptions,economic_determinants,,17,False
-EFO,receipts_sources|underlying forecast changes|equity prices,receipts_sources,Underlying forecast changes,Equity prices,economic_determinants,,17,False
-EFO,receipts_sources|underlying forecast changes|interest rates,receipts_sources,Underlying forecast changes,Interest rates,economic_determinants,,17,False
-EFO,receipts_sources|underlying forecast changes|exchange rates,receipts_sources,Underlying forecast changes,Exchange rates,modelling_other,no keyword matched; default,17,False
-EFO,receipts_sources|underlying forecast changes|prices,receipts_sources,Underlying forecast changes,Prices,economic_determinants,,17,False
-EFO,receipts_sources|underlying forecast changes|other economic determinants,receipts_sources,Underlying forecast changes,Other economic determinants,economic_determinants,,17,False
-EFO,receipts_sources|underlying forecast changes|other assumptions,receipts_sources,Underlying forecast changes,Other assumptions,modelling_other,,17,False
-EFO,receipts_sources|underlying forecast changes|it and nics receipts and modelling,receipts_sources,Underlying forecast changes,IT and NICs receipts and modelling,modelling_other,,6,False
+EFO,receipts_sources|underlying forecast changes|income and expenditure,receipts_sources,Underlying forecast changes,Income and expenditure,economic_determinants,,22,False
+EFO,receipts_sources|underlying forecast changes|average earnings,receipts_sources,Underlying forecast changes,Average earnings,economic_determinants,,22,False
+EFO,receipts_sources|underlying forecast changes|employee numbers,receipts_sources,Underlying forecast changes,Employee numbers,economic_determinants,,22,False
+EFO,receipts_sources|underlying forecast changes|non-financial company profits,receipts_sources,Underlying forecast changes,Non-financial company profits,economic_determinants,,22,False
+EFO,receipts_sources|underlying forecast changes|consumer expenditure,receipts_sources,Underlying forecast changes,Consumer expenditure,economic_determinants,,22,False
+EFO,receipts_sources|underlying forecast changes|self-assessment income streams,receipts_sources,Underlying forecast changes,Self-assessment income streams,modelling_other,no keyword matched; default,22,False
+EFO,receipts_sources|underlying forecast changes|other,receipts_sources,Underlying forecast changes,Other,modelling_other,,22,False
+EFO,receipts_sources|underlying forecast changes|north sea,receipts_sources,Underlying forecast changes,North Sea,modelling_other,no keyword matched; default,11,False
+EFO,receipts_sources|underlying forecast changes|oil and gas prices,receipts_sources,Underlying forecast changes,Oil and gas prices,economic_determinants,,22,False
+EFO,receipts_sources|underlying forecast changes|production and expenditure,receipts_sources,Underlying forecast changes,Production and expenditure,economic_determinants,,22,False
+EFO,receipts_sources|underlying forecast changes|property markets,receipts_sources,Underlying forecast changes,Property markets,economic_determinants,,22,False
+EFO,receipts_sources|underlying forecast changes|market-derived assumptions,receipts_sources,Underlying forecast changes,Market-derived assumptions,economic_determinants,,22,False
+EFO,receipts_sources|underlying forecast changes|equity prices,receipts_sources,Underlying forecast changes,Equity prices,economic_determinants,,22,False
+EFO,receipts_sources|underlying forecast changes|interest rates,receipts_sources,Underlying forecast changes,Interest rates,economic_determinants,,22,False
+EFO,receipts_sources|underlying forecast changes|exchange rates,receipts_sources,Underlying forecast changes,Exchange rates,modelling_other,no keyword matched; default,22,False
+EFO,receipts_sources|underlying forecast changes|prices,receipts_sources,Underlying forecast changes,Prices,economic_determinants,,22,False
+EFO,receipts_sources|underlying forecast changes|other economic determinants,receipts_sources,Underlying forecast changes,Other economic determinants,economic_determinants,,22,False
+EFO,receipts_sources|underlying forecast changes|other assumptions,receipts_sources,Underlying forecast changes,Other assumptions,modelling_other,,22,False
+EFO,receipts_sources|underlying forecast changes|it and nics receipts and modelling,receipts_sources,Underlying forecast changes,IT and NICs receipts and modelling,modelling_other,,11,False
 EFO,receipts_sources|underlying forecast changes|latest dividend income shifting estimates,receipts_sources,Underlying forecast changes,Latest dividend income shifting estimates,modelling_other,no keyword matched; default,6,False
 EFO,receipts_sources|underlying forecast changes|january and february receipts sa it surplus,receipts_sources,Underlying forecast changes,January and February receipts SA IT surplus,modelling_other,no keyword matched; default,12,False
 EFO,receipts_sources|underlying forecast changes|january and february cgt shortfall,receipts_sources,Underlying forecast changes,January and February CGT shortfall,modelling_other,no keyword matched; default,6,False
-EFO,receipts_sources|underlying forecast changes|corporation tax receipts and modelling,receipts_sources,Underlying forecast changes,Corporation tax receipts and modelling,modelling_other,,12,False
+EFO,receipts_sources|underlying forecast changes|corporation tax receipts and modelling,receipts_sources,Underlying forecast changes,Corporation tax receipts and modelling,modelling_other,,17,False
 EFO,receipts_sources|underlying forecast changes|interest and dividend outturn and modelling,receipts_sources,Underlying forecast changes,Interest and dividend outturn and modelling,calibration_to_outturn,label mixes outturn with modelling or other,6,False
 EFO,receipts_sources|underlying forecast changes|business rates modelling,receipts_sources,Underlying forecast changes,Business rates modelling,modelling_other,,6,False
 EFO,receipts_sources|underlying forecast changes|gross operating surplus,receipts_sources,Underlying forecast changes,Gross operating surplus,modelling_other,no keyword matched; default,6,False
 EFO,receipts_sources|underlying forecast changes|rail franchise premia,receipts_sources,Underlying forecast changes,Rail franchise premia,modelling_other,no keyword matched; default,6,False
-EFO,receipts_sources|underlying forecast changes|other judgements and modelling,receipts_sources,Underlying forecast changes,Other judgements and modelling,modelling_other,,12,False
+EFO,receipts_sources|underlying forecast changes|other judgements and modelling,receipts_sources,Underlying forecast changes,Other judgements and modelling,modelling_other,,17,False
 EFO,receipts_sources|changes due to government decisions|effect of uk government decisions,receipts_sources,Changes due to Government decisions,Effect of UK Government decisions,policy,,6,False
 EFO,receipts_sources|changes due to government decisions|effect of devolved administration decisions,receipts_sources,Changes due to Government decisions,Effect of devolved administration decisions,policy,,6,False
-EFO,tax_drivers|economic determinants|average earnings,tax_drivers,Economic determinants,Average earnings,economic_determinants,,12,False
-EFO,tax_drivers|economic determinants|employee numbers,tax_drivers,Economic determinants,Employee numbers,economic_determinants,,12,False
-EFO,tax_drivers|economic determinants|inflation,tax_drivers,Economic determinants,Inflation,economic_determinants,,12,False
-EFO,tax_drivers|economic determinants|other economic determinants,tax_drivers,Economic determinants,Other economic determinants,economic_determinants,,12,False
+EFO,tax_drivers|economic determinants|average earnings,tax_drivers,Economic determinants,Average earnings,economic_determinants,,17,False
+EFO,tax_drivers|economic determinants|employee numbers,tax_drivers,Economic determinants,Employee numbers,economic_determinants,,17,False
+EFO,tax_drivers|economic determinants|inflation,tax_drivers,Economic determinants,Inflation,economic_determinants,,17,False
+EFO,tax_drivers|economic determinants|other economic determinants,tax_drivers,Economic determinants,Other economic determinants,economic_determinants,,17,False
 EFO,tax_drivers|other|outturn paye and nic1 receipts,tax_drivers,Other,Outturn PAYE and NIC1 receipts,calibration_to_outturn,,6,False
 EFO,tax_drivers|other|outturn nics on self-employed,tax_drivers,Other,Outturn NICs on self-employed,calibration_to_outturn,,6,False
 EFO,tax_drivers|other|outturn non-sa repayments,tax_drivers,Other,Outturn Non-SA repayments,calibration_to_outturn,,6,False
 EFO,tax_drivers|other|paye refresh,tax_drivers,Other,PAYE refresh,modelling_other,no keyword matched; default,6,False
-EFO,tax_drivers|other|other modelling and receipts changes,tax_drivers,Other,Other modelling and receipts changes,modelling_other,,6,False
+EFO,tax_drivers|other|other modelling and receipts changes,tax_drivers,Other,Other modelling and receipts changes,modelling_other,,11,False
 EFO,tax_drivers|effect of devolved administration decisions|scottish draft budget measures,tax_drivers,Effect of devolved administration decisions,Scottish draft Budget measures,policy,,6,False
 EFO,tax_drivers|underlying forecast changes|self employment income,tax_drivers,Underlying forecast changes,Self employment income,economic_determinants,,17,False
 EFO,tax_drivers|underlying forecast changes|dividend income,tax_drivers,Underlying forecast changes,Dividend income,modelling_other,no keyword matched; default,17,False
 EFO,tax_drivers|underlying forecast changes|savings income,tax_drivers,Underlying forecast changes,Savings income,modelling_other,no keyword matched; default,17,False
-EFO,tax_drivers|underlying forecast changes|other economic determinants,tax_drivers,Underlying forecast changes,Other economic determinants,economic_determinants,,56,False
+EFO,tax_drivers|underlying forecast changes|other economic determinants,tax_drivers,Underlying forecast changes,Other economic determinants,economic_determinants,,66,False
 EFO,tax_drivers|underlying forecast changes|latest dividend income shifting estimates,tax_drivers,Underlying forecast changes,Latest dividend income shifting estimates,modelling_other,no keyword matched; default,6,False
 EFO,tax_drivers|underlying forecast changes|january and february receipts surplus,tax_drivers,Underlying forecast changes,January and February receipts surplus,modelling_other,no keyword matched; default,6,False
 EFO,tax_drivers|underlying forecast changes|other modelling and receipts changes,tax_drivers,Underlying forecast changes,Other modelling and receipts changes,modelling_other,,17,False
-EFO,tax_drivers|underlying forecast changes|household spending,tax_drivers,Underlying forecast changes,Household spending,economic_determinants,,17,False
-EFO,tax_drivers|underlying forecast changes|standard rated share,tax_drivers,Underlying forecast changes,Standard rated share,modelling_other,,11,False
-EFO,tax_drivers|underlying forecast changes|outturn receipts and modelling,tax_drivers,Underlying forecast changes,Outturn receipts and modelling,calibration_to_outturn,label mixes outturn with modelling or other,34,False
-EFO,tax_drivers|underlying forecast changes|industrial and commercial company profits,tax_drivers,Underlying forecast changes,Industrial and commercial company profits,economic_determinants,,12,False
+EFO,tax_drivers|underlying forecast changes|household spending,tax_drivers,Underlying forecast changes,Household spending,economic_determinants,,22,False
+EFO,tax_drivers|underlying forecast changes|standard rated share,tax_drivers,Underlying forecast changes,Standard rated share,modelling_other,,16,False
+EFO,tax_drivers|underlying forecast changes|outturn receipts and modelling,tax_drivers,Underlying forecast changes,Outturn receipts and modelling,calibration_to_outturn,label mixes outturn with modelling or other,44,False
+EFO,tax_drivers|underlying forecast changes|industrial and commercial company profits,tax_drivers,Underlying forecast changes,Industrial and commercial company profits,economic_determinants,,17,False
 EFO,tax_drivers|underlying forecast changes|financial company profits,tax_drivers,Underlying forecast changes,Financial company profits,economic_determinants,,6,False
-EFO,tax_drivers|underlying forecast changes|house prices,tax_drivers,Underlying forecast changes,House prices,economic_determinants,,6,False
-EFO,tax_drivers|underlying forecast changes|residential property transactions,tax_drivers,Underlying forecast changes,Residential property transactions,economic_determinants,,6,False
-EFO,tax_drivers|underlying forecast changes|commercial property market,tax_drivers,Underlying forecast changes,Commercial property market,economic_determinants,,6,False
+EFO,tax_drivers|underlying forecast changes|house prices,tax_drivers,Underlying forecast changes,House prices,economic_determinants,,11,False
+EFO,tax_drivers|underlying forecast changes|residential property transactions,tax_drivers,Underlying forecast changes,Residential property transactions,economic_determinants,,11,False
+EFO,tax_drivers|underlying forecast changes|commercial property market,tax_drivers,Underlying forecast changes,Commercial property market,economic_determinants,,11,False
 EFO,tax_drivers|underlying forecast changes|first time buyer's relief,tax_drivers,Underlying forecast changes,First time buyer's relief,modelling_other,no keyword matched; default,6,False
 EFO,receipts_sources|underlying forecast changes|uk oil and gas,receipts_sources,Underlying forecast changes,UK oil and gas,economic_determinants,,11,False
-EFO,receipts_sources|underlying forecast changes|oil prices,receipts_sources,Underlying forecast changes,Oil prices,economic_determinants,,11,False
+EFO,receipts_sources|underlying forecast changes|oil prices,receipts_sources,Underlying forecast changes,Oil prices,economic_determinants,,16,False
 EFO,receipts_sources|underlying forecast changes|non-sa it and nics receipts and modelling,receipts_sources,Underlying forecast changes,Non-SA IT and NICs receipts and modelling,modelling_other,,6,False
-EFO,receipts_sources|underlying forecast changes|vat receipts and modelling,receipts_sources,Underlying forecast changes,VAT receipts and modelling,modelling_other,,6,False
-EFO,receipts_sources|underlying forecast changes|excise receipts and modelling,receipts_sources,Underlying forecast changes,Excise receipts and modelling,modelling_other,,6,False
+EFO,receipts_sources|underlying forecast changes|vat receipts and modelling,receipts_sources,Underlying forecast changes,VAT receipts and modelling,modelling_other,,11,False
+EFO,receipts_sources|underlying forecast changes|excise receipts and modelling,receipts_sources,Underlying forecast changes,Excise receipts and modelling,modelling_other,,11,False
 EFO,receipts_sources|underlying forecast changes|council tax,receipts_sources,Underlying forecast changes,Council tax,modelling_other,no keyword matched; default,6,False
 EFO,receipts_sources|underlying forecast changes|business rates receipts and modelling,receipts_sources,Underlying forecast changes,Business rates receipts and modelling,modelling_other,,6,False
-EFO,receipts_sources|underlying forecast changes|interest and dividend receipts and modelling,receipts_sources,Underlying forecast changes,Interest and dividend receipts and modelling,modelling_other,,6,False
+EFO,receipts_sources|underlying forecast changes|interest and dividend receipts and modelling,receipts_sources,Underlying forecast changes,Interest and dividend receipts and modelling,modelling_other,,11,False
 EFO,receipts_sources|underlying forecast changes|cgt outturn and modelling,receipts_sources,Underlying forecast changes,CGT outturn and modelling,calibration_to_outturn,label mixes outturn with modelling or other,6,False
 EFO,receipts_sources|effect of government decisions|direct effects,receipts_sources,Effect of Government decisions,Direct effects,policy,,6,False
-EFO,tax_drivers|other|recostings,tax_drivers,Other,Recostings,modelling_other,no keyword matched; default,11,False
+EFO,tax_drivers|other|recostings,tax_drivers,Other,Recostings,modelling_other,no keyword matched; default,16,False
 EFO,tax_drivers|other|outturn receipts and modelling,tax_drivers,Other,Outturn receipts and modelling,calibration_to_outturn,label mixes outturn with modelling or other,11,False
-EFO,tax_drivers|effect of government decisions|indirect effects,tax_drivers,Effect of Government decisions,Indirect effects,policy,,42,False
-EFO,tax_drivers|underlying forecast changes|recostings,tax_drivers,Underlying forecast changes,Recostings,modelling_other,no keyword matched; default,6,False
-EFO,tax_drivers|underlying forecast changes|modelling,tax_drivers,Underlying forecast changes,Modelling,modelling_other,,6,False
-EFO,tax_drivers|underlying forecast changes|outturn receipts,tax_drivers,Underlying forecast changes,Outturn receipts,calibration_to_outturn,,6,False
+EFO,tax_drivers|effect of government decisions|indirect effects,tax_drivers,Effect of Government decisions,Indirect effects,policy,,62,False
+EFO,tax_drivers|underlying forecast changes|recostings,tax_drivers,Underlying forecast changes,Recostings,modelling_other,no keyword matched; default,11,False
+EFO,tax_drivers|underlying forecast changes|modelling,tax_drivers,Underlying forecast changes,Modelling,modelling_other,,11,False
+EFO,tax_drivers|underlying forecast changes|outturn receipts,tax_drivers,Underlying forecast changes,Outturn receipts,calibration_to_outturn,,11,False
 EFO,tax_drivers|effect of government decisions|government decisions,tax_drivers,Effect of Government decisions,Government decisions,policy,,6,False
 EFO,receipts_sources|underlying forecast changes|paye it and nics outturn and modelling,receipts_sources,Underlying forecast changes,PAYE IT and NICs outturn and modelling,calibration_to_outturn,label mixes outturn with modelling or other,5,False
 EFO,receipts_sources|underlying forecast changes|sa it and cgt outturn and modelling,receipts_sources,Underlying forecast changes,SA IT and CGT outturn and modelling,calibration_to_outturn,label mixes outturn with modelling or other,5,False
@@ -376,7 +396,6 @@ EFO,receipts_sources||paye/nics/hsc,receipts_sources,,PAYE/NICs/HSC,modelling_ot
 EFO,receipts_sources||self assessment,receipts_sources,,Self assessment,modelling_other,no keyword matched; default,7,False
 EFO,receipts_sources||corporation tax,receipts_sources,,Corporation Tax,modelling_other,no keyword matched; default,7,False
 EFO,receipts_sources||vat,receipts_sources,,VAT,modelling_other,no keyword matched; default,7,False
-EFO,tax_drivers||wages and salaries,tax_drivers,,Wages and salaries,economic_determinants,,34,False
 EFO,tax_drivers||pre-measures effective tax rate,tax_drivers,,Pre-measures effective tax rate,modelling_other,no keyword matched; default,65,False
 EFO,tax_drivers||direct effect of government decisions,tax_drivers,,Direct effect of Government decisions,policy,,89,False
 EFO,tax_drivers||recosted sb21 threshold freezes,tax_drivers,,Recosted SB21 threshold freezes,modelling_other,no keyword matched; default,13,False
@@ -442,12 +461,10 @@ EFO,tax_drivers||impact of spending review measures,tax_drivers,,Impact of Spend
 EFO,tax_drivers||lower interest rates,tax_drivers,,Lower interest rates,economic_determinants,,6,False
 EFO,tax_drivers||composition of self assessment,tax_drivers,,Composition of self assessment,modelling_other,no keyword matched; default,6,False
 EFO,tax_drivers||nominal consumer spending,tax_drivers,,Nominal consumer spending,economic_determinants,,6,False
-EFO,tax_drivers||standard rated share of consumer spending,tax_drivers,,Standard rated share of consumer spending,economic_determinants,,6,False
 EFO,tax_drivers||government element of the vat base,tax_drivers,,Government element of the VAT base,modelling_other,,6,False
 EFO,tax_drivers||exempt sector assumptions,tax_drivers,,Exempt sector assumptions,modelling_other,,6,False
 EFO,tax_drivers||housing investment,tax_drivers,,Housing investment,economic_determinants,,6,False
 EFO,tax_drivers||litigation cases,tax_drivers,,Litigation cases,modelling_other,,6,False
-EFO,tax_drivers||vat gap,tax_drivers,,VAT gap,modelling_other,,6,False
 EFO,tax_drivers||equity prices,tax_drivers,,Equity prices,economic_determinants,,6,False
 EFO,tax_drivers||impact of receipts data,tax_drivers,,Impact of receipts data,modelling_other,no keyword matched; default,6,False
 EFO,tax_drivers||paye income tax and class 1 nic,tax_drivers,,PAYE income tax and Class 1 NIC,modelling_other,no keyword matched; default,5,False
@@ -516,7 +533,6 @@ EFO,tax_drivers|(by other category)|scorecard measures,tax_drivers,(by other cat
 EFO,tax_drivers|(by other category)|indirect effects of government decisions,tax_drivers,(by other category),Indirect effects of Government decisions,policy,,10,False
 EFO,"tax_drivers|(by economic determinant)|non-savings, non-dividend income",tax_drivers,(by economic determinant),"Non-savings, non-dividend income",modelling_other,no keyword matched; default,5,False
 EFO,tax_drivers|(by economic determinant)|dividend income,tax_drivers,(by economic determinant),Dividend income,modelling_other,no keyword matched; default,5,False
-EFO,tax_drivers|(by economic determinant)|savings income,tax_drivers,(by economic determinant),Savings income,modelling_other,no keyword matched; default,5,False
 EFO,tax_drivers||standard rated share,tax_drivers,,Standard rated share,modelling_other,,5,False
 EFO,tax_drivers||recostings of previous measures,tax_drivers,,Recostings of previous measures,policy,,5,False
 EFO,tax_drivers||outturn receipts and modelling,tax_drivers,,Outturn receipts and modelling,calibration_to_outturn,label mixes outturn with modelling or other,15,False
@@ -536,6 +552,22 @@ EFO,tax_drivers||changes to sa income tax rates,tax_drivers,,Changes to SA incom
 EFO,tax_drivers||vat on phvos,tax_drivers,,VAT on PHVOs,modelling_other,no keyword matched; default,5,False
 EFO,tax_drivers||vat on motability,tax_drivers,,VAT on Motability,modelling_other,no keyword matched; default,5,False
 EFO,tax_drivers||compliance and debt measures,tax_drivers,,Compliance and debt measures,policy,,5,False
+EFO,receipts_sources|underlying forecast changes|fuel receipts and modelling,receipts_sources,Underlying forecast changes,Fuel receipts and modelling,modelling_other,,5,False
+EFO,receipts_sources|underlying forecast changes|eu ets,receipts_sources,Underlying forecast changes,EU ETS,modelling_other,no keyword matched; default,5,False
+EFO,receipts_sources|underlying forecast changes|cgt modelling,receipts_sources,Underlying forecast changes,CGT modelling,modelling_other,,5,False
+EFO,receipts_sources|underlying forecast changes|north sea modelling,receipts_sources,Underlying forecast changes,North Sea modelling,modelling_other,,5,False
+EFO,receipts_sources|changes due to government decisions|effect of government decisions,receipts_sources,Changes due to Government decisions,Effect of Government decisions,policy,,5,False
+EFO,receipts_sources|changes due to government decisions|scorecard measures,receipts_sources,Changes due to Government decisions,Scorecard measures,policy,,5,False
+EFO,receipts_sources|changes due to government decisions|non-scorecard measures,receipts_sources,Changes due to Government decisions,Non-scorecard measures,policy,,5,False
+EFO,receipts_sources|changes due to government decisions|indirect effects,receipts_sources,Changes due to Government decisions,Indirect effects,policy,,5,False
+EFO,tax_drivers|other|pension flexibility costing,tax_drivers,Other,Pension flexibility costing,modelling_other,no keyword matched; default,5,False
+EFO,tax_drivers|effect of government decisions|scorecard measures,tax_drivers,Effect of Government decisions,Scorecard measures,policy,,15,False
+EFO,tax_drivers|underlying obr forecast changes|self employment income,tax_drivers,Underlying OBR forecast changes,Self employment income,economic_determinants,,5,False
+EFO,tax_drivers|underlying obr forecast changes|dividend income,tax_drivers,Underlying OBR forecast changes,Dividend income,modelling_other,no keyword matched; default,5,False
+EFO,tax_drivers|underlying obr forecast changes|savings income,tax_drivers,Underlying OBR forecast changes,Savings income,modelling_other,no keyword matched; default,5,False
+EFO,tax_drivers|underlying obr forecast changes|new aetr modelling,tax_drivers,Underlying OBR forecast changes,New AETR modelling,modelling_other,,5,False
+EFO,tax_drivers|underlying obr forecast changes|other modelling and receipts changes,tax_drivers,Underlying OBR forecast changes,Other modelling and receipts changes,modelling_other,,5,False
+EFO,tax_drivers|effect of government decisions|budget measures,tax_drivers,Effect of Government decisions,Budget measures,policy,,5,False
 EFO,receipts_sources||pre-measures effective tax rate,receipts_sources,,Pre-measures effective tax rate,modelling_other,no keyword matched; default,11,False
 EFO,receipts_sources||direct effect of government decisions,receipts_sources,,Direct effect of Government decisions,policy,,11,False
 EFO,receipts_sources|by policy and forecast differences|underlying forecast differences (ex. psnb-neutral),receipts_sources,By policy and forecast differences,Underlying forecast differences (ex. PSNB-neutral),policy,,6,False
