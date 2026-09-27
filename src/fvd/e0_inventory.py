@@ -429,6 +429,16 @@ def _first_pages_text(path, n=3) -> str:
         return ""
 
 
+def _pdf_metadata(path) -> dict:
+    import pymupdf as fitz
+
+    try:
+        with fitz.open(stream=path.read_bytes(), filetype="pdf") as pdf:
+            return pdf.metadata or {}
+    except Exception:
+        return {}
+
+
 def _page_count(path) -> int:
     import pymupdf as fitz
 
@@ -444,13 +454,19 @@ def _recover_report(d: dict, month_year: str) -> str:
 
     Candidates are archived PDFs on obr.uk or the OBR's former domains whose
     file name names the publication's month and year; a candidate is accepted
-    only if its first pages carry the report title and the month and year.
+    only if its first pages carry the report title and the month and year, or,
+    for a cover with no text layer, if the PDF's own title names the report and
+    its creation or modification date falls in that month.
     """
+    import calendar as _cal
+
     from .http import fetch_capture
     from .paths import RAW_DOCS
 
     month, year = month_year.split()
+    yyyymm = f"{year}{list(_cal.month_name).index(month):02d}"
     rule = _TITLE_PAGE_RULES.get(d["landing_url"].rstrip("/").rsplit("/", 1)[-1])
+    titles = _REPORT_TITLES[d["collection"]]
 
     def is_report(path) -> bool:
         # A full report runs to dozens of pages; annexes and notes are shorter.
@@ -458,8 +474,14 @@ def _recover_report(d: dict, month_year: str) -> str:
             return False
         # six pages: some covers are images with no text layer
         text = re.sub(r"\s+", " ", _first_pages_text(path, n=6)).lower()
-        ok = (any(t in text for t in _REPORT_TITLES[d["collection"]])
-              and month.lower() in text and year in text)
+        # month and year as one phrase: every FER cites the "... National Audit Act 2011"
+        ok = (any(t in text for t in titles)
+              and re.search(rf"{month.lower()} {year}(?!\d)", text) is not None)
+        if not ok and not _first_pages_text(path, n=1).strip():
+            meta = _pdf_metadata(path)
+            ok = (any(t in (meta.get("title") or "").lower() for t in titles)
+                  and any((meta.get(k) or "").startswith(f"D:{yyyymm}")
+                          for k in ("creationDate", "modDate")))
         if ok and rule is not None:
             ok = rule(re.sub(r"\s+", " ", _first_pages_text(path, n=1)).lower())
         return ok

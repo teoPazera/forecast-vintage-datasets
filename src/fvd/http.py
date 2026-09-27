@@ -347,6 +347,13 @@ def normalize_url(url: str) -> str:
 
 # --- public API ----------------------------------------------------------------
 
+def _same_resource(a: str, b: str) -> bool:
+    """Same URL up to scheme, www. and port, as the Wayback index records them."""
+    def key(u):
+        return re.sub(r"^https?://(www\.)?([^/:]+)(:\d+)?", r"\2", u.strip()).rstrip("/").lower()
+    return key(a) == key(b)
+
+
 def cached_path(url: str) -> Path | None:
     """Most recently retrieved usable local copy of `url`, if any."""
     url = normalize_url(url)
@@ -391,7 +398,9 @@ def fetch_capture(original_url: str, capture_of: str, dest_dir: Path, note: str,
     """
     hit = cached_path(original_url)
     if hit is not None:
-        return hit
+        # a cached copy stands for this candidate only if it was captured from it
+        row = load_sources()[hit.relative_to(ROOT).as_posix()]
+        return hit if _same_resource(row["fetched_url"].split("id_/", 1)[-1], capture_of) else None
     got = _download_wayback(capture_of, dest_dir, "latest", verify)
     if got is None:
         return None

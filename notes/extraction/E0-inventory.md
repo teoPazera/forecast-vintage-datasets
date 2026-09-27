@@ -37,8 +37,19 @@ provenance? Do the plan's statements about the sources (section 5) hold in the f
   OBR's former domains (`budgetresponsibility.org.uk`,
   `budgetresponsibility.independent.gov.uk`) was searched for file names naming the
   month and year. A candidate was accepted only if it has at least 25 pages and its
-  first pages carry the report title, month and year. Both URLs are kept
-  (`via = wayback-alternate`).
+  first pages carry the report title and "Month YYYY" as one phrase. Where the cover
+  is an image with no text layer, the PDF's own title and creation date must match
+  instead. Both URLs are kept (`via = wayback-alternate`).
+- **Correction (27 September 2026).** The first version of this check accepted the
+  month and the year anywhere in the first pages. For FER October 2011 it therefore
+  accepted the October 2023 FER, whose imprint page cites the "Budget Responsibility
+  and National Audit Act 2011". That capture is marked `invalid` in
+  `inventory/sources.csv`. The October 2011 FER now comes from
+  `budgetresponsibility.independent.gov.uk/wordpress/docs/Forecast-evaluation-report-2011.pdf`.
+  That file has 70 pages and an image cover; its PDF title is "Forecast evaluation
+  report", its author the OBR, and it was created on 10 October 2011. A second bug
+  had made the `notes` column name the wrong candidate file for three EFO reports;
+  the stored files were right. Both are fixed.
 - **Defaults taken.**
   - D5: dates known only to the month are set to the last day of the month and
     flagged `month_only`.
