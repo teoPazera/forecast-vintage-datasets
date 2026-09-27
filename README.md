@@ -95,6 +95,9 @@ to get past those challenges.
   links are listed in [`src/fvd/manual.py`](src/fvd/manual.py). To reproduce, save
   them there before running `python -m fvd.manual`; the SHA-256 in `sources.csv`
   shows whether a new download is the same file.
+- **Check against the live site.** The three OBR databases, downloaded in a browser
+  on 27 September 2026, are byte-for-byte identical to the archive copies used
+  ([`inventory/manual_checks.csv`](inventory/manual_checks.csv)).
 
 ## Licences
 

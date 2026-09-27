@@ -178,9 +178,13 @@ confirmed, 3 discrepancies, 1 deferred). The points that change later stages:
    is applied.
 4. **Access method.** All OBR and CBO files come from the Wayback Machine, because
    both sites block scripted clients. Wayback captures can lag a revision.
-   Mitigation: capture time and `Last-Modified` are recorded for every file. If
-   direct copies are wanted, the three database workbooks could be downloaded once
-   in a browser and their SHA-256 compared with `inventory/sources.csv`.
+   Mitigation: capture time and `Last-Modified` are recorded for every file.
+   - **Checked on 27 September 2026.** Teo downloaded the HOFD, FRD and PMD in a
+     browser from the OBR's own links. All three are byte-for-byte identical to the
+     archive copies used here (`inventory/manual_checks.csv`), so the archive copies
+     are the files the OBR serves.
+   - Three EFO workbooks that were never archived were downloaded the same way
+     (`via = manual`, see E2).
 5. **Monthly commentary gaps.** Roughly 10 to 12 of 12 months are listed per year;
    some months are missing from the OBR's own year pages. Whether this matters
    depends on D9.

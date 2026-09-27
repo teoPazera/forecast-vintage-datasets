@@ -29,6 +29,19 @@ SCHEMAS: dict[str, dict] = {
             ("note", "string", "", "free text: capture counts, alternate URL, refusal reason"),
         ],
     },
+    "inventory/manual_checks": {
+        "description": "Files downloaded in a browser from the source's own link and compared "
+                       "byte for byte with the archive copy used in the pipeline.",
+        "columns": [
+            ("manual_file", "string", "", "repository-relative path of the browser download (raw/manual/)"),
+            ("url", "string", "", "the source's own link it was downloaded from"),
+            ("compared_with", "string", "", "repository-relative path of the raw file used in the pipeline"),
+            ("downloaded_at", "datetime", "UTC", "file time of the browser download"),
+            ("sha256_manual", "string", "", "SHA-256 of the browser download"),
+            ("sha256_used", "string", "", "SHA-256 of the file used, as recorded in inventory/sources.csv"),
+            ("identical", "boolean", "", "true if the two hashes are equal"),
+        ],
+    },
     "inventory/documents": {
         "description": "Every inventoried document (forecast narratives and tables, in-period "
                        "commentary, post-hoc evaluations, other forecaster text).",

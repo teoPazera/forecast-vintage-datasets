@@ -1,0 +1,32 @@
+table: inventory/manual_checks
+description: Files downloaded in a browser from the source's own link and compared byte for byte with
+  the archive copy used in the pipeline.
+columns:
+- name: manual_file
+  type: string
+  unit: ''
+  description: repository-relative path of the browser download (raw/manual/)
+- name: url
+  type: string
+  unit: ''
+  description: the source's own link it was downloaded from
+- name: compared_with
+  type: string
+  unit: ''
+  description: repository-relative path of the raw file used in the pipeline
+- name: downloaded_at
+  type: datetime
+  unit: UTC
+  description: file time of the browser download
+- name: sha256_manual
+  type: string
+  unit: ''
+  description: SHA-256 of the browser download
+- name: sha256_used
+  type: string
+  unit: ''
+  description: SHA-256 of the file used, as recorded in inventory/sources.csv
+- name: identical
+  type: boolean
+  unit: ''
+  description: true if the two hashes are equal
