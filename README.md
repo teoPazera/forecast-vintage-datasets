@@ -75,6 +75,10 @@ python -m fvd.e5_stylized_facts   # stylized facts and tests
 The first run downloads from the Internet Archive with throttling and takes a few
 hours. Later runs use the local cache.
 
+The crosswalks in `crosswalks/` are reviewed by hand. `python -m fvd.review build`
+writes a review workbook of the rows that matter, and `python -m fvd.review apply`
+writes the answers back. Rows marked `reviewed` keep their mapping on reruns.
+
 ### Access
 
 `obr.uk` (Cloudflare) and `cbo.gov` (DataDome) answer every scripted request with a

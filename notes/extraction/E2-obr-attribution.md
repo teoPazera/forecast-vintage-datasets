@@ -134,9 +134,19 @@ And are these tables consistent with the HOFD forecasts parsed in E1?
   - property transaction taxes 8;
   - CGT 2, NICs 2, non-SA income tax 2, fuel 2.
 - **Other tables.** 25 receipts-by-type tables and 36 receipts-by-head tables.
-- **Attribution.** 6,822 rows with 559 distinct labels. Default categories: 269
-  modelling/other, 159 economic determinants, 87 policy, 41 calibration to outturn,
-  3 classification.
+- **Attribution.** 6,822 rows with 559 distinct labels. Default categories: 255
+  modelling/other, 158 economic determinants, 82 policy, 41 calibration to outturn,
+  17 split by tax head (not a cause), 3 underlying (unsplit), 3 classification.
+- **Correction (27 September 2026).** In the total-receipts tables, the section
+  heading "By policy and forecast differences" had made the keyword rule file
+  "Underlying forecast differences" and "PSNB-neutral forecast differences" under
+  policy. A heading that names a split no longer decides a row's cause:
+  - the underlying rows are now `underlying_unsplit`;
+  - the PSNB-neutral rows are `modelling_other`;
+  - the "By tax head" rows are `by_tax_head`.
+
+  None of these rows enter the E5 attribution shares, which use the per-tax
+  tables, so no E4 or E5 result changes.
 - **Consistency checks:**
   - **Forecast levels vs the HOFD** (0.05 + 0.5% of the value): **95.9%** of 1,643
     cells pass (current forecast 96.7%, previous 95.2%). Single-tax tables for SA IT,
@@ -166,8 +176,18 @@ And are these tables consistent with the HOFD forecasts parsed in E1?
 ## 4. Open questions
 
 1. **Review of the three crosswalks** (gate item).
-   - Most uncertain: pre-2010 event → HM Treasury vintage (rule-based), the three
-     assumed tax heads, and the keyword-based D3 categories of 559 EFO labels.
+   - `python -m fvd.review build` writes `review/review.xlsx`, which lists only rows
+     that can change a result:
+     - the 98 label wordings that carry 85% of the attributed revision, plus
+       uncertain defaults;
+     - the 22 assumed or unmapped PMD heads;
+     - the 33 events since June 2010.
+
+     `python -m fvd.review apply` writes the answers back (`reviewed`, `comment`).
+     Reviewed rows keep their mapping on every rerun.
+   - Most uncertain: the three assumed tax heads and the keyword-based D3 categories
+     of 559 EFO labels. The 52 pre-2010 event mappings change no result, because
+     component forecasts start in June 2010.
    - For example, "Outturn receipts and modelling" and "IT and NICs receipts and
      modelling" mix calibration with modelling. They are mapped to
      `calibration_to_outturn` and flagged in the `note` column.

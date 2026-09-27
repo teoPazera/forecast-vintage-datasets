@@ -9,8 +9,9 @@ __pycache__/
 # (URL, retrieval time, SHA-256). Fetch them with `python -m fvd.e0_inventory`.
 raw/
 
-# Local scratch and editor state
+# Local scratch and editor state; the review workbook (answers go to crosswalks/)
 scratch/
+review/
 .claude/settings.local.json
 .vscode/
 .DS_Store
