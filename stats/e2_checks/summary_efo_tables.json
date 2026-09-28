@@ -31,8 +31,8 @@
   "sum_share_pass": 0.9241,
   "sum_checks_pass_with_marked_groups_only": 974,
   "efo_direct_effect_vs_pmd_cells": 156,
-  "efo_direct_effect_vs_pmd_within_0.1": 104,
-  "efo_direct_effect_vs_pmd_median_abs_diff": 0.01999999999999999,
+  "efo_direct_effect_vs_pmd_within_0.1": 116,
+  "efo_direct_effect_vs_pmd_median_abs_diff": 0.012938761484925301,
   "attribution_rows": 6822,
   "attribution_labels": 559,
   "attribution_labels_by_category": {

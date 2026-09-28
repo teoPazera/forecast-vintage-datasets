@@ -36,11 +36,10 @@
   "obr_vintages_without_event": [],
   "pmd_heads": 94,
   "pmd_heads_by_confidence": {
-    "spending/assumed": 6,
-    "spending/exact": 10,
-    "spending/none": 16,
-    "tax/assumed": 3,
-    "tax/exact": 28,
-    "tax/none": 31
+    "spending/exact": 17,
+    "spending/none": 15,
+    "tax/assumed": 1,
+    "tax/exact": 32,
+    "tax/none": 29
   }
 }

@@ -25,7 +25,7 @@ import pandas as pd
 import statsmodels.api as sm
 from scipy import stats as sps
 
-from .paths import STATS, TABLES
+from .paths import CROSSWALKS, STATS, TABLES
 
 warnings.filterwarnings("ignore", category=RuntimeWarning)
 
@@ -189,11 +189,28 @@ def attribution_shares(c: pd.DataFrame) -> pd.DataFrame:
                    der.merge(hd, on=["target_period", "vintage_id"], how="inner")])
     a["bucket"] = bucket(a.horizon_months)
     a["abs"] = a.value.abs()
+    # D20: EFO rows whose label is still pending use the keyword category provisionally
+    a["pending"] = a.origin.map(efo_label_status()).eq("pending")
+    a["abs_pending"] = a["abs"].where(a.pending, 0.0)
     tot = a.groupby(["group", "series_id", "bucket"]).abs.sum().rename("total")
-    s = a.groupby(["group", "series_id", "family", "bucket", "category"]).agg(abs_sum=("abs", "sum"), n=("abs", "size")).reset_index()
+    s = a.groupby(["group", "series_id", "family", "bucket", "category"]).agg(
+        abs_sum=("abs", "sum"), n=("abs", "size"), n_pending=("pending", "sum"),
+        abs_pending=("abs_pending", "sum")).reset_index()
     s = s.merge(tot.reset_index(), on=["group", "series_id", "bucket"])
     s["share_of_abs_revision"] = s.abs_sum / s.total
-    return s
+    s["pending_share_of_abs"] = s.abs_pending / s.abs_sum.where(s.abs_sum > 0)
+    return s.drop(columns="abs_pending")
+
+
+def efo_label_status() -> dict[str, str]:
+    """Origin of each EFO attribution row -> status of its label in
+    crosswalks/attribution_labels.csv (settled_agreement | pending | reviewed)."""
+    from .e2_efo_tables import driver_rows
+    drv = driver_rows(pd.read_parquet(STATS / "e2_checks" / "efo_table_rows.parquet"))
+    origin = drv.file + "#" + drv.sheet + "!row" + (drv.row + 1).astype(str)
+    cw = pd.read_csv(CROSSWALKS / "attribution_labels.csv", dtype=str, keep_default_na=False)
+    st = dict(zip(cw[cw.source_table == "EFO"].label_key, cw[cw.source_table == "EFO"].status))
+    return dict(zip(origin, drv.label_key.map(st)))
 
 
 def calibration_predictability(c: pd.DataFrame) -> pd.DataFrame:

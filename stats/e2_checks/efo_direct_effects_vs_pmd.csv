@@ -5,20 +5,20 @@ obr.vat,obr_2015-07,2017-18,0.2,0.195,0.0050000000000000044,EFO T4.9: Changes du
 obr.vat,obr_2015-07,2018-19,0.7,0.74,0.040000000000000036,EFO T4.9: Changes due to Government decisions / Scorecard measures
 obr.vat,obr_2015-07,2019-20,1.0,0.995,0.0050000000000000044,EFO T4.9: Changes due to Government decisions / Scorecard measures
 obr.onshore,obr_2015-07,2015-16,0.1,0.11,0.009999999999999995,EFO T4.10: Changes due to Government decisions / Scorecard measures
-obr.onshore,obr_2015-07,2016-17,0.1,1.06,0.9600000000000001,EFO T4.10: Changes due to Government decisions / Scorecard measures
-obr.onshore,obr_2015-07,2017-18,3.5,5.06,1.5599999999999996,EFO T4.10: Changes due to Government decisions / Scorecard measures
-obr.onshore,obr_2015-07,2018-19,1.0,2.555,1.5550000000000002,EFO T4.10: Changes due to Government decisions / Scorecard measures
-obr.onshore,obr_2015-07,2019-20,-1.8,-0.6000000000000001,1.2,EFO T4.10: Changes due to Government decisions / Scorecard measures
+obr.onshore,obr_2015-07,2016-17,0.1,0.14500000000000002,0.04500000000000001,EFO T4.10: Changes due to Government decisions / Scorecard measures
+obr.onshore,obr_2015-07,2017-18,3.5,3.5300000000000002,0.03000000000000025,EFO T4.10: Changes due to Government decisions / Scorecard measures
+obr.onshore,obr_2015-07,2018-19,1.0,1.0300000000000002,0.03000000000000025,EFO T4.10: Changes due to Government decisions / Scorecard measures
+obr.onshore,obr_2015-07,2019-20,-1.8,-1.8499999999999999,0.04999999999999982,EFO T4.10: Changes due to Government decisions / Scorecard measures
 obr.vat,obr_2016-03,2016-17,0.1,0.115,0.015,EFO T4.11: Changes due to Government decisions / Scorecard measures
 obr.vat,obr_2016-03,2017-18,0.2,0.16999999999999998,0.030000000000000027,EFO T4.11: Changes due to Government decisions / Scorecard measures
 obr.vat,obr_2016-03,2018-19,0.2,0.22,0.01999999999999999,EFO T4.11: Changes due to Government decisions / Scorecard measures
 obr.vat,obr_2016-03,2019-20,0.4,0.39,0.010000000000000009,EFO T4.11: Changes due to Government decisions / Scorecard measures
 obr.vat,obr_2016-03,2020-21,0.4,0.425,0.024999999999999967,EFO T4.11: Changes due to Government decisions / Scorecard measures
 obr.onshore,obr_2016-03,2016-17,0.5,0.49000000000000005,0.009999999999999953,EFO T4.12: Changes due to Government decisions / Scorecard measures
-obr.onshore,obr_2016-03,2017-18,-3.1,-3.4199999999999995,0.3199999999999994,EFO T4.12: Changes due to Government decisions / Scorecard measures
-obr.onshore,obr_2016-03,2018-19,-0.5,-0.845,0.345,EFO T4.12: Changes due to Government decisions / Scorecard measures
-obr.onshore,obr_2016-03,2019-20,8.3,8.61,0.3099999999999987,EFO T4.12: Changes due to Government decisions / Scorecard measures
-obr.onshore,obr_2016-03,2020-21,4.8,5.15,0.35000000000000053,EFO T4.12: Changes due to Government decisions / Scorecard measures
+obr.onshore,obr_2016-03,2017-18,-3.1,-3.0799999999999996,0.020000000000000462,EFO T4.12: Changes due to Government decisions / Scorecard measures
+obr.onshore,obr_2016-03,2018-19,-0.5,-0.49,0.010000000000000009,EFO T4.12: Changes due to Government decisions / Scorecard measures
+obr.onshore,obr_2016-03,2019-20,8.3,8.27,0.030000000000001137,EFO T4.12: Changes due to Government decisions / Scorecard measures
+obr.onshore,obr_2016-03,2020-21,4.8,4.79,0.009999999999999787,EFO T4.12: Changes due to Government decisions / Scorecard measures
 obr.vat,obr_2017-03,2017-18,0.0501740726993961,0.055,0.004825927300603904,EFO T4.10: Changes due to Government decisions / Scorecard measures
 obr.vat,obr_2017-03,2018-19,0.07089157327708699,0.07,0.000891573277086985,EFO T4.10: Changes due to Government decisions / Scorecard measures
 obr.vat,obr_2017-03,2019-20,0.0710476877276333,0.07,0.0010476877276332924,EFO T4.10: Changes due to Government decisions / Scorecard measures
@@ -43,28 +43,28 @@ obr.vat,obr_2021-03,2024-25,0.17405695522635697,0.1055805361600378,0.06847641906
 obr.vat,obr_2021-03,2025-26,0.2862047893460263,0.20788061906107294,0.07832417028495334,EFO T3.9: Direct effect of Government decisions since March 2020 / March 2021 measures
 obr.onshore,obr_2021-03,2020-21,-0.005606634402541248,-2.6360278912402473,2.630421256837706,EFO T3.10: Direct effect of Government decisions since March 2020 / Main rate and small profits rate
 obr.onshore,obr_2021-03,2021-22,0.010419408599364468,-12.286573432710256,12.29699284130962,EFO T3.10: Direct effect of Government decisions since March 2020 / Main rate and small profits rate
-obr.onshore,obr_2021-03,2022-23,2.341243448988515,-9.780634906854816,12.121878355843332,EFO T3.10: Direct effect of Government decisions since March 2020 / Main rate and small profits rate
-obr.onshore,obr_2021-03,2023-24,11.759971415656109,9.723780396475743,2.0361910191803663,EFO T3.10: Direct effect of Government decisions since March 2020 / Main rate and small profits rate
-obr.onshore,obr_2021-03,2024-25,15.831147172630775,18.203800035235034,2.3726528626042587,EFO T3.10: Direct effect of Government decisions since March 2020 / Main rate and small profits rate
-obr.onshore,obr_2021-03,2025-26,16.43534909080668,19.47426108792981,3.0389119971231295,EFO T3.10: Direct effect of Government decisions since March 2020 / Main rate and small profits rate
+obr.onshore,obr_2021-03,2022-23,2.341243448988515,-9.774865554449,12.116109003437515,EFO T3.10: Direct effect of Government decisions since March 2020 / Main rate and small profits rate
+obr.onshore,obr_2021-03,2023-24,11.759971415656109,9.747540517467588,2.012430898188521,EFO T3.10: Direct effect of Government decisions since March 2020 / Main rate and small profits rate
+obr.onshore,obr_2021-03,2024-25,15.831147172630775,18.233209271548564,2.4020620989177885,EFO T3.10: Direct effect of Government decisions since March 2020 / Main rate and small profits rate
+obr.onshore,obr_2021-03,2025-26,16.43534909080668,19.5045601477707,3.0692110569640185,EFO T3.10: Direct effect of Government decisions since March 2020 / Main rate and small profits rate
 obr.onshore,obr_2021-03,2020-21,-1.7361191163590588,-2.6360278912402473,0.8999087748811885,EFO T3.10: Direct effect of Government decisions since March 2020 / Capital allowance measures
 obr.onshore,obr_2021-03,2021-22,-12.254002851770132,-12.286573432710256,0.032570580940124216,EFO T3.10: Direct effect of Government decisions since March 2020 / Capital allowance measures
-obr.onshore,obr_2021-03,2022-23,-12.694181664555865,-9.780634906854816,2.9135467577010488,EFO T3.10: Direct effect of Government decisions since March 2020 / Capital allowance measures
-obr.onshore,obr_2021-03,2023-24,-2.396948960649304,9.723780396475743,12.120729357125047,EFO T3.10: Direct effect of Government decisions since March 2020 / Capital allowance measures
-obr.onshore,obr_2021-03,2024-25,2.090091479772225,18.203800035235034,16.113708555462807,EFO T3.10: Direct effect of Government decisions since March 2020 / Capital allowance measures
-obr.onshore,obr_2021-03,2025-26,2.777751962390481,19.47426108792981,16.69650912553933,EFO T3.10: Direct effect of Government decisions since March 2020 / Capital allowance measures
+obr.onshore,obr_2021-03,2022-23,-12.694181664555865,-9.774865554449,2.9193161101068643,EFO T3.10: Direct effect of Government decisions since March 2020 / Capital allowance measures
+obr.onshore,obr_2021-03,2023-24,-2.396948960649304,9.747540517467588,12.144489478116892,EFO T3.10: Direct effect of Government decisions since March 2020 / Capital allowance measures
+obr.onshore,obr_2021-03,2024-25,2.090091479772225,18.233209271548564,16.143117791776337,EFO T3.10: Direct effect of Government decisions since March 2020 / Capital allowance measures
+obr.onshore,obr_2021-03,2025-26,2.777751962390481,19.5045601477707,16.726808185380218,EFO T3.10: Direct effect of Government decisions since March 2020 / Capital allowance measures
 obr.onshore,obr_2021-03,2020-21,-0.8400611798671899,-2.6360278912402473,1.7959667113730573,EFO T3.10: Direct effect of Government decisions since March 2020 / Extended loss carry back
 obr.onshore,obr_2021-03,2021-22,-0.11834722887508246,-12.286573432710256,12.168226203835173,EFO T3.10: Direct effect of Government decisions since March 2020 / Extended loss carry back
-obr.onshore,obr_2021-03,2022-23,0.5865856747026144,-9.780634906854816,10.367220581557431,EFO T3.10: Direct effect of Government decisions since March 2020 / Extended loss carry back
-obr.onshore,obr_2021-03,2023-24,0.30890193508929237,9.723780396475743,9.41487846138645,EFO T3.10: Direct effect of Government decisions since March 2020 / Extended loss carry back
-obr.onshore,obr_2021-03,2024-25,0.15545657492270135,18.203800035235034,18.04834346031233,EFO T3.10: Direct effect of Government decisions since March 2020 / Extended loss carry back
-obr.onshore,obr_2021-03,2025-26,0.07605085669748095,19.47426108792981,19.39821023123233,EFO T3.10: Direct effect of Government decisions since March 2020 / Extended loss carry back
+obr.onshore,obr_2021-03,2022-23,0.5865856747026144,-9.774865554449,10.361451229151616,EFO T3.10: Direct effect of Government decisions since March 2020 / Extended loss carry back
+obr.onshore,obr_2021-03,2023-24,0.30890193508929237,9.747540517467588,9.438638582378296,EFO T3.10: Direct effect of Government decisions since March 2020 / Extended loss carry back
+obr.onshore,obr_2021-03,2024-25,0.15545657492270135,18.233209271548564,18.07775269662586,EFO T3.10: Direct effect of Government decisions since March 2020 / Extended loss carry back
+obr.onshore,obr_2021-03,2025-26,0.07605085669748095,19.5045601477707,19.42850929107322,EFO T3.10: Direct effect of Government decisions since March 2020 / Extended loss carry back
 obr.onshore,obr_2021-03,2020-21,-0.05424096061145722,-2.6360278912402473,2.58178693062879,EFO T3.10: Direct effect of Government decisions since March 2020 / Other March 2021 measures
 obr.onshore,obr_2021-03,2021-22,0.07535723933559528,-12.286573432710256,12.361930672045851,EFO T3.10: Direct effect of Government decisions since March 2020 / Other March 2021 measures
-obr.onshore,obr_2021-03,2022-23,-0.008513013584264373,-9.780634906854816,9.772121893270551,EFO T3.10: Direct effect of Government decisions since March 2020 / Other March 2021 measures
-obr.onshore,obr_2021-03,2023-24,0.07561612737148898,9.723780396475743,9.648164269104253,EFO T3.10: Direct effect of Government decisions since March 2020 / Other March 2021 measures
-obr.onshore,obr_2021-03,2024-25,0.15651404422286555,18.203800035235034,18.047285991012167,EFO T3.10: Direct effect of Government decisions since March 2020 / Other March 2021 measures
-obr.onshore,obr_2021-03,2025-26,0.21540823787606017,19.47426108792981,19.258852850053753,EFO T3.10: Direct effect of Government decisions since March 2020 / Other March 2021 measures
+obr.onshore,obr_2021-03,2022-23,-0.008513013584264373,-9.774865554449,9.766352540864736,EFO T3.10: Direct effect of Government decisions since March 2020 / Other March 2021 measures
+obr.onshore,obr_2021-03,2023-24,0.07561612737148898,9.747540517467588,9.671924390096098,EFO T3.10: Direct effect of Government decisions since March 2020 / Other March 2021 measures
+obr.onshore,obr_2021-03,2024-25,0.15651404422286555,18.233209271548564,18.076695227325697,EFO T3.10: Direct effect of Government decisions since March 2020 / Other March 2021 measures
+obr.onshore,obr_2021-03,2025-26,0.21540823787606017,19.5045601477707,19.289151909894642,EFO T3.10: Direct effect of Government decisions since March 2020 / Other March 2021 measures
 obr.ptt,obr_2021-03,2020-21,-2.1970380620999204,-0.23057967600622598,1.9664583860936944,EFO T3.11: Direct effect of Government decisions since March 2020 / July 2020 stamp duty holiday
 obr.ptt,obr_2021-03,2021-22,-0.9813618404679937,-1.2841763857181019,0.3028145452501082,EFO T3.11: Direct effect of Government decisions since March 2020 / July 2020 stamp duty holiday
 obr.ptt,obr_2021-03,2022-23,0.0026652214084953805,-0.008212301561355235,0.010877522969850615,EFO T3.11: Direct effect of Government decisions since March 2020 / July 2020 stamp duty holiday
@@ -94,11 +94,11 @@ obr.onshore,obr_2022-03,2024-25,-0.09155273799863665,-0.09155273799863667,1.3877
 obr.onshore,obr_2022-03,2025-26,-0.2125915441793301,-0.21259154417933013,2.7755575615628914e-17,EFO T3.11: Direct effect of Government decisions
 obr.onshore,obr_2022-03,2026-27,-0.30474651638607664,-0.30474651638607675,1.1102230246251565e-16,EFO T3.11: Direct effect of Government decisions
 obr.onshore,obr_2023-03,2022-23,-1.1476432672369854,-1.1476432672369854,0.0,EFO T4.4: Direct effect of Government decisions
-obr.onshore,obr_2023-03,2023-24,-7.8408508389917335,-7.860850838991734,0.020000000000000462,EFO T4.4: Direct effect of Government decisions
-obr.onshore,obr_2023-03,2024-25,-10.564021244133796,-10.582021244133797,0.018000000000000682,EFO T4.4: Direct effect of Government decisions
-obr.onshore,obr_2023-03,2025-26,-8.593386416352834,-8.609386416352834,0.016000000000000014,EFO T4.4: Direct effect of Government decisions
-obr.onshore,obr_2023-03,2026-27,-1.485544113847956,-1.4885441138479563,0.0030000000000003357,EFO T4.4: Direct effect of Government decisions
-obr.onshore,obr_2023-03,2027-28,2.2649634639599436,2.2689634639599436,0.0040000000000000036,EFO T4.4: Direct effect of Government decisions
+obr.onshore,obr_2023-03,2023-24,-7.8408508389917335,-7.8408508389917335,0.0,EFO T4.4: Direct effect of Government decisions
+obr.onshore,obr_2023-03,2024-25,-10.564021244133796,-10.564021244133796,0.0,EFO T4.4: Direct effect of Government decisions
+obr.onshore,obr_2023-03,2025-26,-8.593386416352834,-8.593386416352834,0.0,EFO T4.4: Direct effect of Government decisions
+obr.onshore,obr_2023-03,2026-27,-1.485544113847956,-1.4855441138479564,4.440892098500626e-16,EFO T4.4: Direct effect of Government decisions
+obr.onshore,obr_2023-03,2027-28,2.2649634639599436,2.2649634639599436,0.0,EFO T4.4: Direct effect of Government decisions
 obr.vat,obr_2015-11,2015-16,0.0,0.0,0.0,EFO T4.11: Changes due to Government decisions / Scorecard measures
 obr.vat,obr_2015-11,2016-17,0.0,0.0,0.0,EFO T4.11: Changes due to Government decisions / Scorecard measures
 obr.vat,obr_2015-11,2017-18,0.0,0.0,0.0,EFO T4.11: Changes due to Government decisions / Scorecard measures
@@ -146,12 +146,12 @@ obr.onshore,obr_2018-10,2019-20,-0.5397538232469538,-0.5187685876793957,0.020985
 obr.onshore,obr_2018-10,2020-21,-0.6118812344736579,-0.5376751685479071,0.07420606592575085,EFO T4.13: Effect of Government decisions / Scorecard measures
 obr.onshore,obr_2018-10,2021-22,-0.32007507828476306,-0.26677575891554806,0.053299319369215004,EFO T4.13: Effect of Government decisions / Scorecard measures
 obr.onshore,obr_2018-10,2022-23,-0.3253878674745259,-0.33433970966539306,0.008951842190867143,EFO T4.13: Effect of Government decisions / Scorecard measures
-obr.onshore,obr_2021-10,2021-22,-10.126935509884701,-0.030956489191833015,10.095979020692868,EFO T3.10: Direct effect of Government decisions
-obr.onshore,obr_2021-10,2022-23,-8.316125443021404,-0.3680507876267338,7.94807465539467,EFO T3.10: Direct effect of Government decisions
-obr.onshore,obr_2021-10,2023-24,8.970249936841592,-0.6456693105190237,9.615919247360615,EFO T3.10: Direct effect of Government decisions
-obr.onshore,obr_2021-10,2024-25,16.884510222317395,-0.4603912507953257,17.34490147311272,EFO T3.10: Direct effect of Government decisions
-obr.onshore,obr_2021-10,2021-22,-0.0304638839085376,-0.030956489191833015,0.000492605283295415,EFO T3.10: Direct effect of Government decisions
-obr.onshore,obr_2021-10,2022-23,-0.1360412829865978,-0.3680507876267338,0.23200950464013603,EFO T3.10: Direct effect of Government decisions
-obr.onshore,obr_2021-10,2023-24,0.2556592419440113,-0.6456693105190237,0.901328552463035,EFO T3.10: Direct effect of Government decisions
-obr.onshore,obr_2021-10,2024-25,0.6102109383298817,-0.4603912507953257,1.0706021891252075,EFO T3.10: Direct effect of Government decisions
-obr.onshore,obr_2021-10,2025-26,0.6978291895253745,-0.3968622977444394,1.094691487269814,EFO T3.10: Direct effect of Government decisions
+obr.onshore,obr_2021-10,2021-22,-10.126935509884701,-0.030463883908537593,10.096471625976164,EFO T3.10: Direct effect of Government decisions
+obr.onshore,obr_2021-10,2022-23,-8.316125443021404,-0.13604128298659782,8.180084160034806,EFO T3.10: Direct effect of Government decisions
+obr.onshore,obr_2021-10,2023-24,8.970249936841592,0.2556592419440113,8.71459069489758,EFO T3.10: Direct effect of Government decisions
+obr.onshore,obr_2021-10,2024-25,16.884510222317395,0.6102109383298817,16.274299283987514,EFO T3.10: Direct effect of Government decisions
+obr.onshore,obr_2021-10,2021-22,-0.0304638839085376,-0.030463883908537593,6.938893903907228e-18,EFO T3.10: Direct effect of Government decisions
+obr.onshore,obr_2021-10,2022-23,-0.1360412829865978,-0.13604128298659782,2.7755575615628914e-17,EFO T3.10: Direct effect of Government decisions
+obr.onshore,obr_2021-10,2023-24,0.2556592419440113,0.2556592419440113,0.0,EFO T3.10: Direct effect of Government decisions
+obr.onshore,obr_2021-10,2024-25,0.6102109383298817,0.6102109383298817,0.0,EFO T3.10: Direct effect of Government decisions
+obr.onshore,obr_2021-10,2025-26,0.6978291895253745,0.6978291895253745,0.0,EFO T3.10: Direct effect of Government decisions

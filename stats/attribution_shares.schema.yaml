@@ -29,6 +29,10 @@ columns:
   type: integer
   unit: ''
   description: attribution rows
+- name: n_pending
+  type: integer
+  unit: ''
+  description: 'of which rows whose label is pending (D20): keyword category used provisionally'
 - name: total
   type: float
   unit: series unit
@@ -37,3 +41,7 @@ columns:
   type: float
   unit: ''
   description: abs_sum / total
+- name: pending_share_of_abs
+  type: float
+  unit: ''
+  description: share of abs_sum from rows whose label is pending

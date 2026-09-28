@@ -1,0 +1,36 @@
+measure_type,head,your_answer,status,comment
+spending,Company and other credits,Ctaxcreds: Company tax credits (£ billion),accept,keyword and Jev agree; R&D credits are the content of this series
+spending,Current VAT refunds,VATrefunds: VAT refunds (£ billion),check,"spending-coded measure on a receipts series: check sign before applying (a larger refund is a cost here, a receipts increase there); 3 small measures"
+spending,Debt interest,Netdebtint: Central government debt interest (net of APF) (£ billion),check,"financing-remit measures change CG gross interest, which feeds all three debt-interest series; use whichever one is in the E1 spending hierarchy"
+spending,Energy bills subsidies,(none): no forecast series,accept,no component series; large 2022-24 measures reach aggregates through FRD policy rows
+spending,Income subsidies,(none): no forecast series,accept,"furlough and SEISS were subsidies outside welfare spending, so not Total welfare"
+spending,LA other capital income,(none): no forecast series,accept,"label is LA income/financing, not expenditure; measures are small"
+spending,National Accounting Adjustment (capital),(none): no forecast series,accept,"1 measure, no matching series"
+spending,Net public service pension payments,Pensions: Unfunded public service pension payments (£ billion),accept,keyword and Jev agree
+spending,Other AME (capital),(none): no forecast series,accept,no matching series; both measures affect years without outturn
+spending,Other departmental expenditure (capital),(none): no forecast series,accept,no matching series; Bounce Back Loans and compensation are not CDEL
+spending,Other departmental expenditure (current),(none): no forecast series,accept,no matching series
+spending,Public corporations own-financed capital expenditure,PCcapex: Public corporations' capital expenditure (£ billion),accept,"head names the series; the one measure's description is about LAs, but it affects 2025-27 only, no outturn yet"
+spending,Scottish AME (capital),(none): no forecast series,accept,"2 measures, Spring Statement 2025, years without outturn"
+spending,Scottish AME (current),(none): no forecast series,accept,"6 measures, Spring Statement 2025, years without outturn"
+spending,Scottish BGA (capital),CDEL: PSGI in CDEL (£ billion),check,reading BGA as the Scottish block-grant share of UK capital DEL measures; same check as the current row
+spending,Scottish BGA (current),RDEL: PSCE in RDEL (£ billion),check,"313 measures, largest head in the queue; reading BGA as the Scottish block-grant share of UK resource DEL measures. Check: for one event, compare a measure's value here with the same measure under the UK RDEL head; a value near a tenth of it confirms"
+spending,Social security benefits,Total welfare: Welfare spending (£ billion),accept,keyword and Jev agree; spans inside and outside the cap
+spending,Tax credits,Total welfare: Welfare spending (£ billion),accept,"inside the cap, but mapped to Total welfare for consistency with social security and because the cap series starts later"
+spending,VAT refunds,VATrefunds: VAT refunds (£ billion),check,same sign question as Current VAT refunds; 3 small measures
+tax,Apprenticeship levy,(none): no forecast series,accept,"separate levy, not NICs"
+tax,Bank surcharge,Onshore: Onshore corporation tax (£ billion),accept,"surcharge is paid as CT; one measure also cuts Bank levy, which is a mixed-measure issue, not a mapping issue"
+tax,Crime levy,(none): no forecast series,accept,no matching series
+tax,Digital services tax,(none): no forecast series,check,"separate tax, not CT; confirm it is not inside onshore CT in the EFO receipts table"
+tax,Diverted profits tax,(none): no forecast series,check,confirm in the EFO receipts table whether DPT is a separate line or inside onshore CT; 1 measure
+tax,Domestic minimum tax,Onshore: Onshore corporation tax (£ billion),check,Pillar 2; confirm in the March 2026 EFO receipts table that it is inside onshore CT and not a separate line; large amounts
+tax,Energy bills tax,(none): no forecast series,accept,clawback of a support scheme; no matching series
+tax,Energy profits levy,Oilandgas: UK oil and gas revenues (£ billion),accept,keyword and Jev agree; EPL is counted in oil and gas revenues
+tax,High-value council tax surcharge,Council: Council tax (£ billion),accept,"starts April 2028, no outturn, cannot affect any case"
+tax,Immigration skills charge,(none): no forecast series,accept,"fee, no matching series"
+tax,Land registry receipts,(none): no forecast series,accept,"fee, not a property transaction tax"
+tax,Multinational top-up tax,Onshore: Onshore corporation tax (£ billion),check,"Pillar 2; same check as Domestic minimum tax, one lookup settles both"
+tax,Passport fees,(none): no forecast series,accept,"fee, no matching series"
+tax,Probate fees,(none): no forecast series,accept,"fee, not inheritance tax"
+tax,Retail property developers surcharge,(none): no forecast series,check,"description is Residential Property Developer Tax, a separate tax; confirm it is not inside onshore CT; 1 small measure"
+tax,Vaping duty,Vapes: Vaping tax (£ billion),accept,keyword and Jev agree
