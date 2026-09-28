@@ -219,8 +219,11 @@ def main() -> None:
                 f.write(json.dumps(s, ensure_ascii=False) + "\n")
     (OUT / "system_labels.txt").write_text(codebook_section(2) + "\n", encoding="utf-8")
     (OUT / "system_heads.txt").write_text(codebook_section(3) + "\n", encoding="utf-8")
-    ids = pilot(labels, heads)
-    (OUT / "pilot_ids.json").write_text(json.dumps({"seed": SEED, "ids": ids}, indent=1), encoding="utf-8")
+    # the pilot draw is a record: made once, not redrawn when categories change later
+    p = OUT / "pilot_ids.json"
+    if not p.exists():
+        p.write_text(json.dumps({"seed": SEED, "ids": pilot(labels, heads)}, indent=1), encoding="utf-8")
+    ids = json.loads(p.read_text(encoding="utf-8"))["ids"]
     print(f"{len(labels)} label states, {len(heads)} head states, pilot: {', '.join(ids)}")
 
 
