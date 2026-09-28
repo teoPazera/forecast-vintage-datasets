@@ -8,8 +8,9 @@
   "L0537",
   "L0392",
   "L0431",
-  "H043",
-  "H086",
-  "H050"
- ]
+  "H055",
+  "H026",
+  "H087"
+ ],
+ "note": "rows of the 10-row pilot as run on 28 Sep 2026 (the Jev log records without state_hash)"
 }
