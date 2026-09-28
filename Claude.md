@@ -4,18 +4,18 @@ Status: draft for review by Teo.
 Source facts in this plan were checked against downloaded files on 26 September 2026 unless marked **(verify)**. They are a starting point, not ground truth: re-check each one in the files before relying on it.
 
 ---
-
 ## 1. What this extraction is for
 
 ### 1.1 The research question
 
-An expert forecaster revises its forecast of the same target many times before the outcome is known. The question is whether the later revisions, and the final error, can be predicted from information available when each forecast was made:
+An expert forecaster revises its forecast of the same target many times before the outcome is known. The questions are whether the evidence that explains an error can be found, and whether the later revisions, and the final error, can be predicted from information available when each forecast was made:
 
+0. Retrieval: can passages that explain a forecast error be found among the documents available before the forecast, and how much harder is this when the cause is unknown (prospective query) than when it is known (retrospective query)?
 1. from the numbers alone (the history of forecasts and revisions),
 2. from the text the forecaster had published by that date, and
 3. for errors nobody anticipated: was the cause absent from every document available beforehand, or present and not acted on?
 
-A forecast is called efficient if its errors cannot be predicted from information available when it was made. The standard tests (bias, Mincer–Zarnowitz, autocorrelation of revisions as in Nordhaus 1987, and regression of errors on revisions as in Coibion & Gorodnichenko 2015) cover point 1. Points 2 and 3 need dated text and post-hoc explanations aligned to the same forecast cells, which is what this plan builds.
+A forecast is called efficient if its errors cannot be predicted from information available when it was made. The standard tests (bias, Mincer–Zarnowitz, autocorrelation of revisions as in Nordhaus 1987, and regression of errors on revisions as in Coibion & Gorodnichenko 2015) cover point 1. Points 0, 2 and 3 need dated text and post-hoc explanations aligned to the same forecast cells, which is what this plan builds. Point 1 serves as the numbers-only baseline that text-based results must improve on.
 
 ### 1.2 What the data must contain
 
@@ -49,7 +49,7 @@ Two public forecasters have the required structure:
 
 ### 1.5 Out of scope
 
-- Any call to a language model. Every stage in this plan is zero-cost. Linking text to series is deterministic here; model-based linking belongs in a later plan with its own cost gate.
+- Any hosted or paid language-model call. Local, zero-cost embedding models for retrieval baselines are allowed (D16). Exception: labelling crosswalk rows with Jev (TypeSafe) and a second model, following `crosswalks/codebook.md`, with every call recorded (D20, D21). Every stage in this plan is zero-cost. Linking text to series is deterministic here; model-based linking belongs in a later plan with its own cost gate.
 - Forecasting or error-prediction models beyond the descriptive regressions in stage E5.
 - The synthetic generator.
 - Text not written by the forecaster, such as central bank reports, statistical releases and news (decision D10).
@@ -284,6 +284,7 @@ Every table carries a `source` column. Formats are decision D15. Every table has
   - `passage_id`, `series_id`, `target_period`
   - `link_type` (explicit name / synonym / table reference / relative period resolved)
   - `ambiguous` (true / false)
+  - links records topical relevance (series and target period named). It does not record whether a passage explains an error; that is recorded in qrels.
 - **cells** (derived)
   - Everything in **forecasts**, plus the previous vintage and its value.
   - Revision and log revision.
@@ -292,12 +293,21 @@ Every table carries a `source` column. Formats are decision D15. Every table has
   - Flags: classification break, memo vintage, episode window.
 - **cases**, **controls**, **random_sample**
   - Trajectory identifiers plus the selection statistics defined in E6.
+- **qrels**
+  - `case_trajectory_id`, `vintage_id`, `passage_id`
+  - `mentions_cause` (yes / partial / no)
+  - `acted_on` (forecaster states it adjusted for it / states it did not / not stated)
+  - `cause_id`, `labeller`, `label_date`, `pooled_from` (list of runs)
+- **causes**
+  - `case_trajectory_id`, `cause_id`
+  - `cause_text` (short, written by Teo from the post-hoc passage), `post_hoc_passage_id`
+  - `attribution_category` (harmonized, D3, where the attribution tables support it)
 
 ---
 
 ## 7. Stages
 
-Stages run in the order listed. Case selection (E6) happens before any text is extracted or linked (E7, E8), so that the selection cannot be influenced by what the documents say.
+Stages run in the order listed. Case selection (E6) happens before any text is extracted or linked (R1, E7, E8), so that the selection cannot be influenced by what the documents say.
 
 ### E0 — Inventory and vintage calendar
 
@@ -430,7 +440,7 @@ All statistics are computed per source and per series family, for raw and policy
 
 ### E6 — Case scoring and selection (pre-registered)
 
-The selection rule and thresholds are written to `cases/preregistration.md` and hashed before any selection is run. They are not changed after E7 starts. Any later change is logged as a deviation, with its reason.
+The selection rule and thresholds are written to `cases/preregistration.md` and hashed before any selection is run. They are not changed after R1 starts. Any later change is logged as a deviation, with its reason.
 
 **Scoring**
 1. Error basis: log error for level series; error in per cent of GDP for balance series. Policy-adjusted by default (D2).
@@ -456,6 +466,44 @@ The selection rule and thresholds are written to `cases/preregistration.md` and 
 **Gate**
 - The pre-registration file was written and hashed before selection.
 - Counts are reported per stratum (source, family, episode) for cases, controls and the random sample.
+- The number of distinct target periods among cases, controls and the random sample is reported per source.
+
+### R1 — Retrieval pilot
+
+**Purpose**: measure whether retrieving error-explaining passages is hard, before full extraction.
+
+**Pilot selection** (written into `pilot/preregistration.md` and hashed before any text is extracted): from the E6 cases, the top P per source by case score among cases whose target period is covered by at least one post-hoc document according to the E0 inventory metadata (not its text). Default P = 3 (D17). The corpus window (D18) and the pool depth (D19) are written into the same file.
+
+E0 did not record which target periods a post-hoc document covers. R1 derives this from the inventory's titles and publication dates only (for example, the fiscal year named in a CBO accuracy report, or the year evaluated by an FER), and writes the rule and its result into `pilot/preregistration.md`.
+
+**Tasks**
+1. Implement the E7 extraction code and run it only on the documents needed for the pilot cases: all documents available before each vintage in the case's lead-time window (section 8 rules) and inside the corpus window (D18), plus the post-hoc documents for the target period. E7 later reuses the code and skips these documents.
+2. Build the E8 series dictionary and the E8 deterministic series-and-period linking, but only for the pilot series. E8 later reuses and extends them to all series. Section 8 rule 6 applies: the dictionary is built from series names and the forecaster's own terminology, not from case outcomes.
+3. Teo writes one short `cause_text` per cause from the post-hoc passages (**causes** table).
+4. Queries, fixed in `pilot/preregistration.md` before any retrieval run:
+   - prospective: template from series name, series synonyms (E8 dictionary), and target period only;
+   - retrospective: `cause_text`.
+5. Runs, each restricted per vintage to passages with `available_from` strictly before the vintage publication date (with the section 8 rule 3 exception for the forecaster's own narrative at that vintage):
+   - topical filter: E8 deterministic series-and-period linking, ranked by publication date, newest first. It does not use the query, so it is run and reported once per vintage, not per query type;
+   - BM25;
+   - one local dense embedding model (D16).
+
+   Save the top 50 per query and vintage.
+6. Pooling: Teo labels the union of the top N of every run (D19), plus any passages he finds by manual search (marked as such), into **qrels**.
+7. Metrics per source and query type:
+   - recall@5, @10 and @50 against the pool;
+   - rank of the first relevant passage;
+   - share of topical links with `mentions_cause` = yes;
+   - earliest vintage in the lead-time window at which a relevant passage exists and at which one is retrieved in the top 10.
+
+**Artifacts**: `pilot/preregistration.md` (plus hash), `pilot/queries`, `pilot/runs`, `tables/causes`, `tables/qrels`, `stats/retrieval_pilot`, `notes/extraction/R1-retrieval-pilot.md`.
+
+**Gate**: report only. The note must state, per source:
+- the difference in recall@10 between retrospective and prospective queries;
+- the number of labelled passages;
+- the number of distinct target periods among the pilot cases.
+
+It must state that recall is measured against a pool and is an upper bound. Stop for Teo's review before E7.
 
 ### E7 — Document acquisition and text extraction
 
@@ -465,6 +513,8 @@ The selection rule and thresholds are written to `cases/preregistration.md` and 
 3. Record extraction quality per document: characters per page, empty pages, pages that need OCR.
 4. De-duplicate documents, and record corrections and later modification dates.
 5. Assign `available_from` to every document according to the rules in section 8.
+
+Documents already extracted in R1 are not extracted again; the same extraction code is used.
 
 **Artifacts**: `raw/documents/`, `text/passages`, the `documents` table updated, `notes/extraction/E7-documents.md`.
 
@@ -480,6 +530,8 @@ The selection rule and thresholds are written to `cases/preregistration.md` and 
    - explicit ones: "2025-26", "2025–26", "fiscal year 2025", "FY2025";
    - relative ones: "this year", "next year", resolved against the publication date and marked `ambiguous`.
 3. Table references (e.g. "Table 3.5"), linked to the attribution rows they describe.
+
+The dictionaries and linking code built for the pilot series in R1 are reused and extended to all series.
 
 **Case packs**: one directory per case, control and random-sample trajectory, containing:
 - the trajectory table: vintages, forecasts, revisions, raw and policy-adjusted errors, z, and cell roles;
@@ -520,7 +572,8 @@ The selection rule and thresholds are written to `cases/preregistration.md` and 
 4. Post-hoc documents (FER, CBO accuracy and evaluation reports) are labels only. They must never appear in an input set.
 5. Outturns: at vintage v, only outturn estimates published before v may be used as inputs. The latest outturn is used only to compute errors.
 6. Crosswalks and dictionaries must not be built by looking at case outcomes.
-7. Case selection (E6) is fixed before text extraction (E7).
+7. Case selection (E6) is fixed before any text extraction (R1, E7).
+8. In R1, cause texts and retrospective queries are built from post-hoc documents by construction. They are used only to measure retrieval difficulty, never as inputs to a prediction.
 
 ---
 
@@ -532,6 +585,7 @@ The selection rule and thresholds are written to `cases/preregistration.md` and 
 - Attribution coverage by vintage and series.
 - Classification-break flags by series.
 - Case, control and random-sample counts per stratum.
+- R1 recall results by source and query type, and qrels counts.
 - Extraction quality and linking precision.
 - Every default taken for an open decision.
 
@@ -549,11 +603,18 @@ The selection rule and thresholds are written to `cases/preregistration.md` and 
 - **D8** Thresholds and episode windows. [`z* = 1.5`, `z_low = 0.5`, K = 15, M = 30; episode windows 2008-09 to 2009-10, 2020-21 to 2021-22 and 2022-23, tagged but not excluded.]
 - **D9** Include in-period commentary (OBR monthly public finances commentary, CBO Monthly Budget Review) as dated text. [Inventory in E0, extract in E7, but mark as optional in case packs.]
 - **D10** Text not written by the forecaster. [Out of this plan.]
+  - Consequence: the document corpus contains only the forecaster's own publications. Evidence before a forecast therefore means what the forecaster itself wrote, not third-party signals. Results from this corpus must be stated with this limitation. E0 must report whether any inventoried documents are written by a third party.
 - **D11** Pre-2010 HM Treasury forecasts. [Extract as a separate forecaster; exclude from case selection.]
 - **D12** Economy series (calendar-year, per cent change). [Extract; exclude from case selection; available as context.]
 - **D13** Trajectories with classification breaks. [Keep in the data; exclude from case selection.]
 - **D14** Memo and supplementary vintages. [Keep, flagged; exclude from revision chains.]
 - **D15** Storage format of tables. [A columnar format with a schema file next to each table.]
+- **D16** Local embedding model for the dense retriever. [Allowed; model chosen by Teo; zero cost; name and version recorded.]
+- **D17** Number of pilot cases per source. [P = 3.]
+- **D18** Corpus window for each R1 pilot case. [Documents published on or after the publication date of the first vintage that forecast the case's target period, subject at each vintage to the section 8 rules.]
+- **D19** Pool depth for R1 labelling. [Top 10 of each run at each vintage; each distinct passage is labelled once per case.]
+- **D20** Settling crosswalk rows by agreement. [A row is settled when Jev's top answer equals the keyword mapping, Jev's confidence is at least 0.7, and the label contains no negation (Teo, 28 September 2026). Unsettled PMD heads go to review before E6: on 28 September 2026 a separate Claude session proposed an answer for each of the 35 queued heads, Teo accepted them, and the pipeline session checked the rows marked `check` in the source files and overrode three of them on that evidence (`crosswalks/review_queue_heads_decisions.csv`, which names the labeller and the file each check used). Unsettled attribution labels stay `pending` with the keyword mapping as a provisional value, and every stage that uses them reports how many pending rows it used.]
+- **D21** Second model for pending attribution labels. [Pending: to be run on a separate machine; provider and model recorded in `results.jsonl`.]
 
 ---
 
@@ -564,15 +625,19 @@ raw/obr/                  raw/cbo/                 raw/documents/
 inventory/sources         inventory/vintage_calendar
 inventory/documents
 crosswalks/pmd_events     crosswalks/tax_heads     crosswalks/attribution_labels
+crosswalks/codebook.md    crosswalks/llm/          crosswalks/review_queue_heads
+crosswalks/review_queue_labels                     crosswalks/pending_second_model/
 tables/series             tables/vintages          tables/forecasts
 tables/outturns           tables/attribution       tables/policy_measures
-tables/cells
+tables/cells              tables/causes            tables/qrels
 stats/cbo_replication     stats/stylized_facts     stats/efficiency_tests
-stats/calibration_targets
+stats/calibration_targets stats/retrieval_pilot
 text/passages             text/links
 cases/preregistration.md  cases/cases              cases/controls
 cases/random_sample       cases/packs/<trajectory_id>/
+pilot/preregistration.md  pilot/queries            pilot/runs
 notes/extraction/E0-inventory.md … E9-data-card.md
+notes/extraction/R1-retrieval-pilot.md
 DATA_CARD.md
 ```
 
