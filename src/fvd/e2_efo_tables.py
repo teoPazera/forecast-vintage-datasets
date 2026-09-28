@@ -399,7 +399,7 @@ def attribution_rows(rows: pd.DataFrame, lab2vid: dict, cw: dict) -> tuple[pd.Da
         cat, note = (old["category"], old["note"]) if done else default_category(text, section, r.kind)
         labels.append({"source_table": "EFO", "label_key": key, "table_kind": r.kind, "section": section,
                        "label": text, "category": cat, "note": note, "reviewed": done,
-                       "comment": old.get("comment", "")})
+                       "comment": old.get("comment", ""), **X.llm_fields(old)})
         prev = r.block_previous if isinstance(r.block_previous, str) else None
         out.append({"source": "OBR", "series_id": r.series_id, "target_period": r.target_period,
                     "vintage_id": lab2vid.get(r.vintage_label), "previous_vintage_id": lab2vid.get(prev),
@@ -411,7 +411,7 @@ def attribution_rows(rows: pd.DataFrame, lab2vid: dict, cw: dict) -> tuple[pd.Da
     lab = pd.DataFrame(labels).drop_duplicates("label_key")
     lab["n_rows"] = lab.label_key.map(pd.Series([l["label_key"] for l in labels]).value_counts())
     lab = lab[["source_table", "label_key", "table_kind", "section", "label", "category", "note",
-               "n_rows", "reviewed", "comment"]]
+               "n_rows", "reviewed", "comment", *X.LLM_COLS]]
     return pd.DataFrame(out), lab
 
 
@@ -482,7 +482,8 @@ def main() -> None:
 
     def kept(src, k):
         o = old.get((src, k), {})
-        return {"reviewed": X.is_true(o.get("reviewed", "")), "comment": o.get("comment", "")}
+        return {"reviewed": X.is_true(o.get("reviewed", "")), "comment": o.get("comment", ""),
+                **dict.fromkeys(X.LLM_COLS, ""), "status": "fixed_in_code"}
 
     frd = pd.DataFrame([{"source_table": "FRD", "label_key": k, "table_kind": "frd", "section": "",
                          "label": k, "category": v[0], "note": v[1], "n_rows": None, **kept("FRD", k)}

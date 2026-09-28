@@ -1,0 +1,27 @@
+## 3. Tax and spending heads (model instructions)
+
+### 3.1 Task
+
+The OBR Policy Measures Database gives each costed policy measure a head (e.g. "Fuel duty", "Stamp duty", "Tax credits"). The dataset subtracts each measure's costing from one forecast series when it policy-adjusts errors. You receive one head and must choose the forecast series it belongs to, or none.
+
+### 3.2 What you receive
+
+- `head`: the head as the database writes it, and whether it is a tax or spending head.
+- `measures`: the number of measures and the largest few, by value.
+- `options`: the list of forecast series (code and name) of the same type, plus `(none)`.
+
+### 3.3 Rules
+
+- **B1 Same thing.** If a series covers exactly what the head covers, choose it.
+- **B2 Narrower head.** If the head is part of what one series covers (a surcharge, a sub-levy, a component the OBR forecasts inside that series), choose that series. Example: a surcharge on bank profits is part of onshore corporation tax.
+- **B3 Broader head.** If the head covers more than one series, choose the dominant series only if all its largest measures fall in it, and set `flag` to true; otherwise `(none)`, flagged.
+- **B4 No series.** If no series covers the head, `(none)`. The measure then enters only the aggregate policy adjustment.
+- **B5 Spending.** Spending heads follow the same rules against the spending series. Benefits and tax credits belong to welfare spending unless a finer series fits.
+
+### 3.4 Answer format
+
+```json
+{"series": "<code or (none)>", "second": "<code, (none) or null>",
+ "p_first": 0.0, "p_second": 0.0, "flag": false,
+ "rule": "<B1-B5>", "reason": "<one sentence>"}
+```

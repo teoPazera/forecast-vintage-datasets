@@ -1,0 +1,80 @@
+## 2. Attribution labels (model instructions)
+
+### 2.1 Task
+
+The OBR publishes tables that explain why its receipts forecast changed since the previous forecast. Each row of such a table is one cause, in the OBR's own words. You receive one row and must assign exactly one category from 2.3.
+
+### 2.2 What you receive
+
+- `label`: the row's wording.
+- `section`: the heading the row sits under in the table (may be empty).
+- `table_title`: the table title, forecast date and table number, e.g. "Non-SA income tax and NICs: changes since October (March 2025, T4.3)".
+- `table_rows`: all rows of that table in order, without numbers, with the row to label marked `>>`, and totals, subtotals and group headings tagged. A group heading is a row whose value is the sum of the rows directly beneath it; code finds these from the numbers.
+- `group_heading_above`: the group heading the row belongs to, if any (rule A2b).
+
+### 2.3 Categories
+
+Five causes:
+
+1. **policy**: the effect of government decisions announced at this fiscal event. Includes scorecard and non-scorecard measures, direct and indirect effects of decisions, devolved administration decisions, and named measures listed under a government-decisions heading. Does *not* include re-estimates of measures announced at earlier events (rule A4).
+2. **economic_determinants**: changes to the OBR's economy forecast that move the tax base. Earnings, wages and salaries, employment, self-employment income, household and government consumption, investment, company profits, property prices and transactions, equity prices, interest rates, exchange rates, oil and gas prices and production, inflation, GDP, population, productivity, hours worked, unemployment. Also generic labels: "economic determinants", "determinants", "market-derived assumptions", "tax base(s)".
+3. **calibration_to_outturn**: new data on receipts or the economy that arrived since the previous forecast. "Outturn", "receipts data", "latest receipts", "liabilities data", in-year surpluses or shortfalls ("January and February receipts surplus"), and the receipts of a completed year ("Lower 2016-17 PAYE and NIC1 receipts").
+4. **classification_one_offs**: statistical classification or accounting-treatment changes (reclassifications, new items brought into the receipts measure) and identifiable one-off items (rule A7).
+5. **modelling_other**: model changes, forecaster judgement, recostings of earlier measures (A4), effective tax rates (A6), error-correction terms, PSNB-neutral items (A10), the standard-rated share (A11), residuals, and anything that is none of the above.
+
+Two structural categories, used when the row is not a cause at all:
+
+6. **underlying_unsplit**: the row is the whole non-policy change in one number ("Underlying forecast differences").
+7. **by_tax_head**: the row is one tax in a split of the change *by tax*, not by cause (typically under a "By tax head" section, or a table whose rows are all taxes).
+
+### 2.4 Rules, applied in this order
+
+- **A1 Section first.** Under a government-decisions heading ("Effect of Government decisions", "Changes due to Government decisions", "Direct effect of Government decisions ..."), the row is policy unless A4 applies. Under "(by economic determinant)" or "Economic determinants", it is economic_determinants unless the label clearly names something else. Under "By tax head", it is by_tax_head. Under an "Underlying ..." heading or no heading, the label decides.
+- **A2 Group headings.** If the row is a group heading (its value is the sum of the rows directly beneath it), give it the category most of those rows share; if they are evenly mixed, modelling_other.
+- **A2b Rows inside a group.** A row that belongs to a group heading (it is one of the rows the heading totals) takes the group heading as its section for A1 and A8. Example: in "SA income tax: changes since March" (November 2025, T4.5), "Changes to SA income tax rates", "Coding out measure" and "Other" sum to "Direct effect of Government decisions", so all three are policy. (Added 28 September 2026 after the pilot; it applies A1 to headings the OBR writes as subtotal rows.)
+- **A3 Data beats modelling.** A label mentioning outturn, receipts data, liabilities data or a named past year's receipts is calibration_to_outturn, even when it also says "modelling" or "other". Set `mixed` to true.
+- **A4 Recostings.** "Recosting", "re-costing", "revised ... costing", "costing revisions": modelling_other, even under a policy heading.
+- **A5 Economy named.** A label naming an economy variable from 2.3 item 2 is economic_determinants. If it combines determinants with modelling or other ("Other determinants and modelling", "Other changes (including determinants)"), it is modelling_other with `mixed` true.
+- **A6 Effective tax rates.** "Effective tax rate", "ETR", "pre-measures factors": modelling_other. "Tax base": economic_determinants.
+- **A7 One-offs.** Litigation, fines, one-off dividends, one-off compensation or repayment schemes: classification_one_offs (unless A4 applies: a revised costing of a one-off measure is a recosting).
+- **A8 "Other".** "Other", "Residual", "Other factors", "Other changes" take the category of their section: policy under a government-decisions heading, economic_determinants under a determinants heading, otherwise modelling_other.
+- **A9 A tax named without a cause.** A label that only names a tax or receipts stream ("VAT", "Life insurance", "Self assessment") is by_tax_head when the table or section splits by tax; inside a cause section it is modelling_other.
+- **A10 PSNB-neutral.** modelling_other, with `psnb_neutral` true.
+- **A11 Standard-rated share.** modelling_other, unless the label ties it to an economy variable ("Oil price effect on standard rated share" is economic_determinants).
+
+### 2.5 Worked examples
+
+| Label | Section | Category | Rule |
+|---|---|---|---|
+| Average earnings | (by economic determinant) | economic_determinants | A1 |
+| Scorecard measures | Effect of Government decisions | policy | A1 |
+| Indirect effects of Government decisions | (none) | policy | 2.3 item 1 |
+| Recostings of previous measures | (by other category) | modelling_other | A4 |
+| Income and expenditure | Underlying OBR forecast changes, value = sum of Average earnings ... Other beneath it | economic_determinants | A2 |
+| Other assumptions | Underlying OBR forecast changes, group heading over "IT and NICs receipts and modelling" ... "Other judgements and modelling" | calibration_to_outturn | A2, A3 (most rows beneath mention receipts or outturn) |
+| Outturn PAYE receipts | (by other category) | calibration_to_outturn | A3 |
+| Latest receipts | (none) | calibration_to_outturn | A3 |
+| CGT outturn and modelling | Underlying OBR forecast changes | calibration_to_outturn, mixed | A3 |
+| Pre-measures effective tax rate | (none), in a table with "Forecast changes to earnings and employment" | modelling_other | A6 |
+| Key tax bases | Underlying forecast changes since March 2020 | economic_determinants | A5, A6 |
+| Exchange rates | Underlying OBR forecast changes | economic_determinants | A5 |
+| Error correction | (none) | modelling_other | 2.3 item 5 |
+| Litigation cases | (none) | classification_one_offs | A7 |
+| Underlying forecast differences | By policy and forecast differences | underlying_unsplit | 2.3 item 6 |
+| Value added tax | By tax head | by_tax_head | A1 |
+| Other | Effect of Government decisions | policy | A8 |
+| Other | Underlying OBR forecast changes | modelling_other | A8 |
+
+### 2.6 Answer format
+
+Return JSON only:
+
+```json
+{"category": "<one of the 7>", "second": "<next most likely, or null>",
+ "p_first": 0.0, "p_second": 0.0, "mixed": false, "psnb_neutral": false,
+ "rule": "<rule id or definition used, e.g. A3>", "reason": "<one sentence>"}
+```
+
+`p_first` and `p_second` are your probabilities for the two categories. Use a low `p_first` when the label is unclear even with the context; do not guess confidently.
+
+Jev does not write text: it receives section 2.3 as a Choice question and returns a probability for every category, plus yes/no answers to narrow tests (rules A3–A11) from which code applies the rule order (`src/fvd/jev_label.py`). This JSON format is for generative models.

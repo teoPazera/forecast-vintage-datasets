@@ -270,7 +270,7 @@ def build_crosswalks(pmd: pd.DataFrame, vint: pd.DataFrame) -> tuple[pd.DataFram
                       "aggregate_series_id": S.series_id("£PSCR" if mt == "tax" else "£TME"),
                       "confidence": conf, "note": note,
                       "n_measures": g.measure.nunique(), "reviewed": done,
-                      "comment": old.get("comment", "")})
+                      "comment": old.get("comment", ""), **X.llm_fields(old)})
     return pd.DataFrame(ev), pd.DataFrame(heads)
 
 

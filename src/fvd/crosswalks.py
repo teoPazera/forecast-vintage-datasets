@@ -21,6 +21,17 @@ import pandas as pd
 from .paths import CROSSWALKS
 
 
+# Model-assisted labelling (crosswalks/codebook.md; plan D20, D21): written by
+# fvd.jev_route, kept on every rerun. status: settled_agreement | pending |
+# reviewed | fixed_in_code; empty until routed.
+LLM_COLS = ["status", "labeller", "jev_choice", "jev_p1", "jev_second", "jev_p2", "jev_confidence",
+            "route_reason"]
+
+
+def llm_fields(old: dict) -> dict:
+    return {c: old.get(c, "") for c in LLM_COLS}
+
+
 def is_true(v) -> bool:
     return str(v).strip().lower() in ("true", "1", "yes", "y", "x")
 

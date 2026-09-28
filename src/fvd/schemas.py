@@ -11,6 +11,18 @@ from pathlib import Path
 import pandas as pd
 import yaml
 
+# model-assisted labelling columns shared by the reviewed crosswalks (fvd.jev_route)
+LLM_COLUMNS = [
+    ("status", "string", "", "settled_agreement (Jev's top answer = current mapping, confidence >= D20, no negation) | pending (provisional mapping, awaiting second model or Teo) | reviewed (decided by Teo) | fixed_in_code; empty until routed"),
+    ("labeller", "string", "", "who decided the current mapping: keyword rules + Jev (settled by agreement), or the reviewer named for reviewed rows"),
+    ("jev_choice", "string", "", "Jev's top answer (crosswalks/codebook.md)"),
+    ("jev_p1", "float", "probability", "probability of jev_choice"),
+    ("jev_second", "string", "", "Jev's second answer"),
+    ("jev_p2", "float", "probability", "probability of jev_second"),
+    ("jev_confidence", "float", "", "Jev's confidence (0-1, from the spread of the probabilities)"),
+    ("route_reason", "string", "", "why the row is pending"),
+]
+
 SCHEMAS: dict[str, dict] = {
     "inventory/sources": {
         "description": "Provenance of every raw file and every refused or failed request.",
@@ -208,6 +220,7 @@ SCHEMAS: dict[str, dict] = {
             ("n_measures", "integer", "", "number of distinct measures with this head"),
             ("reviewed", "boolean", "", "true once Teo has checked the row"),
             ("comment", "string", "", "reviewer's comment"),
+            *LLM_COLUMNS,
         ],
     },
     "crosswalks/attribution_labels": {
@@ -225,6 +238,7 @@ SCHEMAS: dict[str, dict] = {
             ("n_rows", "integer", "", "attribution rows (label x target period x vintage) with this label"),
             ("reviewed", "boolean", "", "true once Teo has checked the row"),
             ("comment", "string", "", "reviewer's comment"),
+            *LLM_COLUMNS,
         ],
     },
     "tables/policy_measures": {
@@ -334,8 +348,10 @@ SCHEMAS: dict[str, dict] = {
             ("category", "string", "", "harmonized category (D3)"),
             ("abs_sum", "float", "series unit", "sum of absolute attributed revisions"),
             ("n", "integer", "", "attribution rows"),
+            ("n_pending", "integer", "", "of which rows whose label is pending (D20): keyword category used provisionally"),
             ("total", "float", "series unit", "sum over categories"),
             ("share_of_abs_revision", "float", "", "abs_sum / total"),
+            ("pending_share_of_abs", "float", "", "share of abs_sum from rows whose label is pending"),
         ],
     },
 }

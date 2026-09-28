@@ -75,9 +75,23 @@ python -m fvd.e5_stylized_facts   # stylized facts and tests
 The first run downloads from the Internet Archive with throttling and takes a few
 hours. Later runs use the local cache.
 
-The crosswalks in `crosswalks/` are reviewed by hand. `python -m fvd.review build`
-writes a review workbook of the rows that matter, and `python -m fvd.review apply`
-writes the answers back. Rows marked `reviewed` keep their mapping on reruns.
+The crosswalks in `crosswalks/` follow the written standard in
+`crosswalks/codebook.md`. Rows are labelled by keyword rules and checked with Jev
+(TypeSafe; needs `TYPESAFE_API_KEY` in the environment or `.env`); rows where the
+two agree with enough confidence are settled (plan D20), the rest are reviewed:
+
+```sh
+python -m fvd.crosswalk_states       # per-row context for the labeller (crosswalks/llm/)
+python -m fvd.jev_label all          # Jev's answers, logged in crosswalks/llm/jev_results.jsonl
+python -m fvd.jev_route              # settle by agreement; queue the rest
+python -m fvd.jev_route apply-heads  # write crosswalks/review_queue_heads_decisions.csv
+python -m fvd.second_model_package   # pending labels for the second model (D21)
+python -m fvd.merge_second_model     # after crosswalks/pending_second_model/results.jsonl exists
+python -m fvd.spot_check             # blind spot-check of settled rows; `score` compares
+```
+
+Rows marked `reviewed` keep their mapping on reruns. `python -m fvd.review build`
+still writes the older review workbook.
 
 ### Access
 

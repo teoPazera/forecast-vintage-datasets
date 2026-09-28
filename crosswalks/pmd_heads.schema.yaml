@@ -42,3 +42,38 @@ columns:
   type: string
   unit: ''
   description: reviewer's comment
+- name: status
+  type: string
+  unit: ''
+  description: settled_agreement (Jev's top answer = current mapping, confidence >= D20, no negation)
+    | pending (provisional mapping, awaiting second model or Teo) | reviewed (decided by Teo) | fixed_in_code;
+    empty until routed
+- name: labeller
+  type: string
+  unit: ''
+  description: 'who decided the current mapping: keyword rules + Jev (settled by agreement), or the reviewer
+    named for reviewed rows'
+- name: jev_choice
+  type: string
+  unit: ''
+  description: Jev's top answer (crosswalks/codebook.md)
+- name: jev_p1
+  type: float
+  unit: probability
+  description: probability of jev_choice
+- name: jev_second
+  type: string
+  unit: ''
+  description: Jev's second answer
+- name: jev_p2
+  type: float
+  unit: probability
+  description: probability of jev_second
+- name: jev_confidence
+  type: float
+  unit: ''
+  description: Jev's confidence (0-1, from the spread of the probabilities)
+- name: route_reason
+  type: string
+  unit: ''
+  description: why the row is pending

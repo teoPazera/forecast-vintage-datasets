@@ -1,0 +1,20 @@
+{
+ "D20": 0.7,
+ "labels": {
+  "settled_agreement": 344,
+  "pending": 215
+ },
+ "labels_pending_reasons": {
+  "disagree": 123,
+  "confidence": 119,
+  "group heading (A2)": 21,
+  "negation in label (guard)": 21
+ },
+ "labels_agreement_top_answer": 0.78,
+ "heads": {
+  "settled_agreement": 59,
+  "pending": 35
+ },
+ "heads_in_queue": 35,
+ "heads_agreement_top_answer": 0.809
+}
