@@ -1,0 +1,2 @@
+system-one-adapter[openai]==0.2.1
+openai>=2.53

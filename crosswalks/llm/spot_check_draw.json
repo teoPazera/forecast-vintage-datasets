@@ -1,0 +1,107 @@
+{
+ "seed": 20260929,
+ "n": 20,
+ "pool": 403,
+ "rows": [
+  {
+   "n": 1,
+   "crosswalk": "attribution_labels",
+   "key": "tax_drivers|changes due to government decisions|main rate cut to 19 per cent in april 2017 and to 18 per cent in april 2020"
+  },
+  {
+   "n": 2,
+   "crosswalk": "attribution_labels",
+   "key": "tax_drivers|underlying obr forecast changes|industrial and commercial company profits"
+  },
+  {
+   "n": 3,
+   "crosswalk": "pmd_heads",
+   "key": "tax|Fuel duty"
+  },
+  {
+   "n": 4,
+   "crosswalk": "attribution_labels",
+   "key": "receipts_sources||wages and salaries"
+  },
+  {
+   "n": 5,
+   "crosswalk": "attribution_labels",
+   "key": "tax_drivers||srs of household consumption"
+  },
+  {
+   "n": 6,
+   "crosswalk": "attribution_labels",
+   "key": "tax_drivers|underlying forecast changes since march 2020|standard rated share"
+  },
+  {
+   "n": 7,
+   "crosswalk": "attribution_labels",
+   "key": "receipts_sources|underlying forecast changes|sa it and cgt outturn and modelling"
+  },
+  {
+   "n": 8,
+   "crosswalk": "attribution_labels",
+   "key": "tax_drivers|other|paye refresh"
+  },
+  {
+   "n": 9,
+   "crosswalk": "attribution_labels",
+   "key": "receipts_sources||high income child benefit charge costing"
+  },
+  {
+   "n": 10,
+   "crosswalk": "attribution_labels",
+   "key": "tax_drivers||interest rates"
+  },
+  {
+   "n": 11,
+   "crosswalk": "attribution_labels",
+   "key": "tax_drivers|(by other category)|scorecard measures"
+  },
+  {
+   "n": 12,
+   "crosswalk": "attribution_labels",
+   "key": "tax_drivers|underlying forecast changes|household spending"
+  },
+  {
+   "n": 13,
+   "crosswalk": "attribution_labels",
+   "key": "receipts_sources|effect of government decisions|raising the national living wage"
+  },
+  {
+   "n": 14,
+   "crosswalk": "attribution_labels",
+   "key": "tax_drivers|underlying forecast changes|standard rated share"
+  },
+  {
+   "n": 15,
+   "crosswalk": "attribution_labels",
+   "key": "receipts_sources|by policy and forecast differences|indirect impact of measures"
+  },
+  {
+   "n": 16,
+   "crosswalk": "attribution_labels",
+   "key": "tax_drivers|(by other category)|income distribution modelling"
+  },
+  {
+   "n": 17,
+   "crosswalk": "attribution_labels",
+   "key": "tax_drivers|underlying forecast changes|residential property determinants"
+  },
+  {
+   "n": 18,
+   "crosswalk": "attribution_labels",
+   "key": "tax_drivers||icc investment"
+  },
+  {
+   "n": 19,
+   "crosswalk": "attribution_labels",
+   "key": "tax_drivers||indirect impact of policy"
+  },
+  {
+   "n": 20,
+   "crosswalk": "attribution_labels",
+   "key": "tax_drivers|effect of government decisions|government decisions"
+  }
+ ]
+}
