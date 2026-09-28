@@ -81,7 +81,9 @@ CATEGORY = {
             "what": "Model changes, forecaster judgement and anything that is not another cause.",
             "includes": ["recostings of measures announced at earlier events",
                          "effective tax rates and 'pre-measures' factors",
-                         "error correction", "PSNB-neutral items", "the standard-rated share",
+                         "error correction", "PSNB-neutral items",
+                         "the standard-rated share, unless the label names an economic cause of the "
+                         "change (saying what the share is of, e.g. 'of consumer spending', is not a cause)",
                          "residuals and 'other' outside a policy or determinants heading"],
         },
         "underlying_unsplit": {
@@ -131,6 +133,8 @@ DET = re.compile(r"economic determinant", re.I)
 BYTAX = re.compile(r"by tax head", re.I)
 PSNB = re.compile(r"psnb.?neutral", re.I)
 SRS = re.compile(r"standard.rated share|\bsrs\b", re.I)
+# A11 (clarified 28 Sep): economic only when the label names a cause of the change
+SRS_CAUSE = re.compile(r"\b(effect|impact)\b", re.I)
 
 
 def rule_category(label: str, section: str, n: dict[str, bool], group: str = "") -> tuple[str, str, dict]:
@@ -158,7 +162,8 @@ def rule_category(label: str, section: str, n: dict[str, bool], group: str = "")
     if flags["psnb_neutral"]:
         return "modelling_other", "A10", flags
     if SRS.search(label):
-        return (*(("economic_determinants", "A11") if n["economy"] else ("modelling_other", "A11")), flags)
+        cause = n["economy"] and SRS_CAUSE.search(label)
+        return (*(("economic_determinants", "A11") if cause else ("modelling_other", "A11")), flags)
     if n["etr"]:
         return "modelling_other", "A6", flags
     if n["one_off"] or n["classification"]:

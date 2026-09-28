@@ -36,8 +36,8 @@
   "attribution_rows": 6822,
   "attribution_labels": 559,
   "attribution_labels_by_category": {
-    "modelling_other": 255,
-    "economic_determinants": 158,
+    "modelling_other": 258,
+    "economic_determinants": 155,
     "policy": 82,
     "calibration_to_outturn": 41,
     "by_tax_head": 17,

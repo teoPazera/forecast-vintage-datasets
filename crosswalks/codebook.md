@@ -25,12 +25,14 @@ Each rule settles a class of labels that the definitions alone leave open. Appro
 | A6 Effective tax rates are modelling | A change in the effective tax rate before policy ("pre-measures ETR") is modelling and other. A change in the tax base itself is an economic determinant. | Treat ETR changes as economic determinants (they partly reflect fiscal drag from earnings growth) | "Pre-measures effective tax rate", "Pre-measures ETR", "Lower SA effective tax rate" versus "Pre-measures tax base", "Key tax bases" |
 | A7 One-offs are their own category | Litigation, fines, one-off dividends and one-off compensation payments are classification and one-offs. | Leave them under modelling and other | "Litigation cases", "FCA fines", "RBS dividends", "Re-profiling motor finance compensation" |
 | A10 PSNB-neutral items | Rows the OBR calls PSNB-neutral are modelling and other, flagged `psnb_neutral`. They are matched by spending, so they are not forecast errors of the receipts total. | Classification and one-offs | "PSNB-neutral forecast differences" |
-| A11 Standard-rated share | The VAT standard-rated share is a modelling judgement (modelling and other) unless the label ties it to an economy variable. | Economic determinant (it depends on the consumption mix) | "Standard rated share" (modelling) versus "Oil price effect on standard rated share" (economic) |
+| A11 Standard-rated share | The VAT standard-rated share is a modelling judgement (modelling and other) unless the label names an economic cause of the change. Saying what the share is *of* is not a cause. | Economic determinant (it depends on the consumption mix) | "Standard rated share", "SRS of consumer spending" (modelling) versus "Oil price effect on standard rated share" (economic) |
 | B3 Broad heads | A PMD head that covers more than one forecast series maps to the dominant series only if all its largest measures fall in that series; otherwise it maps to none. It is always flagged. | Split the head's measures by their descriptions (for example, stamp duty measures naming shares go to the shares series) | "Stamp duty" (property and shares) |
 
 **Why it matters.** The label categories drive the E5 attribution shares ("what share of revisions came from new data, from the economy, from policy") and later the question of whether a revision's cause was visible in the text beforehand. The head mapping decides which tax forecast a policy costing is subtracted from when errors are policy-adjusted; E6 case scores use policy-adjusted errors.
 
 **Decisions (Teo, 28 September 2026).** Every rule takes the choice column: A3 (calibration to outturn, flagged `mixed`), A4, A6, A7, A10, A11 and B3. Teo's notes as written: "A3 put mixed; A4 also the first choice; A6 I agree, also first choice; A7 one-offs are one-offs; rest are also default choices."
+
+**Spot-check and clarification (Teo, 28 September 2026).** A blind check of 20 rows settled by agreement matched 19. The miss, "SRS of household consumption", showed that A11's "ties it to an economy variable" could be read two ways. A11 now says the label must name an economic *cause* of the change; "SRS of household consumption", "SRS of consumer spending" and "Standard rated share of consumer spending" are therefore modelling and other, marked reviewed in the crosswalk.
 
 ---
 
@@ -76,7 +78,7 @@ Two structural categories, used when the row is not a cause at all:
 - **A8 "Other".** "Other", "Residual", "Other factors", "Other changes" take the category of their section: policy under a government-decisions heading, economic_determinants under a determinants heading, otherwise modelling_other.
 - **A9 A tax named without a cause.** A label that only names a tax or receipts stream ("VAT", "Life insurance", "Self assessment") is by_tax_head when the table or section splits by tax; inside a cause section it is modelling_other.
 - **A10 PSNB-neutral.** modelling_other, with `psnb_neutral` true.
-- **A11 Standard-rated share.** modelling_other, unless the label ties it to an economy variable ("Oil price effect on standard rated share" is economic_determinants).
+- **A11 Standard-rated share.** modelling_other, unless the label names an economic cause of the change ("Oil price effect on standard rated share" is economic_determinants). A label that only says what the share is of ("SRS of consumer spending", "SRS of household consumption") is modelling_other.
 
 ### 2.5 Worked examples
 

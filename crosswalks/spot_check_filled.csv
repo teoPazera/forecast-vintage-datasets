@@ -1,0 +1,21 @@
+n,kind,row,your_answer,flags,status,comment
+1,label,Main rate cut to 19 per cent in April 2017 and to 18 per cent in April 2020,policy,,accept,"A1: named measure under 'Changes due to Government decisions' in the July 2015 table, announced at that event"
+2,label,Industrial and commercial company profits,economic_determinants,,accept,A5: company profits named; under an Underlying heading the label decides
+3,head,Fuel duty,Fuel,,accept,B1: same tax as the Fuel duties series (code taken from the heads queue; confirm it matches series_codes.csv)
+4,label,Wages and salaries,economic_determinants,,accept,A5: wages and salaries named; table rows are tax bases
+5,label,SRS of household consumption,modelling_other,,check,"A11: standard-rated share; 'of household consumption' says what the share is of, not an economy driver of the change, so modelling. If you read it as tied to consumption, it becomes economic_determinants"
+6,label,Standard rated share,modelling_other,,accept,A11
+7,label,SA IT and CGT outturn and modelling,calibration_to_outturn,mixed,accept,A3: mentions outturn; mixed
+8,label,PAYE refresh,modelling_other,,check,"no outturn or receipts wording, so A3 does not apply; read as a model update. If the EFO text says it is new PAYE data, it becomes calibration_to_outturn"
+9,label,High income child benefit charge costing,modelling_other,,check,"A4: the charge was announced at an earlier event (Budget 2012), so a costing change in March 2014 is a recosting; confirm in the March 2014 EFO text"
+10,label,Interest rates,economic_determinants,,accept,A5: interest rates named
+11,label,Scorecard measures,policy,,accept,2.3 item 1: scorecard measures are policy even though the section is '(by other category)'
+12,label,Household spending,economic_determinants,,accept,A5: household consumption named
+13,label,Raising the National Living Wage,policy,,accept,A1 and A2b: inside the 'Indirect effects of Government decisions' group under 'Effect of Government decisions'
+14,label,Standard rated share,modelling_other,,accept,A11
+15,label,Indirect impact of measures,policy,,accept,2.3 item 1: indirect effects of decisions
+16,label,Income distribution modelling,modelling_other,,accept,2.3 item 5: model change
+17,label,Residential property determinants,economic_determinants,,accept,A5: property determinants
+18,label,ICC investment,economic_determinants,,accept,"A5: company investment named; a cause row, not one of the sector rows above it"
+19,label,Indirect impact of policy,policy,,accept,2.3 item 1: indirect effects of decisions
+20,label,Government decisions,policy,,accept,A1: under 'Effect of Government decisions'

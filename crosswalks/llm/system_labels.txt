@@ -40,7 +40,7 @@ Two structural categories, used when the row is not a cause at all:
 - **A8 "Other".** "Other", "Residual", "Other factors", "Other changes" take the category of their section: policy under a government-decisions heading, economic_determinants under a determinants heading, otherwise modelling_other.
 - **A9 A tax named without a cause.** A label that only names a tax or receipts stream ("VAT", "Life insurance", "Self assessment") is by_tax_head when the table or section splits by tax; inside a cause section it is modelling_other.
 - **A10 PSNB-neutral.** modelling_other, with `psnb_neutral` true.
-- **A11 Standard-rated share.** modelling_other, unless the label ties it to an economy variable ("Oil price effect on standard rated share" is economic_determinants).
+- **A11 Standard-rated share.** modelling_other, unless the label names an economic cause of the change ("Oil price effect on standard rated share" is economic_determinants). A label that only says what the share is of ("SRS of consumer spending", "SRS of household consumption") is modelling_other.
 
 ### 2.5 Worked examples
 

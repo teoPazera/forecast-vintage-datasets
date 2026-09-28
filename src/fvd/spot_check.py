@@ -1,7 +1,7 @@
 """Spot-check of rows settled by agreement (Teo's amendment, step 6, first half).
 
     python -m fvd.spot_check          # writes crosswalks/spot_check.csv
-    python -m fvd.spot_check score    # compares Teo's answers with the settled mappings
+    python -m fvd.spot_check score [file]   # compares the answers with the settled mappings
 
 Draws 20 rows, labels and heads together, uniformly from all rows settled by
 agreement (keyword rules + Jev, D20), with a fixed recorded seed. The file shows
@@ -61,12 +61,13 @@ def build() -> None:
     print(f"{N} of {len(pool)} settled rows -> {OUT.name} (seed {SEED})")
 
 
-def score() -> None:
-    d = pd.read_csv(OUT, dtype=str, keep_default_na=False)
-    draw = json.loads(DRAW.read_text(encoding="utf-8"))["rows"]
+def score(path=OUT) -> None:
+    d = pd.read_csv(path, dtype=str, keep_default_na=False)
+    draw = {str(x["n"]): x for x in json.loads(DRAW.read_text(encoding="utf-8"))["rows"]}
     cur = settled()
     agree = 0
-    for r, k in zip(d.itertuples(), draw):
+    for r in d.itertuples():
+        k = draw[r.n]
         mine = r.your_answer.split(":")[0].strip()
         now = cur.get((k["crosswalk"], k["key"]), "?")
         ok = mine == now
@@ -76,4 +77,7 @@ def score() -> None:
 
 
 if __name__ == "__main__":
-    score() if sys.argv[1:2] == ["score"] else build()
+    if sys.argv[1:2] == ["score"]:
+        score(*sys.argv[2:3])
+    else:
+        build()
