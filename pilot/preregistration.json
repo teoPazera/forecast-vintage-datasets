@@ -1,0 +1,12 @@
+{
+ "part1_sha256": "cc885c53a87f8fc8502b9ab3bb565998126f8a9d579da860ddf73133feb5168e",
+ "file_sha256": "eeb2231f13ea9431c9d3aa223a6d7411d89b1e89b1c8c7eea1aa15e46c6e26c0",
+ "registered_at": "2026-09-29T10:03:06+00:00",
+ "files": {
+  "pilot/pilot_cases.csv": "251f39e366b45b20f7eef4f69fd31eda96c8571a36f77d426eac5303e0736e72",
+  "pilot/corpus.csv": "3c10f95a61fcf5f5b9cf3ae7f7d5c7b2a75387696edc98dde28af032e3e03753",
+  "pilot/post_hoc_coverage.csv": "af74891a176f1a519442f1c1592bf3b291c4c59cee222e90086b27189ef7ee91",
+  "cases/cases.parquet": "eb4f7de7ab13f312bfadd89c30a2abae4d5ae587a14e222bfca8a4557c762139",
+  "inventory/documents.csv": "1bce97fd12d787845051f8e13c4da9d5818e3e0143c1e1bbacba19cf79240414"
+ }
+}

@@ -611,8 +611,8 @@ The dictionaries and linking code built for the pilot series in R1 are reused an
 - **D13** Trajectories with classification breaks. [Keep in the data; exclude from case selection.] Decided: as the default.
 - **D14** Memo and supplementary vintages. [Keep, flagged; exclude from revision chains.]
 - **D15** Storage format of tables. [A columnar format with a schema file next to each table.]
-- **D16** Local embedding model for the dense retriever. [Allowed; model chosen by Teo; zero cost; name and version recorded.]
-- **D17** Number of pilot cases per source. [P = 3.]
+- **D16** Local embedding model for the dense retriever. [Allowed; model chosen by Teo; zero cost; name and version recorded.] Decided (Teo, 29 September 2026): `BAAI/bge-small-en-v1.5`.
+- **D17** Number of pilot cases per source. [P = 3.] Decided (Teo, 29 September 2026): P = 3, and distinct: a case is skipped when its series was already taken, or is the parent or child of a taken case's series in the same target period (`pilot/preregistration.md`).
 - **D18** Corpus window for each R1 pilot case. [Documents published on or after the publication date of the first vintage that forecast the case's target period, subject at each vintage to the section 8 rules.]
 - **D19** Pool depth for R1 labelling. [Top 10 of each run at each vintage; each distinct passage is labelled once per case.]
 - **D20** Settling crosswalk rows by agreement. [A row is settled when Jev's top answer equals the keyword mapping, Jev's confidence is at least 0.7, and the label contains no negation (Teo, 28 September 2026). Unsettled PMD heads go to review before E6: on 28 September 2026 a separate Claude session proposed an answer for each of the 35 queued heads, Teo accepted them, and the pipeline session checked the rows marked `check` in the source files and overrode three of them on that evidence (`crosswalks/review_queue_heads_decisions.csv`, which names the labeller and the file each check used). Unsettled attribution labels stay `pending` with the keyword mapping as a provisional value, and every stage that uses them reports how many pending rows it used.]
