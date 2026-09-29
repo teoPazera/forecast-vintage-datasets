@@ -1,0 +1,108 @@
+table: cases/cases
+description: 'Cases (E6): the top K eligible trajectories per source by score, under the episode and family
+  caps. Selected by the rule in cases/preregistration.md.'
+columns:
+- name: source
+  type: string
+  unit: ''
+  description: OBR | CBO
+- name: trajectory_id
+  type: string
+  unit: ''
+  description: <series_id>__<target_period>
+- name: series_id
+  type: string
+  unit: ''
+  description: see tables/series
+- name: family
+  type: string
+  unit: ''
+  description: series family (D7)
+- name: error_basis
+  type: string
+  unit: ''
+  description: log (level series) | pct_gdp (balance series)
+- name: target_period
+  type: string
+  unit: ''
+  description: see tables/forecasts
+- name: episode
+  type: string
+  unit: ''
+  description: 'episode window of the target period (D8): gfc | covid | energy | empty'
+- name: n_scored_cells
+  type: integer
+  unit: ''
+  description: scored cells (role in_progress or future)
+- name: max_horizon_months
+  type: float
+  unit: months
+  description: longest horizon among scored cells
+- name: max_abs_z
+  type: float
+  unit: ''
+  description: max |z| over scored cells
+- name: n_cells_without_z
+  type: integer
+  unit: ''
+  description: scored cells whose scale was 0 or undefined
+- name: run_length
+  type: integer
+  unit: ''
+  description: length of the qualifying run (0 if none)
+- name: run_sign
+  type: string
+  unit: ''
+  description: over (forecast above outturn) | under | empty
+- name: score
+  type: float
+  unit: ''
+  description: sum of |z| over the qualifying run
+- name: eligible
+  type: boolean
+  unit: ''
+  description: run_length >= 2
+- name: onset_vintage_id
+  type: string
+  unit: ''
+  description: first vintage of the qualifying run
+- name: onset_date
+  type: date
+  unit: ''
+  description: its publication date
+- name: onset_error
+  type: float
+  unit: as error_basis
+  description: policy-adjusted error at onset
+- name: onset_z
+  type: float
+  unit: ''
+  description: z at onset
+- name: corrected
+  type: boolean
+  unit: ''
+  description: a later vintage's error fell to at most half the onset error
+- name: correction_vintage_id
+  type: string
+  unit: ''
+  description: first such vintage; empty if none
+- name: correction_date
+  type: date
+  unit: ''
+  description: its publication date
+- name: lead_time_vintages
+  type: string
+  unit: ''
+  description: vintages from onset to correction (or to the last vintage), ';'-separated
+- name: lead_time_n
+  type: integer
+  unit: ''
+  description: number of vintages in the lead-time window
+- name: case_rank
+  type: integer
+  unit: ''
+  description: rank among the source's cases (1 = highest score)
+- name: in_random_sample
+  type: boolean
+  unit: ''
+  description: also drawn into the random sample

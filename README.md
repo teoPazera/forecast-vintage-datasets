@@ -70,6 +70,7 @@ python -m fvd.e2_efo_tables       # EFO receipts attribution
 python -m fvd.e3_cbo              # CBO tables and replication
 python -m fvd.e4_cells            # harmonized cells, policy adjustment
 python -m fvd.e5_stylized_facts   # stylized facts and tests
+python -m fvd.e6_cases select     # cases, controls, random sample (after `register`)
 ```
 
 The first run downloads from the Internet Archive with throttling and takes a few

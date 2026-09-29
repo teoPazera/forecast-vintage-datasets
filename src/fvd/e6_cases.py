@@ -129,7 +129,7 @@ def scale(s: pd.DataFrame, p: dict) -> pd.DataFrame:
     def mad(x):
         return p["mad_scale"] * float(np.median(np.abs(x - np.median(x)))) if len(x) else np.nan
     s = s.copy()
-    s["sigma"], s["sigma_own_n_targets"], s["sigma_own_weight"] = np.nan, 0, 0.0
+    out = {}
     for _, g in s.groupby(["source", "family", "error_basis", "bucket"]):
         fam = {t: mad(g.error[g.target_period != t].to_numpy()) for t in g.target_period.unique()}
         for _, gs in g.groupby("series_id"):
@@ -139,7 +139,9 @@ def scale(s: pd.DataFrame, p: dict) -> pd.DataFrame:
                 own = mad(rest.error.to_numpy())
                 w = min(n / p["shrink_n"], 1.0) if own > 0 else 0.0
                 sig = own if w == 1 else fam[t] if w == 0 else w * own + (1 - w) * fam[t]
-                s.loc[gt.index, ["sigma", "sigma_own_n_targets", "sigma_own_weight"]] = [sig, n, w]
+                out.update({i: (sig, n, w) for i in gt.index})
+    v = pd.DataFrame.from_dict(out, orient="index", columns=["sigma", "sigma_own_n_targets", "sigma_own_weight"])
+    s = s.join(v)
     ok = s.sigma > 0
     s["z"] = np.where(ok, s.error / s.sigma.where(ok), np.nan)
     return s
@@ -195,7 +197,7 @@ def trajectory(chain: pd.DataFrame, scored: pd.DataFrame, p: dict) -> dict:
             "correction_vintage_id": corr.vintage_id if corr is not None else "",
             "correction_date": corr.publication_date if corr is not None else pd.NaT,
             "lead_time_vintages": ";".join(lead.vintage_id), "lead_time_n": len(lead),
-            "_run_vintages": set(scored.vintage_id.iloc[i:j + 1])}
+            "run_vintages": set(scored.vintage_id.iloc[i:j + 1])}
 
 
 # --- selection -----------------------------------------------------------------
@@ -281,9 +283,9 @@ def select() -> None:
     recs = [trajectory(chains[tid], g, p)
             for tid, g in scored[scored.trajectory_id.isin(scoreable)].groupby("trajectory_id")]
     t = pd.DataFrame(recs)
-    in_run = {(r.trajectory_id, v) for r in t.itertuples() if isinstance(r._run_vintages, set)
-              for v in r._run_vintages}
-    t = t.drop(columns="_run_vintages")
+    in_run = {(r.trajectory_id, v) for r in t.itertuples() if isinstance(r.run_vintages, set)
+              for v in r.run_vintages}
+    t = t.drop(columns="run_vintages")
     t = select_cases(t, p)
     ctrl = select_controls(t, p)
     rnd = random_sample(t, p)

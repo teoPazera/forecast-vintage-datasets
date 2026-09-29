@@ -1,0 +1,68 @@
+table: cases/scored_cells
+description: 'Every scored cell of E6 (cases/preregistration.md, sections 1-3): in-scope chained cells
+  with role in_progress or future, with their scale and z.'
+columns:
+- name: source
+  type: string
+  unit: ''
+  description: OBR | CBO
+- name: trajectory_id
+  type: string
+  unit: ''
+  description: <series_id>__<target_period>
+- name: series_id
+  type: string
+  unit: ''
+  description: see tables/series
+- name: target_period
+  type: string
+  unit: ''
+  description: see tables/forecasts
+- name: vintage_id
+  type: string
+  unit: ''
+  description: see tables/vintages
+- name: publication_date
+  type: date
+  unit: ''
+  description: vintage publication date
+- name: cell_role
+  type: string
+  unit: ''
+  description: in_progress | future
+- name: horizon_months
+  type: float
+  unit: months
+  description: publication date to end of target period
+- name: bucket
+  type: string
+  unit: months
+  description: horizon bucket (D6)
+- name: error_basis
+  type: string
+  unit: ''
+  description: log (level series) | pct_gdp (balance series)
+- name: error
+  type: float
+  unit: log points or percentage points of GDP
+  description: policy-adjusted error against the latest outturn; positive = over-forecast
+- name: sigma
+  type: float
+  unit: as error
+  description: leave-one-target-out scale, shrunk towards the family's below 8 targets
+- name: sigma_own_n_targets
+  type: integer
+  unit: ''
+  description: target periods behind the series' own scale
+- name: sigma_own_weight
+  type: float
+  unit: ''
+  description: weight on the series' own scale (min(n/8, 1); 0 if it is 0 or undefined)
+- name: z
+  type: float
+  unit: ''
+  description: error / sigma; empty when sigma is 0 or undefined
+- name: in_qualifying_run
+  type: boolean
+  unit: ''
+  description: the cell is in the trajectory's qualifying run

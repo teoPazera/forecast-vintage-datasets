@@ -1,0 +1,174 @@
+{
+ "run_at": "2026-09-29T09:23:05+00:00",
+ "preregistration_sha256": "1c395a20142d12e1cb2a95105f5185e3939d519e6b947de2b888b947dfdf43bc",
+ "registered_at": "2026-09-29T09:20:07+00:00",
+ "git_head_at_run": "38843879bea69b343b1f322dd191cd5d903f8e98",
+ "inputs_verified": true,
+ "series_without_policy_adjustment": [
+  {
+   "source": "OBR",
+   "series_id": "obr.apf",
+   "name": "Reductions of debt interest due to APF",
+   "family": "spending_debt_interest",
+   "kind": "balance"
+  },
+  {
+   "source": "OBR",
+   "series_id": "obr.beercider",
+   "name": "Beer and cider duties (\u00a3 billion)",
+   "family": "duties",
+   "kind": "level"
+  },
+  {
+   "source": "OBR",
+   "series_id": "obr.cacb",
+   "name": "Cyclically-adjusted current budget deficit (per cent of GDP)",
+   "family": "aggregate",
+   "kind": "balance"
+  },
+  {
+   "source": "OBR",
+   "series_id": "obr.capsnb",
+   "name": "Cyclically-adjusted public sector net borrowing (per cent of GDP)",
+   "family": "aggregate",
+   "kind": "balance"
+  },
+  {
+   "source": "OBR",
+   "series_id": "obr.cb",
+   "name": "Current budget deficit",
+   "family": "aggregate",
+   "kind": "balance"
+  },
+  {
+   "source": "OBR",
+   "series_id": "obr.cb_gbp",
+   "name": "Current budget deficit",
+   "family": "aggregate",
+   "kind": "balance"
+  },
+  {
+   "source": "OBR",
+   "series_id": "obr.debtint",
+   "name": "Central government gross debt interest (\u00a3 billion)",
+   "family": "spending_debt_interest",
+   "kind": "level"
+  },
+  {
+   "source": "OBR",
+   "series_id": "obr.fundedpensions",
+   "name": "Funded public sector pension schemes (\u00a3 billion)",
+   "family": "spending_other",
+   "kind": "level"
+  },
+  {
+   "source": "OBR",
+   "series_id": "obr.ggdepreciation",
+   "name": "General government depreciation (\u00a3 billion)",
+   "family": "spending_other",
+   "kind": "level"
+  },
+  {
+   "source": "OBR",
+   "series_id": "obr.ggipensions",
+   "name": "General government imputed pensions (\u00a3 billion)",
+   "family": "spending_other",
+   "kind": "level"
+  },
+  {
+   "source": "OBR",
+   "series_id": "obr.lotterycap",
+   "name": "National lottery capital grants (\u00a3 billion)",
+   "family": "spending_other",
+   "kind": "level"
+  },
+  {
+   "source": "OBR",
+   "series_id": "obr.lotterycur",
+   "name": "National lottery current grants (\u00a3 billion)",
+   "family": "spending_other",
+   "kind": "level"
+  },
+  {
+   "source": "OBR",
+   "series_id": "obr.nrcap",
+   "name": "Network Rail capital expenditure (\u00a3 billion)",
+   "family": "spending_other",
+   "kind": "level"
+  },
+  {
+   "source": "OBR",
+   "series_id": "obr.nrcur",
+   "name": "Network Rail current expenditure (\u00a3 billion)",
+   "family": "spending_other",
+   "kind": "level"
+  },
+  {
+   "source": "OBR",
+   "series_id": "obr.paye_it",
+   "name": "Pay as you earn (PAYE) income tax (\u00a3 billion)",
+   "family": "income_taxes",
+   "kind": "level"
+  },
+  {
+   "source": "OBR",
+   "series_id": "obr.pcdebtint",
+   "name": "Public corporations' debt interest (\u00a3 billion)",
+   "family": "spending_debt_interest",
+   "kind": "level"
+  },
+  {
+   "source": "OBR",
+   "series_id": "obr.psdebtint",
+   "name": "Public sector debt interest (\u00a3 billion)",
+   "family": "spending_debt_interest",
+   "kind": "level"
+  },
+  {
+   "source": "OBR",
+   "series_id": "obr.sa_it",
+   "name": "Self assessed income tax (\u00a3 billion)",
+   "family": "income_taxes",
+   "kind": "level"
+  },
+  {
+   "source": "OBR",
+   "series_id": "obr.shares",
+   "name": "Stamp taxes on shares (\u00a3 billion)",
+   "family": "capital_taxes",
+   "kind": "level"
+  },
+  {
+   "source": "OBR",
+   "series_id": "obr.spirits",
+   "name": "Spirits duties (\u00a3 billion)",
+   "family": "duties",
+   "kind": "level"
+  },
+  {
+   "source": "OBR",
+   "series_id": "obr.wine",
+   "name": "Wine duties (\u00a3 billion)",
+   "family": "duties",
+   "kind": "level"
+  }
+ ],
+ "counts": {
+  "CBO": {
+   "scored_cells": 17520,
+   "scoreable_trajectories": 787,
+   "eligible": 429,
+   "cases": 15,
+   "controls": 2,
+   "random_sample": 30
+  },
+  "OBR": {
+   "scored_cells": 5395,
+   "scoreable_trajectories": 528,
+   "eligible": 273,
+   "cases": 15,
+   "controls": 2,
+   "random_sample": 30
+  }
+ }
+}
