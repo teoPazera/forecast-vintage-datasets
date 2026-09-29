@@ -16,6 +16,12 @@
    "reason": "Teo, 29 September 2026: (1) CBO Fannie Mae/Freddie Mac not scored (accounting basis differs, CBO README); (2) controls by mean |z| < z_low",
    "sha256": "14a3e6e93866dd0fd38943fadd22d7ea7598b9c4107a03c85f23837736fa5520",
    "registered_at": "2026-09-29T09:46:51+00:00"
+  },
+  {
+   "n": 2,
+   "reason": "Teo, 29 September 2026: (3) controls matched within the same side of the budget, same family ranked first",
+   "sha256": "6747921fdc395ffb3a458ca151071fb22de2f044d6dcc8225309188e0f4846ee",
+   "registered_at": "2026-09-29T09:53:58+00:00"
   }
  ]
 }

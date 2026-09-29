@@ -269,22 +269,29 @@ def year(tp: pd.Series) -> pd.Series:
 def select_controls(t: pd.DataFrame, p: dict) -> pd.DataFrame:
     cases = t[t.selection == "case"].sort_values(["source", "case_rank"])
     # registered: max |z| < z_low; deviation 2 (29 September 2026): mean |z| < z_low
-    pool = t[t[p.get("control_statistic", "max_abs_z")] < p["z_low"]].copy()
+    pool = t[(t[p.get("control_statistic", "max_abs_z")] < p["z_low"]) & (t.selection != "case")].copy()
     pool["year"] = year(pool.target_period)
+    # registered: same family; deviation 3 (29 September 2026): same group of families
+    # (side of the budget), same family ranked first
+    group = {f: g for g, fams in p.get("control_groups", {}).items() for f in fams}
+    pool["group"] = pool.family.map(group).fillna(pool.family)
     used, rows = set(), []
     for _, c in cases.iterrows():
-        cand = pool[(pool.source == c.source) & (pool.family == c.family) & (pool.error_basis == c.error_basis)
+        cgroup = group.get(c.family, c.family)
+        cand = pool[(pool.source == c.source) & (pool.group == cgroup) & (pool.error_basis == c.error_basis)
                     & ~pool.trajectory_id.isin(used)].copy()
         cand["d_year"] = (cand.year - int(c.target_period[:4])).abs()
         cand["d_max_horizon"] = (cand.max_horizon_months - c.max_horizon_months).abs()
         cand["d_n_cells"] = (cand.n_scored_cells - c.n_scored_cells).abs()
+        cand["other_family"] = cand.family != c.family
         cand = cand[(cand.d_year <= p["control_years"]) & (cand.d_max_horizon <= p["control_max_horizon_months"])]
-        cand = cand.sort_values(["d_n_cells", "d_max_horizon", "d_year", "series_id", "target_period"])
+        cand = cand.sort_values(["other_family", "d_n_cells", "d_max_horizon", "d_year", "series_id", "target_period"])
         for k, (_, r) in enumerate(cand.head(p["controls_per_case"]).iterrows(), start=1):
             used.add(r.trajectory_id)
-            rows.append({**r.drop(["year"]).to_dict(), "case_trajectory_id": c.trajectory_id,
-                         "control_order": k})
-    cols = list(t.columns) + ["d_year", "d_max_horizon", "d_n_cells", "case_trajectory_id", "control_order"]
+            rows.append({**r.drop(["year", "group", "other_family"]).to_dict(), "case_trajectory_id": c.trajectory_id,
+                         "control_order": k, "same_family": r.family == c.family})
+    cols = list(t.columns) + ["d_year", "d_max_horizon", "d_n_cells", "case_trajectory_id", "control_order",
+                               "same_family"]
     return pd.DataFrame(rows, columns=cols)
 
 
@@ -338,7 +345,8 @@ def select() -> None:
              "sigma_own_weight", "z", "in_qualifying_run"]]
     cases = t[t.selection == "case"].sort_values(["source", "case_rank"])
     cases = cases[TRAJ + ["case_rank", "in_random_sample"]]
-    ctrl = ctrl[TRAJ + ["case_trajectory_id", "control_order", "d_year", "d_max_horizon", "d_n_cells"]]
+    ctrl = ctrl[TRAJ + ["case_trajectory_id", "control_order", "same_family", "d_year", "d_max_horizon",
+                        "d_n_cells"]]
     rnd = rnd[TRAJ + ["draw_order", "is_case", "is_control"]]
     t = t[TRAJ + ["selection", "case_rank", "is_control", "in_random_sample"]]
     for name, df in [("scored_cells", sc), ("trajectory_scores", t), ("cases", cases),

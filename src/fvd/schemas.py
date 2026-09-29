@@ -443,11 +443,13 @@ SCHEMAS: dict[str, dict] = {
         ],
     },
     "cases/controls": {
-        "description": "Controls (E6): up to 2 per case, with max |z| < z_low, same family and error basis, "
-                       "target period within 2 years and similar horizon coverage.",
+        "description": "Controls (E6): up to 2 per case, with mean |z| < z_low (deviation 2), same side of the "
+                       "budget (deviation 3; same family ranked first) and error basis, target period within "
+                       "2 years and similar horizon coverage. Never a case.",
         "columns": CASE_TRAJ + [
             ("case_trajectory_id", "string", "", "the case this control is matched to"),
             ("control_order", "integer", "", "1 = closest match"),
+            ("same_family", "boolean", "", "the control is from the case's family (else from the same side of the budget, deviation 3)"),
             ("d_year", "integer", "years", "|difference in the first year of the target period|"),
             ("d_max_horizon", "float", "months", "|difference in maximum horizon among scored cells|"),
             ("d_n_cells", "integer", "", "|difference in number of scored cells|"),

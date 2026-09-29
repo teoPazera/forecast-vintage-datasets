@@ -215,3 +215,35 @@ not_scored_series: [cbo.outlay.fannie_freddie]
 ```yaml
 control_statistic: mean_abs_z
 ```
+
+### 3. Controls matched within the same side of the budget, same family first
+
+Decided by Teo on 29 September 2026, after the rerun with deviations 1 and 2 and
+before R1.
+
+- **Reason.** With deviation 2, the pool was large enough, but matching within the
+  case's family and ±2 years left 5 OBR and 8 CBO controls. Several families have
+  only one or two series: CBO customs, excise and miscellaneous receipts, OBR DEL
+  spending, PSNB. They have no well-forecast trajectory within ±2 years.
+- **The new rule.** A control may come from any family on the same side of the
+  budget as the case: receipts, spending, or aggregates on their own. Candidates
+  from the case's own family are ranked first, so the wider group is used only when
+  the family has none. All other conditions are unchanged. `controls.same_family`
+  records which applied.
+- **Alternatives considered.** Cases with at least one candidate (OBR / CBO):
+  - same family, ±4 years: 7 / 10;
+  - same side, ±2 years: 11 / 14.
+
+  These were counted as candidates only, not as the matched controls.
+- **Also corrected in code.** Section 5 requires that a control is not a case. The
+  first two runs did not check this; none of their controls was a case.
+
+```yaml
+control_groups:
+  receipts: [income_taxes, consumption_taxes, capital_taxes, business_taxes, duties, other_receipts,
+             revenue_corporate_income_taxes, revenue_customs_duties, revenue_estate_and_gift_taxes,
+             revenue_excise_taxes, revenue_individual_income_taxes, revenue_miscellaneous_receipts,
+             revenue_payroll_taxes]
+  spending: [spending_debt_interest, spending_del, spending_local, spending_other, spending_welfare,
+             outlay_discretionary, outlay_mandatory, outlay_net_interest]
+```
