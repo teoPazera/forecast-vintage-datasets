@@ -167,6 +167,36 @@ def facts_and_tests(c: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame, pd.Dat
     return pd.DataFrame(facts), pd.DataFrame(tests), pd.DataFrame(rev_rows)
 
 
+def prespecified_tests(c: pd.DataFrame) -> pd.DataFrame:
+    """D22: the numbers-only baseline, with episodes included. Same-sign share of
+    consecutive revisions whose later revision is at 12-24 months; error on
+    revision at 12-24 months, policy-adjusted (primary) and raw."""
+    rows = []
+    for g, fam, unit, d in units_of_analysis(c):
+        ch = d.sort_values(["series_id", "target_period", "publication_date"])
+        ch = ch.assign(rev_prev=ch.groupby(["series_id", "target_period"]).rev.shift())
+        pair = ch[(ch.bucket == "12-24")].dropna(subset=["rev", "rev_prev"])
+        pair = pair[(pair.rev != 0) & (pair.rev_prev != 0)]
+        base = {"group": g, "family": fam, "unit": unit, "bucket": "12-24"}
+        if len(pair) >= MIN_N:
+            same = int((np.sign(pair.rev) == np.sign(pair.rev_prev)).sum())
+            rows.append({**base, "test": "same_sign_share", "errors": "", "n_cells": len(pair),
+                         "n_targets": int(target_key(pair).nunique()), "estimate": same / len(pair),
+                         "se": np.nan, "p_value": float(sps.binomtest(same, len(pair), 0.5).pvalue),
+                         "note": "later revision at 12-24 months; H0: 0.5 (binomial)"})
+        db = d[d.bucket == "12-24"]
+        for pa, ecol in (("policy_adjusted", "err_pa"), ("raw", "err")):
+            r = ols_clustered(db[ecol], db.rev, target_key(db))
+            if r is not None:
+                res, n, nt = r
+                rows.append({**base, "test": "error_on_revision", "errors": pa, "n_cells": n,
+                             "n_targets": nt, "estimate": float(res.params[1]), "se": float(res.bse[1]),
+                             "p_value": float(res.pvalues[1]),
+                             "note": ("primary" if pa == "policy_adjusted" else "robustness")
+                                     + "; e = F - A, a negative coefficient = CG's under-reaction"})
+    return pd.DataFrame(rows)
+
+
 def attribution_shares(c: pd.DataFrame) -> pd.DataFrame:
     """Share of the absolute revision coming from each harmonized category, by
     horizon bucket. Uses the category rows that add up to the revision (FRD block
@@ -187,6 +217,10 @@ def attribution_shares(c: pd.DataFrame) -> pd.DataFrame:
     hd = h[h.series_id == "obr.it"].drop(columns="series_id")
     a = pd.concat([att.merge(h, on=["series_id", "target_period", "vintage_id"], how="inner"),
                    der.merge(hd, on=["target_period", "vintage_id"], how="inner")])
+    # CBO revenue is split into economic and technical only from 2024 (legislative
+    # only before), and so is the deficit, which includes it: their policy share
+    # would be overstated (Teo, 29 September 2026). Outlays keep the full split.
+    a = a[~(a.group.eq("CBO") & a.series_id.str.match(r"cbo\.(revenue|deficit)\."))]
     a["bucket"] = bucket(a.horizon_months)
     a["abs"] = a.value.abs()
     # D20: EFO rows whose label is still pending use the keyword category provisionally
@@ -272,6 +306,8 @@ def main() -> None:
     tests.to_csv(STATS / "efficiency_tests.csv", index=False)
     shares = attribution_shares(c)
     shares.to_csv(STATS / "attribution_shares.csv", index=False)
+    pre = prespecified_tests(c)
+    pre.to_csv(STATS / "prespecified_tests.csv", index=False)
     targets = calibration_targets(facts, rev)
     (STATS / "calibration_targets.json").write_text(json.dumps(
         {"description": "Calibration targets for the synthetic generator (plan E5). Error basis: log "
@@ -280,7 +316,7 @@ def main() -> None:
          "targets": targets}, indent=2, default=float))
     from .schemas import check_columns, write_schema
     for name, df in [("stats/stylized_facts", facts), ("stats/efficiency_tests", tests),
-                     ("stats/attribution_shares", shares)]:
+                     ("stats/attribution_shares", shares), ("stats/prespecified_tests", pre)]:
         check_columns(name, df)
         write_schema(name, STATS.parent)
     complete = (c[c.outturn_latest.notna()].groupby(["group", "series_id"]).target_period.nunique()

@@ -1,86 +1,86 @@
-event_raw,vintage_label,vintage_id,rule,confidence,reviewed,comment
-Budget 1970,April 1970,hmt_1970-04,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-Budget 1971,March 1971,hmt_1971-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-Budget 1972,March 1972,hmt_1972-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-Budget 1973,March 1973,hmt_1973-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-Budget 1974,March 1974,hmt_1974-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-Budget 1975,April 1975,hmt_1975-04,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-Budget 1976,April 1976,hmt_1976-04,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-Budget 1977,March 1977,hmt_1977-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-Budget 1978,April 1978,hmt_1978-04,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-Budget 1979,June 1979,hmt_1979-06,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-Budget 1980,March 1980,hmt_1980-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-Budget 1981,March 1981,hmt_1981-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-Budget 1982,March 1982,hmt_1982-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-Budget 1983,March 1983,hmt_1983-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-Budget 1984,March 1984,hmt_1984-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-Budget 1985,March 1985,hmt_1985-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-Budget 1986,March 1986,hmt_1986-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-Budget 1987,March 1987,hmt_1987-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-Budget 1988,March 1988,hmt_1988-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-Budget 1989,March 1989,hmt_1989-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-Budget 1990,March 1990,hmt_1990-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-Budget 1991,March 1991,hmt_1991-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-Budget 1992,March 1992,hmt_1992-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-Budget 1993,March 1993,hmt_1993-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-Budget 1993 #2,November 1993,hmt_1993-11,second Budget -> autumn HM Treasury vintage of the year,assumed,False,
-Budget 1994,June 1994,hmt_1994-06,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-Budget 1995,June 1995,hmt_1995-06,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-Budget 1996,July 1996,hmt_1996-07,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-Budget 1997,July 1997,hmt_1997-07,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-Budget 1998,June 1998,hmt_1998-06,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-Budget 1999,March 1999,hmt_1999-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-Budget 2000,March 2000,hmt_2000-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-PBR 2000,November 2000,hmt_2000-11,PBR -> autumn HM Treasury vintage of the year,assumed,False,
-Budget 2001,March 2001,hmt_2001-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-PBR 2001,November 2001,hmt_2001-11,PBR -> autumn HM Treasury vintage of the year,assumed,False,
-Budget 2002,April 2002,hmt_2002-04,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-PBR 2002,November 2002,hmt_2002-11,PBR -> autumn HM Treasury vintage of the year,assumed,False,
-Budget 2003,April 2003,hmt_2003-04,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-PBR 2003,December 2003,hmt_2003-12,PBR -> autumn HM Treasury vintage of the year,assumed,False,
-Budget 2004,March 2004,hmt_2004-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-PBR 2004,December 2004,hmt_2004-12,PBR -> autumn HM Treasury vintage of the year,assumed,False,
-Budget 2005,March 2005,hmt_2005-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-PBR 2005,December 2005,hmt_2005-12,PBR -> autumn HM Treasury vintage of the year,assumed,False,
-Budget 2006,March 2006,hmt_2006-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-PBR 2006,December 2006,hmt_2006-12,PBR -> autumn HM Treasury vintage of the year,assumed,False,
-Budget 2007,March 2007,hmt_2007-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-PBR 2007,October 2007,hmt_2007-10,PBR -> autumn HM Treasury vintage of the year,assumed,False,
-Budget 2008,March 2008,hmt_2008-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-PBR 2008,November 2008,hmt_2008-11,PBR -> autumn HM Treasury vintage of the year,assumed,False,
-Budget 2009,April 2009,hmt_2009-04,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-PBR 2009,November 2009,hmt_2009-11,PBR -> autumn HM Treasury vintage of the year,assumed,False,
-Budget 2010,March 2010,hmt_2010-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,
-Budget 2010 #2,June 2010,obr_2010-06,OBR fiscal event -> EFO published with it,exact,False,
-Autumn 2010,November 2010,obr_2010-11,OBR fiscal event -> EFO published with it,exact,False,
-Budget 2011,March 2011,obr_2011-03,OBR fiscal event -> EFO published with it,exact,False,
-Autumn 2011,November 2011,obr_2011-11,OBR fiscal event -> EFO published with it,exact,False,
-Budget 2012,March 2012,obr_2012-03,OBR fiscal event -> EFO published with it,exact,False,
-Autumn 2012,December 2012,obr_2012-12,OBR fiscal event -> EFO published with it,exact,False,
-Budget 2013,March 2013,obr_2013-03,OBR fiscal event -> EFO published with it,exact,False,
-Autumn 2013,December 2013,obr_2013-12,OBR fiscal event -> EFO published with it,exact,False,
-Budget 2014,March 2014,obr_2014-03,OBR fiscal event -> EFO published with it,exact,False,
-Autumn 2014,December 2014,obr_2014-12,OBR fiscal event -> EFO published with it,exact,False,
-Budget 2015,March 2015,obr_2015-03,OBR fiscal event -> EFO published with it,exact,False,
-Budget 2015 #2,July 2015,obr_2015-07,OBR fiscal event -> EFO published with it,exact,False,
-Autumn 2015,November 2015,obr_2015-11,OBR fiscal event -> EFO published with it,exact,False,
-Budget 2016,March 2016,obr_2016-03,OBR fiscal event -> EFO published with it,exact,False,
-Autumn 2016,November 2016,obr_2016-11,OBR fiscal event -> EFO published with it,exact,False,
-Budget 2017,March 2017,obr_2017-03,OBR fiscal event -> EFO published with it,exact,False,
-Autumn Budget 2017,November 2017,obr_2017-11,OBR fiscal event -> EFO published with it,exact,False,
-Spring Statement 2018,March 2018,obr_2018-03,OBR fiscal event -> EFO published with it,exact,False,
-Budget 2018,October 2018,obr_2018-10,OBR fiscal event -> EFO published with it,exact,False,
-Spring Statement 2019,March 2019,obr_2019-03,OBR fiscal event -> EFO published with it,exact,False,
-Budget 2020,March 2020,obr_2020-03,OBR fiscal event -> EFO published with it,exact,False,
-Spending Review 2020,November 2020,obr_2020-11,OBR fiscal event -> EFO published with it,exact,False,
-Spring Budget 2021,March 2021,obr_2021-03,OBR fiscal event -> EFO published with it,exact,False,
-Autumn Budget 2021,October 2021,obr_2021-10,OBR fiscal event -> EFO published with it,exact,False,
-Spring Statement 2022,March 2022,obr_2022-03,OBR fiscal event -> EFO published with it,exact,False,
-Autumn Statement 2022,November 2022,obr_2022-11,OBR fiscal event -> EFO published with it,exact,False,
-Spring Budget 2023,March 2023,obr_2023-03,OBR fiscal event -> EFO published with it,exact,False,
-Autumn Statement 2023,November 2023,obr_2023-11,OBR fiscal event -> EFO published with it,exact,False,
-Spring Budget 2024,March 2024,obr_2024-03,OBR fiscal event -> EFO published with it,exact,False,
-Autumn Budget 2024,October 2024,obr_2024-10,OBR fiscal event -> EFO published with it,exact,False,
-Spring Statement 2025,March 2025,obr_2025-03,OBR fiscal event -> EFO published with it,exact,False,
-Autumn Budget 2025,November 2025,obr_2025-11,OBR fiscal event -> EFO published with it,exact,False,
-Spring Forecast 2026,March 2026,obr_2026-03,OBR fiscal event -> EFO published with it,exact,False,
+event_raw,vintage_label,vintage_id,rule,confidence,reviewed,comment,status,check
+Budget 1970,April 1970,hmt_1970-04,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 1971,March 1971,hmt_1971-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 1972,March 1972,hmt_1972-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 1973,March 1973,hmt_1973-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 1974,March 1974,hmt_1974-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 1975,April 1975,hmt_1975-04,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 1976,April 1976,hmt_1976-04,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 1977,March 1977,hmt_1977-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 1978,April 1978,hmt_1978-04,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 1979,June 1979,hmt_1979-06,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 1980,March 1980,hmt_1980-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 1981,March 1981,hmt_1981-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 1982,March 1982,hmt_1982-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 1983,March 1983,hmt_1983-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 1984,March 1984,hmt_1984-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 1985,March 1985,hmt_1985-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 1986,March 1986,hmt_1986-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 1987,March 1987,hmt_1987-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 1988,March 1988,hmt_1988-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 1989,March 1989,hmt_1989-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 1990,March 1990,hmt_1990-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 1991,March 1991,hmt_1991-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 1992,March 1992,hmt_1992-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 1993,March 1993,hmt_1993-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 1993 #2,November 1993,hmt_1993-11,second Budget -> autumn HM Treasury vintage of the year,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 1994,June 1994,hmt_1994-06,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 1995,June 1995,hmt_1995-06,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 1996,July 1996,hmt_1996-07,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 1997,July 1997,hmt_1997-07,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 1998,June 1998,hmt_1998-06,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 1999,March 1999,hmt_1999-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 2000,March 2000,hmt_2000-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+PBR 2000,November 2000,hmt_2000-11,PBR -> autumn HM Treasury vintage of the year,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 2001,March 2001,hmt_2001-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+PBR 2001,November 2001,hmt_2001-11,PBR -> autumn HM Treasury vintage of the year,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 2002,April 2002,hmt_2002-04,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+PBR 2002,November 2002,hmt_2002-11,PBR -> autumn HM Treasury vintage of the year,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 2003,April 2003,hmt_2003-04,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+PBR 2003,December 2003,hmt_2003-12,PBR -> autumn HM Treasury vintage of the year,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 2004,March 2004,hmt_2004-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+PBR 2004,December 2004,hmt_2004-12,PBR -> autumn HM Treasury vintage of the year,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 2005,March 2005,hmt_2005-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+PBR 2005,December 2005,hmt_2005-12,PBR -> autumn HM Treasury vintage of the year,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 2006,March 2006,hmt_2006-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+PBR 2006,December 2006,hmt_2006-12,PBR -> autumn HM Treasury vintage of the year,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 2007,March 2007,hmt_2007-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+PBR 2007,October 2007,hmt_2007-10,PBR -> autumn HM Treasury vintage of the year,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 2008,March 2008,hmt_2008-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+PBR 2008,November 2008,hmt_2008-11,PBR -> autumn HM Treasury vintage of the year,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 2009,April 2009,hmt_2009-04,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+PBR 2009,November 2009,hmt_2009-11,PBR -> autumn HM Treasury vintage of the year,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 2010,March 2010,hmt_2010-03,Budget -> first HM Treasury vintage of the year in March-July,assumed,False,,not_checked,before June 2010: component forecasts start then
+Budget 2010 #2,June 2010,obr_2010-06,OBR fiscal event -> EFO published with it,exact,False,,settled_date_check,published 2010-06-22
+Autumn 2010,November 2010,obr_2010-11,OBR fiscal event -> EFO published with it,exact,False,,settled_date_check,published 2010-11-29
+Budget 2011,March 2011,obr_2011-03,OBR fiscal event -> EFO published with it,exact,False,,settled_date_check,published 2011-03-23
+Autumn 2011,November 2011,obr_2011-11,OBR fiscal event -> EFO published with it,exact,False,,settled_date_check,published 2011-11-29
+Budget 2012,March 2012,obr_2012-03,OBR fiscal event -> EFO published with it,exact,False,,settled_date_check,published 2012-03-21
+Autumn 2012,December 2012,obr_2012-12,OBR fiscal event -> EFO published with it,exact,False,,settled_date_check,published 2012-12-05
+Budget 2013,March 2013,obr_2013-03,OBR fiscal event -> EFO published with it,exact,False,,settled_date_check,published 2013-03-20
+Autumn 2013,December 2013,obr_2013-12,OBR fiscal event -> EFO published with it,exact,False,,settled_date_check,published 2013-12-05
+Budget 2014,March 2014,obr_2014-03,OBR fiscal event -> EFO published with it,exact,False,,settled_date_check,published 2014-03-19
+Autumn 2014,December 2014,obr_2014-12,OBR fiscal event -> EFO published with it,exact,False,,settled_date_check,published 2014-12-03
+Budget 2015,March 2015,obr_2015-03,OBR fiscal event -> EFO published with it,exact,False,,settled_date_check,published 2015-03-18
+Budget 2015 #2,July 2015,obr_2015-07,OBR fiscal event -> EFO published with it,exact,False,,settled_date_check,published 2015-07-08
+Autumn 2015,November 2015,obr_2015-11,OBR fiscal event -> EFO published with it,exact,False,,settled_date_check,published 2015-11-25
+Budget 2016,March 2016,obr_2016-03,OBR fiscal event -> EFO published with it,exact,False,,settled_date_check,published 2016-03-16
+Autumn 2016,November 2016,obr_2016-11,OBR fiscal event -> EFO published with it,exact,False,,settled_date_check,published 2016-11-23
+Budget 2017,March 2017,obr_2017-03,OBR fiscal event -> EFO published with it,exact,False,,settled_date_check,published 2017-03-08
+Autumn Budget 2017,November 2017,obr_2017-11,OBR fiscal event -> EFO published with it,exact,False,,settled_date_check,published 2017-11-22
+Spring Statement 2018,March 2018,obr_2018-03,OBR fiscal event -> EFO published with it,exact,False,,settled_date_check,published 2018-03-13
+Budget 2018,October 2018,obr_2018-10,OBR fiscal event -> EFO published with it,exact,False,,settled_date_check,published 2018-10-29
+Spring Statement 2019,March 2019,obr_2019-03,OBR fiscal event -> EFO published with it,exact,False,,settled_date_check,published 2019-03-13
+Budget 2020,March 2020,obr_2020-03,OBR fiscal event -> EFO published with it,exact,False,,settled_date_check,published 2020-03-11
+Spending Review 2020,November 2020,obr_2020-11,OBR fiscal event -> EFO published with it,exact,False,,settled_date_check,published 2020-11-25
+Spring Budget 2021,March 2021,obr_2021-03,OBR fiscal event -> EFO published with it,exact,False,,settled_date_check,published 2021-03-03
+Autumn Budget 2021,October 2021,obr_2021-10,OBR fiscal event -> EFO published with it,exact,False,,settled_date_check,published 2021-10-27
+Spring Statement 2022,March 2022,obr_2022-03,OBR fiscal event -> EFO published with it,exact,False,,settled_date_check,published 2022-03-23
+Autumn Statement 2022,November 2022,obr_2022-11,OBR fiscal event -> EFO published with it,exact,False,,settled_date_check,published 2022-11-16
+Spring Budget 2023,March 2023,obr_2023-03,OBR fiscal event -> EFO published with it,exact,False,,settled_date_check,published 2023-03-15
+Autumn Statement 2023,November 2023,obr_2023-11,OBR fiscal event -> EFO published with it,exact,False,,settled_date_check,published 2023-11-22
+Spring Budget 2024,March 2024,obr_2024-03,OBR fiscal event -> EFO published with it,exact,False,,settled_date_check,published 2024-03-06
+Autumn Budget 2024,October 2024,obr_2024-10,OBR fiscal event -> EFO published with it,exact,False,,settled_date_check,published 2024-10-30
+Spring Statement 2025,March 2025,obr_2025-03,OBR fiscal event -> EFO published with it,exact,False,,settled_date_check,published 2025-03-26
+Autumn Budget 2025,November 2025,obr_2025-11,OBR fiscal event -> EFO published with it,exact,False,,settled_date_check,published 2025-11-26
+Spring Forecast 2026,March 2026,obr_2026-03,OBR fiscal event -> EFO published with it,exact,False,,settled_date_check,published 2026-03-03

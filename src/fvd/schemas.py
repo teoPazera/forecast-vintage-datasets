@@ -204,6 +204,8 @@ SCHEMAS: dict[str, dict] = {
             ("confidence", "string", "", "exact | assumed"),
             ("reviewed", "boolean", "", "true once Teo has checked the row"),
             ("comment", "string", "", "reviewer's comment"),
+            ("status", "string", "", "settled_date_check (passes the date check of crosswalks/codebook.md section 4) | review | not_checked (before June 2010) | reviewed"),
+            ("check", "string", "", "result of the date check: the publication date, or why it failed"),
         ],
     },
     "crosswalks/pmd_heads": {
@@ -352,6 +354,24 @@ SCHEMAS: dict[str, dict] = {
             ("total", "float", "series unit", "sum over categories"),
             ("share_of_abs_revision", "float", "", "abs_sum / total"),
             ("pending_share_of_abs", "float", "", "share of abs_sum from rows whose label is pending"),
+        ],
+    },
+    "stats/prespecified_tests": {
+        "description": "The two numbers-only tests pre-specified as the baseline (D22), episodes included. "
+                       "Chosen after the E5 results had been seen.",
+        "columns": [
+            ("group", "string", "", "OBR | HMT | CBO"),
+            ("family", "string", "", "series family (D7)"),
+            ("unit", "string", "", "pooled_levels (log basis) or the series_id of a balance or rate series"),
+            ("bucket", "string", "months", "12-24"),
+            ("test", "string", "", "same_sign_share | error_on_revision"),
+            ("errors", "string", "", "policy_adjusted (primary) | raw (robustness); empty for same_sign_share"),
+            ("n_cells", "integer", "", "revision pairs or cells"),
+            ("n_targets", "integer", "", "distinct series x target period"),
+            ("estimate", "float", "", "same-sign share, or the slope of e = F - A on the revision (log basis for levels); negative = CG's under-reaction"),
+            ("se", "float", "", "standard error clustered by target (slope only)"),
+            ("p_value", "float", "", "binomial test against 0.5, or t-test of slope = 0"),
+            ("note", "string", "", ""),
         ],
     },
 }

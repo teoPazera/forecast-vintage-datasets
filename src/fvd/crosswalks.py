@@ -90,6 +90,45 @@ def map_event(event: str, hmt_labels: list[str]) -> tuple[str | None, str, str]:
     return f"{calendar.month_name[pick[0]]} {year}", rule, "assumed"
 
 
+def check_events(ev: pd.DataFrame, pub: dict[str, pd.Timestamp]) -> pd.DataFrame:
+    """Codebook section 4: an OBR-era event is settled when the forecast it maps to
+    was published in the year the event names, in the half of the year its type
+    names (Autumn: September-December; Spring: January-June; a second Budget after
+    the first), and no other event maps to the same forecast. Adds `status`
+    (settled_date_check | review | not_checked | reviewed) and `check`."""
+    ev = ev.copy()
+    obr = ev.vintage_id.fillna("").str.startswith("obr_")
+    dup = ev[obr].vintage_id.duplicated(keep=False)
+    status, check = [], []
+    for i, r in ev.iterrows():
+        if is_true(r.reviewed):
+            status.append("reviewed"); check.append("")
+            continue
+        if not obr[i]:
+            status.append("not_checked"); check.append("before June 2010: component forecasts start then")
+            continue
+        d = pub[r.vintage_id]
+        fails = []
+        year = int(re.search(r"\d{4}", r.event_raw).group())
+        if d.year != year:
+            fails.append(f"published {d.year}, event names {year}")
+        if r.event_raw.startswith("Autumn") and d.month < 9:
+            fails.append("autumn event published before September")
+        if r.event_raw.startswith("Spring") and d.month > 6:
+            fails.append("spring event published after June")
+        if r.event_raw.endswith("#2"):
+            # the first Budget may be an HM Treasury forecast (Budget 2010, March)
+            first = ev[ev.event_raw == r.event_raw[:-3]].vintage_id.dropna()
+            if len(first) != 1 or first.iloc[0] not in pub or pub[first.iloc[0]] >= d:
+                fails.append("second Budget not after the first")
+        if dup[i]:
+            fails.append("another event maps to the same forecast")
+        status.append("review" if fails else "settled_date_check")
+        check.append("; ".join(fails) or f"published {d.date()}")
+    ev["status"], ev["check"] = status, check
+    return ev
+
+
 # --- PMD tax heads -> HOFD sheets ---------------------------------------------------
 TAX_HEADS = {
     "income tax": ("IT", "exact"), "nics": ("NICS", "exact"), "vat": ("VAT", "exact"),

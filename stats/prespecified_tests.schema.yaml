@@ -1,0 +1,53 @@
+table: stats/prespecified_tests
+description: The two numbers-only tests pre-specified as the baseline (D22), episodes included. Chosen
+  after the E5 results had been seen.
+columns:
+- name: group
+  type: string
+  unit: ''
+  description: OBR | HMT | CBO
+- name: family
+  type: string
+  unit: ''
+  description: series family (D7)
+- name: unit
+  type: string
+  unit: ''
+  description: pooled_levels (log basis) or the series_id of a balance or rate series
+- name: bucket
+  type: string
+  unit: months
+  description: 12-24
+- name: test
+  type: string
+  unit: ''
+  description: same_sign_share | error_on_revision
+- name: errors
+  type: string
+  unit: ''
+  description: policy_adjusted (primary) | raw (robustness); empty for same_sign_share
+- name: n_cells
+  type: integer
+  unit: ''
+  description: revision pairs or cells
+- name: n_targets
+  type: integer
+  unit: ''
+  description: distinct series x target period
+- name: estimate
+  type: float
+  unit: ''
+  description: same-sign share, or the slope of e = F - A on the revision (log basis for levels); negative
+    = CG's under-reaction
+- name: se
+  type: float
+  unit: ''
+  description: standard error clustered by target (slope only)
+- name: p_value
+  type: float
+  unit: ''
+  description: binomial test against 0.5, or t-test of slope = 0
+- name: note
+  type: string
+  unit: ''
+  description: ''

@@ -173,27 +173,83 @@ And are these tables consistent with the HOFD forecasts parsed in E1?
     event (the E4 cross-check): within 0.1 in 104 of 156 cells; median absolute
     difference £0.02bn (`efo_direct_effects_vs_pmd.csv`).
 
+**Crosswalk review (28–29 September 2026)**
+
+Teo is not a specialist in UK fiscal statistics, so the crosswalk rows were labelled
+against a written codebook (`crosswalks/codebook.md`) rather than by judgement.
+Section 1 of the codebook records Teo's rulings. The labelling was done by the
+keyword rules and Jev (TypeSafe, `jev-1.13.0`) independently, with every call logged
+in `crosswalks/llm/jev_results.jsonl`. A row is settled when the two agree, Jev's
+confidence is at least 0.7, and the label contains no negation (D20). Pipeline:
+`python -m fvd.crosswalk_states`, `python -m fvd.jev_label all`,
+`python -m fvd.jev_route`.
+
+- **Events** (`crosswalks/pmd_events.csv`, `status`). The codebook's date check
+  (section 4), run in `fvd.e2_frd_pmd`, settles **33 of 33** events since June 2010.
+  Each forecast was published in the year the event names and in the half of the
+  year its type names, and no two events share a forecast. The 52 pre-2010 events
+  are `not_checked`: component forecasts start in June 2010, so they change no result.
+- **PMD heads** (`crosswalks/pmd_heads.csv`): **all 94 are final.**
+  - 59 were settled by agreement (81% of Jev's top answers matched the keyword
+    mapping).
+  - The other 35 went to `crosswalks/review_queue_heads.csv`. A separate Claude
+    session proposed an answer for each, which Teo accepted. This session then
+    checked the 10 answers marked `check` against the source files, and 14 rows in
+    total now cite the file used. Three answers were overridden on that evidence
+    (`crosswalks/review_queue_heads_decisions.csv`, columns `labeller` and
+    `verified_in`).
+  - Examples, from EFO March 2026 annex table A.5: Pillar 2 taxes are in onshore
+    CT (footnote 2); the energy profits levy is in oil and gas (footnote 6); the
+    diverted and residential property developer taxes are "other HMRC taxes"
+    (footnote 5), so no series. PMD spending "VAT refunds" maps to no series:
+    mapping it to the receipts series would count those measures twice.
+- **Attribution labels** (`crosswalks/attribution_labels.csv`, `status`): 572 rows.
+  - The 13 FRD and CBO rows are fixed in code.
+  - Of the 559 EFO labels, **343 are settled by agreement, 3 are reviewed and 213
+    are pending.** Jev's top answer matched the keyword category for 78%.
+  - Reasons a row was left pending at routing, where a row can have several:
+    - Jev disagreed (123);
+    - confidence below 0.7 (119);
+    - the row is a group heading, which follows the rows under it (21);
+    - negation in the label (21).
+  - Pending rows keep the keyword category as a **provisional** value. By category:
+    147 modelling and other, 38 economic determinants, 14 policy, 9 calibration to
+    outturn, 2 underlying, 2 by tax head, 1 classification.
+  - They carry 2,172 of the 6,822 EFO attribution rows.
+  - They go to a second model (D21). The package in
+    `crosswalks/pending_second_model/` is written and runs standalone on another
+    machine; its results are merged with `python -m fvd.merge_second_model`, which
+    writes `crosswalks/review_queue_labels.csv`. Neither step has been run.
+- **Spot-check of settled rows.** 20 of the 403 rows settled at the time (labels and
+  heads) were drawn with seed 20260929 (`crosswalks/llm/spot_check_draw.json`) and
+  answered blind in `crosswalks/spot_check_filled.csv`. **19 of 20 match**
+  (`python -m fvd.spot_check score crosswalks/spot_check_filled.csv`).
+  - The miss ("SRS of household consumption") came from the wording of rule A11.
+    The rule now requires an economic cause of the change in the standard-rated
+    share; saying what the share is of is modelling.
+  - Three wordings (45 attribution rows) moved from economic determinants to
+    modelling and other, and are marked reviewed.
+- **Where provisional labels are used.** Every use reports how many rows rest on a
+  pending label:
+  - **E5 attribution shares**: 1,134 of 3,788 OBR EFO driver rows, or 33% of the
+    absolute attributed revision (`stats/attribution_shares.csv`, columns
+    `n_pending` and `pending_share_of_abs`).
+  - **E5 calibration test**: 62 of 364 "calibration to outturn" rows.
+  - **E8 case packs**, which carry attribution per vintage. Pending rows will be
+    marked there.
+
+  E4 policy adjustment and E6 case selection do not use attribution labels: they use
+  the FRD decomposition, fixed in code, and the PMD heads, which are final.
+
 ## 4. Open questions
 
-1. **Review of the three crosswalks** (gate item).
-   - `python -m fvd.review build` writes `review/review.xlsx`, which lists only rows
-     that can change a result:
-     - the 98 label wordings that carry 85% of the attributed revision, plus
-       uncertain defaults;
-     - the 22 assumed or unmapped PMD heads;
-     - the 33 events since June 2010.
-
-     `python -m fvd.review apply` writes the answers back (`reviewed`, `comment`).
-     Reviewed rows keep their mapping on every rerun.
-   - Most uncertain: the three assumed tax heads and the keyword-based D3 categories
-     of 559 EFO labels. The 52 pre-2010 event mappings change no result, because
-     component forecasts start in June 2010.
-   - For example, "Outturn receipts and modelling" and "IT and NICs receipts and
-     modelling" mix calibration with modelling. They are mapped to
-     `calibration_to_outturn` and flagged in the `note` column.
-2. **D3 for the FRD.** The FRD's "underlying" is kept as `underlying_unsplit`. Should
-   it be split with the EFO receipts-by-type tables where they exist (receipts only),
-   or left as is?
+1. **213 pending attribution labels** (gate item, D21). The events and heads are
+   final. The labels wait for the second model and then for Teo's review of any rows
+   the two models still leave unsettled. Until then, the E5 attribution results are
+   provisional to the extent reported above. The workbook review planned on
+   27 September (`python -m fvd.review`) is superseded by the codebook route.
+2. **D3 for the FRD.** Decided (Teo, 29 September 2026): the FRD's "underlying"
+   stays one unsplit category.
 3. **Plan vs files:**
    - Receipts are chapter 4 of the EFO until 2019 and in 2023–25, and chapter 3 in
      2020–22 and 2026. Tables are located by title, so chapter numbering does not
@@ -226,4 +282,4 @@ And are these tables consistent with the HOFD forecasts parsed in E1?
 | ≥ 95% of matched cells pass the checks | levels 1,576 / 1,643; driver sums 1,047 / 1,133; FRD totals 181 / 181; combined 2,804 / 2,957 = **94.8%** | **fail** (narrowly). Causes identified: different receipts definitions in two tables and totals that include unlisted items. No parsing errors found in the single-tax tables |
 | Event crosswalk covers every event since June 2010 | 33 / 33 events → 33 / 33 OBR vintages | **pass** |
 | Coverage of per-tax driver tables reported by vintage and tax | `stats/e2_checks/efo_table_coverage.csv` | **pass** |
-| Teo reviews the three crosswalks | pending | **open** |
+| Teo reviews the three crosswalks | events 33 / 33 settled by the date check; heads 94 / 94 final; labels 346 / 559 settled or reviewed, 213 pending the second model (D21), with a spot-check match of 19 / 20 | **pass** for events and heads; **open** for labels |

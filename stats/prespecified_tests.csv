@@ -1,0 +1,191 @@
+group,family,unit,bucket,test,errors,n_cells,n_targets,estimate,se,p_value,note
+CBO,aggregate,pooled_levels,12-24,same_sign_share,,250,126,0.604,,0.0012130762651629949,later revision at 12-24 months; H0: 0.5 (binomial)
+CBO,aggregate,pooled_levels,12-24,error_on_revision,policy_adjusted,246,122,-0.09910575036364318,0.1008572639795689,0.32578773314906206,"primary; e = F - A, a negative coefficient = CG's under-reaction"
+CBO,aggregate,pooled_levels,12-24,error_on_revision,raw,246,122,-0.263928995460103,0.12142789876026776,0.02973932696826863,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+CBO,aggregate,cbo.deficit.total,12-24,same_sign_share,,98,41,0.5204081632653061,,0.7620362195292437,later revision at 12-24 months; H0: 0.5 (binomial)
+CBO,aggregate,cbo.deficit.total,12-24,error_on_revision,policy_adjusted,97,40,0.015917965397013675,0.3764819640194106,0.9662748366374854,"primary; e = F - A, a negative coefficient = CG's under-reaction"
+CBO,aggregate,cbo.deficit.total,12-24,error_on_revision,raw,97,40,-0.39149727729934386,0.2330557508043389,0.09298769461594901,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+CBO,outlay_discretionary,pooled_levels,12-24,same_sign_share,,233,93,0.4892703862660944,,0.7933516270862023,later revision at 12-24 months; H0: 0.5 (binomial)
+CBO,outlay_discretionary,pooled_levels,12-24,error_on_revision,policy_adjusted,233,87,0.012193982769584017,0.028048277326647258,0.6637440513295477,"primary; e = F - A, a negative coefficient = CG's under-reaction"
+CBO,outlay_discretionary,pooled_levels,12-24,error_on_revision,raw,233,87,0.2021570219503254,0.07950843783066079,0.01100355940529389,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+CBO,outlay_mandatory,pooled_levels,12-24,same_sign_share,,416,173,0.6225961538461539,,6.498624047944679e-07,later revision at 12-24 months; H0: 0.5 (binomial)
+CBO,outlay_mandatory,pooled_levels,12-24,error_on_revision,policy_adjusted,445,165,-0.0561207349474329,0.18057422121051858,0.7559599660905457,"primary; e = F - A, a negative coefficient = CG's under-reaction"
+CBO,outlay_mandatory,pooled_levels,12-24,error_on_revision,raw,445,165,-0.45636099557447596,0.4007953401812425,0.254853973247562,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+CBO,outlay_mandatory,cbo.outlay.fannie_freddie,12-24,same_sign_share,,22,13,0.5,,1.0,later revision at 12-24 months; H0: 0.5 (binomial)
+CBO,outlay_mandatory,cbo.outlay.fannie_freddie,12-24,error_on_revision,policy_adjusted,41,17,-2.468409168010068,1.3886141001096066,0.07546853891418497,"primary; e = F - A, a negative coefficient = CG's under-reaction"
+CBO,outlay_mandatory,cbo.outlay.fannie_freddie,12-24,error_on_revision,raw,41,17,-2.477901236717536,1.3912287103477443,0.07489801997457653,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+CBO,outlay_net_interest,cbo.outlay.net_interest,12-24,same_sign_share,,90,35,0.5,,1.0,later revision at 12-24 months; H0: 0.5 (binomial)
+CBO,outlay_net_interest,cbo.outlay.net_interest,12-24,error_on_revision,policy_adjusted,89,33,-0.5205024684104819,0.24307765324005903,0.03224975714569231,"primary; e = F - A, a negative coefficient = CG's under-reaction"
+CBO,outlay_net_interest,cbo.outlay.net_interest,12-24,error_on_revision,raw,89,33,-0.509456853730335,0.2394794221078624,0.03339090746142996,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+CBO,revenue_corporate_income_taxes,pooled_levels,12-24,same_sign_share,,84,43,0.40476190476190477,,0.10113634213880449,later revision at 12-24 months; H0: 0.5 (binomial)
+CBO,revenue_corporate_income_taxes,pooled_levels,12-24,error_on_revision,policy_adjusted,104,42,0.49316011049724684,0.4471127665734756,0.2700322847790845,"primary; e = F - A, a negative coefficient = CG's under-reaction"
+CBO,revenue_corporate_income_taxes,pooled_levels,12-24,error_on_revision,raw,104,42,0.4435032672326545,0.4964951722626132,0.37171365122755173,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+CBO,revenue_customs_duties,pooled_levels,12-24,same_sign_share,,65,42,0.3076923076923077,,0.0026263768106840374,later revision at 12-24 months; H0: 0.5 (binomial)
+CBO,revenue_customs_duties,pooled_levels,12-24,error_on_revision,policy_adjusted,104,42,0.46166333519303604,0.34116164286762557,0.17598856228874915,"primary; e = F - A, a negative coefficient = CG's under-reaction"
+CBO,revenue_customs_duties,pooled_levels,12-24,error_on_revision,raw,104,42,0.46752286057537884,0.35392988891260957,0.18651881483560095,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+CBO,revenue_estate_and_gift_taxes,cbo.revenue.estate_and_gift_taxes,12-24,same_sign_share,,59,41,0.559322033898305,,0.43499280512215344,later revision at 12-24 months; H0: 0.5 (binomial)
+CBO,revenue_estate_and_gift_taxes,cbo.revenue.estate_and_gift_taxes,12-24,error_on_revision,policy_adjusted,104,42,0.07560598026082498,0.062262012110413406,0.22462571238763107,"primary; e = F - A, a negative coefficient = CG's under-reaction"
+CBO,revenue_estate_and_gift_taxes,cbo.revenue.estate_and_gift_taxes,12-24,error_on_revision,raw,104,42,0.07759258168367635,0.06262381618982396,0.21533560223766823,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+CBO,revenue_excise_taxes,pooled_levels,12-24,same_sign_share,,76,44,0.47368421052631576,,0.7310088822226056,later revision at 12-24 months; H0: 0.5 (binomial)
+CBO,revenue_excise_taxes,pooled_levels,12-24,error_on_revision,policy_adjusted,104,42,0.07387787130864909,0.09805516789971888,0.4511905429263523,"primary; e = F - A, a negative coefficient = CG's under-reaction"
+CBO,revenue_excise_taxes,pooled_levels,12-24,error_on_revision,raw,104,42,0.07722658011099649,0.1156637484557748,0.5043367280611157,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+CBO,revenue_individual_income_taxes,pooled_levels,12-24,same_sign_share,,95,44,0.6421052631578947,,0.007313123139453615,later revision at 12-24 months; H0: 0.5 (binomial)
+CBO,revenue_individual_income_taxes,pooled_levels,12-24,error_on_revision,policy_adjusted,104,42,-0.19428481350807636,0.29601368871615846,0.5116071484918884,"primary; e = F - A, a negative coefficient = CG's under-reaction"
+CBO,revenue_individual_income_taxes,pooled_levels,12-24,error_on_revision,raw,104,42,-0.29799610833176554,0.3362746150423124,0.3755265154383419,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+CBO,revenue_miscellaneous_receipts,pooled_levels,12-24,same_sign_share,,104,44,0.5192307692307693,,0.7687918101386723,later revision at 12-24 months; H0: 0.5 (binomial)
+CBO,revenue_miscellaneous_receipts,pooled_levels,12-24,error_on_revision,policy_adjusted,104,42,-0.17575848511264575,0.161640691801179,0.27688631662871055,"primary; e = F - A, a negative coefficient = CG's under-reaction"
+CBO,revenue_miscellaneous_receipts,pooled_levels,12-24,error_on_revision,raw,104,42,-0.178929769373505,0.16459001551024358,0.276981976690273,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+CBO,revenue_payroll_taxes,pooled_levels,12-24,same_sign_share,,82,43,0.6585365853658537,,0.005435924877566281,later revision at 12-24 months; H0: 0.5 (binomial)
+CBO,revenue_payroll_taxes,pooled_levels,12-24,error_on_revision,policy_adjusted,104,42,-0.37399178281944334,0.398685259711337,0.34821217408906646,"primary; e = F - A, a negative coefficient = CG's under-reaction"
+CBO,revenue_payroll_taxes,pooled_levels,12-24,error_on_revision,raw,104,42,-0.6479074244534582,0.47164551962640955,0.16952958598564238,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+HMT,aggregate,pooled_levels,12-24,same_sign_share,,60,32,0.55,,0.5189580031896519,later revision at 12-24 months; H0: 0.5 (binomial)
+HMT,aggregate,pooled_levels,12-24,error_on_revision,policy_adjusted,70,38,-0.1510160663299427,0.1789763572033724,0.3987942408120969,"primary; e = F - A, a negative coefficient = CG's under-reaction"
+HMT,aggregate,pooled_levels,12-24,error_on_revision,raw,70,38,-0.1507020670517413,0.17897070738742596,0.3997606457559113,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+HMT,aggregate,obr.cacb,12-24,same_sign_share,,15,9,0.7333333333333333,,0.11846923828124999,later revision at 12-24 months; H0: 0.5 (binomial)
+HMT,aggregate,obr.cacb,12-24,error_on_revision,raw,22,12,0.27868963672039315,0.14365356709907062,0.05237823770489217,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+HMT,aggregate,obr.capsnb,12-24,same_sign_share,,11,6,0.7272727272727273,,0.2265625,later revision at 12-24 months; H0: 0.5 (binomial)
+HMT,aggregate,obr.capsnb,12-24,error_on_revision,raw,12,7,0.2373325661872749,0.12605729174938407,0.05973619184354744,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+HMT,aggregate,obr.pscr,12-24,same_sign_share,,32,16,0.625,,0.21532714972272515,later revision at 12-24 months; H0: 0.5 (binomial)
+HMT,aggregate,obr.pscr,12-24,error_on_revision,raw,35,19,0.6207281524445727,0.43511583478952537,0.1537005915102429,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+HMT,aggregate,obr.psnb,12-24,same_sign_share,,35,21,0.7142857142857143,,0.016673847800120715,later revision at 12-24 months; H0: 0.5 (binomial)
+HMT,aggregate,obr.psnb,12-24,error_on_revision,policy_adjusted,44,27,0.1842335650582051,0.260948033046672,0.4801780002245465,"primary; e = F - A, a negative coefficient = CG's under-reaction"
+HMT,aggregate,obr.psnb,12-24,error_on_revision,raw,44,27,0.1854506466997894,0.26162227517243136,0.47841828481343895,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+HMT,aggregate,obr.psnb_gbp,12-24,same_sign_share,,34,20,0.7058823529411765,,0.024306510109454393,later revision at 12-24 months; H0: 0.5 (binomial)
+HMT,aggregate,obr.psnb_gbp,12-24,error_on_revision,policy_adjusted,44,26,-0.11795346293381112,0.31032901641038313,0.7038773956858729,"primary; e = F - A, a negative coefficient = CG's under-reaction"
+HMT,aggregate,obr.psnb_gbp,12-24,error_on_revision,raw,44,26,-0.11666745517577093,0.3113890676071535,0.7079075466929606,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+HMT,aggregate,obr.psnd,12-24,same_sign_share,,11,6,0.9090909090909091,,0.01171875,later revision at 12-24 months; H0: 0.5 (binomial)
+HMT,aggregate,obr.psnd,12-24,error_on_revision,raw,12,7,-0.6486583520977661,0.44026911688359927,0.14066412336591314,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+HMT,aggregate,obr.tme,12-24,same_sign_share,,27,15,0.5185185185185185,,1.0,later revision at 12-24 months; H0: 0.5 (binomial)
+HMT,aggregate,obr.tme,12-24,error_on_revision,raw,35,19,-0.15909649550031452,0.29489383027060906,0.5895389166455385,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+HMT,economy,pooled_levels,12-24,same_sign_share,,39,25,0.48717948717948717,,1.0,later revision at 12-24 months; H0: 0.5 (binomial)
+HMT,economy,pooled_levels,12-24,error_on_revision,raw,49,28,-0.5786236751860785,0.40490598486784884,0.15299498949816037,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+HMT,economy,obr.ukgdp,12-24,same_sign_share,,16,12,0.625,,0.454498291015625,later revision at 12-24 months; H0: 0.5 (binomial)
+HMT,economy,obr.ukgdp,12-24,error_on_revision,raw,49,26,-0.9784139163788453,0.3592398074057383,0.006458098868553592,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,aggregate,pooled_levels,12-24,same_sign_share,,64,32,0.5625,,0.3817327947933377,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,aggregate,pooled_levels,12-24,error_on_revision,policy_adjusted,58,28,0.715679577264727,0.23074457074996038,0.0019247160393213022,"primary; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,aggregate,pooled_levels,12-24,error_on_revision,raw,58,28,0.21019661233912892,0.26819859028981147,0.43319564246892406,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,aggregate,obr.cacb,12-24,same_sign_share,,29,16,0.4482758620689655,,0.711071103811264,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,aggregate,obr.cacb,12-24,error_on_revision,raw,29,14,0.36523885658693406,0.3346431544535537,0.2750846659828532,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,aggregate,obr.capsnb,12-24,same_sign_share,,31,16,0.5161290322580645,,1.0,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,aggregate,obr.capsnb,12-24,error_on_revision,raw,28,14,0.2209258197304418,0.624296764950641,0.7234291996111399,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,aggregate,obr.cb,12-24,same_sign_share,,31,16,0.41935483870967744,,0.47312965989112854,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,aggregate,obr.cb,12-24,error_on_revision,raw,28,14,0.46768227957534414,0.3286210441854235,0.15468805463480198,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,aggregate,obr.cb_gbp,12-24,same_sign_share,,31,16,0.4838709677419355,,1.0,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,aggregate,obr.cb_gbp,12-24,error_on_revision,raw,28,14,0.45444073369250215,0.3340446400760983,0.17369731392207743,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,aggregate,obr.pscr,12-24,same_sign_share,,25,15,0.56,,0.6900379657745361,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,aggregate,obr.pscr,12-24,error_on_revision,raw,29,14,0.5229626603752561,0.29540618965213644,0.07667431331897623,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,aggregate,obr.psnb,12-24,same_sign_share,,30,16,0.5666666666666667,,0.5846647117286922,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,aggregate,obr.psnb,12-24,error_on_revision,policy_adjusted,29,14,0.8420676560383932,0.2557068424111858,0.0009908997833704164,"primary; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,aggregate,obr.psnb,12-24,error_on_revision,raw,29,14,0.4328928411767661,0.42964197598811515,0.3136626413227179,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,aggregate,obr.psnb_gbp,12-24,same_sign_share,,31,16,0.5161290322580645,,1.0,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,aggregate,obr.psnb_gbp,12-24,error_on_revision,policy_adjusted,29,14,0.88043356960941,0.27807181987525936,0.001544396501415048,"primary; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,aggregate,obr.psnb_gbp,12-24,error_on_revision,raw,29,14,0.4385057502244542,0.4543197329575961,0.3344486768501054,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,aggregate,obr.psnd,12-24,same_sign_share,,32,16,0.59375,,0.37708558747544885,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,aggregate,obr.psnd,12-24,error_on_revision,raw,29,14,0.3746845369543426,0.0962134325378117,9.848031495385508e-05,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,aggregate,obr.psnfl,12-24,same_sign_share,,17,9,0.5882352941176471,,0.629058837890625,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,aggregate,obr.psnfl,12-24,error_on_revision,raw,14,8,0.34679432536295135,0.0777321071441291,8.142446205851628e-06,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,aggregate,obr.psni,12-24,same_sign_share,,31,16,0.5483870967741935,,0.720100131817162,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,aggregate,obr.psni,12-24,error_on_revision,raw,28,14,0.6262923079724065,0.3393448866547795,0.0649514261924387,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,aggregate,obr.tme,12-24,same_sign_share,,32,16,0.59375,,0.37708558747544885,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,aggregate,obr.tme,12-24,error_on_revision,raw,29,14,0.0789695035417989,0.41102328407258576,0.8476411383878958,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,business_taxes,pooled_levels,12-24,same_sign_share,,137,74,0.5182481751824818,,0.732684093591041,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,business_taxes,pooled_levels,12-24,error_on_revision,policy_adjusted,133,68,0.42388247742173923,0.2484674476740287,0.08801031886763944,"primary; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,business_taxes,pooled_levels,12-24,error_on_revision,raw,133,68,0.20449414255792858,0.3840896891132003,0.5944403458699004,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,capital_taxes,pooled_levels,12-24,same_sign_share,,115,62,0.4956521739130435,,1.0,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,capital_taxes,pooled_levels,12-24,error_on_revision,policy_adjusted,84,42,0.2704401386773258,0.19669053134417308,0.16914616996270682,"primary; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,capital_taxes,pooled_levels,12-24,error_on_revision,raw,112,56,0.3058860931113196,0.1717378005385059,0.07489240989881112,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,consumption_taxes,pooled_levels,12-24,same_sign_share,,81,46,0.4444444444444444,,0.37417441760470777,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,consumption_taxes,pooled_levels,12-24,error_on_revision,policy_adjusted,84,42,0.16672697012310034,0.11254905229760016,0.13850757728150587,"primary; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,consumption_taxes,pooled_levels,12-24,error_on_revision,raw,84,42,0.1924505793719902,0.13646053891150312,0.1584505100145952,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,duties,pooled_levels,12-24,same_sign_share,,202,114,0.5247524752475248,,0.5266817822731974,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,duties,pooled_levels,12-24,error_on_revision,policy_adjusted,140,70,-0.3306484699532548,0.16147981852251558,0.040597755802690746,"primary; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,duties,pooled_levels,12-24,error_on_revision,raw,224,112,-0.25877722533992126,0.18161607001199975,0.15419806931989358,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,economy,pooled_levels,12-24,same_sign_share,,246,128,0.4796747967479675,,0.5661792835834816,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,economy,pooled_levels,12-24,error_on_revision,raw,215,109,0.14986748768010344,0.25853791953300165,0.5621350598166227,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,economy,obr.businessinv,12-24,same_sign_share,,30,16,0.4666666666666667,,0.8555355519056321,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,economy,obr.businessinv,12-24,error_on_revision,raw,27,14,1.060737902496629,0.29870125405768644,0.0003835276319382397,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,economy,obr.cpi,12-24,same_sign_share,,29,16,0.4482758620689655,,0.711071103811264,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,economy,obr.cpi,12-24,error_on_revision,raw,29,15,-0.3766679643593605,0.4021152616175773,0.3489044527074654,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,economy,obr.currentacc_gbp,12-24,same_sign_share,,31,16,0.4838709677419355,,1.0,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,economy,obr.currentacc_gbp,12-24,error_on_revision,raw,27,14,0.33414728193345233,0.3638639034158365,0.3584459193959292,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,economy,obr.currentacc_pct_gdp,12-24,same_sign_share,,30,16,0.43333333333333335,,0.5846647117286922,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,economy,obr.currentacc_pct_gdp,12-24,error_on_revision,raw,27,14,0.49491123919746416,0.3052872762030362,0.10498914522257094,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,economy,obr.deflator,12-24,same_sign_share,,22,13,0.36363636363636365,,0.28627872467041016,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,economy,obr.deflator,12-24,error_on_revision,raw,27,14,0.12259341449969816,0.1703455007203381,0.47172506347198395,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,economy,obr.demand,12-24,same_sign_share,,28,15,0.6071428571428571,,0.34492845088243484,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,economy,obr.demand,12-24,error_on_revision,raw,27,14,0.3197188194945101,0.1820508054512129,0.07905314433536545,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,economy,obr.earnings,12-24,same_sign_share,,27,15,0.6296296296296297,,0.24778856337070465,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,economy,obr.earnings,12-24,error_on_revision,raw,27,14,-0.3901570029477466,0.4427776604288834,0.3782323996332788,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,economy,obr.eurogdp,12-24,same_sign_share,,26,14,0.5769230769230769,,0.557197093963623,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,economy,obr.eurogdp,12-24,error_on_revision,raw,26,14,-0.35425141999237447,0.14222260893923963,0.012744740541242111,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,economy,obr.exports,12-24,same_sign_share,,31,16,0.6451612903225806,,0.14961278438568115,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,economy,obr.exports,12-24,error_on_revision,raw,27,14,-0.4341262131490216,0.42341701513718105,0.3052252791776666,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,economy,obr.fixedinv,12-24,same_sign_share,,30,16,0.6666666666666666,,0.09873714670538905,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,economy,obr.fixedinv,12-24,error_on_revision,raw,27,14,0.6651528905809243,0.34003023571878854,0.05044653586974522,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,economy,obr.gilts,12-24,same_sign_share,,31,16,0.4838709677419355,,1.0,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,economy,obr.gilts,12-24,error_on_revision,raw,28,14,-0.29944386195572836,0.166936376142275,0.07285141902595457,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,economy,obr.govconsumption,12-24,same_sign_share,,27,14,0.5555555555555556,,0.7011080384254456,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,economy,obr.govconsumption,12-24,error_on_revision,raw,27,14,0.4745446919714417,0.06132111012311941,1.0045112069525095e-14,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,economy,obr.govtinv,12-24,same_sign_share,,31,16,0.4838709677419355,,1.0,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,economy,obr.govtinv,12-24,error_on_revision,raw,27,14,0.40330184722136136,0.24330352462709123,0.0973966318455809,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,economy,obr.hhconsumption,12-24,same_sign_share,,30,16,0.4666666666666667,,0.8555355519056321,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,economy,obr.hhconsumption,12-24,error_on_revision,raw,27,14,0.3024240414657788,0.17034576592874326,0.07583944990048092,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,economy,obr.hhnetworthtoincome,12-24,same_sign_share,,29,16,0.4827586206896552,,1.0,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,economy,obr.hhnetworthtoincome,12-24,error_on_revision,raw,27,14,0.17371244570203334,0.23254582989660644,0.45506171586391875,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,economy,obr.houseprices,12-24,same_sign_share,,29,16,0.5172413793103449,,1.0,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,economy,obr.houseprices,12-24,error_on_revision,raw,27,14,0.34330201151402845,0.39872411208300707,0.38923728194789353,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,economy,obr.imports,12-24,same_sign_share,,26,14,0.4230769230769231,,0.557197093963623,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,economy,obr.imports,12-24,error_on_revision,raw,27,14,0.5487559065429545,0.16699891809772344,0.001016264936475873,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,economy,obr.inventories,12-24,same_sign_share,,18,10,0.5,,1.0,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,economy,obr.inventories,12-24,error_on_revision,raw,27,14,0.663290587371428,0.13551951422302794,9.859175818077087e-07,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,economy,obr.non_oilpnfcprofits,12-24,same_sign_share,,27,16,0.5555555555555556,,0.7011080384254456,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,economy,obr.non_oilpnfcprofits,12-24,error_on_revision,raw,27,14,0.8862141558331351,0.21400500030995176,3.4565795801804024e-05,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,economy,obr.outputgap,12-24,same_sign_share,,29,16,0.5172413793103449,,1.0,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,economy,obr.privatedwellingsinv,12-24,same_sign_share,,29,15,0.41379310344827586,,0.45825831964612007,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,economy,obr.privatedwellingsinv,12-24,error_on_revision,raw,27,14,0.4977247397132474,0.43210640667469347,0.24937988765323882,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,economy,obr.prod,12-24,same_sign_share,,29,15,0.3793103448275862,,0.26493089646101,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,economy,obr.prod,12-24,error_on_revision,raw,27,14,0.49796138789620903,0.2449037099277082,0.04202276966368903,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,economy,obr.rhhdi,12-24,same_sign_share,,30,16,0.5333333333333333,,0.8555355519056321,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,economy,obr.rhhdi,12-24,error_on_revision,raw,27,14,0.7180065520618701,0.36733303749952234,0.050624707220599495,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,economy,obr.rpi,12-24,same_sign_share,,31,16,0.45161290322580644,,0.720100131817162,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,economy,obr.rpi,12-24,error_on_revision,raw,29,15,-0.1746926123103761,0.3718026270169807,0.6384599827932267,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,economy,obr.savingratio,12-24,same_sign_share,,31,16,0.5483870967741935,,0.720100131817162,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,economy,obr.savingratio,12-24,error_on_revision,raw,27,14,0.29213864904867554,0.14403436393990748,0.042534066101818015,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,economy,obr.shorttermrates,12-24,same_sign_share,,31,16,0.6129032258064516,,0.28104151505976915,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,economy,obr.shorttermrates,12-24,error_on_revision,raw,28,14,-0.14540388116741465,0.12149901506902512,0.2314042210406475,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,economy,obr.ukexportmarkets,12-24,same_sign_share,,28,15,0.6785714285714286,,0.08715855330228806,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,economy,obr.ukexportmarkets,12-24,error_on_revision,raw,26,14,-0.3019604682905206,0.21105232961722714,0.15250548068650518,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,economy,obr.ukgdp,12-24,same_sign_share,,30,17,0.5666666666666667,,0.5846647117286922,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,economy,obr.ukgdp,12-24,error_on_revision,raw,28,14,-0.1146564780772799,0.4780007002136278,0.8104335522137377,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,economy,obr.unemplrate,12-24,same_sign_share,,26,15,0.46153846153846156,,0.8450189828872681,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,economy,obr.unemplrate,12-24,error_on_revision,raw,27,14,0.2787831093469393,0.2307866278218119,0.2270591578232961,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,economy,obr.wages_salaries,12-24,same_sign_share,,27,15,0.48148148148148145,,1.0,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,economy,obr.wages_salaries,12-24,error_on_revision,raw,27,14,0.3121560285789221,0.5939343429846285,0.599184716694164,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,economy,obr.worldgdp,12-24,same_sign_share,,26,14,0.4230769230769231,,0.557197093963623,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,economy,obr.worldgdp,12-24,error_on_revision,raw,27,14,-0.01968123480626599,0.5920441399448938,0.9734809272699531,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,economy,obr.worldtrade,12-24,same_sign_share,,28,15,0.6785714285714286,,0.08715855330228806,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,economy,obr.worldtrade,12-24,error_on_revision,raw,26,14,-0.5152059222218585,0.3504330389176638,0.14150815997690663,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,income_taxes,pooled_levels,12-24,same_sign_share,,122,63,0.5901639344262295,,0.05682268892317521,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,income_taxes,pooled_levels,12-24,error_on_revision,policy_adjusted,56,28,-0.1265865284401689,0.18970009840620186,0.504581695330788,"primary; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,income_taxes,pooled_levels,12-24,error_on_revision,raw,112,56,0.004427821170149629,0.2549841725826564,0.9861453651532927,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,other_receipts,pooled_levels,12-24,same_sign_share,,86,48,0.5697674418604651,,0.2353798622110552,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,other_receipts,pooled_levels,12-24,error_on_revision,policy_adjusted,81,41,-0.02616604221412481,0.2027289003711262,0.8973029506234499,"primary; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,other_receipts,pooled_levels,12-24,error_on_revision,raw,81,41,0.004918159603524798,0.2052631633584268,0.980884304256652,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,spending_debt_interest,pooled_levels,12-24,same_sign_share,,104,55,0.49038461538461536,,0.921948827626431,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,spending_debt_interest,pooled_levels,12-24,error_on_revision,policy_adjusted,28,14,-0.006874452755029292,0.36734563087662436,0.985069375751175,"primary; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,spending_debt_interest,pooled_levels,12-24,error_on_revision,raw,100,51,0.08720637800329015,0.15786399763400846,0.5806643260505222,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,spending_debt_interest,obr.apf,12-24,same_sign_share,,22,11,0.5909090909090909,,0.5234670639038086,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,spending_debt_interest,obr.apf,12-24,error_on_revision,raw,19,10,-0.11992102276230497,0.15778561652561843,0.44723960517190464,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,spending_del,pooled_levels,12-24,same_sign_share,,64,33,0.5625,,0.3817327947933377,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,spending_del,pooled_levels,12-24,error_on_revision,policy_adjusted,56,28,0.38660492551023107,0.15604862552346974,0.013231958193041602,"primary; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,spending_del,pooled_levels,12-24,error_on_revision,raw,56,28,0.2715548986793489,0.17369355642491274,0.11795530229107952,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,spending_local,pooled_levels,12-24,same_sign_share,,85,47,0.5176470588235295,,0.8284232741648999,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,spending_local,pooled_levels,12-24,error_on_revision,policy_adjusted,84,42,0.026821986961982625,0.10748603689664696,0.8029436699308652,"primary; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,spending_local,pooled_levels,12-24,error_on_revision,raw,84,42,0.025670453342831856,0.10654656789337978,0.8096079972904849,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,spending_other,pooled_levels,12-24,same_sign_share,,203,117,0.4975369458128079,,1.0,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,spending_other,pooled_levels,12-24,error_on_revision,policy_adjusted,92,46,0.05482836583801376,0.4704990180800572,0.9072306329983796,"primary; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,spending_other,pooled_levels,12-24,error_on_revision,raw,217,109,0.07819043495264724,0.3113113271392422,0.8016867283954527,"robustness; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,spending_other,obr.taxlit,12-24,same_sign_share,,13,8,0.23076923076923078,,0.09228515625,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,spending_welfare,pooled_levels,12-24,same_sign_share,,73,38,0.5342465753424658,,0.6399729317539425,later revision at 12-24 months; H0: 0.5 (binomial)
+OBR,spending_welfare,pooled_levels,12-24,error_on_revision,policy_adjusted,66,34,0.1596829398273266,0.15852213869206552,0.31377975169816097,"primary; e = F - A, a negative coefficient = CG's under-reaction"
+OBR,spending_welfare,pooled_levels,12-24,error_on_revision,raw,66,34,0.2425856339839485,0.1116557623685625,0.029808867583919603,"robustness; e = F - A, a negative coefficient = CG's under-reaction"

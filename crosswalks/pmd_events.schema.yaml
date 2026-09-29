@@ -30,3 +30,12 @@ columns:
   type: string
   unit: ''
   description: reviewer's comment
+- name: status
+  type: string
+  unit: ''
+  description: settled_date_check (passes the date check of crosswalks/codebook.md section 4) | review
+    | not_checked (before June 2010) | reviewed
+- name: check
+  type: string
+  unit: ''
+  description: 'result of the date check: the publication date, or why it failed'

@@ -593,20 +593,22 @@ The dictionaries and linking code built for the pilot series in R1 are reused an
 
 ## 10. Open decisions (Teo decides; defaults in brackets)
 
-- **D1** Outturn used for errors: latest or first estimate. [Store both; latest is the primary.]
-- **D2** Raw or policy-adjusted errors for case selection. [Policy-adjusted.]
-- **D3** Harmonized attribution categories. [policy / economic determinants / calibration to outturn / classification and one-offs / modelling and other. CBO maps Legislative→policy, Economic→economic determinants, Technical→modelling and other.]
+"Decided" marks a decision Teo has taken. On 29 September 2026 Teo accepted the recommendations put to him after E5, which are recorded under D1, D2, D3, D5, D7, D8, D11–D13 and D22.
+
+- **D1** Outturn used for errors: latest or first estimate. [Store both; latest is the primary.] Decided: latest is the primary; first estimate for robustness.
+- **D2** Raw or policy-adjusted errors for case selection. [Policy-adjusted.] Decided: policy-adjusted; raw errors kept for robustness. Known limits: OBR components lose only the direct effects of measures, and OBR aggregate classification changes can be removed only up to October 2021.
+- **D3** Harmonized attribution categories. [policy / economic determinants / calibration to outturn / classification and one-offs / modelling and other. CBO maps Legislative→policy, Economic→economic determinants, Technical→modelling and other.] Decided: the FRD's "underlying" stays one unsplit category (the EFO per-tax tables give the split). CBO revenue, and the CBO deficit that includes it, are left out of the attribution shares, because they are split into economic and technical causes only from 2024; they are kept for errors and cases.
 - **D4** How to reconstruct first-estimate outturns. [The value in the `past` column of the first vintage published after the period ended.]
-- **D5** Uncertain publication dates. [Last day of the month; flag the vintage.]
+- **D5** Uncertain publication dates. [Last day of the month; flag the vintage.] Decided: last day of the month; the date of CBO's testimony on the outlook that month is kept as a column where known.
 - **D6** Horizon buckets in months. [<0; 0–6; 6–12; 12–24; 24–36; 36+.]
-- **D7** Series families for pooling. [OBR: income-based taxes, consumption taxes, capital taxes, business taxes, duties, other receipts, spending by type. CBO: each revenue category is its own family; outlays by category.]
-- **D8** Thresholds and episode windows. [`z* = 1.5`, `z_low = 0.5`, K = 15, M = 30; episode windows 2008-09 to 2009-10, 2020-21 to 2021-22 and 2022-23, tagged but not excluded.]
+- **D7** Series families for pooling. [OBR: income-based taxes, consumption taxes, capital taxes, business taxes, duties, other receipts, spending by type. CBO: each revenue category is its own family; outlays by category.] Decided: level series are pooled within a family in log errors; balance series (PSNB, deficit) are kept separate, in their own units, and never logged.
+- **D8** Thresholds and episode windows. [`z* = 1.5`, `z_low = 0.5`, K = 15, M = 30; episode windows 2008-09 to 2009-10, 2020-21 to 2021-22 and 2022-23, tagged but not excluded.] Decided: the defaults, with at most 3 cases per episode window.
 - **D9** Include in-period commentary (OBR monthly public finances commentary, CBO Monthly Budget Review) as dated text. [Inventory in E0, extract in E7, but mark as optional in case packs.]
 - **D10** Text not written by the forecaster. [Out of this plan.]
   - Consequence: the document corpus contains only the forecaster's own publications. Evidence before a forecast therefore means what the forecaster itself wrote, not third-party signals. Results from this corpus must be stated with this limitation. E0 must report whether any inventoried documents are written by a third party.
-- **D11** Pre-2010 HM Treasury forecasts. [Extract as a separate forecaster; exclude from case selection.]
-- **D12** Economy series (calendar-year, per cent change). [Extract; exclude from case selection; available as context.]
-- **D13** Trajectories with classification breaks. [Keep in the data; exclude from case selection.]
+- **D11** Pre-2010 HM Treasury forecasts. [Extract as a separate forecaster; exclude from case selection.] Decided: as the default.
+- **D12** Economy series (calendar-year, per cent change). [Extract; exclude from case selection; available as context.] Decided: as the default.
+- **D13** Trajectories with classification breaks. [Keep in the data; exclude from case selection.] Decided: as the default.
 - **D14** Memo and supplementary vintages. [Keep, flagged; exclude from revision chains.]
 - **D15** Storage format of tables. [A columnar format with a schema file next to each table.]
 - **D16** Local embedding model for the dense retriever. [Allowed; model chosen by Teo; zero cost; name and version recorded.]
@@ -615,6 +617,7 @@ The dictionaries and linking code built for the pilot series in R1 are reused an
 - **D19** Pool depth for R1 labelling. [Top 10 of each run at each vintage; each distinct passage is labelled once per case.]
 - **D20** Settling crosswalk rows by agreement. [A row is settled when Jev's top answer equals the keyword mapping, Jev's confidence is at least 0.7, and the label contains no negation (Teo, 28 September 2026). Unsettled PMD heads go to review before E6: on 28 September 2026 a separate Claude session proposed an answer for each of the 35 queued heads, Teo accepted them, and the pipeline session checked the rows marked `check` in the source files and overrode three of them on that evidence (`crosswalks/review_queue_heads_decisions.csv`, which names the labeller and the file each check used). Unsettled attribution labels stay `pending` with the keyword mapping as a provisional value, and every stage that uses them reports how many pending rows it used.]
 - **D21** Second model for pending attribution labels. [Pending: to be run on a separate machine; provider and model recorded in `results.jsonl`.]
+- **D22** Pre-specified numbers-only tests. [Decided (Teo, 29 September 2026): the numbers-only baseline for research question 1 is two tests, by source and series family (balance series one at a time), with episodes included: the same-sign share of consecutive revisions whose later revision falls 12–24 months before the end of the target period (binomial test against 0.5), and the coefficient of policy-adjusted errors on revisions at 12–24 months (Coibion–Gorodnichenko; raw errors for robustness). Both are in `stats/prespecified_tests.csv`. They were chosen after the E5 results had been seen, and this is stated wherever they are reported. The other E5 tests are descriptive.]
 
 ---
 

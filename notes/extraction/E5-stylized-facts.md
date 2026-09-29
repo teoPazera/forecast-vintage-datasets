@@ -44,6 +44,7 @@ generator match?
   - `stats/efficiency_tests.csv` (2,750 rows);
   - `stats/attribution_shares.csv`;
   - `stats/complete_target_periods.csv`;
+  - `stats/prespecified_tests.csv` (the D22 baseline, added 29 September 2026);
   - `stats/calibration_targets.json` (targets for the synthetic generator: error SD
     and bias by bucket, revision autocorrelation, same-sign share, with sample sizes).
 
@@ -115,8 +116,13 @@ against 0.5).
     classification 0–8%.
   - **OBR tax drivers (EFO):** economic determinants 20–38%, modelling and other
     28–50%, calibration to outturn 6–30% (highest at 6–12 months), policy 9–28%.
-  - **CBO:** policy 57–71%, economic 5–25%, technical 19–26%. The policy share is
-    inflated because CBO revenue changes are legislative-only before 2024 (E3).
+  - **CBO outlays** (total): policy 55–79%, economic 7–38%, technical 8–16%.
+    Economic causes grow with the horizon. CBO revenue and the deficit are left out
+    (D3, decided 29 September 2026): their changes are legislative-only before 2024
+    (E3), which would inflate the policy share.
+  - About a third of the OBR EFO share figures rest on provisional labels:
+    1,134 of 3,788 rows, 33% of the absolute attributed revision. These labels are
+    pending a second model (D20, D21; E2 note).
 - **Calibration to outturn** (OBR EFO driver tables, 192 cells, 68 targets): not
   predictable from the previous revision overall (slope −0.02, p = 0.83). At 36+
   months, however, the slope is −0.17 (p = 0.010, 77 cells): long-horizon calibration
@@ -127,18 +133,37 @@ against 0.5).
   - OBR debt interest: −0.108 → −0.045;
   - CBO mandatory outlays: −0.027 → −0.008.
 
+**Pre-specified numbers-only baseline** (D22; `stats/prespecified_tests.csv`,
+episodes included). These two tests were chosen after the results above had been
+seen.
+
+- **Same-sign share** of consecutive revisions, with the later revision at 12–24
+  months. Above 0.5 at p < 0.01 for:
+  - CBO individual income taxes: 0.64 (95 pairs);
+  - CBO payroll taxes: 0.66 (82);
+  - CBO mandatory outlays: 0.62 (416);
+  - CBO aggregates: 0.60 (250).
+
+  Below 0.5 for CBO customs duties: 0.31 (65). OBR income taxes are 0.59 (122,
+  p = 0.057). No other OBR family differs from 0.5.
+- **Error on revision**, policy-adjusted, 12–24 months:
+  - significant and positive (over-reaction in CG terms) for OBR aggregates, 0.72
+    (p = 0.002), PSNB in % of GDP, 0.84 (p = 0.001), and OBR DEL spending, 0.39
+    (p = 0.013);
+  - negative for CBO net interest, −0.52 (p = 0.032), and OBR duties, −0.33
+    (p = 0.041);
+  - not significant elsewhere.
+
 ## 4. Open questions
 
-1. **Error basis for pooling.** Level series use log errors. Balances are not pooled,
-   because per cent of GDP is available only for OBR PSNB, CB and PSND and the CBO
-   deficit and debt (via GDP). Is that the pooling Teo wants for E6? E6 uses the same
-   basis, per the plan.
+1. **Decided (Teo, 29 September 2026).** Teo accepted the recommendations put to him
+   after this note: D1, D2, D3, D5, D7 (pooling), D8, D11–D13, and D22 (the
+   pre-specified tests). They are recorded in section 10 of the plan.
 2. **Classification.** The OBR aggregate bias includes classification changes. The
    policy-adjusted OBR aggregate errors remove FRD classification changes only up to
    October 2021 (E4).
-3. **Multiple testing.** 2,750 tests are reported without adjustment. For the
-   thesis, pre-specify the few tests that matter (e.g. same-sign share of revisions
-   by family at 12–24 months).
+3. **Multiple testing.** The 2,750 tests are descriptive. Only the two pre-specified
+   tests (D22) are read as evidence.
 
 ## 5. Implications for the thesis
 
@@ -161,4 +186,4 @@ against 0.5).
 
 | Criterion | Measured | Result |
 |---|---|---|
-| Report only; Teo reviews before case selection | this note and `stats/` | **awaiting review** |
+| Report only; Teo reviews before case selection | this note and `stats/` | **reviewed** (Teo, 29 September 2026: results plausible, recommendations accepted) |

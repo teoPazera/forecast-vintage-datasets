@@ -256,6 +256,7 @@ def build_crosswalks(pmd: pd.DataFrame, vint: pd.DataFrame) -> tuple[pd.DataFram
         ev.append({"event_raw": e, "vintage_label": lab, "vintage_id": lab2id.get(lab),
                    "rule": rule, "confidence": conf, "reviewed": done,
                    "comment": old.get("comment", "")})
+    ev = X.check_events(pd.DataFrame(ev), dict(zip(vint.vintage_id, pd.to_datetime(vint.publication_date))))
     old_heads = X.previous_rows("pmd_heads", ["measure_type", "head_raw"])
     heads = []
     for (mt, h), g in pmd.groupby(["measure_type", "head_raw"]):
@@ -271,7 +272,7 @@ def build_crosswalks(pmd: pd.DataFrame, vint: pd.DataFrame) -> tuple[pd.DataFram
                       "confidence": conf, "note": note,
                       "n_measures": g.measure.nunique(), "reviewed": done,
                       "comment": old.get("comment", ""), **X.llm_fields(old)})
-    return pd.DataFrame(ev), pd.DataFrame(heads)
+    return ev, pd.DataFrame(heads)
 
 
 def policy_measures(pmd, events, heads) -> pd.DataFrame:
