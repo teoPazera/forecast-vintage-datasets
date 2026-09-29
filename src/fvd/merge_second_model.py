@@ -95,7 +95,8 @@ def apply(path=QUEUE) -> None:
         if m.sum() != 1:
             raise ValueError(f"{r['key']}: {m.sum()} crosswalk rows")
         changed += int(cw.loc[m, "category"].iloc[0] != r["answer"])
-        who = "Teo" if r["your_answer"] else "Teo, accepting the codebook review's proposal"
+        who = "Teo" if r["your_answer"] not in ("", r["proposed"]) else \
+            "Teo, accepting the codebook review's proposal"
         note = MIXED if r["rule"].startswith("A3") and r["answer"] == "calibration_to_outturn" \
             else cw.loc[m, "note"].iloc[0]
         cw.loc[m, ["category", "note", "reviewed", "status", "labeller", "route_reason"]] = \
