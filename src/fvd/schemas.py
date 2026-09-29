@@ -13,8 +13,8 @@ import yaml
 
 # model-assisted labelling columns shared by the reviewed crosswalks (fvd.jev_route)
 LLM_COLUMNS = [
-    ("status", "string", "", "settled_agreement (Jev's top answer = current mapping, confidence >= D20, no negation) | pending (provisional mapping, awaiting second model or Teo) | reviewed (decided by Teo) | fixed_in_code; empty until routed"),
-    ("labeller", "string", "", "who decided the current mapping: keyword rules + Jev (settled by agreement), or the reviewer named for reviewed rows"),
+    ("status", "string", "", "settled_agreement (Jev's top answer = current mapping, confidence >= D20, no negation) | pending (provisional mapping, awaiting second model or Teo) | reviewed (decided by Teo) | resolved_in_code (group heading, codebook rule A2) | fixed_in_code; empty until routed"),
+    ("labeller", "string", "", "who decided the current mapping: keyword rules + Jev (settled by agreement), keyword rules + Jev + second model + codebook review (settled by agreement of all four, D21), or the reviewer named for reviewed rows"),
     ("jev_choice", "string", "", "Jev's top answer (crosswalks/codebook.md)"),
     ("jev_p1", "float", "probability", "probability of jev_choice"),
     ("jev_second", "string", "", "Jev's second answer"),
@@ -218,7 +218,7 @@ SCHEMAS: dict[str, dict] = {
             ("category_raw", "string", "", "label as published, prefixed with its table (e.g. 'FRD:policy/receipts (of which: receipts)')"),
             ("category", "string", "", "harmonized category (D3 default): total | policy | economic_determinants | calibration_to_outturn | classification_one_offs | modelling_other | underlying_unsplit (non-policy total not split by cause) | by_tax_head (a split of the change by tax head, not by cause)"),
             ("value", "float", "series.unit_harmonized", "revision in the series' own convention: positive = the series was revised up (receipts raised, spending raised, borrowing raised)"),
-            ("flags", "string", "", "pre_measures_year: revision relative to the pre-measures forecast in a year the previous forecast did not cover (FRD note *)"),
+            ("flags", "string", "", "semicolon list: pre_measures_year: revision relative to the pre-measures forecast in a year the previous forecast did not cover (FRD note *); not_previous_vintage (EFO: measured against a forecast other than the previous vintage); group_heading (EFO: the row totals the rows beneath it, rule A2; E5 counts those rows instead)"),
             ("origin", "string", "", "file, sheet and cell"),
         ],
     },
