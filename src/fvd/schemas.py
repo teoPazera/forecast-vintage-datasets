@@ -35,6 +35,7 @@ CASE_TRAJ = [
     ("n_scored_cells", "integer", "", "scored cells (role in_progress or future)"),
     ("max_horizon_months", "float", "months", "longest horizon among scored cells"),
     ("max_abs_z", "float", "", "max |z| over scored cells"),
+    ("mean_abs_z", "float", "", "mean |z| over scored cells with a z (controls: < z_low, deviation 2)"),
     ("n_cells_without_z", "integer", "", "scored cells whose scale was 0 or undefined"),
     ("run_length", "integer", "", "length of the qualifying run (0 if none)"),
     ("run_sign", "string", "", "over (forecast above outturn) | under | empty"),

@@ -2,6 +2,7 @@
 
     python -m fvd.e6_cases register   # hash cases/preregistration.md and the input tables
     python -m fvd.e6_cases select     # check the hashes, then score and select
+    python -m fvd.e6_cases deviate <reason>   # register a change logged under Deviations
 
 The rule and its parameters are in cases/preregistration.md; the parameters are
 read from the yaml block in section 7 of that file, so the code cannot drift from
@@ -47,10 +48,24 @@ def _inputs() -> list:
     return sorted((TABLES / "cells").glob("*.parquet")) + sorted((TABLES / "series").glob("*.parquet")) + [GDP]
 
 
+DEVIATIONS = "## Deviations\n"
+
+
+def _split(text: str) -> tuple[str, str]:
+    """(registered text, deviations section)."""
+    head, _, dev = text.replace("\r\n", "\n").partition(DEVIATIONS)
+    return head, dev
+
+
 def params() -> dict:
-    text = PREREG.read_text(encoding="utf-8")
-    block = re.search(r"^## 7\..*?```yaml\n(.*?)```", text, flags=re.M | re.S)
-    return yaml.safe_load(block.group(1))
+    """Section 7's parameters, then the overrides of each logged deviation in
+    order (a ```yaml block per deviation)."""
+    head, dev = _split(PREREG.read_text(encoding="utf-8"))
+    block = re.search(r"^## 7\..*?```yaml\n(.*?)```", head, flags=re.M | re.S)
+    p = yaml.safe_load(block.group(1))
+    for b in re.findall(r"```yaml\n(.*?)```", dev, flags=re.S):
+        p.update(yaml.safe_load(b))
+    return p
 
 
 def _rel(p) -> str:
@@ -68,10 +83,28 @@ def register() -> None:
     print(f"registered {reg['sha256'][:12]} at {reg['registered_at']}")
 
 
+def deviate(reason: str) -> None:
+    """Record a deviation logged in the file's Deviations section: the text above
+    that section must still be the registered text; the whole file's new hash is
+    appended to cases/preregistration.json."""
+    reg = json.loads(REG.read_text(encoding="utf-8"))
+    head, dev = _split(PREREG.read_text(encoding="utf-8"))
+    original = hashlib.sha256((head + DEVIATIONS + "\nNone.\n").encode("utf-8")).hexdigest()
+    if original != reg["sha256"]:
+        sys.exit("The text above '## Deviations' differs from the registered text; change only that section.")
+    params()   # overrides must parse
+    reg.setdefault("deviations", []).append({
+        "n": len(reg.get("deviations", [])) + 1, "reason": reason, "sha256": _sha(PREREG, text=True),
+        "registered_at": datetime.now(timezone.utc).isoformat(timespec="seconds")})
+    REG.write_text(json.dumps(reg, indent=1) + "\n", encoding="utf-8")
+    print(f"deviation {reg['deviations'][-1]['n']} registered")
+
+
 def verify() -> dict:
     reg = json.loads(REG.read_text(encoding="utf-8"))
-    if _sha(PREREG, text=True) != reg["sha256"]:
-        sys.exit("cases/preregistration.md has changed since registration.")
+    expected = reg["deviations"][-1]["sha256"] if reg.get("deviations") else reg["sha256"]
+    if _sha(PREREG, text=True) != expected:
+        sys.exit("cases/preregistration.md has changed since registration (log changes with `deviate`).")
     now = {_rel(p): _sha(p) for p in _inputs()}
     if now != reg["inputs"]:
         changed = sorted(k for k in set(now) | set(reg["inputs"]) if now.get(k) != reg["inputs"].get(k))
@@ -90,7 +123,7 @@ def load(p: dict) -> tuple[pd.DataFrame, pd.DataFrame]:
     c = cells.merge(series[["series_id", "name", "family", "kind", "unit_harmonized"]], on="series_id", how="left")
     c = c[c.in_revision_chain & c.forecaster.isin(p["forecasters"]) & c.outturn_latest.notna()]
     c = c[~c.family.isin(p["not_scored_families"]) & ~c.kind.isin(p["not_scored_kinds"])
-          & ~c.series_id.isin(p["not_scored_duplicates"])]
+          & ~c.series_id.isin(p["not_scored_duplicates"]) & ~c.series_id.isin(p.get("not_scored_series", []))]
     has_pa = c.groupby("series_id").error_latest_pa.transform(lambda s: s.notna().any())
     no_pa = (c[~has_pa].groupby(["source", "series_id"])
              .agg(name=("name", "first"), family=("family", "first"), kind=("kind", "first"))
@@ -174,6 +207,7 @@ def trajectory(chain: pd.DataFrame, scored: pd.DataFrame, p: dict) -> dict:
            "episode": first.episode, "n_scored_cells": len(scored),
            "max_horizon_months": float(scored.horizon_months.max()),
            "max_abs_z": float(np.nanmax(np.abs(z))) if np.isfinite(z).any() else np.nan,
+           "mean_abs_z": float(np.nanmean(np.abs(z))) if np.isfinite(z).any() else np.nan,
            "n_cells_without_z": int((~np.isfinite(z)).sum())}
     rs = runs(z, p["z_star"])
     best = max(rs, key=lambda r: (r[1] - r[0] + 1, np.abs(z[r[0]:r[1] + 1]).sum(), -r[0]), default=None)
@@ -234,7 +268,8 @@ def year(tp: pd.Series) -> pd.Series:
 
 def select_controls(t: pd.DataFrame, p: dict) -> pd.DataFrame:
     cases = t[t.selection == "case"].sort_values(["source", "case_rank"])
-    pool = t[t.max_abs_z < p["z_low"]].copy()
+    # registered: max |z| < z_low; deviation 2 (29 September 2026): mean |z| < z_low
+    pool = t[t[p.get("control_statistic", "max_abs_z")] < p["z_low"]].copy()
     pool["year"] = year(pool.target_period)
     used, rows = set(), []
     for _, c in cases.iterrows():
@@ -265,7 +300,7 @@ def random_sample(t: pd.DataFrame, p: dict) -> pd.DataFrame:
 
 
 TRAJ = ["source", "trajectory_id", "series_id", "family", "error_basis", "target_period", "episode",
-        "n_scored_cells", "max_horizon_months", "max_abs_z", "n_cells_without_z", "run_length", "run_sign",
+        "n_scored_cells", "max_horizon_months", "max_abs_z", "mean_abs_z", "n_cells_without_z", "run_length", "run_sign",
         "score", "eligible", "onset_vintage_id", "onset_date", "onset_error", "onset_z", "corrected",
         "correction_vintage_id", "correction_date", "lead_time_vintages", "lead_time_n"]
 
@@ -329,4 +364,7 @@ def select() -> None:
 
 
 if __name__ == "__main__":
-    {"register": register, "select": select}[sys.argv[1]]()
+    if sys.argv[1] == "deviate":
+        deviate(" ".join(sys.argv[2:]))
+    else:
+        {"register": register, "select": select}[sys.argv[1]]()

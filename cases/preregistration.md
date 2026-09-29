@@ -172,4 +172,46 @@ forecasters: [OBR, CBO]
 
 ## Deviations
 
-None.
+Both deviations were decided by Teo on 29 September 2026, after the first selection
+(commit `31c3c3f`, kept in git history) and before R1 started. The text above this
+section is unchanged. The yaml block of each deviation overrides section 7's
+parameters, in order.
+
+### 1. CBO Fannie Mae/Freddie Mac outlays are not scored
+
+- **Reason.** CBO removes these outlays from all its accuracy analyses "because CBO
+  and the Administration account for those entities' transactions differently"
+  (`raw/cbo/eval-projections-682559c/README.md`, line 123). The series therefore
+  measures an accounting difference, not a forecast error. That is the kind of
+  measurement break D13 excludes, and E4 could not flag it, because CBO records no
+  classification changes.
+- **Should have been in the original rule.** The reason is in CBO's documentation
+  and does not depend on any score.
+- **Effect seen before the decision.** The series supplied 6 of the 15 CBO cases,
+  including the top 4, with z values in the hundreds. Its σ came from years when
+  the outlays were near zero.
+
+```yaml
+not_scored_series: [cbo.outlay.fannie_freddie]
+```
+
+### 2. Controls: mean |z| below z_low instead of max |z|
+
+- **Reason.** Requiring every scored cell to have |z| < 0.5 left 15 OBR and 11 CBO
+  candidates, mostly trajectories of 2–3 cells, and 2 matched controls per source.
+  Trajectories have a median of 11 (OBR) and 26 (CBO) scored cells, and almost
+  none stays within 0.5σ at every vintage.
+- **The new rule.** A control must be well forecast on average: mean |z| < z_low,
+  with the threshold unchanged at 0.5. Family, error basis, year window and horizon
+  matching are unchanged.
+- **Alternatives considered.** Pool sizes before matching (OBR / CBO):
+  - max |z| < 1.0: 62 / 99;
+  - mean |z| < 0.5: 71 / 154;
+  - max |z| < 1.5: 166 / 234.
+
+  These were compared as pool sizes only; which controls each rule would match was
+  not looked at.
+
+```yaml
+control_statistic: mean_abs_z
+```

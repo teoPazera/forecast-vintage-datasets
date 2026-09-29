@@ -9,5 +9,13 @@
   "tables/series/OBR.parquet": "dddb20d11e4e7bb95fe91644eefa40c266db3c7a8ae6d0935866bb406857b895",
   "tables/series/OBR_derived.parquet": "8716b4a5bb3b0dc352fb987f4ac0c44f0af16e1d241b6c9fc5336383913924a8",
   "raw/cbo/eval-projections-682559c/input_data/actual_GDP.csv": "eb90d2eb38d8f7d5f3af27c9600bf52d4dcc8903e8e196191ba562f5800c10b4"
- }
+ },
+ "deviations": [
+  {
+   "n": 1,
+   "reason": "Teo, 29 September 2026: (1) CBO Fannie Mae/Freddie Mac not scored (accounting basis differs, CBO README); (2) controls by mean |z| < z_low",
+   "sha256": "14a3e6e93866dd0fd38943fadd22d7ea7598b9c4107a03c85f23837736fa5520",
+   "registered_at": "2026-09-29T09:46:51+00:00"
+  }
+ ]
 }
