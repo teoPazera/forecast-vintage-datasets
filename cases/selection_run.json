@@ -1,8 +1,8 @@
 {
- "run_at": "2026-09-29T09:47:29+00:00",
+ "run_at": "2026-09-29T09:54:30+00:00",
  "preregistration_sha256": "1c395a20142d12e1cb2a95105f5185e3939d519e6b947de2b888b947dfdf43bc",
  "registered_at": "2026-09-29T09:20:07+00:00",
- "git_head_at_run": "f849abc1236dc0b7e6a06e6eedf7948891a82e4b",
+ "git_head_at_run": "6ae275e9da3c74516387bb335efa602e7ef03cb6",
  "inputs_verified": true,
  "series_without_policy_adjustment": [
   {
@@ -159,7 +159,7 @@
    "scoreable_trajectories": 769,
    "eligible": 418,
    "cases": 15,
-   "controls": 8,
+   "controls": 22,
    "random_sample": 30
   },
   "OBR": {
@@ -167,7 +167,7 @@
    "scoreable_trajectories": 528,
    "eligible": 273,
    "cases": 15,
-   "controls": 5,
+   "controls": 22,
    "random_sample": 30
   }
  }

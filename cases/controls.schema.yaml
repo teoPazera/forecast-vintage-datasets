@@ -1,6 +1,7 @@
 table: cases/controls
-description: 'Controls (E6): up to 2 per case, with max |z| < z_low, same family and error basis, target
-  period within 2 years and similar horizon coverage.'
+description: 'Controls (E6): up to 2 per case, with mean |z| < z_low (deviation 2), same side of the budget
+  (deviation 3; same family ranked first) and error basis, target period within 2 years and similar horizon
+  coverage. Never a case.'
 columns:
 - name: source
   type: string
@@ -110,6 +111,11 @@ columns:
   type: integer
   unit: ''
   description: 1 = closest match
+- name: same_family
+  type: boolean
+  unit: ''
+  description: the control is from the case's family (else from the same side of the budget, deviation
+    3)
 - name: d_year
   type: integer
   unit: years

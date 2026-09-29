@@ -4,9 +4,11 @@ Runs on 29 September 2026:
 
 1. `python -m fvd.e6_cases register` at 09:20 UTC, committed as `3884387`.
 2. First selection at 09:23 UTC, committed as `31c3c3f`.
-3. Two deviations decided by Teo, logged in `cases/preregistration.md` and registered
-   with `python -m fvd.e6_cases deviate`, committed as `f849abc`.
-4. Current selection, run after `f849abc`.
+3. Deviations 1 and 2, decided by Teo, logged in `cases/preregistration.md` and
+   registered with `python -m fvd.e6_cases deviate`, committed as `f849abc`.
+4. A second selection, committed as `09f42e7`.
+5. Deviation 3, decided by Teo, committed as `6ae275e`.
+6. Current selection, run after `6ae275e`.
 
 ## 1. Question
 
@@ -61,13 +63,20 @@ The first selection (`31c3c3f`) had two problems:
   with scores up to 2,242.
 - It found only 2 controls per source.
 
-Teo decided two deviations before R1:
+Teo decided three deviations before R1:
 1. **Fannie Mae/Freddie Mac outlays are not scored.** CBO itself removes them from
    its accuracy analyses because CBO and the Administration account for them
    differently (`raw/cbo/eval-projections-682559c/README.md`, line 123). The
    original rule should have excluded the series.
 2. **Controls need mean |z| < 0.5** instead of max |z| < 0.5. Almost no trajectory
    stays within 0.5σ at every vintage.
+3. **Controls are matched within the same side of the budget** (receipts, spending,
+   or aggregates on their own), with the case's own family ranked first.
+   - After deviations 1 and 2, matching within the family and ±2 years left 5 OBR
+     and 8 CBO controls. Families with one or two series have no well-forecast
+     trajectory that close.
+   - The code now also enforces the registered condition that a control is not a
+     case; no earlier control was one.
 
 Removing the series also changes the CBO random sample. The draw is from the sorted
 list of scoreable trajectories, which is now shorter. The seed is unchanged.
@@ -140,10 +149,23 @@ The OBR list is unchanged by the deviations.
     15 CBO cases.
   - Median lead-time window: 9 vintages (OBR), 26 (CBO).
 
-**Controls** (`cases/controls.parquet`): **5 OBR and 8 CBO**, where up to 30 per
-source were possible. They matched 3 OBR and 5 CBO cases. Because the rule now uses
-the mean, a control can have one vintage that was well off: the largest max |z|
-among controls is 2.0.
+**Controls** (`cases/controls.parquet`): **22 per source**, where up to 30 were
+possible.
+- **Matched cases:** 11 of 15 OBR cases and 12 of 15 CBO cases have controls; 2
+  each, except CBO customs 2025 and miscellaneous receipts 2023, which have 1.
+- **Same family as the case:** 5 of the OBR controls and 8 of the CBO controls. The
+  rest are from the same side of the budget (deviation 3).
+- **Unmatched cases, and why:**
+  - OBR PSNB 2012-13 and CBO deficit 2021 are the only balance series in % of GDP
+    in their aggregate groups, so no candidate has their error basis.
+  - The two electricity generators levy trajectories have short horizons (2 and 6
+    scored cells), and no candidate has a similar horizon coverage.
+  - OBR student loans 2022-23, CBO nondefense discretionary 2018 and CBO customs
+    2022 have no well-forecast candidate within ±2 years and 12 months of horizon.
+- **Outlying vintages.** Because the rule uses the mean (deviation 2), a control can
+  have one vintage that was well off: the largest max |z| among controls is 2.1
+  (CBO) and 1.5 (OBR).
+- **Overlap.** One OBR control is also in the random sample.
 
 **Random sample** (`cases/random_sample.parquet`, seed 20260930): 30 per source.
 - OBR: 12 of the 30 are eligible and 2 are also cases.
@@ -155,39 +177,18 @@ among controls is 2.0.
 |---|---|---|
 | Cases by family | business taxes 4, duties 3, DEL spending 3, other spending 2, aggregate 1, consumption taxes 1, debt interest 1 | discretionary outlays 4, mandatory outlays 4, customs 3, excise 2, aggregate 1, miscellaneous receipts 1 |
 | Cases by episode | COVID 3, energy 3, none 9 | COVID 2, GFC 1, energy 1, none 11 |
-| Controls by family | business taxes 2, other spending 2, duties 1 | mandatory outlays 5, discretionary outlays 3 |
-| Controls by episode | none 5 | COVID 2, GFC 2, none 4 |
+| Controls by family | other spending 7, business taxes 4, duties 3, other receipts 3, income taxes 2, DEL 1, local spending 1, welfare 1 | mandatory outlays 8, discretionary outlays 6, individual income taxes 3, customs 2, excise 1, miscellaneous receipts 1, payroll 1 |
+| Controls by episode | COVID 3, energy 2, none 17 | COVID 3, GFC 2, energy 1, none 16 |
 | Random sample by episode | COVID 4, energy 3, none 23 | energy 1, none 29 |
-| Distinct target periods: cases / controls / random / all | 9 / 4 / 13 / 15 | 10 / 6 / 20 / 26 |
+| Distinct target periods: cases / controls / random / all | 9 / 11 / 13 / 15 | 10 / 11 / 20 / 28 |
 
 **Pending attribution labels.** E6 does not use them. Policy adjustment uses the FRD
 decomposition, fixed in code, and the PMD heads, which are final (E2 note).
 
 ## 4. Open questions
 
-1. **Controls are still few**, and the cause is the matching, not the threshold.
-   - A control must come from the case's **family** and have a target period
-     within **±2 years**.
-   - Several families have only one or two series: CBO customs, excise and
-     miscellaneous receipts; OBR DEL spending; PSNB. They have no well-forecast
-     trajectory that close to the case.
-   - Cases with at least one candidate, after the year and horizon conditions:
-
-     | Matching | OBR | CBO |
-     |---|---|---|
-     | same family, ±2 years (current) | 5 / 15 | 7 / 15 |
-     | same family, ±4 years | 7 / 15 | 10 / 15 |
-     | same side (receipts or spending), ±2 years | 11 / 15 | 14 / 15 |
-
-   - Options:
-     - **(a)** Accept the controls as they are. The random sample carries the base
-       rates, and the plan says "up to 2".
-     - **(b)** A third deviation: match on the same side of the budget instead of the
-       same family.
-
-     The plan's family rule was meant to keep a control comparable in its drivers.
-     For single-series families that is impossible within ±2 years, and the same
-     side is the closest comparable group. **Recommendation: (b).**
+1. **Controls** are settled by deviation 3. Seven cases stay without a control, for
+   the structural reasons in section 3. Case–control comparisons use the other 23.
 2. **Short trajectories.** A run of 2 cells can make a case: the electricity
    generators levy 2022-23 has only 2 scored cells. This is within the rule and is
    noted only.
@@ -205,17 +206,17 @@ decomposition, fixed in code, and the PMD heads, which are final (E2 note).
 
   That is the mix research question 3 needs: causes absent from earlier documents,
   and causes present but not acted on.
-- **Case–control comparisons are thin** until open question 1 is settled. The random
-  sample (30 per source) is intact.
+- **Case–control comparisons** have 23 matched cases (11 OBR, 12 CBO) and 44
+  controls. The random sample (30 per source) is intact.
 - **R1 pilot** (next stage) picks the top 3 per source among cases whose target
-  period has a post-hoc document. The rule freezes when R1 starts, so open question
-  1 should be settled first.
+  period has a post-hoc document. The rule, with its three deviations, freezes when
+  R1 starts.
 
 ## 6. Gate result
 
 | Criterion | Measured | Result |
 |---|---|---|
-| Pre-registration written and hashed before selection | registered 09:20 UTC, committed `3884387` before the first selection; deviations logged, hashed and committed (`f849abc`) before the current selection; hashes verified at each run | **pass** |
+| Pre-registration written and hashed before selection | registered 09:20 UTC, committed `3884387` before the first selection; each deviation logged, hashed and committed (`f849abc`, `6ae275e`) before the selection that uses it; hashes verified at each run | **pass** |
 | Counts reported per stratum (source, family, episode) | section 3 | **pass** |
-| Distinct target periods reported per source | OBR 15, CBO 26 across cases, controls and random sample | **pass** |
-| (substance) enough controls | OBR 5, CBO 8 (up to 30 each) | **flagged**: open question 1 |
+| Distinct target periods reported per source | OBR 15, CBO 28 across cases, controls and random sample | **pass** |
+| (substance) enough controls | 22 per source (up to 30), covering 11 OBR and 12 CBO cases; 7 cases unmatched for structural reasons | **pass** |
