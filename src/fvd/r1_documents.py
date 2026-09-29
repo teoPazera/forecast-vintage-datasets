@@ -314,9 +314,12 @@ def extract_pdf(path: Path) -> tuple[list[dict], dict]:
 
 def extract_html(path: Path) -> tuple[list[dict], dict]:
     s = BeautifulSoup(path.read_text(encoding="utf-8", errors="replace"), "lxml")
-    for t in s(["script", "style", "nav", "header", "footer", "form", "aside"]):
+    for t in s(["script", "style"]):
         t.decompose()
+    # find the main content first: CBO's template puts <main> inside a <header>
     main = (s.find("main") or s.find("article") or s.find("div", id=re.compile("content", re.I)) or s.body or s)
+    for t in main(["nav", "header", "footer", "form", "aside"]):
+        t.decompose()
     out, section = [], ""
     for el in main.find_all(["h1", "h2", "h3", "h4", "p", "li", "table"]):
         if el.find_parent("table") is not None and el.name != "table":

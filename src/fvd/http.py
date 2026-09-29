@@ -154,6 +154,8 @@ def sniff(path: Path) -> str:
 
 def check_integrity(path: Path) -> str:
     """Empty string if the file looks complete, else the reason it does not."""
+    if path.stat().st_size == 0:
+        return "empty file (the capture has no content)"
     kind = sniff(path)
     try:
         if kind in ("xlsx", "zip"):

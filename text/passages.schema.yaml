@@ -1,0 +1,32 @@
+table: text/passages
+description: Passages of the forecasters' documents (E7; R1 pilot documents first). Partitioned by source.
+  Document metadata, including available_from, is in pilot/documents.csv until E7.
+columns:
+- name: source
+  type: string
+  unit: ''
+  description: OBR | CBO
+- name: doc_id
+  type: string
+  unit: ''
+  description: see inventory/documents
+- name: passage_id
+  type: string
+  unit: ''
+  description: <doc_id>_p<n>, n in reading order
+- name: section_path
+  type: string
+  unit: ''
+  description: the heading the passage sits under (nearest heading only)
+- name: page
+  type: integer
+  unit: ''
+  description: PDF page (1-based); 1 for HTML documents
+- name: kind
+  type: string
+  unit: ''
+  description: 'paragraph | box | table | footnote (heuristic: font size, position, digit share, Box heading)'
+- name: text
+  type: string
+  unit: ''
+  description: passage text; passages over 1,500 characters are split at sentence ends

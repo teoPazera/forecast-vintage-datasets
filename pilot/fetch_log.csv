@@ -139,7 +139,6 @@ cbo_f6893e5e04,raw/documents/cbo/pilot/cbo_mbr/57193-MBR.pdf,PDF https://www.cbo
 cbo_2d6a97e68e,raw/documents/cbo/pilot/cbo_beo/57218-Outlook.pdf,PDF https://www.cbo.gov/system/files/2021-07/57218-Outlook.pdf
 cbo_d52064278e,raw/documents/cbo/pilot/cbo_mbr/57288-MBR.pdf,PDF https://www.cbo.gov/system/files/2021-07/57288-MBR.pdf
 cbo_dd97059bce,raw/documents/cbo/pilot/cbo_beo/57263-outlook.pdf,PDF https://www.cbo.gov/system/files/2021-07/57263-outlook.pdf
-cbo_768c7ceb9b,raw/documents/cbo/pilot/cbo_apb/57358,publication page (no archived PDF)
 cbo_9982a803ae,raw/documents/cbo/pilot/cbo_mbr/57349-MBR.pdf,PDF https://www.cbo.gov/system/files/2021-08/57349-MBR.pdf
 cbo_a72367d9b2,raw/documents/cbo/pilot/cbo_mbr/57419-MBR.pdf,PDF https://www.cbo.gov/system/files/2021-09/57419-MBR.pdf
 cbo_ad0a6f62d0,raw/documents/cbo/pilot/cbo_mbr/57476-MBR.pdf,PDF https://www.cbo.gov/system/files/2021-10/57476-MBR.pdf
@@ -186,7 +185,6 @@ cbo_8067cb2d89,raw/documents/cbo/pilot/cbo_mbr/60115-MBR.pdf,PDF https://www.cbo
 cbo_efb486a2da,raw/documents/cbo/pilot/cbo_mbr/60193-MBR.pdf,PDF https://www.cbo.gov/system/files/2024-05/60193-MBR.pdf
 cbo_6fc108d204,raw/documents/cbo/pilot/cbo_mbr/60280-MBR.pdf,PDF https://www.cbo.gov/system/files/2024-06/60280-MBR.pdf
 cbo_545b4c4173,raw/documents/cbo/pilot/cbo_beo/60039-Outlook-2024.pdf,PDF https://www.cbo.gov/system/files/2024-06/60039-Outlook-2024.pdf
-cbo_0238676e18,raw/documents/cbo/pilot/cbo_apb/60041,publication page (no archived PDF)
 cbo_b194307082,raw/documents/cbo/pilot/cbo_mbr/60361-MBR.pdf,PDF https://www.cbo.gov/system/files/2024-07/60361-MBR.pdf
 cbo_d41534f0d9,raw/documents/cbo/pilot/cbo_mbr/60479-MBR.pdf,PDF https://www.cbo.gov/system/files/2024-08/60479-MBR.pdf
 cbo_9c9a9e3be3,raw/documents/cbo/pilot/cbo_mbr/60592-MBR.pdf,PDF https://www.cbo.gov/system/files/2024-09/60592-MBR.pdf
@@ -436,8 +434,6 @@ obr_7fc02655c7,raw/documents/obr/pilot/efo/March-2023-Economic-and-fiscal-outloo
 obr_81d779a514,raw/documents/obr/pilot/efo/Log-of-contact-EFO-Mar23.pdf,own link
 obr_c4d07da0d5,raw/documents/obr/pilot/psf_commentary/February-2023-PSF-commentary.pdf,own link
 obr_b3510d4f27,raw/documents/obr/pilot/psf_commentary/March-2023-PSF-commentary-1.pdf,own link
-obr_0ecb0a4704,raw/documents/obr/pilot/psf_commentary/commentary-on-the-public-sector-finances-april-2023_94ecb72c,own link
-obr_b001c97076,raw/documents/obr/pilot/psf_commentary/commentary-on-the-public-sector-finances-april-2023_94ecb72c,own link
 obr_0151f06dfc,raw/documents/obr/pilot/psf_commentary/June-PSF-commentary-Accessible-PDF.pdf,own link
 obr_16f011276e,raw/documents/obr/pilot/psf_commentary/July-PSF-commentary.pdf,own link
 obr_79ea6285ed,raw/documents/obr/pilot/psf_commentary/August-2023-PSF-commentary.pdf,own link
@@ -477,3 +473,7 @@ obr_9d79fd5288,raw/manual/pilot/obr_9d79fd5288.pdf,manual (downloaded in a brows
 obr_872a1ace89,raw/manual/pilot/obr_872a1ace89.pdf,manual (downloaded in a browser)
 obr_1a661c6fa1,raw/manual/pilot/obr_1a661c6fa1.pdf,manual (downloaded in a browser)
 obr_3e693c49b7,raw/manual/pilot/obr_3e693c49b7.pdf,manual (downloaded in a browser)
+cbo_768c7ceb9b,raw/documents/cbo/pilot/cbo_apb/57358,"publication page: CBO published the report text on the page and its tables as a workbook (raw/manual/pilot/cbo_768c7ceb9b.xlsx, downloaded in a browser)"
+cbo_0238676e18,raw/manual/pilot/cbo_0238676e18.pdf,manual (downloaded in a browser)
+obr_0ecb0a4704,raw/manual/pilot/obr_0ecb0a4704.pdf,manual (downloaded in a browser)
+obr_b001c97076,raw/manual/pilot/obr_b001c97076.pdf,manual (downloaded in a browser)
