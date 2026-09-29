@@ -25,14 +25,12 @@ import re
 
 import pandas as pd
 
-from .e2_efo_tables import driver_rows
+from .e2_efo_tables import block_groups, driver_rows
 from .paths import CROSSWALKS, STATS, TABLES
 
 OUT = CROSSWALKS / "llm"
 CODEBOOK = CROSSWALKS / "codebook.md"
 SEED = 20260928
-N_PERIODS = 3        # target periods shown per table
-GROUP_TOL = 0.011    # a group heading equals the sum of its rows to rounding
 
 LABEL_OPTIONS = ["policy", "economic_determinants", "calibration_to_outturn",
                  "classification_one_offs", "modelling_other", "underlying_unsplit", "by_tax_head"]
@@ -57,56 +55,13 @@ def _vdate(label: str) -> pd.Timestamp:
     return pd.to_datetime("1 " + label)
 
 
-def _groups(block: pd.DataFrame, periods: list[str]) -> dict[int, int]:
-    """Component rows whose values equal the sum of the next k component rows of
-    the same section, in every shown period: {row: k}. Marks group headings for
-    rule A2. The tolerance is fixed, not scaled by k, so that long runs of rows
-    do not match by chance."""
-    comp = block[block.role == "component"]
-    vals = comp[periods].to_numpy(dtype=float)
-    secs = comp.section.fillna("").tolist()
-    rows = comp.index.tolist()
-    out = {}
-    for i in range(len(rows)):
-        for k in range(2, len(rows) - i):
-            if secs[i + k] != secs[i]:
-                break
-            nxt = vals[i + 1:i + 1 + k].sum(axis=0)
-            if (abs(nxt - vals[i]) <= GROUP_TOL).all() and abs(vals[i]).sum() > 0:
-                out[rows[i]] = k
-                break
-    return out
-
-
 def _table_rows(t: pd.DataFrame, block: float, target_row: int) -> tuple[list[str], int | None, str | None]:
     """The block of an OBR table as a list of row texts, without numbers (Jev reads
-    numbers poorly; group headings are found here, in code). Section headings are
-    rows of their own; the row to label is prefixed '>> '. Returns the rows; if
-    the row to label is a group heading, the number of rows it sums; and if it
-    sits inside a group, that group's heading (rule A2b)."""
-    t = t.sort_values("row").copy()
-    t["blk"] = t.block.bfill().ffill()
-    b = t[t.blk == block]
-    # periods in which (nearly) every component row has a value; the first year
-    # of a table is often empty for the drivers
-    comp = b[b.role == "component"]
-    cover = comp.groupby("target_period").value.count() / max(comp.row.nunique(), 1)
-    periods = sorted(cover[cover >= 0.8].index)[:N_PERIODS]
-    wide = b.pivot_table(index="row", columns="target_period", values="value", aggfunc="first")
-    info = b.drop_duplicates("row").set_index("row")
-    wide = wide.reindex(info.index)
-    for p in periods:
-        if p not in wide:
-            wide[p] = float("nan")
-    info = info.join(wide[periods])
-    groups = _groups(info.dropna(subset=periods), periods) if periods else {}
-    parent = {}
-    comp_rows = info.dropna(subset=periods)
-    comp_rows = comp_rows[comp_rows.role == "component"].index.tolist()
-    for g, k in groups.items():
-        i = comp_rows.index(g)
-        for child in comp_rows[i + 1:i + 1 + k]:
-            parent.setdefault(child, g)
+    numbers poorly; group headings are found in code, e2_efo_tables.block_groups).
+    Section headings are rows of their own; the row to label is prefixed '>> '.
+    Returns the rows; if the row to label is a group heading, the number of rows
+    it sums; and if it sits inside a group, that group's heading (rule A2b)."""
+    info, _, groups, parent = block_groups(t, block)
     lines, section = [], None
     for r, x in info.iterrows():
         sec = x.section if isinstance(x.section, str) else ""

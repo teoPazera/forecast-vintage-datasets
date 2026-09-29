@@ -15,7 +15,7 @@ The clone has no raw data (it is not in the repository), and this folder does no
 
 The OBR explains each revision of its receipts forecast in tables whose rows are causes ("Average earnings", "Latest receipts data", "Scorecard measures"). The dataset sorts each row wording into one of seven categories (`crosswalks/codebook.md`, section 2). Most wordings were settled when the keyword rules and Jev (TypeSafe) agreed with confidence of at least 0.7 (plan D20). The rows in `states.jsonl` were not: the two disagreed, Jev was unsure, the label contains a negation, or the row is a group heading.
 
-`run_second_model.py` asks a second model the same question Jev was asked, with the same context and options, for each of those rows. It does not see the keyword mapping or Jev's answer.
+`run_second_model.py` asks a second model to give one or two concise sentences of reasoning, then return exactly one category from the taxonomy or `none` if no category fits. It does not see the keyword mapping or Jev's answer.
 
 ## Files
 
@@ -23,7 +23,7 @@ The OBR explains each revision of its receipts forecast in tables whose rows are
 |---|---|
 | `states.jsonl` | One row per pending label: `id`, `key`, `state` (the label, its section, the table title and the table's rows, without numbers), `question` (instructions and a description of each option) and `options` |
 | `run_second_model.py` | The runner |
-| `requirements.txt` | `system-one-adapter[openai]` 0.2.1 (TypeSafe's adapter for LLM endpoints) and `openai` (tested with 3.20) |
+| `requirements.txt` | `openai`, used for the OpenAI-compatible endpoint |
 | `.env.example` | The three settings the runner reads |
 | `results.jsonl` | Written by the runner |
 
@@ -43,17 +43,17 @@ python run_second_model.py --limit 3     # check the first rows look sensible
 python run_second_model.py               # label the rest
 ```
 
-The runner prints which path it used:
+The runner makes **one direct call per row**. The model returns `{"reasoning": "<one or two concise sentences>", "answer": "<category>"}`. Valid answers are the seven listed categories plus `none`; it does not request probabilities or confidence scores. The runner validates that reasoning is non-empty and no more than 60 words. If a row fails, it is skipped with a message; run the script again to retry only missing rows.
 
-- `adapter_structured`: the adapter with the endpoint's structured output (preferred);
-- `adapter_prompted`: the adapter asking for JSON in the prompt, when the endpoint rejects structured output;
-- `direct`: the same question and options sent straight to the endpoint, when the adapter cannot use it. Confidence is then computed from the returned probabilities with TypeSafe's documented approximation.
+Inspect the exact request and output contract locally, without reading credentials or making a network call:
 
-Each row also gets one separate call asking for a one-sentence reason. If a row fails, it is skipped with a message; run the script again to retry only the missing rows.
+```
+python run_second_model.py --show-prompt
+```
 
 ## What to send back
 
-`results.jsonl`, one line per row: `id`, `key`, `answer`, `probabilities`, `confidence`, `reason`, `model_name`, `model_version` (as the endpoint reports it), `endpoint` (host only), `path` and `timestamp`.
+`results.jsonl`, one line per row: `id`, `key`, `reasoning`, `answer` (one category or `none`), `model_name`, `model_version` (as the endpoint reports it), endpoint usage when supplied, `endpoint` (host only), `path` and `timestamp`.
 
 First check that every row is there: the script prints `nothing to do: 213 of 213 rows already in results.jsonl` when run again. Then, from this folder:
 
@@ -67,4 +67,4 @@ git push
 
 ## Choosing the model
 
-Any OpenAI-compatible endpoint works. The point of the second model (plan D21) is an independent second opinion, so use a capable general model from a different provider than TypeSafe. The runner records the model name, the version the endpoint reports and the endpoint's host with every row. The full run is 213 rows × 2 calls, each call a few thousand tokens.
+Any OpenAI-compatible endpoint works. The point of the second model (plan D21) is an independent second opinion, so use a capable general model from a different provider than TypeSafe. The runner records the model name, the version the endpoint reports and the endpoint's host with every row. The full run is 213 rows × 1 call.

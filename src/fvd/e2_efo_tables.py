@@ -388,8 +388,106 @@ def driver_rows(rows: pd.DataFrame) -> pd.DataFrame:
     return drv
 
 
+# --- group headings (codebook rule A2) -----------------------------------------------------
+
+N_PERIODS = 3        # target periods compared when looking for group headings
+GROUP_TOL = 0.011    # a group heading equals the sum of its rows to rounding
+
+
+def _groups(block: pd.DataFrame, periods: list[str]) -> dict[int, int]:
+    """Component rows whose values equal the sum of the next k component rows of
+    the same section, in every shown period: {row: k}. Marks group headings for
+    rule A2. The tolerance is fixed, not scaled by k, so that long runs of rows
+    do not match by chance."""
+    comp = block[block.role == "component"]
+    vals = comp[periods].to_numpy(dtype=float)
+    secs = comp.section.fillna("").tolist()
+    rows = comp.index.tolist()
+    out = {}
+    for i in range(len(rows)):
+        for k in range(2, len(rows) - i):
+            if secs[i + k] != secs[i]:
+                break
+            nxt = vals[i + 1:i + 1 + k].sum(axis=0)
+            if (abs(nxt - vals[i]) <= GROUP_TOL).all() and abs(vals[i]).sum() > 0:
+                out[rows[i]] = k
+                break
+    return out
+
+
+def block_groups(t: pd.DataFrame, block: float) -> tuple[pd.DataFrame, list[str], dict[int, int], dict[int, int]]:
+    """One block of an OBR table (t: all rows of the table): one row of info per
+    table row with the values of up to N_PERIODS well-covered periods, those
+    periods, the group headings {row: k} and the parents {child row: heading row}."""
+    t = t.sort_values("row").copy()
+    t["blk"] = t.block.bfill().ffill()
+    b = t[t.blk == block]
+    # periods in which (nearly) every component row has a value; the first year
+    # of a table is often empty for the drivers
+    comp = b[b.role == "component"]
+    cover = comp.groupby("target_period").value.count() / max(comp.row.nunique(), 1)
+    periods = sorted(cover[cover >= 0.8].index)[:N_PERIODS]
+    wide = b.pivot_table(index="row", columns="target_period", values="value", aggfunc="first")
+    info = b.drop_duplicates("row").set_index("row")
+    wide = wide.reindex(info.index)
+    for p in periods:
+        if p not in wide:
+            wide[p] = float("nan")
+    info = info.join(wide[periods])
+    groups = _groups(info.dropna(subset=periods), periods) if periods else {}
+    parent = {}
+    comp_rows = info.dropna(subset=periods)
+    comp_rows = comp_rows[comp_rows.role == "component"].index.tolist()
+    for g, k in groups.items():
+        i = comp_rows.index(g)
+        for child in comp_rows[i + 1:i + 1 + k]:
+            parent.setdefault(child, g)
+    return info, periods, groups, parent
+
+
+def heading_children(rows: pd.DataFrame) -> pd.DataFrame:
+    """Every group heading among the driver rows, with the rows it totals: one row
+    per (vintage_label, table, block, heading row, child row)."""
+    drv = driver_rows(rows)
+    out = []
+    for (v, tb), t in rows[rows.kind.isin(["tax_drivers", "receipts_sources"])].groupby(["vintage_label", "table"]):
+        for block in drv[(drv.vintage_label == v) & (drv.table == tb)].block.unique():
+            _, _, groups, parent = block_groups(t, block)
+            out += [{"vintage_label": v, "table": tb, "block": block, "row": h, "child_row": c}
+                    for c, h in parent.items()]
+    return pd.DataFrame(out, columns=["vintage_label", "table", "block", "row", "child_row"])
+
+
+def resolve_headings(drv: pd.DataFrame, hc: pd.DataFrame, cat: dict[str, str],
+                     fixed: set[str]) -> dict[str, tuple[str, str]]:
+    """Rule A2: a group heading takes the category most of the rows it totals share,
+    pooled over every table where its label heads a group; evenly mixed ->
+    modelling_other. Nested headings are resolved from the inside out. Labels in
+    `fixed` (reviewed by Teo) keep their category. Returns {heading key: (category, note)}."""
+    key = drv.drop_duplicates(["vintage_label", "table", "block", "row"]) \
+             .set_index(["vintage_label", "table", "block", "row"]).label_key
+    m = hc.assign(h=[key.get((r.vintage_label, r.table, r.block, r.row)) for r in hc.itertuples()],
+                  c=[key.get((r.vintage_label, r.table, r.block, r.child_row)) for r in hc.itertuples()])
+    m = m.dropna(subset=["h", "c"]).drop_duplicates(["h", "vintage_label", "table", "c"])
+    cat, out = dict(cat), {}
+    for _ in range(5):                      # nesting is at most two deep in practice
+        changed = False
+        for h, g in m[~m.h.isin(fixed)].groupby("h"):
+            counts = g.c.map(cat).value_counts()
+            top = counts[counts == counts.max()]
+            new = top.index[0] if len(top) == 1 else "modelling_other"
+            note = "A2: group heading; rows beneath: " + ", ".join(f"{k} {n}" for k, n in counts.items())
+            if out.get(h) != (new, note):
+                out[h], cat[h], changed = (new, note), new, True
+        if not changed:
+            break
+    return out
+
+
 def attribution_rows(rows: pd.DataFrame, lab2vid: dict, cw: dict) -> tuple[pd.DataFrame, pd.DataFrame]:
     drv = driver_rows(rows)
+    hc = heading_children(rows)
+    heads = set(zip(hc.vintage_label, hc.table, hc.block, hc.row))
     labels = []
     out = []
     for _, r in drv.iterrows():
@@ -401,18 +499,29 @@ def attribution_rows(rows: pd.DataFrame, lab2vid: dict, cw: dict) -> tuple[pd.Da
                        "label": text, "category": cat, "note": note, "reviewed": done,
                        "comment": old.get("comment", ""), **X.llm_fields(old)})
         prev = r.block_previous if isinstance(r.block_previous, str) else None
+        flags = ["not_previous_vintage"] if prev and lab2vid.get(prev) and ";" in (r.previous_labels or "") else []
+        # a group heading repeats the sum of the rows beneath it; E5 counts the rows
+        if (r.vintage_label, r.table, r.block, r.row) in heads:
+            flags.append("group_heading")
         out.append({"source": "OBR", "series_id": r.series_id, "target_period": r.target_period,
                     "vintage_id": lab2vid.get(r.vintage_label), "previous_vintage_id": lab2vid.get(prev),
                     "category_raw": f"EFO {r.table}: {section + ' / ' if section else ''}{text}",
-                    "category": cat, "value": r.value,
-                    "flags": "not_previous_vintage" if prev and lab2vid.get(prev) and
-                             ";" in (r.previous_labels or "") else "",
-                    "origin": f"{r.file}#{r.sheet}!row{r.row + 1}"})
+                    "category": cat, "value": r.value, "flags": ";".join(flags),
+                    "origin": f"{r.file}#{r.sheet}!row{r.row + 1}", "label_key": key})
     lab = pd.DataFrame(labels).drop_duplicates("label_key")
     lab["n_rows"] = lab.label_key.map(pd.Series([l["label_key"] for l in labels]).value_counts())
+    # rule A2, after every other row has its category
+    a2 = resolve_headings(drv, hc, dict(zip(lab.label_key, lab.category)),
+                          set(lab[lab.reviewed.astype(bool)].label_key))
+    for k, (c, n) in a2.items():
+        i = lab.label_key == k
+        lab.loc[i, ["category", "note", "status", "labeller", "route_reason"]] = \
+            [c, n, "resolved_in_code", "codebook rule A2 (code)", ""]
+    out = pd.DataFrame(out)
+    out["category"] = [a2[k][0] if k in a2 else c for k, c in zip(out.label_key, out.category)]
     lab = lab[["source_table", "label_key", "table_kind", "section", "label", "category", "note",
                "n_rows", "reviewed", "comment", *X.LLM_COLS]]
-    return pd.DataFrame(out), lab
+    return out.drop(columns="label_key"), lab
 
 
 def derived_series() -> pd.DataFrame:

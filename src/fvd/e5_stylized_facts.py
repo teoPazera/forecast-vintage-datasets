@@ -210,6 +210,8 @@ def attribution_shares(c: pd.DataFrame) -> pd.DataFrame:
     frd = att.category_raw.str.startswith("FRD")
     att = att[~frd | (att.series_id.eq("obr.psnb_gbp") & att.category_raw.str.match(r"FRD:(policy|classification|underlying) \("))]
     att = att[~(att.category_raw.str.startswith("EFO") & att.series_id.eq("obr.pscr_gbp"))]
+    # a group heading repeats the sum of the rows beneath it (rule A2); count the rows
+    att = att[~att["flags"].fillna("").str.contains("group_heading")]
     h = c[["series_id", "target_period", "vintage_id", "horizon_months", "family", "group"]].drop_duplicates(
         ["series_id", "target_period", "vintage_id"])
     # derived income-tax series (EFO tables) have no cells: take horizons from IT
@@ -253,6 +255,7 @@ def calibration_predictability(c: pd.DataFrame) -> pd.DataFrame:
     series' revision at the previous vintage, both scaled by the previous forecast
     level (so taxes of different size pool). OBR EFO driver tables only."""
     att = pd.read_parquet(TABLES / "attribution" / "OBR_EFO.parquet")
+    att = att[~att["flags"].fillna("").str.contains("group_heading")]
     cal = (att[att.category == "calibration_to_outturn"]
            .groupby(["series_id", "target_period", "vintage_id"]).value.sum().rename("calib").reset_index())
     cells = c[c.source == "OBR"][["series_id", "target_period", "vintage_id", "prev_value", "revision",

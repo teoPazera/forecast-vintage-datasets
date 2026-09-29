@@ -46,13 +46,14 @@ columns:
   type: string
   unit: ''
   description: settled_agreement (Jev's top answer = current mapping, confidence >= D20, no negation)
-    | pending (provisional mapping, awaiting second model or Teo) | reviewed (decided by Teo) | fixed_in_code;
-    empty until routed
+    | pending (provisional mapping, awaiting second model or Teo) | reviewed (decided by Teo) | resolved_in_code
+    (group heading, codebook rule A2) | fixed_in_code; empty until routed
 - name: labeller
   type: string
   unit: ''
-  description: 'who decided the current mapping: keyword rules + Jev (settled by agreement), or the reviewer
-    named for reviewed rows'
+  description: 'who decided the current mapping: keyword rules + Jev (settled by agreement), keyword rules
+    + Jev + second model + codebook review (settled by agreement of all four, D21), or the reviewer named
+    for reviewed rows'
 - name: jev_choice
   type: string
   unit: ''
