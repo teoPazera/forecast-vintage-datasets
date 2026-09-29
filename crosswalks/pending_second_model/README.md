@@ -1,6 +1,15 @@
 # Second model for the pending attribution labels
 
-This folder is self-contained. Copy it to any machine with Python 3.10 or later; it needs nothing else from the repository.
+This folder is self-contained. It runs on any machine with Python 3.10 or later and git, and needs nothing else from the repository.
+
+## Getting it onto the other machine
+
+```
+git clone https://github.com/teoPazera/forecast-vintage-datasets.git
+cd forecast-vintage-datasets/crosswalks/pending_second_model
+```
+
+The clone has no raw data (it is not in the repository), and this folder does not need any.
 
 ## What it does
 
@@ -14,7 +23,7 @@ The OBR explains each revision of its receipts forecast in tables whose rows are
 |---|---|
 | `states.jsonl` | One row per pending label: `id`, `key`, `state` (the label, its section, the table title and the table's rows, without numbers), `question` (instructions and a description of each option) and `options` |
 | `run_second_model.py` | The runner |
-| `requirements.txt` | `system-one-adapter[openai]` (TypeSafe's adapter for LLM endpoints) and `openai` |
+| `requirements.txt` | `system-one-adapter[openai]` 0.2.1 (TypeSafe's adapter for LLM endpoints) and `openai` (tested with 3.20) |
 | `.env.example` | The three settings the runner reads |
 | `results.jsonl` | Written by the runner |
 
@@ -44,6 +53,18 @@ Each row also gets one separate call asking for a one-sentence reason. If a row 
 
 ## What to send back
 
-`results.jsonl`, one line per row: `id`, `key`, `answer`, `probabilities`, `confidence`, `reason`, `model_name`, `model_version` (as the endpoint reports it), `endpoint` (host only), `path` and `timestamp`. Put it back in `crosswalks/pending_second_model/` in the repository and run `python -m fvd.merge_second_model`.
+`results.jsonl`, one line per row: `id`, `key`, `answer`, `probabilities`, `confidence`, `reason`, `model_name`, `model_version` (as the endpoint reports it), `endpoint` (host only), `path` and `timestamp`.
 
-Do not send `.env`.
+First check that every row is there: the script prints `nothing to do: 213 of 213 rows already in results.jsonl` when run again. Then, from this folder:
+
+```
+git add results.jsonl
+git commit -m "Second-model answers for the pending attribution labels"
+git push
+```
+
+`.env` is ignored by git and is never committed; `git status` should list only `results.jsonl`. On the main machine, `git pull` and then `python -m fvd.merge_second_model` (see the repository README).
+
+## Choosing the model
+
+Any OpenAI-compatible endpoint works. The point of the second model (plan D21) is an independent second opinion, so use a capable general model from a different provider than TypeSafe. The runner records the model name, the version the endpoint reports and the endpoint's host with every row. The full run is 213 rows × 2 calls, each call a few thousand tokens.

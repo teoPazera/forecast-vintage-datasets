@@ -1,6 +1,7 @@
 """Merge the second model's answers for pending attribution labels (plan D20, D21).
 
-    python -m fvd.merge_second_model
+    python -m fvd.merge_second_model          # settle by agreement, queue the rest
+    python -m fvd.merge_second_model apply    # write decided queue rows back as reviewed
 
 Reads crosswalks/pending_second_model/results.jsonl (written on another machine
 by run_second_model.py) and applies the D20 rule to the second model: a pending
@@ -75,5 +76,34 @@ def main() -> None:
           f"{missing} without a second-model result")
 
 
+CATEGORIES = ["policy", "economic_determinants", "calibration_to_outturn", "classification_one_offs",
+              "modelling_other", "underlying_unsplit", "by_tax_head"]
+
+
+def apply(path=CROSSWALKS / "review_queue_labels_decisions.csv") -> None:
+    """Write decided queue rows into crosswalks/attribution_labels.csv as reviewed
+    rows, which E2 keeps on every rerun. Columns: key, answer (a category of
+    codebook section 2.3), labeller, comment."""
+    d = pd.read_csv(path, dtype=str, keep_default_na=False)
+    bad = sorted(set(d.answer) - set(CATEGORIES))
+    if bad:
+        raise ValueError(f"answers that are not categories: {bad}")
+    cw = pd.read_csv(CROSSWALKS / "attribution_labels.csv", dtype=str, keep_default_na=False)
+    changed = 0
+    for _, r in d.iterrows():
+        m = (cw.source_table == "EFO") & (cw.label_key == r["key"])
+        if m.sum() != 1:
+            raise ValueError(f"{r['key']}: {m.sum()} crosswalk rows")
+        changed += int(cw.loc[m, "category"].iloc[0] != r["answer"])
+        cw.loc[m, ["category", "reviewed", "status", "labeller", "route_reason"]] = \
+            [r["answer"], "True", "reviewed", r["labeller"], ""]
+        if r.get("comment"):
+            cw.loc[m, "comment"] = r["comment"]
+    cw.to_csv(CROSSWALKS / "attribution_labels.csv", index=False)
+    print(f"{len(d)} labels marked reviewed, {changed} categories changed. "
+          "Next: python -m fvd.e2_efo_tables, then python -m fvd.e5_stylized_facts")
+
+
 if __name__ == "__main__":
-    main()
+    import sys
+    apply() if sys.argv[1:2] == ["apply"] else main()

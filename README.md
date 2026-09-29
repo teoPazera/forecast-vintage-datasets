@@ -88,8 +88,20 @@ python -m fvd.jev_route              # settle by agreement; queue the rest
 python -m fvd.jev_route apply-heads  # write crosswalks/review_queue_heads_decisions.csv
 python -m fvd.second_model_package   # pending labels for the second model (D21)
 python -m fvd.merge_second_model     # after crosswalks/pending_second_model/results.jsonl exists
+python -m fvd.merge_second_model apply  # write crosswalks/review_queue_labels_decisions.csv
 python -m fvd.spot_check             # blind spot-check of settled rows; `score` compares
 ```
+
+The second model runs on another machine, with only the folder
+`crosswalks/pending_second_model/` (see its README). Its `results.jsonl`
+comes back through git. Then, here:
+
+1. `python -m fvd.merge_second_model` settles the rows where it agrees and writes
+   the rest to `crosswalks/review_queue_labels.csv`;
+2. the decided rows go in `crosswalks/review_queue_labels_decisions.csv` (columns
+   `key`, `answer`, `labeller`, `comment`), then `python -m fvd.merge_second_model apply`;
+3. `python -m fvd.e2_efo_tables`, then `python -m fvd.e5_stylized_facts`, to carry the
+   final labels into the attribution table and shares.
 
 Rows marked `reviewed` keep their mapping on reruns. `python -m fvd.review build`
 still writes the older review workbook.

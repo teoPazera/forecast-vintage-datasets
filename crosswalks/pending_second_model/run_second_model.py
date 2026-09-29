@@ -84,8 +84,9 @@ class Adapter:
                                                                  criteria=q["criteria"])})
         a = r.answers["category"]
         version = None
+        # the adapter keeps each raw endpoint response under llm_attempts[i]["llm_response"]
         for att in (getattr(r, "debug", None) or {}).get("llm_attempts", []):
-            version = (att.get("debug_info") or {}).get("model") or version
+            version = (att.get("llm_response") or {}).get("model") or version
         return {"answer": a.choice, "probabilities": dict(a.probabilities), "confidence": a.confidence,
                 "model_version": version}
 
