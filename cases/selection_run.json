@@ -1,8 +1,8 @@
 {
- "run_at": "2026-09-29T09:23:05+00:00",
+ "run_at": "2026-09-29T09:47:29+00:00",
  "preregistration_sha256": "1c395a20142d12e1cb2a95105f5185e3939d519e6b947de2b888b947dfdf43bc",
  "registered_at": "2026-09-29T09:20:07+00:00",
- "git_head_at_run": "38843879bea69b343b1f322dd191cd5d903f8e98",
+ "git_head_at_run": "f849abc1236dc0b7e6a06e6eedf7948891a82e4b",
  "inputs_verified": true,
  "series_without_policy_adjustment": [
   {
@@ -155,11 +155,11 @@
  ],
  "counts": {
   "CBO": {
-   "scored_cells": 17520,
-   "scoreable_trajectories": 787,
-   "eligible": 429,
+   "scored_cells": 17150,
+   "scoreable_trajectories": 769,
+   "eligible": 418,
    "cases": 15,
-   "controls": 2,
+   "controls": 8,
    "random_sample": 30
   },
   "OBR": {
@@ -167,7 +167,7 @@
    "scoreable_trajectories": 528,
    "eligible": 273,
    "cases": 15,
-   "controls": 2,
+   "controls": 5,
    "random_sample": 30
   }
  }

@@ -41,6 +41,10 @@ columns:
   type: float
   unit: ''
   description: max |z| over scored cells
+- name: mean_abs_z
+  type: float
+  unit: ''
+  description: 'mean |z| over scored cells with a z (controls: < z_low, deviation 2)'
 - name: n_cells_without_z
   type: integer
   unit: ''
