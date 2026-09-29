@@ -1,7 +1,9 @@
 """R1 task 1 (the E7 code, run on the pilot documents only): download and extract.
 
-    python -m fvd.r1_documents fetch     # download pilot/corpus.csv -> raw/documents/
-    python -m fvd.r1_documents extract   # text/passages/{OBR,CBO}.parquet, pilot/documents.csv
+    python -m fvd.r1_documents fetch        # download pilot/corpus.csv -> raw/documents/
+    python -m fvd.r1_documents manual-list  # pilot/manual_downloads.csv: what the fetch could not get
+    python -m fvd.r1_documents manual       # take browser downloads from raw/manual/pilot/
+    python -m fvd.r1_documents extract      # text/passages/{OBR,CBO}.parquet, pilot/documents.csv
 
 Both refuse to run unless part 1 of pilot/preregistration.md is registered and
 unchanged. E7 reuses this code for all documents and skips those done here.
@@ -157,6 +159,61 @@ def fetch_all() -> None:
         pd.DataFrame(rows).to_csv(out_p, index=False)
     d = pd.DataFrame(rows)
     print(f"{(d.path != '').sum()} of {len(d)} documents retrieved")
+
+
+MANUAL_DIR = ROOT / "raw" / "manual" / "pilot"
+MANUAL_LIST = PILOT / "manual_downloads.csv"
+
+
+def manual_list() -> pd.DataFrame:
+    """Write pilot/manual_downloads.csv: every pilot document the fetch could not
+    get, with the link to open in a browser and the file name to save it under
+    raw/manual/pilot/. Post-hoc documents first: they carry the cause texts."""
+    cor = pd.read_csv(PILOT / "corpus.csv", dtype=str, keep_default_na=False).drop_duplicates("doc_id")
+    log = pd.read_csv(PILOT / "fetch_log.csv", dtype=str, keep_default_na=False)
+    miss = cor[cor.doc_id.isin(log[log.path == ""].doc_id)].copy()
+    miss["priority"] = miss.role.map({"post_hoc": 1}).fillna(
+        miss.doc_type.map({"forecast_narrative": 2, "in_period_commentary": 4})).fillna(3).astype(int)
+    miss["save_as"] = miss.doc_id + ".pdf"
+    out = miss.sort_values(["priority", "publication_date"])[
+        ["priority", "doc_id", "source", "role", "doc_type", "title", "publication_date", "url", "save_as"]]
+    out.to_csv(MANUAL_LIST, index=False)
+    print(out.groupby("priority").size().to_string())
+    return out
+
+
+def record_manual_downloads() -> None:
+    """Take browser downloads from raw/manual/pilot/<doc_id>.<ext> into the pilot:
+    record each in inventory/sources.csv (via = manual) and in pilot/fetch_log.csv,
+    after checking that a PDF's first pages carry the title's distinctive words."""
+    verify_part1()
+    from .http import record_manual
+    todo = pd.read_csv(MANUAL_LIST, dtype=str, keep_default_na=False)
+    log_p = PILOT / "fetch_log.csv"
+    log = pd.read_csv(log_p, dtype=str, keep_default_na=False)
+    for r in todo.itertuples():
+        files = sorted(MANUAL_DIR.glob(f"{r.doc_id}.*"))
+        if not files:
+            continue
+        path = files[0]
+        if sniff(path) == "pdf":
+            want = _words(r.title)
+            text = re.sub(r"\s+", " ", _first_text(path, 5))
+            hit = sum(w in text for w in want) / max(len(want), 1)
+            # slides and speaking notes do not name themselves; their first page
+            # carries the forecast's month and year instead
+            mo, y = _month_year({"title": r.title})
+            dated = bool(mo and y and re.search(rf"\b{mo}\s+{y}\b", text))
+            if hit < 0.5 and not dated:
+                print(f"{r.doc_id}: first pages carry {hit:.0%} of the title's words and not its month "
+                      "and year; not taken - check the file")
+                continue
+        record_manual(path, r.url, note="R1 pilot corpus; no usable archived copy")
+        log = log[log.doc_id != r.doc_id]
+        log = pd.concat([log, pd.DataFrame([{"doc_id": r.doc_id, "path": path.relative_to(ROOT).as_posix(),
+                                             "how": "manual (downloaded in a browser)"}])])
+        print(f"{r.doc_id}: recorded {path.name}")
+    log.to_csv(log_p, index=False)
 
 
 # --- extraction ----------------------------------------------------------------
@@ -334,4 +391,5 @@ def extract_all() -> None:
 
 
 if __name__ == "__main__":
-    {"fetch": fetch_all, "extract": extract_all}[sys.argv[1]]()
+    {"fetch": fetch_all, "manual-list": manual_list, "manual": record_manual_downloads,
+     "extract": extract_all}[sys.argv[1]]()
