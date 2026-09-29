@@ -23,6 +23,34 @@ LLM_COLUMNS = [
     ("route_reason", "string", "", "why the row is pending"),
 ]
 
+# trajectory columns shared by the E6 case tables (fvd.e6_cases.TRAJ)
+CASE_TRAJ = [
+    ("source", "string", "", "OBR | CBO"),
+    ("trajectory_id", "string", "", "<series_id>__<target_period>"),
+    ("series_id", "string", "", "see tables/series"),
+    ("family", "string", "", "series family (D7)"),
+    ("error_basis", "string", "", "log (level series) | pct_gdp (balance series)"),
+    ("target_period", "string", "", "see tables/forecasts"),
+    ("episode", "string", "", "episode window of the target period (D8): gfc | covid | energy | empty"),
+    ("n_scored_cells", "integer", "", "scored cells (role in_progress or future)"),
+    ("max_horizon_months", "float", "months", "longest horizon among scored cells"),
+    ("max_abs_z", "float", "", "max |z| over scored cells"),
+    ("n_cells_without_z", "integer", "", "scored cells whose scale was 0 or undefined"),
+    ("run_length", "integer", "", "length of the qualifying run (0 if none)"),
+    ("run_sign", "string", "", "over (forecast above outturn) | under | empty"),
+    ("score", "float", "", "sum of |z| over the qualifying run"),
+    ("eligible", "boolean", "", "run_length >= 2"),
+    ("onset_vintage_id", "string", "", "first vintage of the qualifying run"),
+    ("onset_date", "date", "", "its publication date"),
+    ("onset_error", "float", "as error_basis", "policy-adjusted error at onset"),
+    ("onset_z", "float", "", "z at onset"),
+    ("corrected", "boolean", "", "a later vintage's error fell to at most half the onset error"),
+    ("correction_vintage_id", "string", "", "first such vintage; empty if none"),
+    ("correction_date", "date", "", "its publication date"),
+    ("lead_time_vintages", "string", "", "vintages from onset to correction (or to the last vintage), ';'-separated"),
+    ("lead_time_n", "integer", "", "number of vintages in the lead-time window"),
+]
+
 SCHEMAS: dict[str, dict] = {
     "inventory/sources": {
         "description": "Provenance of every raw file and every refused or failed request.",
@@ -293,7 +321,7 @@ SCHEMAS: dict[str, dict] = {
             ("error_first_pa", "float", "series.unit_harmonized", "policy-adjusted error vs first estimate"),
             ("log_error_latest_pa", "float", "log points", "log of policy-adjusted forecast over latest outturn"),
             ("log_error_first_pa", "float", "log points", "log of policy-adjusted forecast over first estimate"),
-            ("z", "float", "", "normalized error (E6); empty until E6"),
+            ("z", "float", "", "always empty: E6 writes the normalized error to cases/scored_cells, so the cell table E6 was registered against stays unchanged"),
             ("classification_break", "boolean", "", "trajectory flagged for a classification break (E4 task 4)"),
             ("memo_vintage", "boolean", "", "memo or supplementary vintage (D14)"),
             ("episode", "string", "", "episode window of the target period (D8): gfc | covid | energy | empty"),
@@ -372,6 +400,65 @@ SCHEMAS: dict[str, dict] = {
             ("se", "float", "", "standard error clustered by target (slope only)"),
             ("p_value", "float", "", "binomial test against 0.5, or t-test of slope = 0"),
             ("note", "string", "", ""),
+        ],
+    },
+    "cases/scored_cells": {
+        "description": "Every scored cell of E6 (cases/preregistration.md, sections 1-3): in-scope chained "
+                       "cells with role in_progress or future, with their scale and z.",
+        "columns": [
+            ("source", "string", "", "OBR | CBO"),
+            ("trajectory_id", "string", "", "<series_id>__<target_period>"),
+            ("series_id", "string", "", "see tables/series"),
+            ("target_period", "string", "", "see tables/forecasts"),
+            ("vintage_id", "string", "", "see tables/vintages"),
+            ("publication_date", "date", "", "vintage publication date"),
+            ("cell_role", "string", "", "in_progress | future"),
+            ("horizon_months", "float", "months", "publication date to end of target period"),
+            ("bucket", "string", "months", "horizon bucket (D6)"),
+            ("error_basis", "string", "", "log (level series) | pct_gdp (balance series)"),
+            ("error", "float", "log points or percentage points of GDP", "policy-adjusted error against the latest outturn; positive = over-forecast"),
+            ("sigma", "float", "as error", "leave-one-target-out scale, shrunk towards the family's below 8 targets"),
+            ("sigma_own_n_targets", "integer", "", "target periods behind the series' own scale"),
+            ("sigma_own_weight", "float", "", "weight on the series' own scale (min(n/8, 1); 0 if it is 0 or undefined)"),
+            ("z", "float", "", "error / sigma; empty when sigma is 0 or undefined"),
+            ("in_qualifying_run", "boolean", "", "the cell is in the trajectory's qualifying run"),
+        ],
+    },
+    "cases/trajectory_scores": {
+        "description": "Every scoreable trajectory (at least 2 scored cells) with its E6 score and selection outcome.",
+        "columns": CASE_TRAJ + [
+            ("selection", "string", "", "case | not eligible | below top K | cap: episode | cap: family and target period"),
+            ("case_rank", "integer", "", "rank among the source's cases; empty if not a case"),
+            ("is_control", "boolean", "", "selected as a control"),
+            ("in_random_sample", "boolean", "", "drawn into the random sample"),
+        ],
+    },
+    "cases/cases": {
+        "description": "Cases (E6): the top K eligible trajectories per source by score, under the episode and "
+                       "family caps. Selected by the rule in cases/preregistration.md.",
+        "columns": CASE_TRAJ + [
+            ("case_rank", "integer", "", "rank among the source's cases (1 = highest score)"),
+            ("in_random_sample", "boolean", "", "also drawn into the random sample"),
+        ],
+    },
+    "cases/controls": {
+        "description": "Controls (E6): up to 2 per case, with max |z| < z_low, same family and error basis, "
+                       "target period within 2 years and similar horizon coverage.",
+        "columns": CASE_TRAJ + [
+            ("case_trajectory_id", "string", "", "the case this control is matched to"),
+            ("control_order", "integer", "", "1 = closest match"),
+            ("d_year", "integer", "years", "|difference in the first year of the target period|"),
+            ("d_max_horizon", "float", "months", "|difference in maximum horizon among scored cells|"),
+            ("d_n_cells", "integer", "", "|difference in number of scored cells|"),
+        ],
+    },
+    "cases/random_sample": {
+        "description": "Random sample (E6): M scoreable trajectories per source, drawn uniformly with the "
+                       "recorded seed, regardless of score.",
+        "columns": CASE_TRAJ + [
+            ("draw_order", "integer", "", "order of the draw"),
+            ("is_case", "boolean", "", "also a case"),
+            ("is_control", "boolean", "", "also a control"),
         ],
     },
 }

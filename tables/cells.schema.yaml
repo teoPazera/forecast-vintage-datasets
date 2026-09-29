@@ -119,7 +119,8 @@ columns:
 - name: z
   type: float
   unit: ''
-  description: normalized error (E6); empty until E6
+  description: 'always empty: E6 writes the normalized error to cases/scored_cells, so the cell table
+    E6 was registered against stays unchanged'
 - name: classification_break
   type: boolean
   unit: ''
