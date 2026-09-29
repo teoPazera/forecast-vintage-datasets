@@ -403,6 +403,31 @@ SCHEMAS: dict[str, dict] = {
             ("note", "string", "", ""),
         ],
     },
+    "text/passages": {
+        "description": "Passages of the forecasters' documents (E7; R1 pilot documents first). Partitioned by "
+                       "source. Document metadata, including available_from, is in pilot/documents.csv until E7.",
+        "columns": [
+            ("source", "string", "", "OBR | CBO"),
+            ("doc_id", "string", "", "see inventory/documents"),
+            ("passage_id", "string", "", "<doc_id>_p<n>, n in reading order"),
+            ("section_path", "string", "", "the heading the passage sits under (nearest heading only)"),
+            ("page", "integer", "", "PDF page (1-based); 1 for HTML documents"),
+            ("kind", "string", "", "paragraph | box | table | footnote (heuristic: font size, position, digit share, Box heading)"),
+            ("text", "string", "", "passage text; passages over 1,500 characters are split at sentence ends"),
+        ],
+    },
+    "text/links": {
+        "description": "Deterministic links of passages to (series, target period) (E8; R1 pilot series first). "
+                       "Topical relevance only: whether a passage explains an error is in tables/qrels.",
+        "columns": [
+            ("source", "string", "", "OBR | CBO"),
+            ("passage_id", "string", "", "see text/passages"),
+            ("series_id", "string", "", "see tables/series"),
+            ("target_period", "string", "", "see tables/forecasts"),
+            ("link_type", "string", "", "how the period is named: explicit period | year mention (fiscal or calendar) | relative period resolved (several joined by '; ')"),
+            ("ambiguous", "boolean", "", "true when every period mention is relative or a bare year"),
+        ],
+    },
     "cases/scored_cells": {
         "description": "Every scored cell of E6 (cases/preregistration.md, sections 1-3): in-scope chained "
                        "cells with role in_progress or future, with their scale and z.",

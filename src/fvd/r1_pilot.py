@@ -2,6 +2,7 @@
 
     python -m fvd.r1_pilot plan        # coverage, pilot cases and corpus -> pilot/
     python -m fvd.r1_pilot register    # hash part 1 of pilot/preregistration.md and its inputs
+    python -m fvd.r1_pilot register-queries   # part 2: dictionary, causes, queries (before any run)
 
 Which target periods a post-hoc document covers is derived from the inventory's
 titles and publication dates only (plan R1), never from document text:
@@ -201,5 +202,81 @@ def verify_part1() -> dict:
     return reg
 
 
+def build_queries() -> pd.DataFrame:
+    """Prospective: the series name, its dictionary terms and the target period
+    only. Retrospective: each cause text Teo wrote (pilot/causes.csv)."""
+    from .r1_link import dictionary
+    cases = pd.read_csv(PILOT / "pilot_cases.csv", dtype=str)
+    causes = pd.read_csv(PILOT / "causes.csv", dtype=str, keep_default_na=False)
+    series = pd.concat([pd.read_parquet(f) for f in sorted((TABLES / "series").glob("*.parquet"))])
+    name = dict(zip(series.series_id, series.name.str.replace(r"\s*\(.*?\)\s*\d*$", "", regex=True)
+                    .str.replace(r"^(Revenue|Outlay): ", "", regex=True)))
+    d = dictionary()
+    d = d[d.status == "in"]
+    rows = []
+    for c in cases.itertuples():
+        period = c.target_period if c.source == "OBR" else f"fiscal year {c.target_period}"
+        terms = ", ".join(d[d.series_id == c.series_id].term)
+        rows.append({"query_id": f"{c.trajectory_id}__prospective", "trajectory_id": c.trajectory_id,
+                     "query_type": "prospective", "cause_id": "",
+                     "text": f"{name[c.series_id]} ({terms}) in {period}"})
+        for k in causes[causes.trajectory_id == c.trajectory_id].itertuples():
+            rows.append({"query_id": f"{k.cause_id}__retrospective", "trajectory_id": c.trajectory_id,
+                         "query_type": "retrospective", "cause_id": k.cause_id, "text": k.cause_text})
+    return pd.DataFrame(rows)
+
+
+def _model_revision() -> dict:
+    import importlib.metadata as md
+    from pathlib import Path
+    snap = Path.home() / ".cache" / "huggingface" / "hub" / "models--BAAI--bge-small-en-v1.5" / "snapshots"
+    revs = sorted(p.name for p in snap.iterdir()) if snap.exists() else []
+    return {"model": "BAAI/bge-small-en-v1.5", "revision": revs[-1] if revs else "",
+            **{f"{p}_version": md.version(p) for p in ("sentence-transformers", "torch", "transformers")}}
+
+
+def register_queries() -> None:
+    """Part 2: dictionary decided, cause texts written, queries built; hashed
+    before any retrieval run. Part 1 must be unchanged."""
+    from .r1_link import dictionary
+    reg = verify_part1()
+    if "part2" in reg:
+        sys.exit("Part 2 is registered; log changes under Deviations.")
+    text = PREREG.read_text(encoding="utf-8").replace("\r\n", "\n")
+    if re.search(r"## Part 2:.*?\n\nPending\.\n", text, flags=re.S):
+        sys.exit("Write part 2 of pilot/preregistration.md first.")
+    if (dictionary().status == "proposed").any():
+        sys.exit("Dictionary terms still 'proposed': Teo decides each (in or dropped) first.")
+    causes = pd.read_csv(PILOT / "causes.csv", dtype=str, keep_default_na=False)
+    if (causes.cause_text.str.strip() == "").any():
+        sys.exit("pilot/causes.csv has empty cause texts.")
+    q = build_queries()
+    q.to_csv(PILOT / "queries.csv", index=False)
+    files = [PILOT / "queries.csv", PILOT / "causes.csv", PILOT / "series_dictionary.csv",
+             PILOT / "documents.csv"] + sorted((ROOT / "text" / "links").glob("*.parquet")) \
+        + sorted((ROOT / "text" / "passages").glob("*.parquet"))
+    reg["part2"] = {"file_sha256": _sha_bytes(PREREG.read_bytes()),
+                    "registered_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+                    "dense_model": _model_revision(),
+                    "files": {f.relative_to(ROOT).as_posix(): _sha_bytes(f.read_bytes()) if f.suffix == ".csv"
+                              else hashlib.sha256(f.read_bytes()).hexdigest() for f in files}}
+    REG.write_text(json.dumps(reg, indent=1) + "\n", encoding="utf-8")
+    print(f"part 2 registered at {reg['part2']['registered_at']}; {len(q)} queries")
+
+
+def verify_part2() -> dict:
+    reg = verify_part1()
+    if "part2" not in reg:
+        sys.exit("Part 2 of pilot/preregistration.md is not registered.")
+    p2 = reg["part2"]
+    if _sha_bytes(PREREG.read_bytes()) != p2["file_sha256"]:
+        sys.exit("pilot/preregistration.md has changed since part 2 was registered.")
+    for rel, h in p2["files"].items():
+        b = (ROOT / rel).read_bytes()
+        if h not in (_sha_bytes(b), hashlib.sha256(b).hexdigest()):
+            sys.exit(f"{rel} has changed since part 2 was registered.")
+    return reg
+
+
 if __name__ == "__main__":
-    {"plan": plan, "register": register}[sys.argv[1]]()
+    {"plan": plan, "register": register, "register-queries": register_queries}[sys.argv[1]]()

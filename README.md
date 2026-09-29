@@ -71,6 +71,11 @@ python -m fvd.e3_cbo              # CBO tables and replication
 python -m fvd.e4_cells            # harmonized cells, policy adjustment
 python -m fvd.e5_stylized_facts   # stylized facts and tests
 python -m fvd.e6_cases select     # cases, controls, random sample (after `register`)
+python -m fvd.r1_pilot plan       # R1: pilot cases and corpus (then `register`)
+python -m fvd.r1_documents fetch  # R1: download the pilot documents; then `extract`
+python -m fvd.r1_link             # R1: series dictionary and links; `post-hoc` for cause texts
+python -m fvd.r1_pilot register-queries   # R1: fix dictionary, causes and queries
+python -m fvd.r1_runs run         # R1: retrieval runs; then `pool` for labelling
 ```
 
 The first run downloads from the Internet Archive with throttling and takes a few

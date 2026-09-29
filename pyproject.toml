@@ -21,5 +21,9 @@ dependencies = [
     "typesafe-sdk>=0.7",
 ]
 
+[project.optional-dependencies]
+# R1 dense retrieval (D16): BAAI/bge-small-en-v1.5 on CPU
+retrieval = ["sentence-transformers>=5", "scipy>=1.11"]
+
 [tool.setuptools.packages.find]
 where = ["src"]
