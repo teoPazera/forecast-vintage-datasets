@@ -1,22 +1,13 @@
-"""Label the pending crosswalk rows with a second model (plan D21).
+"""Label the pending crosswalk rows with a second model.
 
-Standalone: needs only the files in this folder and the packages in
-requirements.txt. Nothing is imported from the pipeline.
+Each pending row is sent once to an OpenAI-compatible endpoint.  The model is
+asked to reason privately and return exactly one category (or ``none`` when no
+category fits).  Results are appended to ``results.jsonl`` so interrupted runs
+resume without repeating completed calls.
 
-    pip install -r requirements.txt
-    copy .env.example .env        # then fill in the three SECOND_MODEL_ values
-    python run_second_model.py --limit 3   # try a few rows first
-    python run_second_model.py             # every row not yet in results.jsonl
-
-For each row in states.jsonl the script asks the category question through the
-System One Adapter (TypeSafe's system-one-adapter package), which sends the same
-state, question and options Jev received to the OpenAI-compatible endpoint in
-.env and returns a probability for every option. If the endpoint rejects
-structured output, the adapter retries with prompted JSON; if the adapter cannot
-use the endpoint at all, the script asks the endpoint directly with the same
-question and options. A second, separate call per row asks for a one-sentence
-reason. Results are appended to results.jsonl, one line per row, so an
-interrupted run can be restarted.
+    python run_second_model.py --show-prompt  # inspect locally; no API call
+    python run_second_model.py --limit 1      # small live probe
+    python run_second_model.py                # remaining rows
 """
 
 from __future__ import annotations
@@ -33,158 +24,187 @@ from urllib.parse import urlparse
 HERE = Path(__file__).resolve().parent
 STATES = HERE / "states.jsonl"
 RESULTS = HERE / "results.jsonl"
+NONE = "none"
+
+
+class InvalidAnswer(ValueError):
+    """The endpoint returned text that is not one of the allowed categories."""
 
 
 def load_config() -> dict[str, str]:
-    env = HERE / ".env"
-    if env.exists():
+    """Read a folder-local .env, or the repository-root .env as a fallback."""
+    envs = (HERE / ".env", HERE.parent.parent / ".env")
+    for env in envs:
+        if not env.exists():
+            continue
         for line in env.read_text(encoding="utf-8").splitlines():
             m = re.match(r"\s*([A-Za-z_][A-Za-z0-9_]*)\s*=\s*(.*?)\s*$", line)
             if m and not line.lstrip().startswith("#"):
                 os.environ.setdefault(m.group(1), m.group(2).strip("'\""))
     cfg = {k: os.environ.get(f"SECOND_MODEL_{k}", "") for k in ("BASE_URL", "NAME", "API_KEY")}
-    missing = [f"SECOND_MODEL_{k}" for k, v in cfg.items() if not v]
+    missing = [f"SECOND_MODEL_{k}" for k, value in cfg.items() if not value]
     if missing:
-        sys.exit(f"Set {', '.join(missing)} in {env} (see .env.example).")
+        locations = ", ".join(str(path) for path in envs)
+        sys.exit(f"Set {', '.join(missing)} in one of: {locations} (see .env.example).")
     return cfg
 
 
-def confidence(probs: dict[str, float]) -> float:
-    """1 when all probability is on one option, 0 when it is spread evenly (the
-    approximation TypeSafe documents). Used only on the direct path; the adapter
-    returns its own confidence."""
-    k, p = len(probs), max(probs.values())
-    return max(0.0, min(1.0, (k * p - 1) / (k - 1))) if k > 1 else 1.0
+def allowed_answers(s: dict) -> list[str]:
+    return [*s["options"], NONE]
+
+
+def static_context(s: dict) -> str:
+    """The invariant prefix, deliberately before the row-specific state.
+
+    Keeping this byte-for-byte identical across calls gives a cache-capable
+    provider the best chance to reuse its prompt prefix.
+    """
+    q = s["question"]
+    allowed = allowed_answers(s)
+    taxonomy = {"instructions": q["instructions"], "categories": q["criteria"], "none": {
+        "what": "Use only when none of the listed categories adequately describes the row.",
+        "do_not_use_for": "ordinary uncertainty; choose the best listed category when one fits.",
+    }}
+    return (
+        "Classification instructions and taxonomy (identical for every row):\n"
+        + json.dumps(taxonomy, ensure_ascii=False)
+        + "\n\nProvide few sentences of reasoning. "
+        + "Reply with JSON only, exactly in the form "
+        + "{\"reasoning\": \"<few sentences causally deciding what is the label>\", \"answer\": \"<category>\"}. "
+        + f"The answer must be exactly one of: {allowed}.\n\n"
+        + "Row-specific state:\n"
+    )
+
+
+def classification_messages(s: dict) -> list[dict[str, str]]:
+    return [
+        {
+            "role": "system",
+            "content": "Classify the supplied tax-forecast row. Follow the requested output format exactly.",
+        },
+        {"role": "user", "content": static_context(s) + json.dumps(s["state"], ensure_ascii=False)},
+    ]
 
 
 def _json(text: str) -> dict:
-    m = re.search(r"\{.*\}", text or "", re.S)
-    if not m:
-        raise ValueError(f"no JSON in answer: {text[:200]!r}")
-    return json.loads(m.group(0))
-
-
-class Adapter:
-    """The category question through system-one-adapter."""
-
-    def __init__(self, cfg: dict[str, str], structured: bool) -> None:
-        from system_one_adapter import SystemOneAdapterClient
-        from system_one_adapter.providers.openai import OpenAIProvider
-        self.path = "adapter_structured" if structured else "adapter_prompted"
-        self.provider = OpenAIProvider(cfg["NAME"], base_url=cfg["BASE_URL"], api_key=cfg["API_KEY"],
-                                       api="chat_completions")
-        self.client = SystemOneAdapterClient(structured_outputs=structured, llm_answer_mode="probabilities",
-                                             normalize_probabilities=True, n_retry_malformed_structure=2)
-
-    def ask(self, s: dict) -> dict:
-        from system_one_adapter import Choice
-        q = s["question"]
-        r = self.client.system_one(state=s["state"], model=self.provider,
-                                   questions={"category": Choice(instructions=q["instructions"],
-                                                                 criteria=q["criteria"])})
-        a = r.answers["category"]
-        version = None
-        # the adapter keeps each raw endpoint response under llm_attempts[i]["llm_response"]
-        for att in (getattr(r, "debug", None) or {}).get("llm_attempts", []):
-            version = (att.get("llm_response") or {}).get("model") or version
-        return {"answer": a.choice, "probabilities": dict(a.probabilities), "confidence": a.confidence,
-                "model_version": version}
-
-
-class Direct:
-    """The same question and options, asked directly (for endpoints the adapter cannot use)."""
-
-    path = "direct"
-
-    def __init__(self, client, cfg: dict[str, str]) -> None:
-        self.client, self.name = client, cfg["NAME"]
-
-    def ask(self, s: dict) -> dict:
-        q = s["question"]
-        options = list(q["criteria"])
-        body = {"state": s["state"], "instructions": q["instructions"], "options": q["criteria"]}
-        msgs = [
-            {"role": "system", "content": "You answer a classification question about the given state. "
-                                          "Reply with JSON only."},
-            {"role": "user", "content": json.dumps(body, ensure_ascii=False) +
-             '\n\nReturn {"probabilities": {<option>: <probability>, ...}} with every option in '
-             f"{options}, the probabilities summing to 1."},
-        ]
-        r = self.client.chat.completions.create(model=self.name, messages=msgs)
-        j = _json(r.choices[0].message.content)
-        raw = j.get("probabilities", j)
-        probs = {o: max(float(raw.get(o, 0) or 0), 0.0) for o in options}
-        total = sum(probs.values())
-        if total <= 0:
-            raise ValueError(f"no probabilities in answer: {j}")
-        probs = {o: p / total for o, p in probs.items()}
-        return {"answer": max(probs, key=probs.get), "probabilities": probs,
-                "confidence": confidence(probs), "model_version": r.model}
-
-
-def reason(client, name: str, s: dict, answer: str) -> str:
-    """A separate call: one sentence on why the chosen option fits."""
-    q = s["question"]
-    body = {"state": s["state"], "instructions": q["instructions"], "options": q["criteria"]}
-    msgs = [{"role": "system", "content": "Answer in exactly one sentence."},
-            {"role": "user", "content": json.dumps(body, ensure_ascii=False) +
-             f"\n\nThe chosen option is '{answer}'. In one sentence, say why it fits the row "
-             "`label` better than the other options."}]
-    r = client.chat.completions.create(model=name, messages=msgs)
-    return " ".join((r.choices[0].message.content or "").split())
-
-
-def choose_path(cfg: dict[str, str], openai_client, probe: dict):
-    """Adapter with structured output, then adapter with prompted JSON, then direct."""
-    errors = []
-    for structured in (True, False):
-        try:
-            a = Adapter(cfg, structured)
-            first = a.ask(probe)
-            return a, first
-        except Exception as e:   # noqa: BLE001 - any failure means: try the next path
-            errors.append(f"adapter structured={structured}: {type(e).__name__}: {e}")
-    d = Direct(openai_client, cfg)
+    match = re.search(r"\{.*\}", text or "", re.S)
+    if not match:
+        raise InvalidAnswer(f"no JSON object in answer: {text[:200]!r}")
     try:
-        return d, d.ask(probe)
-    except Exception as e:  # noqa: BLE001
-        errors.append(f"direct: {type(e).__name__}: {e}")
-        sys.exit("No path worked for the first row:\n  " + "\n  ".join(errors))
+        parsed = json.loads(match.group(0))
+    except json.JSONDecodeError as exc:
+        raise InvalidAnswer(f"malformed JSON answer: {text[:200]!r}") from exc
+    if not isinstance(parsed, dict):
+        raise InvalidAnswer(f"JSON answer is not an object: {parsed!r}")
+    return parsed
+
+
+def parse_response(text: str, s: dict) -> dict[str, str]:
+    try:
+        parsed = _json(text)
+        answer = parsed.get("answer")
+        reasoning = parsed.get("reasoning")
+        if not isinstance(answer, str) or answer not in allowed_answers(s):
+            raise InvalidAnswer(
+                f"answer must be exactly one of {allowed_answers(s)!r}; received {answer!r}"
+            )
+        if not isinstance(reasoning, str) or not reasoning.strip():
+            raise InvalidAnswer("response must contain a non-empty string field 'reasoning'")
+        reasoning = " ".join(reasoning.split())
+        if len(reasoning.split()) > 60:
+            raise InvalidAnswer(f"reasoning exceeds 60 words ({len(reasoning.split())})")
+        return {"answer": answer, "reasoning": reasoning}
+    except InvalidAnswer as exc:
+        exc.raw_response = text
+        raise
+
+
+def usage_dict(usage) -> dict | None:
+    """Keep provider usage, including cached-token details if it exposes them."""
+    if usage is None:
+        return None
+    if hasattr(usage, "model_dump"):
+        return usage.model_dump(exclude_none=True)
+    if isinstance(usage, dict):
+        return usage
+    return {key: value for key, value in vars(usage).items() if not key.startswith("_") and value is not None}
+
+
+def ask(client, cfg: dict[str, str], s: dict) -> dict:
+    """Make the single classification call for a row."""
+    response = client.chat.completions.create(model=cfg["NAME"], messages=classification_messages(s))
+    print(response)
+    parsed = parse_response(response.choices[0].message.content or "", s)
+    return {
+        **parsed,
+        "model_version": response.model,
+        "usage": usage_dict(getattr(response, "usage", None)),
+    }
 
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--limit", type=int, default=None, help="label at most this many rows")
+    ap.add_argument("--limit", type=int, default=None, help="classify at most this many rows")
+    ap.add_argument("--show-prompt", action="store_true", help="print the first row's exact request and output contract, then exit")
     args = ap.parse_args()
-    cfg = load_config()
-    from openai import OpenAI
-    oc = OpenAI(base_url=cfg["BASE_URL"], api_key=cfg["API_KEY"])
 
     rows = [json.loads(line) for line in STATES.read_text(encoding="utf-8").splitlines() if line.strip()]
+    if args.show_prompt:
+        sample = rows[0]
+        print(json.dumps({
+            "sample_id": sample["id"],
+            "classification_request": {"model": "SECOND_MODEL_NAME", "messages": classification_messages(sample)},
+            "classification_response_contract": {
+                "answer": f"exactly one of {allowed_answers(sample)!r}",
+                "reasoning": "one or two concise sentences, maximum 60 words",
+                "examples": [
+                    {"reasoning": "The row sits under the economic-determinant section and identifies a tax-base driver.", "answer": "economic_determinants"},
+                    {"reasoning": "The row does not fit any defined causal or non-cause category.", "answer": "none"},
+                ],
+                "constraints": ["JSON only", "answer and reasoning fields only", "no probabilities"],
+            },
+            "stored_result_format": {
+                "id": sample["id"], "key": sample["key"], "answer": "one allowed category or none",
+                "reasoning": "few sentences providing causal reasoning for given label",
+                "model_name": "string", "model_version": "string or null",
+                "usage": "provider usage object or null", "endpoint": "host name",
+                "timestamp": "UTC ISO-8601 timestamp",
+            },
+        }, ensure_ascii=False, indent=2))
+        return
+
+    cfg = load_config()
+    from openai import OpenAI
+    client = OpenAI(base_url=cfg["BASE_URL"], api_key=cfg["API_KEY"])
+
     done = set()
     if RESULTS.exists():
         done = {json.loads(line)["id"] for line in RESULTS.read_text(encoding="utf-8").splitlines() if line.strip()}
-    todo = [s for s in rows if s["id"] not in done][: args.limit]
+    todo = [s for s in rows if s["id"] not in done][:args.limit]
     if not todo:
         print(f"nothing to do: {len(done)} of {len(rows)} rows already in {RESULTS.name}")
         return
 
-    asker, first = choose_path(cfg, oc, todo[0])
-    print(f"path: {asker.path}; {len(todo)} rows to label")
-    with open(RESULTS, "a", encoding="utf-8") as f:
-        for n, s in enumerate(todo):
+    print(f"path: direct; {len(todo)} rows to classify")
+    with RESULTS.open("a", encoding="utf-8") as handle:
+        for s in todo:
             try:
-                res = first if n == 0 else asker.ask(s)
-                why = reason(oc, cfg["NAME"], s, res["answer"])
-            except Exception as e:  # noqa: BLE001 - record and continue; rerun picks it up
-                print(f"{s['id']}: failed ({type(e).__name__}: {e}); rerun to retry")
+                result = ask(client, cfg, s)
+            except Exception as exc:  # retry missing rows on a later run
+                print(f"{s['id']}: failed ({type(exc).__name__}: {exc})")
+                raw = getattr(exc, "raw_response", None)
+                if raw is not None:
+                    print(f"{s['id']}: raw response: {raw}")
+                print(f"{s['id']}: rerun to retry")
                 continue
-            rec = {"id": s["id"], "key": s["key"], **res, "reason": why,
-                   "model_name": cfg["NAME"], "endpoint": urlparse(cfg["BASE_URL"]).netloc,
-                   "path": asker.path, "timestamp": datetime.now(timezone.utc).isoformat(timespec="seconds")}
-            f.write(json.dumps(rec, ensure_ascii=False) + "\n")
-            f.flush()
-            print(f"{s['id']}: {res['answer']} ({res['confidence']:.2f})")
+            record = {
+                "id": s["id"], "key": s["key"], **result,
+                "model_name": cfg["NAME"], "endpoint": urlparse(cfg["BASE_URL"]).netloc,
+                "path": "direct", "timestamp": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+            }
+            handle.write(json.dumps(record, ensure_ascii=False) + "\n")
+            handle.flush()
+            print(f"{s['id']}: {result['answer']}")
 
 
 if __name__ == "__main__":
