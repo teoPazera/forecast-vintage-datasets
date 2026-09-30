@@ -1,0 +1,7 @@
+trajectory_id,cause_id,cause_text,post_hoc_passage_id,attribution_category
+cbo.revenue.customs_duties__2025,cbo.revenue.customs_duties__2025__c1,"The executive order implementing large scale tariffs caused the custom duties revenue to rise above any of the forecast estimates",,policy 
+cbo.outlay.other_mandatory__2023,cbo.outlay.other_mandatory__2023__c1,"On net CBO’s June 2024 baseline projections for all other mandatory programs were very close to actual amounts. Among those other programs the largest projection difference was an overestimate of outlays by $10 billion for refundable tax credits related to the COVID-19 pandemic. Those tax credits were intended to enable employers to provide sick and family leave retain employees and mantain health insurance for certain workers during the pandemic",,
+cbo.revenue.miscellaneous_receipts__2023,cbo.revenue.miscellaneous_receipts__2023__c1,,,
+obr.apd__2020-21,obr.apd__2020-21__c1,,,
+obr.studentloans__2022-23,obr.studentloans__2022-23__c1,,,
+obr.fuel__2020-21,obr.fuel__2020-21__c1,,,
