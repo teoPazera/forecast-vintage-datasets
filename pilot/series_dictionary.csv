@@ -1,0 +1,13 @@
+series_id,term,basis,status
+obr.apd,air passenger duty,HOFD series name; EFO table label; PMD head,in
+obr.apd,APD,HOFD sheet code; the OBR's abbreviation,in
+obr.fuel,fuel duty,PMD head; EFO label 'Fuel duties',in
+obr.fuel,fuel duties,HOFD series name; EFO table label,in
+obr.studentloans,student loans,HOFD series name; EFO table label,in
+obr.studentloans,student loan,EFO table labels ('Student loan repayments'),in
+cbo.revenue.customs_duties,customs duties,CBO revenue category,in
+cbo.revenue.customs_duties,customs duty,singular of the category,in
+cbo.revenue.customs_duties,tariffs,synonym of customs duties; also names the 2025 cause,proposed
+cbo.outlay.other_mandatory,other mandatory,CBO outlay category ('other mandatory spending/programs'),in
+cbo.revenue.miscellaneous_receipts,miscellaneous receipts,CBO revenue category,in
+cbo.revenue.miscellaneous_receipts,Federal Reserve remittances,the category's main component; also names the 2023 cause,proposed

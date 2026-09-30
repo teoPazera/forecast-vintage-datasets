@@ -53,7 +53,7 @@ def dictionary() -> pd.DataFrame:
 def _term_re(terms: list[str]) -> re.Pattern:
     # abbreviations match case-sensitively; words case-insensitively
     parts = [re.escape(t) if t.isupper() else f"(?i:{re.escape(t)})" for t in terms]
-    return re.compile(r"\b(" + "|".join(parts) + r")\b")
+    return re.compile(r"\b(?:" + "|".join(parts) + r")\b")
 
 
 def _uk_fy(d: pd.Timestamp) -> int:

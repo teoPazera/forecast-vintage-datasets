@@ -1,0 +1,29 @@
+table: text/links
+description: 'Deterministic links of passages to (series, target period) (E8; R1 pilot series first).
+  Topical relevance only: whether a passage explains an error is in tables/qrels.'
+columns:
+- name: source
+  type: string
+  unit: ''
+  description: OBR | CBO
+- name: passage_id
+  type: string
+  unit: ''
+  description: see text/passages
+- name: series_id
+  type: string
+  unit: ''
+  description: see tables/series
+- name: target_period
+  type: string
+  unit: ''
+  description: see tables/forecasts
+- name: link_type
+  type: string
+  unit: ''
+  description: 'how the period is named: explicit period | year mention (fiscal or calendar) | relative
+    period resolved (several joined by ''; '')'
+- name: ambiguous
+  type: boolean
+  unit: ''
+  description: true when every period mention is relative or a bare year
