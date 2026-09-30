@@ -67,6 +67,14 @@ Two public forecasters have the required structure:
 - **Be polite to sources.** Throttle requests, identify the client in each request, and cache everything. Some sources refuse anonymous automated requests. If a request is refused, record it and retry with an identified request before concluding a file is unavailable.
 - **Do not construct URLs.** Build document lists from the sources' own listing pages; URL patterns for older publications differ from recent ones.
 
+### 2.1 Working with Teo (for any Claude session, local or remote)
+
+- **Autonomy.** Work through a stage without check-ins; stop at the review points and gates the plan defines. When reporting back, give an intuitive summary of what is done and a clear list of what is needed from Teo.
+- **Git.** Logical commits with clear messages. Commit locally; `git push` only when Teo asks for that push. Side tasks (e.g. stepping back to an earlier stage) go on their own branch, merged into `main` and then into the stage branch. Never stage files another session left uncommitted.
+- **Public repository.** Only cleaned, reproducible work is committed: no scratch files, no raw data (`raw/` is gitignored).
+- **OBR and CBO access.** obr.uk and cbo.gov serve a browser challenge to every script. Never bypass it. `fvd.http` uses Wayback Machine captures of the same URL, or a content-verified capture of the same document under another archived URL, and integrity-checks every download. For a file the archive never saved, ask Teo to download it in a browser into `raw/manual/` (R1 pilot: `raw/manual/pilot/<doc_id>.<ext>`, recorded by `python -m fvd.r1_documents manual`).
+- **Current status.** The stage in progress and its open questions are in its note under `notes/extraction/` (R1: `notes/extraction/R1-retrieval-pilot.md`).
+
 ---
 
 ## 3. Terms
